@@ -1,0 +1,177 @@
+const CHARACTER_META_BY_NAME = {
+  "magdalene": {
+    "id": "1",
+    "name": "Magdalene",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Magdalene.webp"
+  },
+  "cain": {
+    "id": "2",
+    "name": "Cain",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Cain.webp"
+  },
+  "judas": {
+    "id": "3",
+    "name": "Judas",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Judas.webp"
+  },
+  "question": {
+    "id": "4",
+    "name": "???",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Blue_Baby.webp"
+  },
+  "eve": {
+    "id": "5",
+    "name": "Eve",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Eve.webp"
+  },
+  "samson": {
+    "id": "6",
+    "name": "Samson",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Samson.webp"
+  },
+  "azazel": {
+    "id": "7",
+    "name": "Azazel",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Azazel.webp"
+  },
+  "lazarus": {
+    "id": "8",
+    "name": "Lazarus",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Lazarus.webp"
+  },
+  "eden": {
+    "id": "9",
+    "name": "Eden",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Eden.webp"
+  },
+  "the lost": {
+    "id": "10",
+    "name": "The Lost",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/The_Lost.webp"
+  },
+  "lazarus ii": {
+    "id": "11",
+    "name": "Lazarus II",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Lazarus_II.webp"
+  },
+  "black judas": {
+    "id": "12",
+    "name": "Black Judas",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Black_Judas.webp"
+  },
+  "lilith": {
+    "id": "13",
+    "name": "Lilith",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Lilith.webp"
+  },
+  "keeper": {
+    "id": "14",
+    "name": "Keeper",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Keeper.webp"
+  },
+  "apollyon": {
+    "id": "15",
+    "name": "Apollyon",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Apollyon.webp"
+  },
+  "the forgotten": {
+    "id": "16",
+    "name": "The Forgotten",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/The_Forgotten.webp"
+  },
+  "bethany": {
+    "id": "18",
+    "name": "Bethany",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Bethany.webp"
+  },
+  "jacob and esau": {
+    "id": "19",
+    "name": "Jacob and Esau",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Jacob_and_Esau_combined.webp"
+  },
+  "tainted isaac": {
+    "id": "21",
+    "name": "Tainted Isaac",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Isaac.webp"
+  },
+  "tainted magdalene": {
+    "id": "22",
+    "name": "Tainted Magdalene",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Magdalene.webp"
+  },
+  "tainted cain": {
+    "id": "23",
+    "name": "Tainted Cain",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Cain.webp"
+  },
+  "tainted judas": {
+    "id": "24",
+    "name": "Tainted Judas",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Judas.webp"
+  },
+  "tainted question": {
+    "id": "25",
+    "name": "Tainted ???",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Blue_Baby.webp"
+  },
+  "tainted eve": {
+    "id": "26",
+    "name": "Tainted Eve",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Eve.webp"
+  },
+  "tainted samson": {
+    "id": "27",
+    "name": "Tainted Samson",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Samson.webp"
+  },
+  "tainted azazel": {
+    "id": "28",
+    "name": "Tainted Azazel",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Azazel.webp"
+  },
+  "tainted lazarus": {
+    "id": "29",
+    "name": "Tainted Lazarus",
+    "imageUrl": "https://isaacguru.com/core/assets/img/uploads/isaac/Tainted_Lazaruses.webp"
+  },
+  "tainted eden": {
+    "id": "30",
+    "name": "Tainted Eden",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Eden.webp"
+  },
+  "tainted lost": {
+    "id": "31",
+    "name": "Tainted Lost",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Lost.webp"
+  },
+  "tainted lilith": {
+    "id": "32",
+    "name": "Tainted Lilith",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Lilith.webp"
+  },
+  "tainted keeper": {
+    "id": "33",
+    "name": "Tainted Keeper",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Keeper.webp"
+  },
+  "tainted apollyon": {
+    "id": "34",
+    "name": "Tainted Apollyon",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Apollyon.webp"
+  },
+  "tainted forgotten": {
+    "id": "35",
+    "name": "Tainted Forgotten",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Forgotten.webp"
+  },
+  "tainted bethany": {
+    "id": "36",
+    "name": "Tainted Bethany",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Bethany.webp"
+  },
+  "tainted jacob": {
+    "id": "37",
+    "name": "Tainted Jacob",
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/Tainted_Jacob.webp"
+  }
+};

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isaac Unlock Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="title-block">
+        <h1>Isaac Unlock Tracker</h1>
+        <p>Track completion marks and get your next best unlock.</p>
+      </div>
+      <div class="header-actions">
+        <button id="exportBtn" class="secondary">Export Progress</button>
+        <label class="import-label">
+          Import Progress
+          <input id="importInput" type="file" accept="application/json" />
+        </label>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="panel">
+          <input id="characterSearch" class="search" placeholder="Search character" />
+          <div class="list-group">
+            <h3>Characters</h3>
+            <ul id="regularList" class="character-list"></ul>
+          </div>
+        </div>
+      </aside>
+
+      <section class="content">
+        <div class="character-compare">
+          <div class="panel character-panel" id="characterPanelRegular">
+            <div class="character-card">
+              <div class="sprite" id="characterSpriteRegular"></div>
+              <div class="character-info">
+                <h2 id="characterNameRegular">Select a character</h2>
+                <p class="character-subtitle">Completion marks are saved automatically.</p>
+                <div id="characterProgressRegular" class="progress">0 / 12 marks</div>
+              </div>
+            </div>
+
+            <div class="paper">
+              <h3>Completion Marks</h3>
+              <div id="marksGridRegular" class="marks-grid"></div>
+            </div>
+          </div>
+
+          <div class="panel character-panel" id="characterPanelTainted">
+            <div class="character-card">
+              <div class="sprite" id="characterSpriteTainted"></div>
+              <div class="character-info">
+                <h2 id="characterNameTainted">Tainted</h2>
+                <p class="character-subtitle">Completion marks are saved automatically.</p>
+                <div id="characterProgressTainted" class="progress">0 / 12 marks</div>
+              </div>
+            </div>
+
+            <div class="paper">
+              <h3>Completion Marks</h3>
+              <div id="marksGridTainted" class="marks-grid"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="recommendations-header">
+            <h3>Recommended Next Unlocks</h3>
+          </div>
+
+          <div id="recommendations" class="recommendations"></div>
+          <button id="toggleRecommendationsBottom" class="secondary recommendations-more">
+            ...
+          </button>
+          <p class="muted">
+            Tip: unlock data is embedded in <code>data.js</code> (from your CSVs).
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Data stored locally in your browser.</span>
+      <button id="resetBtn" class="danger">Reset Progress</button>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="item-meta-by-name.js"></script>
+    <script src="character-meta-by-name.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

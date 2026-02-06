@@ -1,0 +1,853 @@
+const STORAGE_KEY = "isaacUnlockTracker_v1";
+
+const MARKS = [
+  {
+    id: "moms_heart",
+    label: "Mom's Heart / It Lives",
+    iconUrl:
+      "assets/Completion_Heart.png",
+    iconUrlHard:
+      "assets/Completion_Heart_Hard.png",
+  },
+  {
+    id: "boss_rush",
+    label: "Boss Rush",
+    iconUrl:
+      "assets/Completion_BossRush.png",
+    iconUrlHard:
+      "assets/Completion_BossRush_Hard.png",
+  },
+  {
+    id: "isaac",
+    label: "Isaac",
+    iconUrl:
+      "assets/Completion_Cathedral.png",
+    iconUrlHard:
+      "assets/Completion_Cathedral_Hard.png",
+  },
+  {
+    id: "satan",
+    label: "Satan",
+    iconUrl:
+      "assets/Completion_Sheol.png",
+    iconUrlHard:
+      "assets/Completion_Sheol_Hard.png",
+  },
+  {
+    id: "blue_baby",
+    label: "???",
+    iconUrl:
+      "assets/Completion_Chest.png",
+    iconUrlHard:
+      "assets/Completion_Chest_Hard.png",
+  },
+  {
+    id: "lamb",
+    label: "The Lamb",
+    iconUrl:
+      "assets/Completion_DarkRoom.png",
+    iconUrlHard:
+      "assets/Completion_DarkRoom_Hard.png",
+  },
+  {
+    id: "mega_satan",
+    label: "Mega Satan",
+    iconUrl:
+      "assets/Completion_Brimstone.png",
+    iconUrlHard:
+      "assets/Completion_Brimstone_Hard.png",
+  },
+  {
+    id: "greed",
+    label: "Ultra Greed",
+    iconUrl:
+      "assets/Completion_Greed.png",
+    iconUrlHard:
+      "assets/Completion_Greed_Hard.png",
+  },
+  {
+    id: "hush",
+    label: "Hush",
+    iconUrl:
+      "assets/Completion_BlueWomb.png",
+    iconUrlHard:
+      "assets/Completion_BlueWomb_Hard.png",
+  },
+  {
+    id: "delirium",
+    label: "Delirium",
+    iconUrl: "assets/Repentance_Completion_Void.png",
+    iconUrlHard: "assets/Repentance_Completion_Void_Hard.png",
+    usePaperBackground: true,
+  },
+  {
+    id: "mother",
+    label: "Mother",
+    iconUrl:
+      "assets/Completion_Mother.png",
+    iconUrlHard:
+      "assets/Completion_Mother_Hard.png",
+  },
+  {
+    id: "beast",
+    label: "The Beast",
+    iconUrl:
+      "assets/Completion_Beast.png",
+    iconUrlHard:
+      "assets/Completion_Beast_Hard.png",
+  },
+];
+
+const MARK_POSITIONS = {
+  moms_heart: { x: 25, y: 9 },
+  isaac: { x: 40, y: 20 },
+  blue_baby: { x: 57, y: 22 },
+  greed: { x: 75, y: 15 },
+  satan: { x: 28, y: 30 },
+  lamb: { x: 45, y: 38 },
+  mega_satan: { x: 61, y: 44 },
+  boss_rush: { x: 15, y: 42 },
+  hush: { x: 14, y: 62 },
+  mother: { x: 30, y: 58 },
+  beast: { x: 47, y: 65 },
+  delirium: { x: 73.4, y: 76.6 },
+};
+
+const BASE_CHARACTERS = [
+  { id: "isaac", name: "Isaac", initials: "IS" },
+  { id: "magdalene", name: "Magdalene", initials: "MG" },
+  { id: "cain", name: "Cain", initials: "CA" },
+  { id: "judas", name: "Judas", initials: "JU" },
+  { id: "blue_baby", name: "Blue Baby", initials: "BB" },
+  { id: "eve", name: "Eve", initials: "EV" },
+  { id: "samson", name: "Samson", initials: "SA" },
+  { id: "azazel", name: "Azazel", initials: "AZ" },
+  { id: "lazarus", name: "Lazarus", initials: "LA" },
+  { id: "eden", name: "Eden", initials: "ED" },
+  { id: "the_lost", name: "The Lost", initials: "LO" },
+  { id: "lilith", name: "Lilith", initials: "LI" },
+  { id: "keeper", name: "Keeper", initials: "KE" },
+  { id: "apollyon", name: "Apollyon", initials: "AP" },
+  { id: "the_forgotten", name: "The Forgotten", initials: "FO" },
+  { id: "bethany", name: "Bethany", initials: "BE" },
+  { id: "jacob_esau", name: "Jacob & Esau", initials: "J+E" },
+];
+
+const CHARACTERS = [
+  ...BASE_CHARACTERS.map((char) => ({ ...char, group: "regular" })),
+  ...BASE_CHARACTERS.map((char) => ({
+    id: `t_${char.id}`,
+    name: `Tainted ${char.name}`,
+    initials: `T${char.initials}`,
+    group: "tainted",
+  })),
+];
+
+const CHARACTER_ID_BY_NAME = {
+  Isaac: "isaac",
+  Magdalene: "magdalene",
+  Cain: "cain",
+  Judas: "judas",
+  "???": "blue_baby",
+  Eve: "eve",
+  Samson: "samson",
+  Azazel: "azazel",
+  Lazarus: "lazarus",
+  Eden: "eden",
+  "The Lost": "the_lost",
+  Lilith: "lilith",
+  Keeper: "keeper",
+  Apollyon: "apollyon",
+  "The Forgotten": "the_forgotten",
+  Bethany: "bethany",
+  "Jacob & Esau": "jacob_esau",
+  "Tainted Isaac": "t_isaac",
+  "Tainted Magdalene": "t_magdalene",
+  "Tainted Cain": "t_cain",
+  "Tainted Judas": "t_judas",
+  "Tainted ???": "t_blue_baby",
+  "Tainted Eve": "t_eve",
+  "Tainted Samson": "t_samson",
+  "Tainted Azazel": "t_azazel",
+  "Tainted Lazarus": "t_lazarus",
+  "Tainted Eden": "t_eden",
+  "Tainted Lost": "t_the_lost",
+  "Tainted Lilith": "t_lilith",
+  "Tainted Keeper": "t_keeper",
+  "Tainted Apollyon": "t_apollyon",
+  "Tainted Forgotten": "t_the_forgotten",
+  "Tainted Bethany": "t_bethany",
+  "Tainted Jacob": "t_jacob_esau",
+};
+
+const CHARACTER_IMAGE_OVERRIDES = {
+  isaac: "https://isaacguru.com/core/assets/img/items/Isaac.webp",
+  "blue baby": "https://isaacguru.com/core/assets/img/items/Blue_Baby.webp",
+  "tainted blue baby":
+    "https://isaacguru.com/core/assets/img/items/Tainted_Blue_Baby.webp",
+  "tainted the lost":
+    "https://isaacguru.com/core/assets/img/items/Tainted_Lost.webp",
+  "tainted the forgotten":
+    "https://isaacguru.com/core/assets/img/items/Tainted_Forgotten.webp",
+  "tainted jacob and esau":
+    "https://isaacguru.com/core/assets/img/items/Tainted_Jacob.webp",
+};
+
+const MARK_PATTERNS = [
+  { id: "greedier", patterns: ["Ultra Greedier"] },
+  { id: "greed", patterns: ["Ultra Greed"] },
+  { id: "mega_satan", patterns: ["Mega Satan"] },
+  { id: "boss_rush", patterns: ["Boss Rush"] },
+  { id: "moms_heart", patterns: ["Mom's Heart", "It Lives"] },
+  { id: "blue_baby", patterns: ["???"] },
+  { id: "isaac", patterns: ["Isaac"] },
+  { id: "satan", patterns: ["Satan"] },
+  { id: "lamb", patterns: ["The Lamb"] },
+  { id: "hush", patterns: ["Hush"] },
+  { id: "delirium", patterns: ["Delirium"] },
+  { id: "mother", patterns: ["Mother"] },
+  { id: "beast", patterns: ["The Beast"] },
+];
+
+const ITEMS = buildItemsFromCsv(
+  typeof UNLOCKS_CSV === "object" && UNLOCKS_CSV ? UNLOCKS_CSV : {}
+);
+
+const DEFAULT_STATE = {
+  selectedCharacterId: CHARACTERS[0].id,
+  marksByCharacter: {},
+};
+
+const state = loadState();
+
+const regularList = document.getElementById("regularList");
+const taintedList = document.getElementById("taintedList");
+const characterPanelRegular = document.getElementById("characterPanelRegular");
+const characterPanelTainted = document.getElementById("characterPanelTainted");
+const characterNameRegular = document.getElementById("characterNameRegular");
+const characterNameTainted = document.getElementById("characterNameTainted");
+const characterSpriteRegular = document.getElementById("characterSpriteRegular");
+const characterSpriteTainted = document.getElementById("characterSpriteTainted");
+const characterProgressRegular = document.getElementById("characterProgressRegular");
+const characterProgressTainted = document.getElementById("characterProgressTainted");
+const marksGridRegular = document.getElementById("marksGridRegular");
+const marksGridTainted = document.getElementById("marksGridTainted");
+const recommendations = document.getElementById("recommendations");
+const characterSearch = document.getElementById("characterSearch");
+
+const exportBtn = document.getElementById("exportBtn");
+const importInput = document.getElementById("importInput");
+const resetBtn = document.getElementById("resetBtn");
+
+const toggleRecommendationsBottom = document.getElementById("toggleRecommendationsBottom");
+const toggleRecommendationButtons = [toggleRecommendationsBottom].filter(Boolean);
+const RECOMMENDATION_BATCH = 10;
+let recommendationLimit = RECOMMENDATION_BATCH;
+
+renderCharacters();
+renderSelectedCharacter();
+renderRecommendations();
+
+characterSearch.addEventListener("input", (event) => {
+  renderCharacters(event.target.value.trim().toLowerCase());
+});
+
+toggleRecommendationButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    recommendationLimit += RECOMMENDATION_BATCH;
+    renderRecommendations();
+  });
+});
+
+exportBtn.addEventListener("click", () => {
+  const payload = {
+    version: 1,
+    updatedAt: new Date().toISOString(),
+    marksByCharacter: state.marksByCharacter,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {
+    type: "application/json",
+  });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "isaac-unlock-progress.json";
+  link.click();
+  URL.revokeObjectURL(url);
+});
+
+importInput.addEventListener("change", async (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+  try {
+    const text = await file.text();
+    const parsed = JSON.parse(text);
+    if (!parsed.marksByCharacter || typeof parsed.marksByCharacter !== "object") {
+      throw new Error("Invalid file format.");
+    }
+    state.marksByCharacter = parsed.marksByCharacter;
+    saveState(state);
+    renderSelectedCharacter();
+    renderRecommendations();
+  } catch (error) {
+    alert("Could not import progress. Check the file format.");
+  }
+  event.target.value = "";
+});
+
+resetBtn.addEventListener("click", () => {
+  const confirmed = window.confirm("Reset all saved progress?");
+  if (!confirmed) return;
+  state.marksByCharacter = {};
+  saveState(state);
+  renderSelectedCharacter();
+  renderRecommendations();
+});
+
+function renderCharacters(filter = "") {
+  regularList.innerHTML = "";
+  if (taintedList) {
+    taintedList.innerHTML = "";
+  }
+  const characterById = new Map(CHARACTERS.map((char) => [char.id, char]));
+  const matchesFilter = (char) =>
+    !filter || char.name.toLowerCase().includes(filter);
+  const renderEntry = (char) => {
+    const entry = document.createElement("div");
+    entry.className = "character-entry";
+    if (char.id === state.selectedCharacterId) {
+      entry.classList.add("active");
+    }
+
+    const pill = document.createElement("div");
+    pill.className = "character-pill";
+    const imageUrl = getCharacterImageUrl(char.name);
+    if (imageUrl) {
+      const img = document.createElement("img");
+      img.src = imageUrl;
+      img.alt = char.name;
+      img.className = "character-image";
+      img.referrerPolicy = "no-referrer";
+      pill.appendChild(img);
+    } else {
+      pill.textContent = char.initials;
+    }
+
+    const name = document.createElement("span");
+    name.textContent = char.name;
+
+    entry.appendChild(pill);
+    entry.appendChild(name);
+    return entry;
+  };
+  BASE_CHARACTERS.forEach((base) => {
+    const regular = characterById.get(base.id);
+    const tainted = characterById.get(`t_${base.id}`);
+    const showRegular = regular && matchesFilter(regular);
+    const showTainted = tainted && matchesFilter(tainted);
+    if (!showRegular && !showTainted) {
+      return;
+    }
+    const row = document.createElement("li");
+    row.className = "character-row";
+    if (base.id === getBaseCharacterId(state.selectedCharacterId)) {
+      row.classList.add("active");
+    }
+    row.addEventListener("click", () => {
+      state.selectedCharacterId = base.id;
+      saveState(state);
+      renderCharacters(filter);
+      renderSelectedCharacter();
+    });
+    if (showRegular) {
+      row.appendChild(renderEntry(regular));
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "character-entry placeholder";
+      row.appendChild(placeholder);
+    }
+    if (showTainted) {
+      row.appendChild(renderEntry(tainted));
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "character-entry placeholder";
+      row.appendChild(placeholder);
+    }
+    regularList.appendChild(row);
+  });
+}
+
+function buildItemsFromCsv(csvMap) {
+  const items = [];
+  Object.values(csvMap).forEach((csvText) => {
+    if (!csvText) return;
+    let currentCharacterId = null;
+    const lines = csvText.split(/\r?\n/);
+    lines.forEach((line) => {
+      if (!line.trim()) return;
+      const columns = parseCsvLine(line);
+      const header = columns[0] ? columns[0].trim() : "";
+      if (header.endsWith("Completion Marks")) {
+        const name = header.replace(" Completion Marks", "");
+        currentCharacterId = CHARACTER_ID_BY_NAME[name] || null;
+        return;
+      }
+      if (!currentCharacterId) return;
+      const itemId = columns[0] ? columns[0].trim() : "";
+      const itemName = columns[1] ? columns[1].trim() : "";
+      const condition = columns[2] ? columns[2].trim() : "";
+      if (!itemId || !itemName || !condition) return;
+      const normalizedName = normalizeItemName(itemName);
+      const meta =
+        typeof ITEM_META_BY_NAME === "object" && ITEM_META_BY_NAME
+          ? ITEM_META_BY_NAME[normalizedName]
+          : null;
+      const requirement = parseUnlockCondition(condition);
+      items.push({
+        id: `item_${itemId}`,
+        itemId,
+        name: itemName,
+        quality: meta ? meta.quality : null,
+        imageUrl: meta ? meta.imageUrl : null,
+        sourceId: meta ? meta.id : null,
+        unlock: {
+          characterId: currentCharacterId,
+          markIds: requirement.markIds,
+        },
+        allMarks: requirement.allMarks,
+        manualUnlock: requirement.manualUnlock,
+        conditionText: condition,
+      });
+    });
+  });
+  return items;
+}
+
+function parseCsvLine(line) {
+  const result = [];
+  let current = "";
+  let inQuotes = false;
+  for (let i = 0; i < line.length; i += 1) {
+    const char = line[i];
+    if (char === '"') {
+      const next = line[i + 1];
+      if (inQuotes && next === '"') {
+        current += '"';
+        i += 1;
+      } else {
+        inQuotes = !inQuotes;
+      }
+      continue;
+    }
+    if (char === "," && !inQuotes) {
+      result.push(current);
+      current = "";
+      continue;
+    }
+    current += char;
+  }
+  result.push(current);
+  return result;
+}
+
+function normalizeItemName(name) {
+  return name
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/\?+/g, " question ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function normalizeCharacterName(name) {
+  return name
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/\?+/g, " question ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function getCharacterImageUrl(name) {
+  const normalized = normalizeCharacterName(name);
+  if (CHARACTER_IMAGE_OVERRIDES[normalized]) {
+    return CHARACTER_IMAGE_OVERRIDES[normalized];
+  }
+  if (typeof CHARACTER_META_BY_NAME === "object" && CHARACTER_META_BY_NAME) {
+    const entry = CHARACTER_META_BY_NAME[normalized];
+    return entry ? entry.imageUrl : null;
+  }
+  return null;
+}
+
+function parseUnlockCondition(condition) {
+  const normalized = condition.toLowerCase();
+  if (
+    normalized.includes("earn all hard mode completion marks") ||
+    normalized.includes("12 completion marks on hard mode")
+  ) {
+    return { markIds: MARKS.map((mark) => mark.id), allMarks: true };
+  }
+
+  const matched = [];
+  MARK_PATTERNS.forEach((entry) => {
+    entry.patterns.forEach((pattern) => {
+      if (condition.includes(pattern)) {
+        matched.push(entry.id);
+      }
+    });
+  });
+
+  const unique = Array.from(new Set(matched));
+  return {
+    markIds: unique,
+    allMarks: false,
+    manualUnlock: unique.length === 0,
+  };
+}
+
+function renderSelectedCharacter() {
+  const baseId = getBaseCharacterId(state.selectedCharacterId);
+  const regular = CHARACTERS.find((char) => char.id === baseId);
+  const tainted = CHARACTERS.find((char) => char.id === `t_${baseId}`);
+  renderCharacterPane(regular, {
+    panel: characterPanelRegular,
+    name: characterNameRegular,
+    sprite: characterSpriteRegular,
+    progress: characterProgressRegular,
+    marksGrid: marksGridRegular,
+  });
+  renderCharacterPane(tainted, {
+    panel: characterPanelTainted,
+    name: characterNameTainted,
+    sprite: characterSpriteTainted,
+    progress: characterProgressTainted,
+    marksGrid: marksGridTainted,
+  });
+}
+
+function renderCharacterPane(character, pane) {
+  if (!character) {
+    if (pane.panel) {
+      pane.panel.style.display = "none";
+    }
+    return;
+  }
+  if (pane.panel) {
+    pane.panel.style.display = "";
+  }
+  pane.name.textContent = character.name;
+  pane.sprite.innerHTML = "";
+  const spriteUrl = getCharacterImageUrl(character.name);
+  if (spriteUrl) {
+    const img = document.createElement("img");
+    img.src = spriteUrl;
+    img.alt = character.name;
+    img.className = "character-image large";
+    img.referrerPolicy = "no-referrer";
+    pane.sprite.appendChild(img);
+  } else {
+    pane.sprite.textContent = character.initials;
+  }
+
+  const marksGrid = pane.marksGrid;
+  marksGrid.innerHTML = "";
+  const marksState = getMarksForCharacter(character.id);
+  let completedCount = 0;
+  marksGrid.onclick = (event) => {
+    if (event.target !== marksGrid) return;
+    const current = normalizeMarkState(marksState.delirium, "delirium");
+    marksState.delirium = getNextMarkState(current, "delirium");
+    state.marksByCharacter[character.id] = marksState;
+    saveState(state);
+    renderSelectedCharacter();
+    renderRecommendations();
+  };
+  const deliriumState = normalizeMarkState(marksState.delirium, "delirium");
+  marksGrid.classList.toggle("hard-paper", deliriumState === "hard");
+
+  MARKS.forEach((mark) => {
+    const markState = getEffectiveMarkState(marksState, mark.id);
+    completedCount += countMarkCompletion(mark.id, markState);
+    if (mark.usePaperBackground) {
+      return;
+    }
+    const markCard = document.createElement("div");
+    markCard.className = "mark";
+    markCard.dataset.markId = mark.id;
+    markCard.title = mark.label;
+    markCard.setAttribute("aria-label", mark.label);
+    const position = MARK_POSITIONS[mark.id];
+    if (position) {
+      markCard.style.left = `${position.x}%`;
+      markCard.style.top = `${position.y}%`;
+    }
+    if (markState === "hard") {
+      markCard.classList.add("checked");
+    } else if (markState === "dim") {
+      markCard.classList.add("dim");
+    }
+    markCard.addEventListener("click", () => {
+      const nextState = getNextMarkState(markState, mark.id);
+      marksState[mark.id] = nextState;
+      if (mark.id === "greed") {
+        delete marksState.greedier;
+      }
+      state.marksByCharacter[character.id] = marksState;
+      saveState(state);
+      renderSelectedCharacter();
+      renderRecommendations();
+    });
+
+    const icon = document.createElement("img");
+    icon.className = "mark-icon-img";
+    icon.alt = mark.label;
+    icon.src = markState === "hard" ? mark.iconUrlHard : mark.iconUrl;
+    icon.referrerPolicy = "no-referrer";
+    markCard.appendChild(icon);
+    marksGrid.appendChild(markCard);
+  });
+
+  pane.progress.textContent = `${completedCount} / ${getTotalMarks()} marks`;
+}
+
+function renderRecommendations() {
+  const weights = {
+    quality: 0.6,
+    community: 0.3,
+    manual: 0.1,
+  };
+
+  const candidates = ITEMS.map((item) => {
+    const unlocked = isItemUnlocked(item);
+    return { ...item, unlocked };
+  }).filter((item) => !item.unlocked);
+
+  const scored = candidates.map((item) => {
+    const qualityScore = (item.quality ?? 0) * 25;
+    const communityScore = item.communityTier
+      ? (6 - item.communityTier) * 20
+      : 0;
+    const manualScore = item.score ?? 0;
+    const score =
+      weights.quality * qualityScore +
+      weights.community * communityScore +
+      weights.manual * manualScore;
+    return { ...item, scoreComputed: Math.round(score) };
+  });
+
+  scored.sort((a, b) => b.scoreComputed - a.scoreComputed);
+
+  recommendations.innerHTML = "";
+  const limit = Math.min(recommendationLimit, scored.length);
+  scored.slice(0, limit).forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.addEventListener("click", () => focusUnlock(item));
+
+    if (item.imageUrl) {
+      const icon = document.createElement("img");
+      icon.className = "item-icon";
+      icon.src = item.imageUrl;
+      icon.alt = item.name;
+      icon.referrerPolicy = "no-referrer";
+      card.appendChild(icon);
+    }
+
+    const body = document.createElement("div");
+    body.className = "card-body";
+
+    const title = document.createElement("h4");
+    title.textContent = item.name;
+
+    const meta = document.createElement("div");
+    meta.className = "meta";
+    const charName = getCharacterName(item.unlock.characterId);
+    const markLabel = getUnlockLabel(item);
+    meta.textContent = `${charName} • ${markLabel}`;
+
+    const badges = document.createElement("div");
+    badges.innerHTML = `
+      <span class="badge">Q${item.quality ?? "?"}</span>
+    `;
+
+    const note = document.createElement("div");
+    note.className = "meta";
+    note.textContent = item.manualUnlock
+      ? "Manual unlock condition"
+      : item.conditionText;
+
+    body.appendChild(title);
+    body.appendChild(meta);
+    body.appendChild(badges);
+    body.appendChild(note);
+    card.appendChild(body);
+    recommendations.appendChild(card);
+  });
+
+  if (!scored.length) {
+    recommendations.innerHTML = `<div class="card">No locked items left in the list.</div>`;
+  }
+  toggleRecommendationButtons.forEach((button) => {
+    if (scored.length <= limit) {
+      button.style.display = "none";
+    } else {
+      button.style.display = "inline-flex";
+      button.textContent = "...";
+    }
+  });
+}
+
+function getMarksForCharacter(characterId) {
+  return state.marksByCharacter[characterId] || {};
+}
+
+function getBaseCharacterId(characterId) {
+  return characterId.startsWith("t_") ? characterId.slice(2) : characterId;
+}
+
+function getMarksGridForCharacter(characterId) {
+  return characterId.startsWith("t_") ? marksGridTainted : marksGridRegular;
+}
+
+function getCharacterName(characterId) {
+  const char = CHARACTERS.find((entry) => entry.id === characterId);
+  return char ? char.name : "Unknown";
+}
+
+function getMarkName(markId) {
+  const mark = MARKS.find((entry) => entry.id === markId);
+  return mark ? mark.label : "Unknown";
+}
+
+function getUnlockLabel(item) {
+  if (item.allMarks) return "All completion marks";
+  if (!item.unlock.markIds.length) return "Special unlock";
+  return item.unlock.markIds.map(getMarkName).join(" + ");
+}
+
+function focusUnlock(item) {
+  if (!item || !item.unlock) return;
+  state.selectedCharacterId = getBaseCharacterId(item.unlock.characterId);
+  saveState(state);
+  renderCharacters();
+  renderSelectedCharacter();
+
+  const marksToHighlight = item.allMarks
+    ? MARKS.map((mark) => mark.id)
+    : item.unlock.markIds;
+  if (!marksToHighlight.length) return;
+
+  const targetGrid = getMarksGridForCharacter(item.unlock.characterId);
+  if (!targetGrid) return;
+  window.requestAnimationFrame(() => {
+    marksToHighlight.forEach((markId) => {
+      const markKey = markId === "greedier" ? "greed" : markId;
+      const markEl = targetGrid.querySelector(`[data-mark-id="${markKey}"]`);
+      if (!markEl) {
+        if (markId === "delirium") {
+          targetGrid.classList.add("pulse");
+          window.setTimeout(() => targetGrid.classList.remove("pulse"), 1000);
+        }
+        return;
+      }
+      markEl.classList.add("pulse");
+      window.setTimeout(() => markEl.classList.remove("pulse"), 1000);
+    });
+  });
+}
+
+function isItemUnlocked(item) {
+  const marks = getMarksForCharacter(item.unlock.characterId);
+  if (item.allMarks) {
+    return MARKS.every((mark) =>
+      isMarkHardCompleted(mark.id, getEffectiveMarkState(marks, mark.id))
+    );
+  }
+  if (!item.unlock.markIds.length) return false;
+  return item.unlock.markIds.every((markId) =>
+    isMarkCompleted(markId, getEffectiveMarkState(marks, markId))
+  );
+}
+
+function isGreedMark(markId) {
+  return markId === "greed" || markId === "greedier";
+}
+
+function normalizeMarkState(value, markId) {
+  if (value === true) return "hard";
+  if (value === false || value == null) {
+    return "dim";
+  }
+  if (value === "hard" || value === "normal" || value === "dim") {
+    if (!isGreedMark(markId) && value === "normal") {
+      return "dim";
+    }
+    return value;
+  }
+  return isGreedMark(markId) ? "dim" : "dim";
+}
+
+function getNextMarkState(current, markId) {
+  if (isGreedMark(markId)) {
+    if (current === "dim") return "normal";
+    if (current === "normal") return "hard";
+    return "dim";
+  }
+  if (current === "hard") return "dim";
+  return "hard";
+}
+
+function isMarkCompleted(markId, state) {
+  if (isGreedMark(markId)) {
+    return state === "normal" || state === "hard";
+  }
+  return state === "hard";
+}
+
+function isMarkHardCompleted(markId, state) {
+  if (isGreedMark(markId)) {
+    return state === "hard";
+  }
+  return state === "hard";
+}
+
+function getEffectiveMarkState(marksState, markId) {
+  if (markId === "greed" || markId === "greedier") {
+    return normalizeMarkState(marksState.greed, "greed");
+  }
+  return normalizeMarkState(marksState[markId], markId);
+}
+
+function countMarkCompletion(markId, state) {
+  if (markId === "greed") {
+    if (state === "hard") return 2;
+    if (state === "normal") return 1;
+    return 0;
+  }
+  return state === "hard" ? 1 : 0;
+}
+
+function getTotalMarks() {
+  return MARKS.length + 1;
+}
+
+function loadState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    if (!saved || typeof saved !== "object") return { ...DEFAULT_STATE };
+    return {
+      ...DEFAULT_STATE,
+      ...saved,
+      marksByCharacter: saved.marksByCharacter || {},
+    };
+  } catch (error) {
+    return { ...DEFAULT_STATE };
+  }
+}
+
+function saveState(nextState) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(nextState));
+}
