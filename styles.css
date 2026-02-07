@@ -304,8 +304,8 @@ code {
 .recommendations {
   margin-top: 16px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px;
 }
 
 .recommendations-more {
@@ -314,18 +314,26 @@ code {
   margin-top: 12px;
 }
 
+.recommendations-less {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+
 .card {
-  padding: 14px;
+  padding: 18px;
   border-radius: 12px;
   background: #2a2a2a;
   border: 1px solid #3b3b3b;
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: flex-start;
+  min-height: 240px;
 }
 
 .card h4 {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
+  font-size: 26px;
 }
 
 .card-body {
@@ -333,28 +341,94 @@ code {
 }
 
 .item-icon {
-  width: 56px;
-  height: 56px;
+  width: 68px;
+  height: 68px;
   border-radius: 10px;
   background: #1b1b1b;
   border: 1px solid #3b3b3b;
-  padding: 6px;
+  padding: 8px;
   object-fit: contain;
 }
 
 .card .meta {
-  font-size: 12px;
+  font-size: 17px;
   color: #bdb6aa;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.item-description {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #d8d2c7;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  overflow: hidden;
+  white-space: pre-line;
 }
 
 .badge {
   display: inline-block;
-  padding: 2px 8px;
+  padding: 4px 12px;
   border-radius: 999px;
   background: #443529;
   color: #f4e7d6;
-  font-size: 12px;
-  margin-right: 6px;
+  font-size: 15px;
+}
+
+.badge.quality-q0 {
+  background: #f2f2f2;
+  color: #2b2b2b;
+}
+
+.badge.quality-q1 {
+  background: #5edc6a;
+  color: #1b2a1f;
+}
+
+.badge.quality-q2 {
+  background: #5bbcff;
+  color: #0f2333;
+}
+
+.badge.quality-q3 {
+  background: #b27cff;
+  color: #201233;
+}
+
+.badge.quality-q4 {
+  background: #f5d76e;
+  color: #3a2b00;
+}
+
+.badge.quality-qunknown {
+  background: #666;
+  color: #eee;
+}
+
+.mark-tooltip {
+  position: absolute;
+  z-index: 50;
+  width: 360px;
+  pointer-events: none;
+}
+
+.mark-tooltip-card {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
 }
 
 .muted {

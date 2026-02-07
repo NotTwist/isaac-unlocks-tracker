@@ -240,9 +240,16 @@ const importInput = document.getElementById("importInput");
 const resetBtn = document.getElementById("resetBtn");
 
 const toggleRecommendationsBottom = document.getElementById("toggleRecommendationsBottom");
+const toggleRecommendationsLess = document.getElementById("toggleRecommendationsLess");
 const toggleRecommendationButtons = [toggleRecommendationsBottom].filter(Boolean);
 const RECOMMENDATION_BATCH = 10;
 let recommendationLimit = RECOMMENDATION_BATCH;
+
+const markTooltip = document.createElement("div");
+markTooltip.id = "markTooltip";
+markTooltip.className = "mark-tooltip";
+markTooltip.style.display = "none";
+document.body.appendChild(markTooltip);
 
 renderCharacters();
 renderSelectedCharacter();
@@ -258,6 +265,12 @@ toggleRecommendationButtons.forEach((button) => {
     renderRecommendations();
   });
 });
+if (toggleRecommendationsLess) {
+  toggleRecommendationsLess.addEventListener("click", () => {
+    recommendationLimit = RECOMMENDATION_BATCH;
+    renderRecommendations();
+  });
+}
 
 exportBtn.addEventListener("click", () => {
   const payload = {
@@ -409,6 +422,7 @@ function buildItemsFromCsv(csvMap) {
         name: itemName,
         quality: meta ? meta.quality : null,
         imageUrl: meta ? meta.imageUrl : null,
+        description: meta ? meta.description : null,
         sourceId: meta ? meta.id : null,
         unlock: {
           characterId: currentCharacterId,
@@ -565,6 +579,11 @@ function renderCharacterPane(character, pane) {
     renderSelectedCharacter();
     renderRecommendations();
   };
+  marksGrid.addEventListener("pointermove", (event) => {
+    if (event.target !== marksGrid) return;
+    showMarkTooltip("delirium", character.id, marksGrid);
+  });
+  marksGrid.addEventListener("mouseleave", hideMarkTooltip);
   const deliriumState = normalizeMarkState(marksState.delirium, "delirium");
   marksGrid.classList.toggle("hard-paper", deliriumState === "hard");
 
@@ -600,6 +619,10 @@ function renderCharacterPane(character, pane) {
       renderSelectedCharacter();
       renderRecommendations();
     });
+    markCard.addEventListener("mouseenter", () => {
+      showMarkTooltip(mark.id, character.id, markCard);
+    });
+    markCard.addEventListener("mouseleave", hideMarkTooltip);
 
     const icon = document.createElement("img");
     icon.className = "mark-icon-img";
@@ -641,7 +664,19 @@ function renderRecommendations() {
   scored.sort((a, b) => b.scoreComputed - a.scoreComputed);
 
   recommendations.innerHTML = "";
-  const limit = Math.min(recommendationLimit, scored.length);
+  const baseLimit = Math.min(recommendationLimit, scored.length);
+  const containerWidth = recommendations.clientWidth || 0;
+  const minCardWidth = 400;
+  const gridGap = 16;
+  const columns = Math.max(
+    1,
+    Math.floor((containerWidth + gridGap) / (minCardWidth + gridGap))
+  );
+  const remainder = baseLimit % columns;
+  const limit =
+    remainder === 0
+      ? baseLimit
+      : Math.min(scored.length, baseLimit + (columns - remainder));
   scored.slice(0, limit).forEach((item) => {
     const card = document.createElement("div");
     card.className = "card";
@@ -669,20 +704,25 @@ function renderRecommendations() {
     meta.textContent = `${charName} • ${markLabel}`;
 
     const badges = document.createElement("div");
+    const qualityValue =
+      typeof item.quality === "number" ? item.quality : "unknown";
     badges.innerHTML = `
-      <span class="badge">Q${item.quality ?? "?"}</span>
+      <span class="badge quality-q${qualityValue}">Q${item.quality ?? "?"}</span>
     `;
+    badges.className = "badge-row";
 
-    const note = document.createElement("div");
-    note.className = "meta";
-    note.textContent = item.manualUnlock
-      ? "Manual unlock condition"
-      : item.conditionText;
+    const description = document.createElement("div");
+    description.className = "item-description";
+    description.textContent = item.description ?? "No description available.";
+    description.title = description.textContent;
 
     body.appendChild(title);
-    body.appendChild(meta);
-    body.appendChild(badges);
-    body.appendChild(note);
+    const metaRow = document.createElement("div");
+    metaRow.className = "meta-row";
+    metaRow.appendChild(meta);
+    metaRow.appendChild(badges);
+    body.appendChild(metaRow);
+    body.appendChild(description);
     card.appendChild(body);
     recommendations.appendChild(card);
   });
@@ -698,6 +738,10 @@ function renderRecommendations() {
       button.textContent = "...";
     }
   });
+  if (toggleRecommendationsLess) {
+    toggleRecommendationsLess.style.display =
+      recommendationLimit > RECOMMENDATION_BATCH ? "inline-flex" : "none";
+  }
 }
 
 function getMarksForCharacter(characterId) {
@@ -710,6 +754,102 @@ function getBaseCharacterId(characterId) {
 
 function getMarksGridForCharacter(characterId) {
   return characterId.startsWith("t_") ? marksGridTainted : marksGridRegular;
+}
+
+function showMarkTooltip(markId, characterId, anchor) {
+  const matches = ITEMS.filter((item) => {
+    if (!item.unlock || item.unlock.characterId !== characterId) return false;
+    if (item.allMarks) return true;
+    return item.unlock.markIds.includes(markId);
+  });
+  if (!matches.length) {
+    hideMarkTooltip();
+    return;
+  }
+  const sorted = matches.slice().sort((a, b) => {
+    const aq = typeof a.quality === "number" ? a.quality : -1;
+    const bq = typeof b.quality === "number" ? b.quality : -1;
+    return bq - aq;
+  });
+  const item = sorted[0];
+  const extraCount = sorted.length - 1;
+
+  markTooltip.innerHTML = "";
+  const card = document.createElement("div");
+  card.className = "card mark-tooltip-card";
+
+  if (item.imageUrl) {
+    const icon = document.createElement("img");
+    icon.className = "item-icon";
+    icon.src = item.imageUrl;
+    icon.alt = item.name;
+    icon.referrerPolicy = "no-referrer";
+    card.appendChild(icon);
+  }
+
+  const body = document.createElement("div");
+  body.className = "card-body";
+  const title = document.createElement("h4");
+  title.textContent = item.name;
+  const metaRow = document.createElement("div");
+  metaRow.className = "meta-row";
+  const meta = document.createElement("div");
+  meta.className = "meta";
+  meta.textContent = `${getCharacterName(characterId)} • ${getMarkName(markId)}`;
+  const badges = document.createElement("div");
+  badges.className = "badge-row";
+  const qualityValue =
+    typeof item.quality === "number" ? item.quality : "unknown";
+  badges.innerHTML = `<span class="badge quality-q${qualityValue}">Q${
+    item.quality ?? "?"
+  }</span>`;
+  metaRow.appendChild(meta);
+  metaRow.appendChild(badges);
+
+  const description = document.createElement("div");
+  description.className = "item-description";
+  description.textContent = item.description ?? "No description available.";
+  description.title = description.textContent;
+
+  body.appendChild(title);
+  body.appendChild(metaRow);
+  body.appendChild(description);
+
+  if (extraCount > 0) {
+    const more = document.createElement("div");
+    more.className = "meta";
+    more.textContent = `+${extraCount} more unlock${extraCount > 1 ? "s" : ""}`;
+    body.appendChild(more);
+  }
+
+  card.appendChild(body);
+  markTooltip.appendChild(card);
+  markTooltip.style.display = "block";
+
+  const rect = anchor.getBoundingClientRect();
+  const tooltipRect = markTooltip.getBoundingClientRect();
+  const padding = 12;
+  let left = rect.right + padding;
+  let top = rect.top + window.scrollY - tooltipRect.height / 2 + rect.height / 2;
+
+  const maxLeft = window.scrollX + window.innerWidth - tooltipRect.width - padding;
+  if (left > maxLeft) {
+    left = rect.left + window.scrollX - tooltipRect.width - padding;
+  }
+  if (left < padding) {
+    left = padding;
+  }
+  const minTop = window.scrollY + padding;
+  const maxTop = window.scrollY + window.innerHeight - tooltipRect.height - padding;
+  if (top < minTop) top = minTop;
+  if (top > maxTop) top = maxTop;
+
+  markTooltip.style.left = `${left}px`;
+  markTooltip.style.top = `${top}px`;
+}
+
+function hideMarkTooltip() {
+  markTooltip.style.display = "none";
 }
 
 function getCharacterName(characterId) {

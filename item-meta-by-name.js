@@ -1,4304 +1,5021 @@
 const ITEM_META_BY_NAME = {
-  "spoon bender": {
-    "id": "3",
-    "name": "Spoon Bender",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_003_spoonbender.png"
-  },
-  "cricket s head": {
-    "id": "4",
-    "name": "Cricket's Head",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_004_cricketshead.png"
-  },
-  "my reflection": {
-    "id": "5",
-    "name": "My Reflection",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_005_myreflection.png"
-  },
-  "the inner eye": {
-    "id": "2",
-    "name": "The Inner Eye",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_002_theinnereye.png"
+  "number one": {
+    "id": "6",
+    "name": "Number One",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_006_numberone.png",
+    "description": "+1.5 tears.\r\n-1.5 range.\r\n×0.8 range multiplier.\r\nTears turn yellow and are fired from Isaac's lower body rather than his head."
   },
   "the sad onion": {
     "id": "1",
     "name": "The Sad Onion",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_001_thesadonion.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_001_thesadonion.png",
+    "description": "+0.7 tears."
   },
-  "number one": {
-    "id": "6",
-    "name": "Number One",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_006_numberone.png"
-  },
-  "blood of the martyr": {
-    "id": "7",
-    "name": "Blood of the Martyr",
+  "my reflection": {
+    "id": "5",
+    "name": "My Reflection",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_007_bloodofthemartyr.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_005_myreflection.png",
+    "description": "+1.5 damage.\r\n×2 range multiplier.\r\n+1.5 range.\r\n×1.6 shot speed multiplier.\r\n-1 luck.\r\nMakes Isaac's tears pull back to his direction after traveling a short distance."
   },
-  "halo of flies": {
-    "id": "10",
-    "name": "Halo of Flies",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_010_haloofflies.png"
+  "spoon bender": {
+    "id": "3",
+    "name": "Spoon Bender",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_003_spoonbender.png",
+    "description": "Grants homing tears.\r\nHas a 1% chance of being dropped upon defeating Rag Mega."
   },
-  "brother bobby": {
-    "id": "8",
-    "name": "Brother Bobby",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_008_brotherbobby.png"
-  },
-  "magic mushroom": {
-    "id": "12",
-    "name": "Magic Mushroom",
+  "cricket s head": {
+    "id": "4",
+    "name": "Cricket's Head",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_012_magicmushroom.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_004_cricketshead.png",
+    "description": "+0.5 damage.\n×1.5 damage multiplier."
+  },
+  "the inner eye": {
+    "id": "2",
+    "name": "The Inner Eye",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_002_theinnereye.png",
+    "description": "×0.51 fire rate multiplier.\r\nIsaac fires a spread of 3 tears at once."
   },
   "skatole": {
     "id": "9",
     "name": "Skatole",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_009_skatole.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_009_skatole.png",
+    "description": "Causes some fly enemies to transform into neutral flies that deal no damage: Attack Fly, Dart Fly, Eternal Fly, Ring Fly, Army Fly and Swarm.\r\nCauses the following flies to move slower and deal no contact damage: Moter, Level 2 Fly, Bulb, Mama Fly, Bloodfly, Ultra Famine Fly and Ultra Pestilence Fly.\r\nPrevents Pooters and Super Pooters from shooting and makes them slower, prevents Moters from splitting and Bulbs from draining energy.\r\nThe following flies move slower and deal no contact damage, but can still damage Isaac through other means: Full Fly, Boom Fly, Red Boom Fly, Drowned Boom Fly, Sucker, Soul Sucker, Split, Ink, Willo, Level 2 Willo, Dragon Fly, Dragon Fly X, Bone Fly, Sick Boom Fly, Tainted Boom Fly and Tainted Sucker.\r\nCan be obtained as a final reward from a Shell Game ."
   },
   "1up": {
     "id": "11",
     "name": "1up!",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_011_1up.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_011_1up.png",
+    "description": "+1 extra life.\r\nGrants a familiar that follows Isaac.\r\nRespawns Isaac with full health in the previous room, or half a soul heart if he has no red heart containers.\r\nThe item is removed from Isaac's inventory after it respawns Isaac."
   },
-  "raw liver": {
-    "id": "16",
-    "name": "Raw Liver",
+  "blood of the martyr": {
+    "id": "7",
+    "name": "Blood of the Martyr",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_007_bloodofthemartyr.png",
+    "description": "+1 damage."
+  },
+  "magic mushroom": {
+    "id": "12",
+    "name": "Magic Mushroom",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_012_magicmushroom.png",
+    "description": "+1 full Red Heart container.\r\n+0.3 damage.\n×1.5 damage multiplier.\r\n+2.5 range.\r\n+0.3 speed.\r\nIncreases Isaac's size by +25% without affecting his hitbox.\r\nFully heals Isaac.\r\nCan very rarely drop when destroying mushrooms."
+  },
+  "brother bobby": {
+    "id": "8",
+    "name": "Brother Bobby",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_008_brotherbobby.png",
+    "description": "Spawns a familiar that follows Isaac around and shoots tears that deal 3.5 damage.\nThe familiar shoots 1.88 times per second."
+  },
+  "halo of flies": {
+    "id": "10",
+    "name": "Halo of Flies",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_016_rawliver.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_010_haloofflies.png",
+    "description": "Spawns 2 Pretty Flies that block enemy shots.\nThese flies will instantly kill some fly enemies upon contact.\nNo more than 3 Pretty Flies can be obtained at a time.\r\nHas a 1% chance of being dropped upon defeating Duke of Flies."
   },
   "the virus": {
     "id": "13",
     "name": "The Virus",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_013_thevirus.png"
-  },
-  "boom": {
-    "id": "19",
-    "name": "Boom!",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_019_boom.png"
-  },
-  "skeleton key": {
-    "id": "17",
-    "name": "Skeleton Key",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_017_skeletonkey.png"
-  },
-  "a dollar": {
-    "id": "18",
-    "name": "A Dollar",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_018_adollar.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_013_thevirus.png",
+    "description": "+0.2 speed.\r\nInflicts poison on enemies who make contact with Isaac.\r\nThe poison lasts for 6-7 ticks and deals damage equal to 0.2 × HeartContainers ^ 2 + 2 . The poison can be continuously applied to bossses which normally are immune to status effects for a brief time after being inflicted with one.\r\nMakes Isaac deal 24 contact damage per tick on top of applying poison (48 damage per second).\r\nCan be dropped from the Lust mini-boss."
   },
   "roid rage": {
     "id": "14",
     "name": "Roid Rage",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_014_roidrage.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_014_roidrage.png",
+    "description": "+0.3 speed.\n+2.5 range."
+  },
+  "raw liver": {
+    "id": "16",
+    "name": "Raw Liver",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_016_rawliver.png",
+    "description": "+2 Red Heart containers.\nFully heals Isaac."
+  },
+  "skeleton key": {
+    "id": "17",
+    "name": "Skeleton Key",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_017_skeletonkey.png",
+    "description": "+99 keys."
+  },
+  "a dollar": {
+    "id": "18",
+    "name": "A Dollar",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_018_adollar.png",
+    "description": "+100¢.\nCan only be dropped as a final reward from a Slot Machine ."
+  },
+  "boom": {
+    "id": "19",
+    "name": "Boom!",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_019_boom.png",
+    "description": "+10 bombs."
   },
   "transcendence": {
     "id": "20",
     "name": "Transcendence",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_020_transcendence.png"
-  },
-  "the compass": {
-    "id": "21",
-    "name": "The Compass",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_021_thecompass.png"
-  },
-  "dinner": {
-    "id": "23",
-    "name": "Dinner",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_023_dinner.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_020_transcendence.png",
+    "description": "Grants flight."
   },
   "lunch": {
     "id": "22",
     "name": "Lunch",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_022_lunch.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_022_lunch.png",
+    "description": "+1 full Red Heart container.\nHeals 1 red heart container."
+  },
+  "the compass": {
+    "id": "21",
+    "name": "The Compass",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_021_thecompass.png",
+    "description": "Shows the icons of all special rooms on the map, excluding secret rooms.\nReveals if Greed / Super Greed has replaced the shop or a secret room by displaying a mini-boss icon instead of the normal one.\nIts effects appear as an icon next to the map."
+  },
+  "dinner": {
+    "id": "23",
+    "name": "Dinner",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_023_dinner.png",
+    "description": "+1 full Red Heart container.\nHeals 1 red heart container."
   },
   "breakfast": {
     "id": "25",
     "name": "Breakfast",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_025_breakfast.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_025_breakfast.png",
+    "description": "+1 full Red Heart container.\r\nHeals 1 red heart container.\r\nCan spawn once the Treasure Room item pool has been exhausted. When other pools are exhausted, they will use the Treasure Room item pool."
   },
   "dessert": {
     "id": "24",
     "name": "Dessert",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_024_dessert.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_024_dessert.png",
+    "description": "+1 full Red Heart container.\nHeals 1 red heart container."
   },
   "rotten meat": {
     "id": "26",
     "name": "Rotten Meat",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_026_rottenmeat.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_026_rottenmeat.png",
+    "description": "+1 full Red Heart container.\r\nHeals 1 red heart container.\r\nCan drop from destroying polyps in Corpse."
   },
   "wooden spoon": {
     "id": "27",
     "name": "Wooden Spoon",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_027_woodenspoon.png"
-  },
-  "mom s underwear": {
-    "id": "29",
-    "name": "Mom's Underwear",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_029_momsunderwear.png"
-  },
-  "mom s heels": {
-    "id": "30",
-    "name": "Mom's Heels",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_030_momsheels.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_027_woodenspoon.png",
+    "description": "+0.3 speed."
   },
   "the belt": {
     "id": "28",
     "name": "The Belt",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_028_thebelt.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_028_thebelt.png",
+    "description": "+0.3 speed."
+  },
+  "mom s heels": {
+    "id": "30",
+    "name": "Mom's Heels",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_030_momsheels.png",
+    "description": "+2.5 range.\nMakes Isaac deal 12 contact damage per tick (24 damage per second)."
+  },
+  "mom s underwear": {
+    "id": "29",
+    "name": "Mom's Underwear",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_029_momsunderwear.png",
+    "description": "On pickup Spawns 3-6 Blue Flies upon pickup.\r\nWhile held +2.5 range."
   },
   "mom s lipstick": {
     "id": "31",
     "name": "Mom's Lipstick",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_031_momslipstick.png"
-  },
-  "the bible": {
-    "id": "33",
-    "name": "The Bible",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_033_thebible.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_031_momslipstick.png",
+    "description": "On pickup Spawns a random heart.\nWhile held +3.75 range."
   },
   "wire coat hanger": {
     "id": "32",
     "name": "Wire Coat Hanger",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_032_wirecoathanger.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_032_wirecoathanger.png",
+    "description": "+0.7 tears."
   },
-  "the book of belial": {
-    "id": "34",
-    "name": "The Book of Belial",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_034_thebookofbelial.png"
-  },
-  "the necronomicon": {
-    "id": "35",
-    "name": "The Necronomicon",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_035_thenecronomicon.png"
-  },
-  "the poop": {
-    "id": "36",
-    "name": "The Poop",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_036_thepoop.png"
+  "the bible": {
+    "id": "33",
+    "name": "The Bible",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_033_thebible.png",
+    "description": "Grants flight for the current room.\nInstantly kills Mom, Mom's Heart, It Lives, including their alt path variants.\nInstantly kills Isaac if used against Satan."
   },
   "mr boom": {
     "id": "37",
     "name": "Mr. Boom",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_037_mrboom.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_037_mrboom.png",
+    "description": "Places down a large bomb that deals 185 damage, identical to the ones spawned by Mr. Mega .\nThe bomb is compatible with all bomb modifiers.\nCan drop by the Wrath mini-boss."
   },
-  "mom s bra": {
-    "id": "39",
-    "name": "Mom's Bra",
+  "the book of belial": {
+    "id": "34",
+    "name": "The Book of Belial",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_034_thebookofbelial.png",
+    "description": null
+  },
+  "the necronomicon": {
+    "id": "35",
+    "name": "The Necronomicon",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_039_momsbra.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_035_thenecronomicon.png",
+    "description": "Deals 40 damage to everything in the room.\nA Missing Page and Missing Page 2 each add +40 to the damage, stacking up to 120 in total."
   },
   "tammy s head": {
     "id": "38",
     "name": "Tammy's Head",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_038_tammyshead.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_038_tammyshead.png",
+    "description": "Shoots 10 tears in a circle around Isaac that retain Isaac's shot speed and tear modifiers.\nEach tear does DamageStat + 25 damage."
   },
-  "kamikaze": {
-    "id": "40",
-    "name": "Kamikaze!",
+  "the poop": {
+    "id": "36",
+    "name": "The Poop",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_040_kamikaze.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_036_thepoop.png",
+    "description": "Spawns a poop pile where Isaac is currently standing.\r\nKnocks back nearby enemies, enemy shots and pickups.\r\nThe poop pile may yield pickups like regular poop.\r\nCan drop from destroying buckets in Dross.\r\nCannot be placed over obstacles (e.g. while flying), except for some examples such as Red Poop and Cobwebs which will remove the obstacles.\r\nIt can also be placed over retracted spikes which will remove them from the room.\r\nHas a 1% chance of being dropped upon defeating Dingle."
+  },
+  "mom s bra": {
+    "id": "39",
+    "name": "Mom's Bra",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_039_momsbra.png",
+    "description": "Petrifies all enemies in the room for 4 seconds."
   },
   "mom s pad": {
     "id": "41",
     "name": "Mom's Pad",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_041_momspad.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_041_momspad.png",
+    "description": "Inflicts fear to all enemies in the room for 5 seconds.\r\nSpawns a Blue Fly."
   },
   "isaacguru s item laboratory": {
     "id": "43",
     "name": "IsaacGuru's Item Laboratory",
     "quality": null,
-    "imageUrl": null
+    "imageUrl": null,
+    "description": null
   },
   "bob s rotten head": {
     "id": "42",
     "name": "Bob's Rotten Head",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_042_bobsrottenhead.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_042_bobsrottenhead.png",
+    "description": "Grants a poison bomb above Isaac's head that can be thrown using the cardinal directions and explodes upon impact.\r\nThe explosion deals DamageStat + 185 damage and leaves behind a gas cloud that poisons enemies that come in contact with it.\r\nThe poison cloud deals 5 damage per tick (15 per second).\r\nThe bomb can slightly bounce off of walls before exploding.\nCan drop from the Sloth mini-boss."
   },
   "teleport": {
     "id": "44",
     "name": "Teleport!",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_044_teleport.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_044_teleport.png",
+    "description": "Teleports Isaac to a random room.\nIt is possible to teleport to the Secret Room, Super Secret Room but not to the I AM ERROR room.\r\nIn the Mirrored World, it can additionally teleport to the Ultra Secret Room."
+  },
+  "kamikaze": {
+    "id": "40",
+    "name": "Kamikaze!",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_040_kamikaze.png",
+    "description": "Makes Isaac explode, damaging him for half a heart and dealing 185 damage to nearby enemies."
   },
   "yum heart": {
     "id": "45",
     "name": "Yum Heart",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_045_yumheart.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_045_yumheart.png",
+    "description": "Heals one red heart container, or 2 if playing as Tainted Magdalene .\nHeals co-op players for half a red heart.\nCan be dropped from the Super Lust mini-boss."
   },
   "lucky foot": {
     "id": "46",
     "name": "Lucky Foot",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_046_luckyfoot.png"
-  },
-  "shoop da whoop": {
-    "id": "49",
-    "name": "Shoop da Whoop!",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_049_shoopdawhoop.png"
-  },
-  "cupid s arrow": {
-    "id": "48",
-    "name": "Cupid's Arrow",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_048_cupidsarrow.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_046_luckyfoot.png",
+    "description": "+1 luck.\r\nIncreases the chances of winning at Slot Machines , Shell Games , Fortune Telling Machines , and Confessionals .\r\nIncreases the chance of getting a room-clear reward.\r\nConverts all negative pills into their positive counterparts, but does not identify them like PHD does."
   },
   "doctor s remote": {
     "id": "47",
     "name": "Doctor's Remote",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_047_doctorsremote.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_047_doctorsremote.png",
+    "description": "Makes a large red crosshair appear on the ground that can be controlled by Isaac's shooting keys.\r\nAfter approximately 2 seconds, a large missile strikes down on the crosshair, dealing 20x Isaac's damage."
+  },
+  "shoop da whoop": {
+    "id": "49",
+    "name": "Shoop da Whoop!",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_049_shoopdawhoop.png",
+    "description": "Upon use, the next shot fired will be a large Brimstone -like laser in the direction Isaac is shooting at.\nThe laser deals 2x Isaac's damage and can hit enemies up to 13 times.\nThe laser inherits Isaac's tear effects.\nCan be dropped by the Envy mini-boss."
   },
   "steven": {
     "id": "50",
     "name": "Steven",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_050_steven.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_050_steven.png",
+    "description": "+1 damage.\nHas a 16.6% chance to drop from the Steven boss."
   },
-  "dr fetus": {
-    "id": "52",
-    "name": "Dr. Fetus",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_052_drfetus.png"
+  "cupid s arrow": {
+    "id": "48",
+    "name": "Cupid's Arrow",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_048_cupidsarrow.png",
+    "description": "Grants piercing tears that travel through enemies."
   },
   "pentagram": {
     "id": "51",
     "name": "Pentagram",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_051_pentagram.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_051_pentagram.png",
+    "description": "+1 damage.\n+10% chance to spawn a devil/angel deal."
+  },
+  "dr fetus": {
+    "id": "52",
+    "name": "Dr. Fetus",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_052_drfetus.png",
+    "description": "×0.4 fire rate multiplier.\r\nReplaces Isaac's tears with bombs that explode after approximately 1 second after being fired.\r\nEach bomb deals 10 times Isaac's damage. If this would lead to more than 60 damage, then the bombs instead deal 5 × DamageStat + 30 .\nBombs' size depends on tear size modifiers.\r\nBombs deal no knockback to each other."
   },
   "magneto": {
     "id": "53",
     "name": "Magneto",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_053_magneto.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_053_magneto.png",
+    "description": "Pickups are attracted to Isaac, even through pits and obstacles, excluding key blocks.\r\nHearts and batteries are only attracted when they are needed.\r\nNearby unlocked chests will open automatically, including spiked chests without damaging Isaac."
   },
   "mom s eye": {
     "id": "55",
     "name": "Mom's Eye",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_055_momseye.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_055_momseye.png",
+    "description": "Gives Isaac a chance to simultaneously shoot a tear out of an eye on the back of his head.\nThe chance starts at 50% with 0 luck and goes up to 100% with 5 luck."
   },
   "treasure map": {
     "id": "54",
     "name": "Treasure Map",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_054_treasuremap.png"
-  },
-  "distant admiration": {
-    "id": "57",
-    "name": "Distant Admiration",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_057_distantadmiration.png"
-  },
-  "book of shadows": {
-    "id": "58",
-    "name": "Book of Shadows",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_058_bookofshadows.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_054_treasuremap.png",
+    "description": "Reveals the map layout without showing the icons."
   },
   "lemon mishap": {
     "id": "56",
     "name": "Lemon Mishap",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_056_lemonmishap.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_056_lemonmishap.png",
+    "description": "Creates a small pool of yellow creep that deals 8 damage per tick (24 per second) to enemies inside it.\r\nThe creep remains active until Isaac leaves the room."
+  },
+  "distant admiration": {
+    "id": "57",
+    "name": "Distant Admiration",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_057_distantadmiration.png",
+    "description": "Spawns a red attack fly that circles around Isaac and deals 5 damage per tick (75 per second)."
   },
   "the ladder": {
     "id": "60",
     "name": "The Ladder",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_060_theladder.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_060_theladder.png",
+    "description": "Places a ladder across one-square gaps, allowing Isaac to walk over.\nEnemies cannot walk over the ladder."
+  },
+  "book of shadows": {
+    "id": "58",
+    "name": "Book of Shadows",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_058_bookofshadows.png",
+    "description": "Creates a protective shield around Isaac, negating all types of damage in the room for 10 seconds.\r\nPrevents damage from Blood Donation Machines , Devil Beggars , Hell Games , and Confessionals .\r\nDoes not prevent damage from IV Bag ."
   },
   "charm of the vampire": {
     "id": "62",
     "name": "Charm of the Vampire",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_062_charmofthevampire.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_062_charmofthevampire.png",
+    "description": "+0.3 damage.\r\nRestores half a red heart for every 13 enemies killed.\r\nRemoves Isaac's reflection in the water."
   },
   "the battery": {
     "id": "63",
     "name": "The Battery",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_063_thebattery.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_063_thebattery.png",
+    "description": "Allows active items to store an additional full level of charge.\r\nExtra charges appear as yellow bars on top of the normal charge meter."
   },
   "steam sale": {
     "id": "64",
     "name": "Steam Sale",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_064_steamsale.png"
-  },
-  "anarchist cookbook": {
-    "id": "65",
-    "name": "Anarchist Cookbook",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_065_anarchistcookbook.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_064_steamsale.png",
+    "description": "Cuts in half the price of all items that can be purchased with money.\r\nItems that cost 15¢ are reduced to 7¢, while pickups that cost 5¢ are reduced to 3¢.\r\nPicking up multiple copies of Steam Sale will further reduce the price, with each copy lowering prices less. The following formula is applied: price / (SteamSaleCopies + 1) .\nPrevents shops from having natural discounts on top of the Steam Sale discount.\nCan be dropped as a rare drop from shopkeepers, as well as from the Greed mini-boss, and from the Super Greed mini-boss before unlocking A Quarter ."
   },
   "the hourglass": {
     "id": "66",
     "name": "The Hourglass",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_066_thehourglass.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_066_thehourglass.png",
+    "description": "Slows down all enemies in the room for 8 seconds."
   },
   "sister maggy": {
     "id": "67",
     "name": "Sister Maggy",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_067_sistermaggy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_067_sistermaggy.png",
+    "description": "Spawns a familiar that follows Isaac around and shoots red tears that deal 6 damage.\nThe familiar shoots 1.36 times per second."
+  },
+  "anarchist cookbook": {
+    "id": "65",
+    "name": "Anarchist Cookbook",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_065_anarchistcookbook.png",
+    "description": "Spawns 6 Troll Bombs near the center of the room.\nBombs are affected by bomb modifiers.\nCan drop from the Pride mini-boss."
   },
   "technology": {
     "id": "68",
     "name": "Technology",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_068_technology.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_068_technology.png",
+    "description": "Replaces Isaac's tears with a laser beam that has unlimited range and pierces through enemies.\nThe laser is fired from Isaac's left eye."
   },
   "chocolate milk": {
     "id": "69",
     "name": "Chocolate Milk",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_069_chocolatemilk.png"
-  },
-  "growth hormones": {
-    "id": "70",
-    "name": "Growth Hormones",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_070_growthhormones.png"
-  },
-  "mini mush": {
-    "id": "71",
-    "name": "Mini Mush",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_071_minimushroom.png"
-  },
-  "cube of meat": {
-    "id": "73",
-    "name": "Cube of Meat",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_073_cubeofmeat.png"
-  },
-  "a quarter": {
-    "id": "74",
-    "name": "A Quarter",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_074_aquarter.png"
-  },
-  "phd": {
-    "id": "75",
-    "name": "PHD",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_075_phd.png"
-  },
-  "my little unicorn": {
-    "id": "77",
-    "name": "My Little Unicorn",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_077_mylittleunicorn.png"
-  },
-  "x ray vision": {
-    "id": "76",
-    "name": "X-Ray Vision",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_076_xrayvision.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_069_chocolatemilk.png",
+    "description": "Isaac can hold down the shoot button to fire a more powerful tear depending on the charge.\nDamage scales from 10% at minimum to 400% at full charge.\nA higher tear stat can increase the minimum damage but decrease the maximum."
   },
   "rosary": {
     "id": "72",
     "name": "Rosary",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_072_rosary.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_072_rosary.png",
+    "description": "+3 Soul Hearts.\n+0.5 tears.\r\nAdds 5 copies of The Bible to all item pools, unless it has previously been picked up.\r\nThe Bible can be found multiple times even in the same pool unless it is picked up, after which it is removed from everywhere."
   },
-  "book of revelations": {
-    "id": "78",
-    "name": "Book of Revelations",
+  "mini mush": {
+    "id": "71",
+    "name": "Mini Mush",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_071_minimushroom.png",
+    "description": "+0.3 speed.\r\n+1.5 range.\r\nReduces Isaac's size by 20%, and his hitbox by 36%.\r\nCan very rarely drop when destroying mushrooms."
+  },
+  "cube of meat": {
+    "id": "73",
+    "name": "Cube of Meat",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_073_cubeofmeat.png",
+    "description": "Spawns an orbital familiar which blocks shots and deals contact damage.\r\nThe familiar can be upgraded up to 4 times by obtaining additional Cubes of Meat. Each level has its own characteristics.\r\nLevel 1: Blocks projectiles and deals 7 damage per tick (52.5 per second).\r\nLevel 2: Gains the ability to shoot tears alongside Isaac, 1.36 times per second, that deal 3.5 damage.\r\nLevel 3: Transforms from an orbital to a follower that chases nearby enemies and deals 5 damage per tick (12.5 per second). Loses the ability to shoot tears and block shots.\r\nLevel 4: Increases the size of Meat Boy and now deals 10 damage per tick (25 per second).\r\nObtaining additional Cubes of Meat will create a new level 1 cube and start the cycle again.\r\nCan drop after defeating a Harbinger."
+  },
+  "growth hormones": {
+    "id": "70",
+    "name": "Growth Hormones",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_078_bookofrevelations.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_070_growthhormones.png",
+    "description": "+1 damage.\n+0.2 speed."
+  },
+  "a quarter": {
+    "id": "74",
+    "name": "A Quarter",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_074_aquarter.png",
+    "description": "+25¢.\r\nCan drop from destroying urns or killing Super Greed."
+  },
+  "phd": {
+    "id": "75",
+    "name": "PHD",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_075_phd.png",
+    "description": "On pickup Heals 2 red hearts.\nSpawns a random pill on the ground.\nWhile held Identifies all pills upon pickup.\nConverts negative pills into their positive counterparts or removes their negative effects.\nAdds 0-2 coins to the payout every time a Blood Donation Machine or IV Bag is used.\nIn Hard Mode, adds exactly 1 coin to the payout."
+  },
+  "my little unicorn": {
+    "id": "77",
+    "name": "My Little Unicorn",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_077_mylittleunicorn.png",
+    "description": "Gives invulnerability and +0.28 speed for 6 seconds.\r\nIsaac cannot shoot any tears while active, but can instead deal 20 damage per tick (40 per second).\r\nAlso speeds up the game's music."
+  },
+  "x ray vision": {
+    "id": "76",
+    "name": "X-Ray Vision",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_076_xrayvision.png",
+    "description": "Permanently opens up Secret Room and Super Secret Room entrances."
   },
   "the mark": {
     "id": "79",
     "name": "The Mark",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_079_themark.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_079_themark.png",
+    "description": "+1 Black Heart.\n+1 damage.\n+0.2 speed."
+  },
+  "book of revelations": {
+    "id": "78",
+    "name": "Book of Revelations",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_078_bookofrevelations.png",
+    "description": "While held +17.5% devil/angel chance.\r\nOn use +1 Soul Heart.\r\nGuarantees a Harbinger boss to replace the current floor's boss, if possible.\r\nOnly 1 Harbinger can spawn per chapter:\r\n• Famine in Chapter 1.\r\n• Pestilence in Chapter 2.\r\n• War in Chapter 3.\r\n• Death or Conquest (if unlocked) in Chapter 4.\r\n• The Headless Horseman on any floor.\r\nDoes not affect bosses in alt path and final bosses."
   },
   "the pact": {
     "id": "80",
     "name": "The Pact",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_080_thepact.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_080_thepact.png",
+    "description": "+2 Black Hearts.\r\n+0.5 damage.\r\n+0.7 tears."
   },
   "dead cat": {
     "id": "81",
     "name": "Dead Cat",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_081_deadcat.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_081_deadcat.png",
+    "description": "+9 extra lives.\r\nGrants a familiar that follows Isaac.\r\nSets Isaac's red heart containers to 1.\r\nDoes not remove Soul Hearts or Black Hearts unless picked up as a character that cannot use red hearts.\r\nDoes not remove Bone Hearts unless picked up as The Forgotten .\r\nUpon death respawns Isaac in the previous room and sets his red heart containers to 1 again.\r\nThe item is removed from Isaac's inventory after it respawns Isaac 9 times.\r\nCan drop from the Super Pride mini-boss."
   },
   "lord of the pit": {
     "id": "82",
     "name": "Lord of the Pit",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_082_lordofthepit.png"
-  },
-  "the nail": {
-    "id": "83",
-    "name": "The Nail",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_083_thenail.png"
-  },
-  "we need to go deeper": {
-    "id": "84",
-    "name": "We Need To Go Deeper!",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_084_weneedtogodeeper.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_082_lordofthepit.png",
+    "description": "+0.3 speed.\nGrants flight."
   },
   "deck of cards": {
     "id": "85",
     "name": "Deck of Cards",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_085_deckofcards.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_085_deckofcards.png",
+    "description": "Gives Isaac a random card.\nHas a rare chance to give Dice Shard or Cracked Key ."
   },
-  "loki s horns": {
-    "id": "87",
-    "name": "Loki's Horns",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_087_lokishorns.png"
+  "the nail": {
+    "id": "83",
+    "name": "The Nail",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_083_thenail.png",
+    "description": "+1 Half Black Heart.\n+2 damage.\n-0.18 speed.\nGrants the ability to destroy obstacles by walking into them.\nAllows Isaac to deal 20 contact damage per tick (40 per second) to enemies.\nChanges the color of Isaac's tears to red.\nIsaac makes a demonic sound when taking damage in a room where the item was used.\nIf used multiple times in the same room, the speed penalty applies only once, but the damage bonus stacks.\nAll bonuses apply only for the current room."
+  },
+  "we need to go deeper": {
+    "id": "84",
+    "name": "We Need To Go Deeper!",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_084_weneedtogodeeper.png",
+    "description": "Spawns a trapdoor that leads to the next floor.\nIf used on a tile with a special graphic (e.g. grass, piece of garbage, etc), it will instead spawn a Crawl Space once per floor.\nIf used in Womb II, the trapdoor will always lead to Sheol.\nCan only spawn a Crawl Space trapdoor if used in any floor after Womb. Regular trapdoors won't be spawned in these floors.\nCan be used on a dirt patch in the Dark Room to get a random chest."
   },
   "monstro s tooth": {
     "id": "86",
     "name": "Monstro's Tooth",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_086_monstrostooth.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_086_monstrostooth.png",
+    "description": "Spawns a friendly Monstro that jumps onto a random enemy and deals 120 damage, while destroying nearby obstacles.\nCan also damage Isaac and will target him if used in a room with no enemies.\r\nHas a 1% chance of being dropped upon defeating Monstro."
+  },
+  "loki s horns": {
+    "id": "87",
+    "name": "Loki's Horns",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_087_lokishorns.png",
+    "description": "Adds a chance to shoot tears in 4 cardinal directions.\r\nThe chance starts at 25% with 0 luck and goes up to 100% with 15 luck.\r\nHas a 1% chance of being dropped upon defeating Loki."
   },
   "little chubby": {
     "id": "88",
     "name": "Little Chubby",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_088_littlechubby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_088_littlechubby.png",
+    "description": "Spawns a familiar that follows Isaac and charges across the room when Isaac shoots, dealing 3.5 damage per tick (105 per second) to any enemies in its path, until it hits a wall or obstacle.\r\nHas a 1% chance of being dropped upon defeating Chub."
   },
   "spider bite": {
     "id": "89",
     "name": "Spider Bite",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_089_spidersbite.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_089_spidersbite.png",
+    "description": "Adds a 25% chance to shoot slowing tears that reduce the movement speed of enemies and any projectiles fired by them.\nThe slowness lasts for 2.5 seconds.\nThe chance to fire a slowing tear goes up to 100% at 15 luck.\r\nHas a 1% chance of being dropped upon defeating Triachnid."
   },
   "the small rock": {
     "id": "90",
     "name": "The Small Rock",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_090_smallrock.png"
-  },
-  "the gamekid": {
-    "id": "93",
-    "name": "The Gamekid",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_093_thegamekid.png"
-  },
-  "super bandage": {
-    "id": "92",
-    "name": "Super Bandage",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_092_superbandage.png"
-  },
-  "sack of pennies": {
-    "id": "94",
-    "name": "Sack of Pennies",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_094_sackofpennies.png"
-  },
-  "robo baby": {
-    "id": "95",
-    "name": "Robo-Baby",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_095_robobaby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_090_smallrock.png",
+    "description": "+1 damage.\r\n+0.2 tears.\r\n-0.2 speed.\r\nHas a small chance to drop when destroying a Tinted Rock."
   },
   "spelunker hat": {
     "id": "91",
     "name": "Spelunker Hat",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_091_spelunkerhat.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_091_spelunkerhat.png",
+    "description": "Reveals map icons and layout up to 2 rooms from where Isaac is located.\nCan also reveal Secret Rooms and Super Secret Rooms.\nCompletely prevents damage from projectiles falling from above."
   },
-  "the book of sin": {
-    "id": "97",
-    "name": "The Book of Sin",
+  "super bandage": {
+    "id": "92",
+    "name": "Super Bandage",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_092_superbandage.png",
+    "description": "+1 full Red Heart container.\r\n+2 Soul Hearts.\r\nHeals 1 Red Heart container."
+  },
+  "the gamekid": {
+    "id": "93",
+    "name": "The Gamekid",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_097_bookofsin.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_093_thegamekid.png",
+    "description": "Turns Isaac into a Pac-Man-like creature for 6 seconds and provides the following effects:\r\nGives invulnerability.\r\nInflicts fear to all enemies in the room.\r\nRemoves the ability to shoot tears.\r\nAllows Isaac to deal 20 contact damage per tick (40 per second).\r\nHas a 50% chance to replenish half a red heart for every enemy that dies while active, even if not killed by Isaac.\r\nSpeeds up the game's music."
   },
-  "little gish": {
-    "id": "99",
-    "name": "Little Gish",
+  "robo baby": {
+    "id": "95",
+    "name": "Robo-Baby",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_099_littlegish.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_095_robobaby.png",
+    "description": "Spawns a familiar that follows Isaac and shoots spectral Technology lasers that deal 3.5 damage.\r\nThe familiar shoots 1.36 times per second."
   },
-  "the relic": {
-    "id": "98",
-    "name": "The Relic",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_098_therelic.png"
+  "sack of pennies": {
+    "id": "94",
+    "name": "Sack of Pennies",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_094_sackofpennies.png",
+    "description": "Spawns a sack familiar that follows Isaac around and drops a random coin every 2 rooms.\nThe first drop happens after 1 room."
   },
   "little c h a d": {
     "id": "96",
     "name": "Little C.H.A.D.",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_096_littlechad.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_096_littlechad.png",
+    "description": "Spawns a familiar that follows Isaac and drops a Half Red Heart every 3 rooms.\r\nThe first drop happens after 2 rooms.\nCan drop when defeating C.H.A.D."
+  },
+  "the book of sin": {
+    "id": "97",
+    "name": "The Book of Sin",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_097_bookofsin.png",
+    "description": "Spawns a random pickup, pill, card or rune.\r\nCannot spawn Micro Batteries . Other battery types can spawn normally."
+  },
+  "the relic": {
+    "id": "98",
+    "name": "The Relic",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_098_therelic.png",
+    "description": "Spawns a small blue cross familiar that follows Isaac around and drops a Soul Heart every 8 rooms.\r\nThe first Soul Heart is dropped after 7 rooms."
+  },
+  "little gish": {
+    "id": "99",
+    "name": "Little Gish",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_099_littlegish.png",
+    "description": "Spawns a familiar that follows Isaac around and fires slowing tears that deal 3.5 damage.\r\nThe familiar shoots 1.36 times per second.\r\nCan drop by defeating Gish."
   },
   "the halo": {
     "id": "101",
     "name": "The Halo",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_101_thehalo.png"
-  },
-  "little steven": {
-    "id": "100",
-    "name": "Little Steven",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_100_littlesteve.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_101_thehalo.png",
+    "description": "+1 full Red Heart container.\n+0.3 damage.\n+0.2 tears.\n+1.5 range.\n+0.3 speed.\nHeals 1 red heart container."
   },
   "mom s bottle of pills": {
     "id": "102",
     "name": "Mom's Bottle of Pills",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_102_momsbottleofpills.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_102_momsbottleofpills.png",
+    "description": "Gives Isaac a random pill."
+  },
+  "little steven": {
+    "id": "100",
+    "name": "Little Steven",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_100_littlesteve.png",
+    "description": "Spawns a familiar that follows Isaac around and fires homing tears that do 3.5 damage.\r\nThe familiar shoots 1.36 times per second.\r\nCan drop by defeating Steven."
   },
   "the common cold": {
     "id": "103",
     "name": "The Common Cold",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_103_thecommoncold.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_103_thecommoncold.png",
+    "description": "Adds a chance to fire poison tears that deal damage over time when inflicted.\r\nThe poison hits enemies 2 times, dealing a total of 2x Isaac's damage.\r\nThe chance to fire a poison tear starts at 25% with 0 luck and maximizes at 100% with 12 luck."
   },
   "the parasite": {
     "id": "104",
     "name": "The Parasite",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_104_theparasite.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_104_theparasite.png",
+    "description": "Upon impact with obstacles or enemies, tears split into 2 smaller tears with half damage and half range.\r\nOnly tears with damage greater than 1 are affected."
   },
   "the d6": {
     "id": "105",
     "name": "The D6",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_105_dice.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_105_dice.png",
+    "description": "Rerolls every item in the current room into another item from the current room's item pool."
   },
   "the pinking shears": {
     "id": "107",
     "name": "The Pinking Shears",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_107_pinkingshears.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_107_pinkingshears.png",
+    "description": "Separates Isaac's head from his body for the current room. Only the head will be under Isaac's control, which gains flight.\nThe body will seek out to enemies and deal 5.5 damage per tick (23.57 per second).\nThe body's speed is dependent on Isaac's speed stat."
   },
   "mr mega": {
     "id": "106",
     "name": "Mr. Mega",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_106_mrmega.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_106_mrmega.png",
+    "description": "+5 bombs.\nIncreases the damage and blast radius of Isaac's bombs. Damage is increased to 185.\nMakes the screen shake after a bomb explodes.\nCan drop from the Super Wrath mini-boss."
   },
   "the wafer": {
     "id": "108",
     "name": "The Wafer",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_108_thewafer.png"
-  },
-  "mom s contacts": {
-    "id": "110",
-    "name": "Mom's Contacts",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_110_momscontacts.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_108_thewafer.png",
+    "description": "Reduces all damage taken to half a heart.\r\nGiant champions that deal 2 full hearts of damage will instead deal only 1 full heart."
   },
   "money power": {
     "id": "109",
     "name": "Money = Power",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_109_moneyispower.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_109_moneyispower.png",
+    "description": "+0.04 damage for every penny Isaac has."
   },
-  "guardian angel": {
-    "id": "112",
-    "name": "Guardian Angel",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_112_guardianangel.png"
+  "mom s contacts": {
+    "id": "110",
+    "name": "Mom's Contacts",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_110_momscontacts.png",
+    "description": "+1.5 range.\nAdds a 20% chance to shoot petrifying tears that stop enemies in place and prevent them from moving or attacking for 1 second.\nThe activation rate goes up to around 50% with 20 luck."
   },
   "the bean": {
     "id": "111",
     "name": "The Bean",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_111_thebean.png"
-  },
-  "demon baby": {
-    "id": "113",
-    "name": "Demon Baby",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_113_demonbaby.png"
-  },
-  "9 volt": {
-    "id": "116",
-    "name": "9 Volt",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_116_9volt.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_111_thebean.png",
+    "description": "Isaac farts, knocking back enemies and reflecting projectiles, making them deal damage to enemies.\r\nThe fart deals 5 damage and poisons any nearby enemies for 6 ticks. The poison deals damage equal to Isaac's.\r\nThe area of effect is 2.5 tiles in all directions."
   },
   "mom s knife": {
     "id": "114",
     "name": "Mom's Knife",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_114_momsknife.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_114_momsknife.png",
+    "description": "Replaces Isaac's tears with a knife that pierces through enemies and can travel through obstacles.\r\nHolding down the fire button increases the knife's range and power.\r\nThe knife deals 2x Isaac's damage 20 times per second while held, and 6x Isaac's damage at about 1/3 full charge. Damage quickly drops to 2x Isaac's damage when returning regardless of charge. Further charging only increases the maximum range.\r\nCan be fired diagonally by holding down 2 firing buttons at once."
   },
   "ouija board": {
     "id": "115",
     "name": "Ouija Board",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_115_ouijaboard.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_115_ouijaboard.png",
+    "description": "+0.5 tears.\nGrants spectral tears that can travel through obstacles."
+  },
+  "9 volt": {
+    "id": "116",
+    "name": "9 Volt",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_116_9volt.png",
+    "description": "On pickup Fully charges Isaac's active item.\r\nWhile held Grants 1 bar of charge when using any active item that has more than 1 bar of recharge time.\r\nIf the current active item has a recharge time of 1 bar, then it will be changed to a timed recharge of 15 seconds.\r\nRecharging can happen only in a room with enemies.\r\nMakes timed recharge items start at half charge, reducing their recharge time by 50%."
+  },
+  "guardian angel": {
+    "id": "112",
+    "name": "Guardian Angel",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_112_guardianangel.png",
+    "description": "Spawns an orbital familiar that blocks enemy shots and deals 7 damage per tick (52.5 per second).\r\nIncreases the speed of all orbiting familiars."
+  },
+  "demon baby": {
+    "id": "113",
+    "name": "Demon Baby",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_113_demonbaby.png",
+    "description": "Spawns a familiar that follows Isaac and automatically fires at enemies in its range 3 times per second, dealing 3 damage per shot."
   },
   "dead bird": {
     "id": "117",
     "name": "Dead Bird",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_117_deadbird.png"
-  },
-  "blood bag": {
-    "id": "119",
-    "name": "Blood Bag",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_119_bloodbag.png"
-  },
-  "odd mushroom": {
-    "id": "120",
-    "name": "Odd Mushroom",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_120_oddmushroomthin.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_117_deadbird.png",
+    "description": "Taking damage summons a bird familiar that chases enemies for the remainder of the room.\r\nThe familiar deals 2 damage per tick (4.29 per second).\r\nThe familiar will remain active between rooms as long as Isaac has half or no Red Hearts (1 or less as Eve )."
   },
   "brimstone": {
     "id": "118",
     "name": "Brimstone",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_118_brimstone.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_118_brimstone.png",
+    "description": "×0.33 fire rate multiplier.\r\nReplaces Isaac's tears with a laser beam that must be charged.\r\nThe beam pierces through enemies and obstacles and has infinite range.\r\nThe beam deals damage equal to Isaac's damage each tick. Each shot deals damage for 9 ticks, resulting in a total of 9x Isaac's damage in about ~0.63 seconds.\r\nStarting from 15 fire rate, the beam can last indefinitely as long as a fire button is held. Higher fire rates will result in higher damage per tick and a larger scale.\r\nAcquiring a second copy of Brimstone grants ×1.2 damage multiplier and +1 damage. The width of the laser is doubled as well.\r\nAny additional copies only grant +1 damage."
   },
-  "whore of babylon": {
-    "id": "122",
-    "name": "Whore of Babylon",
+  "blood bag": {
+    "id": "119",
+    "name": "Blood Bag",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_122_whoreofbabylon.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_119_bloodbag.png",
+    "description": "+1 full Red Heart container.\n+0.3 speed.\nRefills 4 red heart containers.\nCan drop as a final payout from a Blood Donation Machine ."
   },
   "monster manual": {
     "id": "123",
     "name": "Monster Manual",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_123_monstermanual.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_123_monstermanual.png",
+    "description": "Summons a random familiar for the remainder of the floor.\nOnly familiars that have the monstermanual tag can be summoned."
+  },
+  "odd mushroom": {
+    "id": "121",
+    "name": "Odd Mushroom",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_121_oddmushroomlarge.png",
+    "description": "+1 full Red Heart container.\r\n+1 damage.\r\n+1.5 range.\r\n-0.2 speed.\r\nMakes Isaac's head larger, which on its own is only a visual effect. If taken when Isaac is smaller than the default, the Mushroom also increases his hitbox slightly."
+  },
+  "whore of babylon": {
+    "id": "122",
+    "name": "Whore of Babylon",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_122_whoreofbabylon.png",
+    "description": "Whenever Isaac has half a red heart or less, he enters the Whore of Babylon state which grants the following effects:\n+1.5 damage.\n+0.3 speed.\nThe effect lasts for the remainder of the room after healing.\nWhen playing as Eve , the effect will activate at one full red heart or less and will also increase her damage multiplier to ×1."
   },
   "bobby bomb": {
     "id": "125",
     "name": "Bobby-Bomb",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_125_bobbybomb.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_125_bobbybomb.png",
+    "description": "+5 bombs.\nBombs gain a homing effect."
   },
   "dead sea scrolls": {
     "id": "124",
     "name": "Dead Sea Scrolls",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_124_deadseascrolls.png"
-  },
-  "razor blade": {
-    "id": "126",
-    "name": "Razor Blade",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_126_razorblade.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_124_deadseascrolls.png",
+    "description": null
   },
   "forever alone": {
     "id": "128",
     "name": "Forever alone",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_128_foreveralone.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_128_foreveralone.png",
+    "description": "Spawns a blue orbital fly that orbits a long distance from Isaac and deals 2 damage per tick (30 per second).\nCan drop from the Super Envy mini-boss."
   },
   "forget me now": {
     "id": "127",
     "name": "Forget Me Now",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_127_forgetmenow.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_127_forgetmenow.png",
+    "description": "Restarts and regenerates the current floor.\r\nThis counts as entering a new floor."
+  },
+  "razor blade": {
+    "id": "126",
+    "name": "Razor Blade",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_126_razorblade.png",
+    "description": "+1.2 damage for the current room.\r\n-1 full red heart.\r\nSubsequent uses in the same room will deal only half a heart of damage."
   },
   "bucket of lard": {
     "id": "129",
     "name": "Bucket of Lard",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_129_bucketoflard.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_129_bucketoflard.png",
+    "description": "+2 full heart containers.\r\n-0.2 speed.\r\nCan drop from the Super Gluttony mini-boss."
   },
   "a pony": {
     "id": "130",
     "name": "A Pony",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_130_apony.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_130_apony.png",
+    "description": "While held Grants flight and sets Isaac's minimum speed to 1.5. The speed cannot go below this point as long as the item is held.\nOn use Isaac charges in the direction he's facing, gaining invincibility during the charge and dealing contact damage to enemies.\nThe dash deals 4 × DamageStat + 28 .\nThe dash can persist between multiple rooms if lined up correctly. This means it can be used to enter Curse Rooms for free.\nThe invincibility will not protect against Blood Donation Machines , Devil Beggars or similar self-sacrifice methods.\nCan drop by defeating The Headless Horseman."
   },
   "bomb bag": {
     "id": "131",
     "name": "Bomb Bag",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_131_bombbag.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_131_bombbag.png",
+    "description": "Spawns a familiar that follows Isaac and drops a random type of bomb every 3 rooms.\nThe first drop happens after 2 rooms."
   },
   "a lump of coal": {
     "id": "132",
     "name": "A Lump of Coal",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_132_alumpofcoal.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_132_alumpofcoal.png",
+    "description": "Tears gain a flat damage bonus of about +0.5-0.6 per tile of distance traveled, unaffected by other multipliers.\nCan drop by defeating Krampus."
   },
   "guppy s tail": {
     "id": "134",
     "name": "Guppy's Tail",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_134_guppystail.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_134_guppystail.png",
+    "description": "Grants a 33% chance of replacing room clear rewards with a Chest or a Locked Chest .\nGrants a 22% chance to replace the room clear reward with nothing.\nDue to these effects, keys become more scarce as they can often times be replaced with Locked Chests."
   },
   "guppy s paw": {
     "id": "133",
     "name": "Guppy's Paw",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_133_guppyspaw.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_133_guppyspaw.png",
+    "description": "+3 Soul Hearts.\r\n-1 Red Heart container."
   },
   "iv bag": {
     "id": "135",
     "name": "IV Bag",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_135_ivbag.png"
-  },
-  "best friend": {
-    "id": "136",
-    "name": "Best Friend",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_136_bestfriend.png"
-  },
-  "stigmata": {
-    "id": "138",
-    "name": "Stigmata",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_138_stigmata.png"
-  },
-  "mom s purse": {
-    "id": "139",
-    "name": "Mom's Purse",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_139_momspurse.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_135_ivbag.png",
+    "description": "Spawns coins on the cost of half a red heart (or a full heart starting from The Womb).\r\nEach use pays out with 1-2 coins on Normal Mode or 1 coin on Hard Mode.\r\nSpawns 0-1 coins instead when used by Keeper or Tainted Keeper .\r\nCan drop as a final payout from a Blood Donation Machine ."
   },
   "remote detonator": {
     "id": "137",
     "name": "Remote Detonator",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_137_remotedetonator.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_137_remotedetonator.png",
+    "description": "On pickup +5 bombs.\r\nWhile held Bombs will no longer explode automatically.\r\nOn use Detonates all bombs currently placed in the room.\r\nCannot control Troll Bombs and Megatroll Bombs ."
   },
-  "pageant boy": {
-    "id": "141",
-    "name": "Pageant Boy",
+  "best friend": {
+    "id": "136",
+    "name": "Best Friend",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_141_pageantboy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_136_bestfriend.png",
+    "description": "Spawns a decoy that distracts enemies and makes them target it instead of Isaac.\nThe decoy explodes after a few seconds, dealing 185 damage in a Megatroll Bomb radius.\nThe decoy is affected by some bomb modifiers."
+  },
+  "stigmata": {
+    "id": "138",
+    "name": "Stigmata",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_138_stigmata.png",
+    "description": "+1 full Red Heart container.\r\n+0.3 damage.\r\nRefills 1 heart container."
+  },
+  "mom s purse": {
+    "id": "139",
+    "name": "Mom's Purse",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_139_momspurse.png",
+    "description": "Spawns a random trinket.\nAllows 2 trinkets to be carried at once."
   },
   "bob s curse": {
     "id": "140",
     "name": "Bob's Curse",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_140_bobscurse.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_140_bobscurse.png",
+    "description": "+5 bombs.\r\nGrants bombs a poison effect, making them leave behind a lingering green poison cloud after exploding.\r\nThe poison cloud deals 5 damage per tick (15 per second).\r\nMakes Isaac immune to poison effects such as gas clouds from destroying Mushrooms or Sick Boom Flies.\r\nCan drop from the Super Sloth mini-boss."
+  },
+  "pageant boy": {
+    "id": "141",
+    "name": "Pageant Boy",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_141_pageantboy.png",
+    "description": "Spawns 7 random coins and a random penny trinket."
   },
   "scapular": {
     "id": "142",
     "name": "Scapular",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_142_scapular.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_142_scapular.png",
+    "description": "Once per room, when Isaac is down to his last half heart, he gains a soul heart.\nRe-entering the room allows for the effect to be triggered again.\nCannot be triggered by self-sacrifice methods such as Blood Donation Machines or Devil Beggars ."
   },
   "speed ball": {
     "id": "143",
     "name": "Speed Ball",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_143_speedball.png"
-  },
-  "prayer card": {
-    "id": "146",
-    "name": "Prayer Card",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_146_prayercard.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_143_speedball.png",
+    "description": "+0.3 speed.\n+0.2 shot speed."
   },
   "bum friend": {
     "id": "144",
     "name": "Bum Friend",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_144_bumfriend.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_144_bumfriend.png",
+    "description": "Spawns a familiar that follows Isaac and picks up coins from the ground.\nThe familiar will drop a random pickup after collecting 6 coins.\nAfter the initial drop, Bum Friend has a 67% chance to drop a pickup after collecting 3 coins, and a 33% chance to drop after 4 coins.\nHas an additional chance to drop batteries and items from the Beggar item pool.\nHe cannot pick up Sticky Nickels .\nHe can drop one of the following: red heart, bomb, key, card/rune, pill or a trinket."
   },
   "guppy s head": {
     "id": "145",
     "name": "Guppy's Head",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_145_guppyshead.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_145_guppyshead.png",
+    "description": "Spawns 2-4 friendly Blue Flies."
+  },
+  "prayer card": {
+    "id": "146",
+    "name": "Prayer Card",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_146_prayercard.png",
+    "description": "+1 Eternal Heart ."
   },
   "notched axe": {
     "id": "147",
     "name": "Notched Axe",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_147_notchedaxe.png"
-  },
-  "infestation": {
-    "id": "148",
-    "name": "Infestation",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_148_infestation.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_147_notchedaxe.png",
+    "description": "When used, replaces Isaac's tears with a pickaxe that can be swung like The Forgotten 's club.\nIt can damage enemies, break obstacles and blow open doors.\nUsing the item again holsters the pickaxe and allows Isaac to shoot tears again. This can be done repeatedly without wasting any charges.\nThe item has a total of 64 charges and cannot be recharged normally by clearing rooms or picking up batteries or battery-related items. It will fully recharge upon going down to a next floor or picking up Iron Bar .\nEach swing deals 3x Isaac's damage and depletes 2 charges.\nDestroying an obstacle or blowing open a door depletes 1 charge.\nOnce the item runs out of charges, the pickaxe breaks and cannot be used again until recharged."
   },
   "ipecac": {
     "id": "149",
     "name": "Ipecac",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_149_ipecac.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_149_ipecac.png",
+    "description": "+40 flat damage.\r\n×0.33 fire rate multiplier.\r\n×0.8 range multiplier.\r\n×0.8 shot speed multiplier.\r\n×0.4 tear size multiplier.\r\nIsaac's tears become explosive and are fired in an arc.\r\nEnemies within the blast radius become poisoned.\r\nDamage multipliers do not affect Ipecac's flat damage bonus.\r\nIpecac shots deal half a heart of self-damage, and a full heart with 85 or a higher damage stat.\r\nThe poison deals damage equal to BaseDamage + 2 , and ticks for a total of 2 times. The +40 flat damage does not apply to this formula."
+  },
+  "infestation": {
+    "id": "148",
+    "name": "Infestation",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_148_infestation.png",
+    "description": "Spawns 2-6 Blue Flies upon taking damage.\r\nHas a 1% chance of being dropped upon defeating The Husk."
   },
   "the mulligan": {
     "id": "151",
     "name": "The Mulligan",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_151_themulligan.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_151_themulligan.png",
+    "description": "Tears have a 16% chance to spawn a Blue Fly when they hit an enemy."
   },
   "tough love": {
     "id": "150",
     "name": "Tough Love",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_150_toughlove.png"
-  },
-  "mutant spider": {
-    "id": "153",
-    "name": "Mutant Spider",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_153_mutantspider.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_150_toughlove.png",
+    "description": "Adds a chance to shoot a tooth instead of a tear, that deals 3.2x Isaac's damage.\r\nThe chance for a tooth shot starts at 10% with 0 luck, and maximizes at 100% with 9 luck."
   },
   "technology 2": {
     "id": "152",
     "name": "Technology 2",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_152_technology2.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_152_technology2.png",
+    "description": "×0.66 fire rate multiplier.\nReplaces the tears fired from Isaac's right eye with a piercing laser with unlimited range that fires continuously as long as a fire button is held.\nThe laser deals ~13% of Isaac's damage 15 times per second (~195% per second).\nThe laser can knock back enemies."
+  },
+  "mutant spider": {
+    "id": "153",
+    "name": "Mutant Spider",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_153_mutantspider.png",
+    "description": "×0.42 fire rate multiplier.\r\nIsaac fires a spread of 4 tears at the same time."
   },
   "chemical peel": {
     "id": "154",
     "name": "Chemical Peel",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_154_chemicalpeel.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_154_chemicalpeel.png",
+    "description": "+2 flat damage to tears fired from Isaac's left eye."
   },
   "the peeper": {
     "id": "155",
     "name": "The Peeper",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_155_thepeeper.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_155_thepeeper.png",
+    "description": "×1.35 damage multiplier to tears fired from Isaac's left eye.\r\nSpawns a familiar that floats diagonally across the room and bounces off of walls.\r\nThe familiar blocks enemy shots and deals 8 damage per tick (17.14 per second) to enemies it passes through.\r\nHas a 1% chance of being dropped upon defeating The Bloat."
   },
   "habit": {
     "id": "156",
     "name": "Habit",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_156_habit.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_156_habit.png",
+    "description": "Adds +1 charge to Isaac's active item upon taking damage."
   },
   "bloody lust": {
     "id": "157",
     "name": "Bloody Lust",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_157_bloodylust.png"
-  },
-  "crystal ball": {
-    "id": "158",
-    "name": "Crystal Ball",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_158_crystalball.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_157_bloodylust.png",
+    "description": "Taking damage increases Isaac's damage stat for the remainder of the floor.\nDamage is increased up to 6 times per floor, in the following manner: +0.5 for the first hit and an additional +0.2 for each hit, until +1.5 at the final hit.\nThe maximum total is +6 damage."
   },
   "spirit of the night": {
     "id": "159",
     "name": "Spirit of the Night",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_159_spiritofthenight.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_159_spiritofthenight.png",
+    "description": "Grants spectral tears and flight."
+  },
+  "crystal ball": {
+    "id": "158",
+    "name": "Crystal Ball",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_158_crystalball.png",
+    "description": "While held +15% Planetarium chance, or +100% if at least one Treasure Room has been skipped.\r\nEven though it grants a 100% planetarium chance, it still cannot guarantee one to spawn due to some floor layouts not being capable of spawning one.\r\nOn use Reveals the floor layout and all map icons except the Super Secret Room.\r\n50/50 chance to drop either a Soul Heart or a random card/rune.\r\nCan drop as a final payout from a Fortune Telling Machine ."
   },
   "crack the sky": {
     "id": "160",
     "name": "Crack the Sky",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_160_crackthesky.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_160_crackthesky.png",
+    "description": "Summons 5 beams of light that tend to directly target enemies.\nBeams can hit the same enemy up to 8 times, dealing DamageStat + 20 damage per hit.\nEach beam lasts for 0.8 seconds and has a 3x3 cross-shaped area of effect."
   },
   "ankh": {
     "id": "161",
     "name": "Ankh",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_161_ankh.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_161_ankh.png",
+    "description": "+1 extra life.\r\nUpon death, respawns Isaac as ??? with 3 Soul Hearts in the most recent non-hostile room, and then removes the item.\r\nIf playing as Tainted ??? , will revive as that character instead."
   },
   "celtic cross": {
     "id": "162",
     "name": "Celtic Cross",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_162_celticcross.png"
-  },
-  "the candle": {
-    "id": "164",
-    "name": "The Candle",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_164_bluecandle.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_162_celticcross.png",
+    "description": "Taking damage has a chance to create a shield that negates all types of damage for 7 seconds, similarly to Book of Shadows .\r\nThe base chance is 20% and goes up to 100% with 27 luck."
   },
   "ghost baby": {
     "id": "163",
     "name": "Ghost Baby",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_163_ghostbaby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_163_ghostbaby.png",
+    "description": "Spawns a familiar that follows Isaac around and fires spectral tears that deal 3.5 damage.\r\nThe familiar shoots 1.36 times per second.\r\nCan drop by destroying a skull."
   },
-  "d20": {
-    "id": "166",
-    "name": "D20",
+  "the candle": {
+    "id": "164",
+    "name": "The Candle",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_166_d20.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_164_bluecandle.png",
+    "description": "When used, Isaac raises the candle above his head. Pressing a fire button will shoot out a blue flame in the chosen direction.\r\nThe flame shrinks in size while traveling and disappears after 2 seconds.\r\nThe flame deals 23 to 11.5 damage per tick depending on its size, 6 times per second.\r\nA single flame can deal a total of 160 damage.\r\nThe flame also destroys enemy shots and shopkeepers.\r\nIt can travel over pits, but not through obstacles.\r\nThe flame cannot hurt Isaac."
   },
   "cat o nine tails": {
     "id": "165",
     "name": "Cat-o-nine-tails",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_165_catoninetails.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_165_catoninetails.png",
+    "description": "+1 damage.\r\n+0.23 shot speed."
+  },
+  "d20": {
+    "id": "166",
+    "name": "D20",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_166_d20.png",
+    "description": "Rerolls all pickups and chests in the room.\nCannot reroll items into item pedestals."
   },
   "harlequin baby": {
     "id": "167",
     "name": "Harlequin Baby",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_167_harlequinbaby.png"
-  },
-  "daddy longlegs": {
-    "id": "170",
-    "name": "Daddy Longlegs",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_170_daddylonglegs.png"
-  },
-  "polyphemus": {
-    "id": "169",
-    "name": "Polyphemus",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_169_polyphemus.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_167_harlequinbaby.png",
+    "description": "Spawns a familiar that follows Isaac around and fires 2 tears at once in a V pattern which each deal 4 damage.\r\nThe familiar shoots 1.36 times per second.\r\nHas a 1% chance of being dropped upon defeating Mr. Fred."
   },
   "epic fetus": {
     "id": "168",
     "name": "Epic Fetus",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_168_epicfetus.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_168_epicfetus.png",
+    "description": "Replaces Isaac's tears with guided missiles.\r\nPressing a fire button spawns a crosshair that can be controlled with the fire buttons, summoning a missile to its position 1.5 seconds later.\r\nEach missile deals 20x Isaac's damage.\r\nMissiles are affected by some bomb modifiers.\r\nThe speed of the crosshair is not affected by Isaac's shot speed."
+  },
+  "polyphemus": {
+    "id": "169",
+    "name": "Polyphemus",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_169_polyphemus.png",
+    "description": "+4 flat damage.\r\n×2 damage multiplier.\r\n×0.42 fire rate multiplier.\r\nWhen a tear kills an enemy, it continues to travel on with any leftover damage."
+  },
+  "daddy longlegs": {
+    "id": "170",
+    "name": "Daddy Longlegs",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_170_daddylonglegs.png",
+    "description": "Creates a shadow that follows Isaac around and causes Daddy Long Legs' foot to stomp on enemies every ~4 seconds.\nEach stomp can hit an enemy twice for a total of 40 damage (20 per tick).\nThe foor stays down for about 1 second and can hit multiple enemies at once, including ones that come in contact with it while it's down.\nThe familiar prioritizes enemies with the most health first, and then target ones closest to Isaac.\r\nHas a 1% chance of being dropped upon defeating Daddy Long Legs."
   },
   "spider butt": {
     "id": "171",
     "name": "Spider Butt",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_171_spiderbutt.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_171_spiderbutt.png",
+    "description": "Deals 10 damage to all enemies in the room and slows them down for 4 seconds.\nEnemies killed by Spider Butt spawn 1-3 Blue Spiders."
   },
   "sacrificial dagger": {
     "id": "172",
     "name": "Sacrificial Dagger",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_172_sacrificialdagger.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_172_sacrificialdagger.png",
+    "description": "Spawns a sideways dagger that orbits around Isaac, blocks shots and deals damage to enemies that come in contact with it.\r\nThe dagger deals 15 damage per tick (112.5 per second)."
   },
   "mitre": {
     "id": "173",
     "name": "Mitre",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_173_mitre.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_173_mitre.png",
+    "description": "Grants a 33% chance to convert any red heart drop into a Soul Heart ."
   },
   "rainbow baby": {
     "id": "174",
     "name": "Rainbow Baby",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_174_rainbowbaby.png"
-  },
-  "stem cells": {
-    "id": "176",
-    "name": "Stem Cells",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_176_stemcells.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_174_rainbowbaby.png",
+    "description": "Spawns a familiar that follows Isaac around and shoots tears that have random effects similar to other familiars.\nThe familiar shoots 1.36 times per second.\nThe familiar can shoot the following types of tears:\n• short-range blood tears that deal 6 damage;\n• plain red tears that deal 3.5 damage;\n• V-pattern double shot tears that deal 3.5 damage each;\n• charming purple tears that deal 3.5 damage;\n• slowing black tears that deal 3.5 damage;\n• spectral tears that deal 3.5 damage;\n• long-range homing violet tears that deal 3.5 damage;\n• long-range spectral and homing tears that deal 3.5 damage;\n• blood tear that deals 4 damage;\n• large blood tear that deals 5 damage."
   },
   "dad s key": {
     "id": "175",
     "name": "Dad's Key",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_175_dadskey.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_175_dadskey.png",
+    "description": "Opens all doors in the current room.\nIt can open:\n• any normal door that is closed during combat;\n• any door requiring a key/bomb/heart;\n• Secret Rooms and Super Secret Rooms;\n• Challenge Rooms and Boss Challenge Rooms;\n• the door to the Mega Satan arena;\n• the Boss Rush door from the inside;\n• a mini-boss door from the inside;\n• a boss room door from the inside (excluding Mom's room);\n• the exit door in Greed Mode."
+  },
+  "stem cells": {
+    "id": "176",
+    "name": "Stem Cells",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_176_stemcells.png",
+    "description": "+1 full Red Heart container.\n+0.16 shot speed.\nHeals 1 red heart container."
   },
   "portable slot": {
     "id": "177",
     "name": "Portable Slot",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_177_portableslot.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_177_portableslot.png",
+    "description": "Has a chance to drop a random pickup, spawn a Neutral Fly, or grant a Pretty Fly , for the cost of 1¢.\r\nCan be obtained via a Slot Machine ."
   },
   "holy water": {
     "id": "178",
     "name": "Holy Water",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_178_holywater.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_178_holywater.png",
+    "description": "Spawns a familiar that follows Isaac around and launches itself while Isaac is shooting.\r\nUpon hitting an enemy, the familiar deals 7 damage and shatters, creating a pool of damaging blue creep that petrifies enemies that come in contact with it.\r\nThe pool lasts for ~9 seconds and deals 8 damage per tick (24 per second).\r\nOnce the pool disappears completely, Holy Water will respawn and can be launched again.\r\nIt will not respawn immediately after entering a new room."
   },
   "fate": {
     "id": "179",
     "name": "Fate",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_179_fate.png"
-  },
-  "tooth picks": {
-    "id": "183",
-    "name": "Tooth Picks",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_183_toothpicks.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_179_fate.png",
+    "description": "+1 Eternal heart .\r\nGrants flight."
   },
   "the black bean": {
     "id": "180",
     "name": "The Black Bean",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_180_blackbean.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_180_blackbean.png",
+    "description": "Taking damage causes Isaac to fart 5 times in quick succession, knocking back and dealing poison damage to nearby enemies.\r\nThe farts deals 5 damage and the poison deals 6x Isaac's damage for 6 ticks."
   },
   "white pony": {
     "id": "181",
     "name": "White Pony",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_181_whitepony.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_181_whitepony.png",
+    "description": "While held Grants flight and sets Isaac's minimum speed to 1.5. The speed cannot go below this point as long as the item is held.\nOn use Isaac charges in the direction he's facing, gaining invincibility during the charge and dealing contact damage to enemies while also creating beams of light behind him.\nThe dash deals DamageStat × 4 + 28 .\nThe dash can persist between multiple rooms if lined up correctly. This means it can be used to enter Curse Rooms for free.\nThe invincibility will not protect against Blood Donation Machines , Devil Beggars or similar self-sacrifice methods.\nThe beams of light deal DamageStat × 4 + 10 and trail behind him as he charges.\nCan drop by defeating Conquest."
   },
-  "holy grail": {
-    "id": "184",
-    "name": "Holy Grail",
+  "tooth picks": {
+    "id": "183",
+    "name": "Tooth Picks",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_184_holygrail.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_183_toothpicks.png",
+    "description": "+0.7 tears.\n+0.16 shot speed."
   },
   "sacred heart": {
     "id": "182",
     "name": "Sacred Heart",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_182_sacredheart.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_182_sacredheart.png",
+    "description": "+1 full Red Heart container.\r\nx2.3 damage multiplier.\r\n+1 flat damage.\r\n-0.4 tears.\r\n-0.25 shot speed.\r\nFully heals Isaac.\r\nGrants homing tears."
   },
-  "dead dove": {
-    "id": "185",
-    "name": "Dead Dove",
+  "holy grail": {
+    "id": "184",
+    "name": "Holy Grail",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_185_deaddove.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_184_holygrail.png",
+    "description": "+1 full Red Heart container.\nHeals 1 red heart container.\nGrants flight."
   },
   "blood rights": {
     "id": "186",
     "name": "Blood Rights",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_186_bloodrights.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_186_bloodrights.png",
+    "description": "+0.48 fire rate for the current room when used for the first time on a stage.\r\nDeals a full heart of damage and activates The Necronomicon effect, dealing 40 damage to all enemies in the room.\r\nDeals only half a heart of damage after the first use in the same room, and adds only +0.15 fire rate for the current stage bonus.\r\nPrioritizes red hearts.\r\nBypasses boss armor."
+  },
+  "dead dove": {
+    "id": "185",
+    "name": "Dead Dove",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_185_deaddove.png",
+    "description": "Grants flight.\nGrants spectral tears."
   },
   "guppy s hairball": {
     "id": "187",
     "name": "Guppy's Hairball",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_187_guppyshairball.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_187_guppyshairball.png",
+    "description": "Spawns a hairball familiar that loosely follows behind Isaac.\r\nThe familiar can block shots and be swung to damage enemies, dealing 5 damage per tick (21.43 per second).\r\nEach time it kills an enemy, it grows in size and its damage increases by +2. It can grow up to 5 times, for a maximum of 13 damage per tick (55.71 per second).\r\nThe damage dealt by it is equal to: (level × 2) + 3 .\r\nUpon entering a new floor, the hairball decreases its level:\r\n• If level 2, reverts to level 1.\r\n• If level 3 or 4, reverts to level 2.\r\n• If level 5, reverts to level 3."
   },
   "abel": {
     "id": "188",
     "name": "Abel",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_188_abel.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_188_abel.png",
+    "description": "Spawns a familiar that mirrors Isaac's movement and shoots tears towards him that deal 3.5 damage.\r\nWhen used by Cain or Tainted Cain , the familiar's tears are red and deal 7.5 damage.\r\nThe familiar shoots 1.88 times per second."
   },
   "smb super fan": {
     "id": "189",
     "name": "SMB Super Fan",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_189_smbsuperfan.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_189_smbsuperfan.png",
+    "description": "+1 heart container.\r\n+0.3 damage.\r\n+0.2 tears.\r\n+0.2 speed.\r\n+2.5 range.\r\nFully heals Isaac."
   },
   "pyro": {
     "id": "190",
     "name": "Pyro",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_190_pyro.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_190_pyro.png",
+    "description": "+99 bombs."
   },
   "telepathy for dummies": {
     "id": "192",
     "name": "Telepathy For Dummies",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_192_telepathyfordummies.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_192_telepathyfordummies.png",
+    "description": "+3 range and homing tears for the current room."
   },
   "3 dollar bill": {
     "id": "191",
     "name": "3 Dollar Bill",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_191_3dollarbill.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_191_3dollarbill.png",
+    "description": null
   },
   "meat": {
     "id": "193",
     "name": "MEAT!",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_193_meat.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_193_meat.png",
+    "description": "+1 full Red Heart container.\r\n+0.3 damage.\r\nHeals 1 additional Red Heart."
   },
   "magic 8 ball": {
     "id": "194",
     "name": "Magic 8 Ball",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_194_magic8ball.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_194_magic8ball.png",
+    "description": "On pickup Drops a random tarot card.\nWhile held +0.16 shot speed.\n+15% chance for the first Planetarium to appear."
   },
   "mom s coin purse": {
     "id": "195",
     "name": "Mom's Coin Purse",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_195_momscoinpurse.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_195_momscoinpurse.png",
+    "description": "Spawns 4 random pills."
   },
   "squeezy": {
     "id": "196",
     "name": "Squeezy",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_196_squeezy.png"
-  },
-  "box": {
-    "id": "198",
-    "name": "Box",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_198_box.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_196_squeezy.png",
+    "description": "On pickup Spawns 2 Soul Hearts .\nWhile held +0.4 tears."
   },
   "jesus juice": {
     "id": "197",
     "name": "Jesus Juice",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_197_jesusjuice.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_197_jesusjuice.png",
+    "description": "+0.5 damage.\n+1.5 range."
+  },
+  "box": {
+    "id": "198",
+    "name": "Box",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_198_box.png",
+    "description": "Spawns 1 coin, key, bomb, heart, card/rune, pill and trinket.\nThe pickups can be of any variety (nickels, dimes, soul hearts, double bombs, golden trinkets, etc)."
   },
   "mom s key": {
     "id": "199",
     "name": "Mom's Key",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_199_momskey.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_199_momskey.png",
+    "description": "+2 keys.\r\nIf a chest spawns hearts, coins, bombs and/or keys, a second group of said pickups will spawn, effectively doubling the average pickup yield.\r\nDoes not affect Red Chests and Old Chests ."
   },
   "mom s eyeshadow": {
     "id": "200",
     "name": "Mom's Eyeshadow",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_200_momseyeshadow.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_200_momseyeshadow.png",
+    "description": "Gives a chance to shoot charming tears that cause enemies to temporarily fight on Isaac's side.\r\nThe chance to fire a charming tear scales with luck, starting at 10% with 0 luck, and maxing out at 100% with 26.95 luck: 1 / (10 - (LuckStat / 3)) ."
   },
   "iron bar": {
     "id": "201",
     "name": "Iron Bar",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_201_ironbar.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_201_ironbar.png",
+    "description": "+0.3 damage.\r\nGrants a chance to shoot concussive tears that cause enemies to walk around randomly.\r\nThe chance to fire concussive tears scales with luck, maxing out at 100% with 27 luck."
   },
   "midas touch": {
     "id": "202",
     "name": "Midas' Touch",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_202_midastouch.png"
-  },
-  "humbleing bundle": {
-    "id": "203",
-    "name": "Humbleing Bundle",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_203_humblingbundle.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_202_midastouch.png",
+    "description": "Isaac can petrify enemies and turn them into gold by touching them.\r\nEnemies killed in this state will drop 1-4 pennies, or 0-1 when held by Keeper or Tainted Keeper .\r\nTouching enemies also deals contact damage to them based on the number of coins Isaac has: 3.5 + 0.2 × coins .\r\nDamage is dealt 2 times per second per enemy."
   },
   "fanny pack": {
     "id": "204",
     "name": "Fanny Pack",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_204_fannypack.png"
-  },
-  "guillotine": {
-    "id": "206",
-    "name": "Guillotine",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_206_guillotine.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_204_fannypack.png",
+    "description": "Grants a 50% chance to drop a random coin, bomb, key or heart when taking damage."
   },
   "sharp plug": {
     "id": "205",
     "name": "Sharp Plug",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_205_sharpplug.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_205_sharpplug.png",
+    "description": "Grants the ability to recharge your active item in exchange for self-damage. This can be accomplished by attempting to use an active item when it's not fully charged.\nEach charge slot costs one half-heart.\nRed hearts are prioritized when sacrificing health.\nCannot deal fatal damage. It can leave Isaac at a minimum of half a heart."
+  },
+  "humbleing bundle": {
+    "id": "203",
+    "name": "Humbleing Bundle",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_203_humblingbundle.png",
+    "description": "Provides a 50% chance to transform all bombs, keys, pennies and red hearts into their respective double variants."
   },
   "ball of bandages": {
     "id": "207",
     "name": "Ball of Bandages",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_207_ballofbandages.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_207_ballofbandages.png",
+    "description": "Spawns an orbital familiar which blocks shots and deals contact damage.\r\nThe familiar can be upgraded up to 4 times by obtaining additional Balls of Bandages. Each level has its own characteristics.\r\nLevel 1: Blocks projectiles and deals 7 damage per tick (52.5 per second).\r\nLevel 2: Gains the ability to shoot tears alongside Isaac, 1.36 times per second, that deal 3.5 damage and can charm enemies.\r\nLevel 3: Transforms from an orbital to a follower that chases nearby enemies and deals 5 damage per tick (12.5 per second). It will fire charming tears in the direction Isaac shoots.\r\nLevel 4: Increases the size of Bandage Girl and now deals 10 damage per tick (25 per second). Enemies killed by its tears have a chance to drop a full red heart.\r\nObtaining additional Balls of Bandages will create a new level 1 ball and start the cycle again.\r\nCan drop after defeating a Harbinger."
+  },
+  "guillotine": {
+    "id": "206",
+    "name": "Guillotine",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_206_guillotine.png",
+    "description": "+1 damage.\r\n+0.5 fire rate.\r\nDetaches Isaac's head from his body, and makes it rotate around his body, allowing it to deal contact damage and block projectiles.\r\nThe tears are still shot from Isaac's head, resulting in a non-constant line of fire while standing still.\r\nThe head deals 7 damage per tick (52.5 per second)."
   },
   "champion belt": {
     "id": "208",
     "name": "Champion Belt",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_208_championbelt.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_208_championbelt.png",
+    "description": "+1 damage.\r\nIncreases the chance for champion enemies to appear by 15%.\r\nDoes not affect the spawn rate of champion bosses.\r\nDoes not affect the champion rates in The Void."
   },
   "butt bombs": {
     "id": "209",
     "name": "Butt Bombs",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_209_buttbombs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_209_buttbombs.png",
+    "description": "+5 bombs.\nBombs cloud up the screen upon detonating, briefly confusing and dealing 10 damage to all enemies in the room.\nButt Bombs heal the following bosses by 25% of their maximum HP: Turdlings, Dingle, Dangle, Brownie and Clog.\r\nHas a 1% chance of being dropped upon defeating Colostomia."
   },
   "gnawed leaf": {
     "id": "210",
     "name": "Gnawed Leaf",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_210_gnawedleaf.png"
-  },
-  "guppy s collar": {
-    "id": "212",
-    "name": "Guppy's Collar",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_212_guppyscollar.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_210_gnawedleaf.png",
+    "description": "Standing still and not pressing the move or attack buttons for one second will make Isaac invulnerable until the next key press.\nInvincibility will be removed by placing bombs or using active items.\r\nHas a 1% chance of being dropped upon defeating Great Gideon."
   },
   "spiderbaby": {
     "id": "211",
     "name": "Spiderbaby",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_211_spiderbaby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_211_spiderbaby.png",
+    "description": "Spawns 3-5 friendly Blue Spiders upon taking damage.\r\nHas a 1% chance of being dropped upon defeating The Widow."
+  },
+  "guppy s collar": {
+    "id": "212",
+    "name": "Guppy's Collar",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_212_guppyscollar.png",
+    "description": "Grants a permanent 50% chance to respawn on death, returning Isaac to the previous room.\nRespawning via this item will leave Isaac on half a red heart, or half soul heart if he had no red heart containers."
   },
   "lost contact": {
     "id": "213",
     "name": "Lost Contact",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_213_lostcontact.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_213_lostcontact.png",
+    "description": "-0.15 shot speed.\r\nCauses Isaac's tears to destroy enemy projectiles upon impact."
   },
   "anemic": {
     "id": "214",
     "name": "Anemic",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_214_anemic.png"
-  },
-  "goat head": {
-    "id": "215",
-    "name": "Goat Head",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_215_goathead.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_214_anemic.png",
+    "description": "+1.5 range.\r\nIsaac leaves a trail of red creep upon taking damage.\r\nThe creep deals 2 damage per tick (20 per second)."
   },
   "ceremonial robes": {
     "id": "216",
     "name": "Ceremonial Robes",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_216_ceremonialrobes.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_216_ceremonialrobes.png",
+    "description": "+3 Black Hearts.\r\n+1 damage.\r\nHas a 1% chance of being dropped upon defeating The Heretic."
+  },
+  "goat head": {
+    "id": "215",
+    "name": "Goat Head",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_215_goathead.png",
+    "description": "100% chance for a devil/angel room to spawn after beating a boss, regardless of damage taken.\r\nThe devil/angel room won't disappear after leaving.\r\nEven if the boss has been defeated on the current floor, the item will still spawn a devil/angel room.\r\nDoes not work on floors that don't normally spawn a devil/angel room."
   },
   "mom s wig": {
     "id": "217",
     "name": "Mom's Wig",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_217_momswig.png"
-  },
-  "old bandage": {
-    "id": "219",
-    "name": "Old Bandage",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_219_oldbandage.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_217_momswig.png",
+    "description": "On pickup Heals 1 Red Heart container.\r\nWhile held Makes Isaac occasionally spawn friendly Blue Spiders while firing tears.\r\nUp to 5 spiders can be spawned at once.\r\nThe chance to spawn spiders scales with luck, and goes up to 100% with 10 luck."
   },
   "placenta": {
     "id": "218",
     "name": "Placenta",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_218_placenta.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_218_placenta.png",
+    "description": "On pickup +1 full Red Heart container.\r\nHeals 1 additional Red Heart.\r\nWhile held Grants Isaac a chance to regenerate half a red heart each time the in-game timer hits a new minute (00 seconds).\r\nCan drop from destroying polyps in The Womb."
+  },
+  "old bandage": {
+    "id": "219",
+    "name": "Old Bandage",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_219_oldbandage.png",
+    "description": "+1 empty Red Heart container.\r\nGrants a chance of dropping a red heart after taking damage.\r\nThe chance starts at 20% with 0 luck, and goes up to 100% with 80 luck."
   },
   "sad bombs": {
     "id": "220",
     "name": "Sad Bombs",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_220_sadbombs.png"
-  },
-  "rubber cement": {
-    "id": "221",
-    "name": "Rubber Cement",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_221_rubbercement.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_220_sadbombs.png",
+    "description": "+5 bombs.\nMakes Isaac's bombs shoot 10 tears in every direction upon exploding.\nThe tears deal DamageStat + 25 damage and are affected by any tear modifiers Isaac has, including weapon modifiers."
   },
   "anti gravity": {
     "id": "222",
     "name": "Anti-Gravity",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_222_antigravity.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_222_antigravity.png",
+    "description": "+1 fire rate.\r\nHolding the fire button causes tears to hover in midair. Upon releasing the button, tears are shot in the direction they were originally fired at.\r\nIf the button is not released, tears will fire on their own after 3 seconds."
   },
   "pyromaniac": {
     "id": "223",
     "name": "Pyromaniac",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_223_pyromaniac.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_223_pyromaniac.png",
+    "description": "+5 bombs.\nMakes explosions heal Isaac for half a red heart rather than damaging him.\nGrants immunity to damage from fire places or enemy fires, as well as the lake of lava in The Beast fight.\nNo healing occurs if Isaac has no empty red heart containers."
+  },
+  "rubber cement": {
+    "id": "221",
+    "name": "Rubber Cement",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_221_rubbercement.png",
+    "description": "Makes Isaac's tears bounce off of walls, enemies, bombs and environmental objects."
   },
   "cricket s body": {
     "id": "224",
     "name": "Cricket's Body",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_224_cricketsbody.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_224_cricketsbody.png",
+    "description": "+0.5 fire rate.\r\n×0.8 range multiplier.\r\n+0.1 tear size.\r\nIsaac's tears split in 4 smaller tears upon hitting something or falling on the ground.\r\nSmaller tears deal half of Isaac's damage and inherit the original tear's status effects."
   },
   "gimpy": {
     "id": "225",
     "name": "Gimpy",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_225_gimpy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_225_gimpy.png",
+    "description": "Grants Isaac a chance to spawn a Soul Heart upon taking damage.\r\nThe chance to drop a Soul Heart starts at 8% with 0 luck, and goes up to 100% with 46 luck.\r\nGrants enemies a chance to drop a Half Red Heart upon death. This chance depends on the enemies' base health points:\r\n• <10 HP → 1% chance\r\n• 10-29 HP → 5% chance\r\n• 30+ HP → 10% chance\r\nHas a 1% chance of being dropped upon defeating Sisters Vis."
   },
   "black lotus": {
     "id": "226",
     "name": "Black Lotus",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_226_blacklotus.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_226_blacklotus.png",
+    "description": "+1 full Red Heart container.\n+1 Soul Heart.\n+1 Black Heart."
   },
   "piggy bank": {
     "id": "227",
     "name": "Piggy Bank",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_227_piggybank.png"
-  },
-  "mom s perfume": {
-    "id": "228",
-    "name": "Mom's Perfume",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_228_momsperfume.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_227_piggybank.png",
+    "description": "+3¢.\r\nSpawns 1-2 Pennies upon taking damage.\r\nWhen held by Keeper or Tainted Keeper , will spawn 0-1 Pennies instead."
   },
   "monstro s lung": {
     "id": "229",
     "name": "Monstro's Lung",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_229_monstroslung.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_229_monstroslung.png",
+    "description": "×0.23 fire rate multiplier.\r\nReplaces Isaac's tears with a charge-attack that fires a barrage of 14 tears, similarly to Monstro's attack.\r\nEach tear has a random size multiplier between 0.9x and 1.33x, but deals the same amount of damage, equal to Isaac's damage stat.\r\nHas a 1% chance of being dropped upon defeating Monstro II."
+  },
+  "mom s perfume": {
+    "id": "228",
+    "name": "Mom's Perfume",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_228_momsperfume.png",
+    "description": "+0.5 fire rate.\r\nAdds a chance to shoot fear tears that cause enemies to run away from Isaac.\r\nThe chance to shoot fear tears scales with luck, starting at 15% with 0 luck, and goes up to 100% with 85 luck."
   },
   "abaddon": {
     "id": "230",
     "name": "Abaddon",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_230_abaddon.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_230_abaddon.png",
+    "description": "On pickup +1.5 damage.\r\n+0.2 speed.\r\nConverts all red heart containers into black hearts, and adds 2 additional black hearts.\r\nBone hearts will not be removed, but only emptied.\r\nWhile held Adds a chance to shoot fear tears that cause enemies to run away from Isaac.\r\nThe chance to shoot fear tears scales with luck, starting at 15% with 0 luck, and goes up to 100% with 85 luck."
   },
   "ball of tar": {
     "id": "231",
     "name": "Ball of Tar",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_231_balloftar.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_231_balloftar.png",
+    "description": "Makes Isaac leave a trail of slowing black creep on the ground.\nAdds a chance to shoot slowing tears that reduce the movement speed of enemies and their projectiles.\nThe chance to shoot slowing tears scales with luck, going up to 100% at 18 luck."
   },
   "stop watch": {
     "id": "232",
     "name": "Stop Watch",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_232_stopwatch.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_232_stopwatch.png",
+    "description": "+0.3 speed.\nSlows all enemies' movement and attack speed by 20%.\r\nSlows the music speed by about 10%."
   },
   "tiny planet": {
     "id": "233",
     "name": "Tiny Planet",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_233_tinyplanet.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_233_tinyplanet.png",
+    "description": "+6.5 range.\nGrants spectral tears.\nTears now revolve around Isaac at a fixed distance until they hit the ground.\nChanging the firing direction will redirect all previously fired tears."
   },
   "infestation 2": {
     "id": "234",
     "name": "Infestation 2",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_234_infestation2.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_234_infestation2.png",
+    "description": "Spawns a friendly Blue Spider upon killing an enemy.\nBlue Spiders themselves cannot spawn more Blue Spiders when killing enemies."
   },
   "e coli": {
     "id": "236",
     "name": "E. Coli",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_236_ecoli.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_236_ecoli.png",
+    "description": "Grants Isaac the ability to turn non-boss enemies into poop by touching them.\nPoops spawned this way can yield pickups when destroyed.\nIncreases the chance of poops dropping hearts."
   },
   "death s touch": {
     "id": "237",
     "name": "Death's Touch",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_237_deathstouch.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_237_deathstouch.png",
+    "description": "+1.5 damage.\r\n-0.3 tears.\r\n×2 tear size.\r\nGrants piercing tears.\r\nTears are replaced by Death's scythes."
   },
   "key piece 1": {
     "id": "238",
     "name": "Key Piece 1",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_238_keypiece1.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_238_keypiece1.png",
+    "description": "+25% chance to spawn an Angel Room instead of a Devil Room when defeating the floor's boss.\r\nGrants a +2.5% chance to convert Red Heart pickups into Eternal Hearts .\r\nUnlocks the door to the Mega Satan fight in The Chest or Dark Room when combined with Key Piece 2 .\r\nSpawns when defeating Uriel if not already in possession."
   },
   "key piece 2": {
     "id": "239",
     "name": "Key Piece 2",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_239_keypiece2.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_239_keypiece2.png",
+    "description": "+25% chance to spawn an Angel Room instead of a Devil Room when defeating the floor's boss.\r\nGrants a +2.5% chance to convert Red Heart pickups into Eternal Hearts .\r\nUnlocks the door to the Mega Satan fight in The Chest or Dark Room when combined with Key Piece 1 .\r\nSpawns when defeating Gabriel if not already in possession."
   },
   "experimental treatment": {
     "id": "240",
     "name": "Experimental Treatment",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_240_experimentaltreatment.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_240_experimentaltreatment.png",
+    "description": "Grants 4 random stat increases and 2 random stat decreases.\nEach stat can change for a fixed amount:\n±1 heart container.\n±1 flat damage.\n±0.5 fire rate.\n±2.5 range.\n±0.2 shot speed.\n±0.2 speed.\n±1 luck."
   },
   "contract from below": {
     "id": "241",
     "name": "Contract from Below",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_241_contractfrombelow.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_241_contractfrombelow.png",
+    "description": "Any reward spawned from clearing a room is doubled, but has a 33% chance to be removed completely.\nDoes not apply to trinkets or Pennies dropped in Greed Mode."
   },
   "infamy": {
     "id": "242",
     "name": "Infamy",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_242_infamy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_242_infamy.png",
+    "description": "Grants a 50% chance to block any projectile that hits Isaac.\nA successful block is indicated by Isaac briefly flashing blue.\nCannot block explosives, lasers, lines of fire from fireballs and projectiles from Big Bony, Coal Boy and Danny.\nEven though the mask is only seen on Isaac's face, projectiles can be blocked from any direction.\r\nHas a 1% chance of being dropped upon defeating Mask of Infamy."
   },
   "trinity shield": {
     "id": "243",
     "name": "Trinity Shield",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_243_trinityshield.png"
-  },
-  "blue map": {
-    "id": "246",
-    "name": "Blue Map",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_246_bluemap.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_243_trinityshield.png",
+    "description": "Spawns a shield that stays in front of Isaac's shooting direction and blocks incoming projectiles.\nThe shield can also be placed diagonally by holding two firing buttons at once."
   },
   "tech 5": {
     "id": "244",
     "name": "Tech.5",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_244_techpointfive.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_244_techpointfive.png",
+    "description": "Grants Isaac a laser with unlimited range and piercing that fires alongside his original tears.\r\nThe laser has a 1/6 chance to fire every ~0.07 seconds, firing at an average of 2.5 times per second.\r\nDamage dealt by the laser is equal to Isaac's damage stat.\r\nThe laser has a 5% chance to gain a random status effect."
   },
   "20 20": {
     "id": "245",
     "name": "20/20",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_245_2020.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_245_2020.png",
+    "description": "×0.8 damage multiplier.\r\nIsaac now fires 2 tears at once, one from each eye.\r\nPrevents shot multipliers such as The Inner Eye and Mutant Spider from decreasing tears. This also affects Polyphemus ."
+  },
+  "blue map": {
+    "id": "246",
+    "name": "Blue Map",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_246_bluemap.png",
+    "description": "Reveals the locations of Secret Rooms and Super Secret Rooms on the map.\nIts effects appear as an icon next to the map."
   },
   "bffs": {
     "id": "247",
     "name": "BFFS!",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_247_bffs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_247_bffs.png",
+    "description": "Increases the size of Isaac's familiars by 25%, and improves the effectiveness of most of them.\nDoubles the damage of familiars that deal damage through tears or contact damage.\nIncreases the frequency of pickup-generating familiars dropping pickups.\nGrants unique synergies for some familiars. Check the synergies section of familiar pages for more details."
   },
   "hive mind": {
     "id": "248",
     "name": "Hive Mind",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_248_hivemind.png"
-  },
-  "there s options": {
-    "id": "249",
-    "name": "There's Options",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_249_theresoptions.png"
-  },
-  "starter deck": {
-    "id": "251",
-    "name": "Starter Deck",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_251_starterdeck.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_248_hivemind.png",
+    "description": "Increases the size and doubles the damage of friendly Blue Spiders, Blue Flies and Locusts.\r\nMakes fly and spider familiars stronger, exactly like BFFS! ."
   },
   "bogo bombs": {
     "id": "250",
     "name": "BOGO Bombs",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_250_bogobombs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_250_bogobombs.png",
+    "description": "Turns all newly spawned Bombs into Double Bombs ."
+  },
+  "there s options": {
+    "id": "249",
+    "name": "There's Options",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_249_theresoptions.png",
+    "description": "Makes 2 items spawn after defeating a boss instead of one. Only one can be taken; the other will disappear.\nTwo items will also spawn after clearing Boss Rush.\nDoes not affect mini-boss drops.\nDoes not affect the Mom fight drops."
+  },
+  "starter deck": {
+    "id": "251",
+    "name": "Starter Deck",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_251_starterdeck.png",
+    "description": "On pickup Spawns a random card/rune.\r\nWhile held Allows Isaac to carry 2 cards/runes at once.\r\nReplaces all pills with cards. This works retroactively, affecting pills already spawned on the floor.\r\nCards can be cycled through by using the drop button."
   },
   "little baggy": {
     "id": "252",
     "name": "Little Baggy",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_252_littlebaggy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_252_littlebaggy.png",
+    "description": "On pickup Spawns a random pill.\r\nWhile held Allows Isaac to carry 2 pills at once. Pills can be cycled through by using the drop button.\r\nConverts all cards into pills. This works retroactively."
   },
   "magic scab": {
     "id": "253",
     "name": "Magic Scab",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_253_magicscab.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_253_magicscab.png",
+    "description": "+1 full Red Heart container.\r\n+1 luck.\r\nHeals 1 additional Red Heart."
   },
   "blood clot": {
     "id": "254",
     "name": "Blood Clot",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_254_bloodclot.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_254_bloodclot.png",
+    "description": "Applies the following stats to Isaac's left eye:\n+1 flat damage.\n+2.75 range.\nCan drop from destroying polyps in The Womb."
   },
   "screw": {
     "id": "255",
     "name": "Screw",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_255_screw.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_255_screw.png",
+    "description": "+0.5 tears.\r\n+0.2 shot speed."
   },
   "hot bombs": {
     "id": "256",
     "name": "Hot Bombs",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_256_hotbombs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_256_hotbombs.png",
+    "description": "+5 bombs.\r\nGrants immunity to damage from fire places.\r\nMakes Isaac's bombs deal contact damage and leave behind a fire that damages enemies and remains there for 10 seconds.\r\nThe fire can block 4 shots and/or deal 4 ticks of contact damage before disappearing.\r\nThe fire cannot hurt Isaac.\r\nBombs deal 16 contact damage to enemies. The fire deals 23 damage at full durability, then 17.25, and finally 2x11.5.\r\nHas a 1% chance of being dropped upon defeating Hornfel."
   },
   "missing no": {
     "id": "258",
     "name": "Missing No.",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_258_missingno.png"
-  },
-  "fire mind": {
-    "id": "257",
-    "name": "Fire Mind",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_257_firemind.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_258_missingno.png",
+    "description": "Randomizes Isaac's passive items and stats on pickup and at the start of every floor.\r\nStats gain a random modifier that does not stack between floors. These modifiers can be either 0 or:\r\n±0.2 speed.\r\n±2.5 range\r\n±0.5 fire rate.\r\n±0.2 shot speed.\r\n±1 flat damage.\r\n±1 luck."
   },
   "dark matter": {
     "id": "259",
     "name": "Dark Matter",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_259_darkmatter.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_259_darkmatter.png",
+    "description": "+1 damage.\r\nAdds a chance to shoot fear tears that cause enemies to run away from Isaac.\r\nThe chance to shoot fear tears starts at 33.33% with 0 luck, and goes up to 100% with 20 luck.\r\nHas a 1% chance of being dropped upon defeating The Dark One."
+  },
+  "fire mind": {
+    "id": "257",
+    "name": "Fire Mind",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_257_firemind.png",
+    "description": "Grants a fire effect to Isaac's tears, making them set enemies on fire.\nTears have a chance to explode upon impact with an enemy, leaving behind a fire.\nThe fire deals 23 damage at full durability, then 17.25, and finally 2x11.5.\nThe explosion can hurt Isaac, but he is immune to the fire that's spawned afterward.\nThe chance for tears to explode scales with luck, going up to 100% with 13 luck."
   },
   "black candle": {
     "id": "260",
     "name": "Black Candle",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_260_blackcandle.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_260_blackcandle.png",
+    "description": "On pickup +1 Black Heart.\r\n+15% chance for a devil/angel room to spawn after defeating the floor's boss.\r\nWhile held Prevents curses from appearing.\r\nWill immediately remove any curse on the current floor, except for Curse of the Labyrinth! .\r\nRemoves teleportation effects from Cursed Eye and Cursed Penny ."
   },
   "proptosis": {
     "id": "261",
     "name": "Proptosis",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_261_proptosis.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_261_proptosis.png",
+    "description": "+0.5 damage.\n×2 tear size.\nMakes Isaac's tears shrink in size and lose damage the more time they stay airborne, starting at 3x damage and going down to 0 damage after 0.8 seconds."
   },
   "missing page 2": {
     "id": "262",
     "name": "Missing Page 2",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_262_missingpage2.png"
-  },
-  "smart fly": {
-    "id": "264",
-    "name": "Smart Fly",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_264_smartfly.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_262_missingpage2.png",
+    "description": "On pickup +1 Black Heart.\nWhile held If taking damage would leave Isaac at exactly one heart, deals 80 damage to every enemy in the room.\nIncreases the damage dealt by The Necronomicon by +40."
   },
   "clear rune": {
     "id": "263",
     "name": "Clear Rune",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_263_blankrune.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_263_blankrune.png",
+    "description": "On pickup Drops a random rune.\r\nOn use Copies the effect of Isaac's currently held rune or soul stone.\r\nThe recharge time depends on the last copied rune or soul stone. Check the page of each rune or soul stone for more details."
+  },
+  "smart fly": {
+    "id": "264",
+    "name": "Smart Fly",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_264_smartfly.png",
+    "description": "Spawns a fly familiar that orbits Isaac, blocks projectiles and deals 1.5 damage per tick (6.43 per second).\r\nUpon taking damage in the room, the fly will seek out nearby enemies and attack them, losing the ability to block projectiles.\r\nHas a 1% chance of being dropped upon defeating Min-Min."
   },
   "dry baby": {
     "id": "265",
     "name": "Dry Baby",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_265_drybaby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_265_drybaby.png",
+    "description": "Spawns a familiar that follows Isaac and blocks enemy projectiles. Upon blocking a shot, it has a 10% chance of triggering the The Necronomicon effect.\nCan rarely drop from destroying skulls."
   },
   "juicy sack": {
     "id": "266",
     "name": "Juicy Sack",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_266_juicysack.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_266_juicysack.png",
+    "description": "Spawns a familiar that follows Isaac and leaves a trail of white creep that slows enemies down.\r\nThe familiar spawns 1-2 Blue Spiders after every room.\r\nHas a 1% chance of being dropped upon defeating The Wretched."
   },
   "robo baby 2 0": {
     "id": "267",
     "name": "Robo-Baby 2.0",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_267_robobaby2.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_267_robobaby2.png",
+    "description": "Spawns a familiar that automatically shoots Technology lasers at enemies when aligned with them, dealing 3.5 damage per shot.\r\nThe familiar shoots 3 times per second.\r\nThe familiar can be moved around with the shooting buttons."
   },
   "rotten baby": {
     "id": "268",
     "name": "Rotten Baby",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_268_rottenbaby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_268_rottenbaby.png",
+    "description": "Spawns a familiar that follows Isaac and spawns friendly Blue Flies when in a room with enemies and holding down a fire button.\r\nThe familiar can spawn only one Blue Fly at a time. No additional Blue Flies will be spawned until the first one is killed (minimum delay of 1.36 seconds).\r\nCan drop from destroying polyps in Corpse."
   },
   "headless baby": {
     "id": "269",
     "name": "Headless Baby",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_269_headlessbaby.png"
-  },
-  "leech": {
-    "id": "270",
-    "name": "Leech",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_270_leech.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_269_headlessbaby.png",
+    "description": "Spawns a familiar that follows Isaac and leaves a trail of damaging red creep on the ground.\nThe creep deals 2 damage per tick (20 per second)."
   },
   "mystery sack": {
     "id": "271",
     "name": "Mystery Sack",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_271_mysterysack.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_271_mysterysack.png",
+    "description": "Spawns a familiar that follows Isaac and drops a heart, coin, bomb or key every 5 or 6 rooms alternatingly.\nPickups can be of any variant."
+  },
+  "leech": {
+    "id": "270",
+    "name": "Leech",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_270_leech.png",
+    "description": "Spawns a familiar that follows Isaac and attacks nearby enemies, healing Isaac for half a red heart upon killing an enemy.\r\nThe familiar deals 1.5 damage per tick (3.21 per second).\r\nCan spawn from destroying buckets in Downpour or Dross.\r\nHas a 1% chance of being dropped upon defeating Wormwood."
   },
   "bbf": {
     "id": "272",
     "name": "BBF",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_272_bff.png"
-  },
-  "best bud": {
-    "id": "274",
-    "name": "Best Bud",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_274_bestbud.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_272_bff.png",
+    "description": "Spawns a familiar that flies around the room diagonally and explodes upon contact with an enemy.\r\nThe explosion deals 100 damage to all enemies within its blast radius and 10 to the enemy it touched.\r\nAfter exploding, it will respawn again after 10 seconds, or upon entering a new room.\r\nThe explosion can hurt Isaac."
   },
   "bob s brain": {
     "id": "273",
     "name": "Bob's Brain",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_273_bobsbrain.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_273_bobsbrain.png",
+    "description": "Spawns a familiar that follows Isaac and launches forward while shooting.\r\nIf it hits an enemy, it deals 3.5 damage to the enemy and explodes. The explosion deals 100 damage and poisons enemies in its blast radius.\r\nThe explosion can hurt Isaac, dealing a full heart of damage.\r\nUpon exploding, the familiar re-appears after a few seconds."
+  },
+  "best bud": {
+    "id": "274",
+    "name": "Best Bud",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_274_bestbud.png",
+    "description": "Upon taking damage, spawns a white attack fly familiar for the duration of the room.\nThe fly orbits Isaac and deals 10 damage per tick (150 per second)."
   },
   "lil brimstone": {
     "id": "275",
     "name": "Lil Brimstone",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_275_lilbrimstone.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_275_lilbrimstone.png",
+    "description": "Spawns a familiar that follows Isaac and will charge a shot while firing. Releasing it will fire a thin Brimstone laser.\nThe laser deals 3 damage per tick and can strike an enemy up to 8 times, for a total of 24 damage."
   },
   "isaac s heart": {
     "id": "276",
     "name": "Isaac's Heart",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_276_isaacsheart.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_276_isaacsheart.png",
+    "description": "Spawns a heart familiar that follows Isaac and tries to position itself in the opposite direction of Isaac's shooting.\r\nIsaac takes damage if the heart is hurt, but Isaac's body becomes immune to damage, excluding interactable objects such as Blood Donation Machines and Devil Beggars .\r\nThe heart charges up as Isaac fires. At full charge, upon releasing the fire button, it will knock back nearby enemies and tears, create a small puddle of red creep, and release blood shots in 8 directions that deal 8 damage.\r\nMakes Isaac's body deal contact damage equal to 2x Isaac's damage stat per tick (4x per second)."
   },
   "lil haunt": {
     "id": "277",
     "name": "Lil Haunt",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_277_lilhaunt.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_277_lilhaunt.png",
+    "description": "Spawns a familiar that chases down enemies, dealing 2 damage per tick (4.29 per second), and inflicting fear.\r\nHas a 1% chance of being dropped upon defeating The Haunt."
   },
   "dark bum": {
     "id": "278",
     "name": "Dark Bum",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_278_darkbum.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_278_darkbum.png",
+    "description": "Spawns a familiar that follows Isaac and collects red hearts.\r\nFor every one and a half red hearts collected, it will spawn one of the following:\r\n• Black Heart (40% chance)\r\n• Card or rune (20% chance)\r\n• Pill (20% chance)\r\n• Blue Spider (10% chance)\r\n• Enemy Spider (10% chance)"
   },
   "sissy longlegs": {
     "id": "280",
     "name": "Sissy Longlegs",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_280_sissylonglegs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_280_sissylonglegs.png",
+    "description": "Spawns a familiar that wanders around the room and spawns friendly Blue Spiders once every 10-15 seconds.\r\nUpon contact with an enemy, it will briefly charm them.\r\nUp to 5 Blue Spiders can be spawned at a time.\r\nThe spawning timer is active only if there are enemies in the room."
   },
   "big fan": {
     "id": "279",
     "name": "Big Fan",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_279_bigfan.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_279_bigfan.png",
+    "description": "Spawns a large orbital familiar that blocks enemy shots and deals 2 damage per tick (8.57 per second)."
   },
   "punching bag": {
     "id": "281",
     "name": "Punching Bag",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_281_punchingbag.png"
-  },
-  "how to jump": {
-    "id": "282",
-    "name": "How to Jump",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_282_howtojump.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_281_punchingbag.png",
+    "description": "Spawns a familiar that walks randomly around the room and acts as a decoy, making enemies attack it instead of Isaac if it is closer than him.\r\nThe familiar can block enemy projectiles.\r\nEnemies can target the familiar for up to 6 seconds, then they will target Isaac for 6 seconds, etc."
   },
   "d100": {
     "id": "283",
     "name": "D100",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_283_d100.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_283_d100.png",
+    "description": "Activates most dice-related items in the game at once: D1 , D4 , The D6 , D7 , D8 , D10 , D12 and D20 .\nEffectively rerolls the entire run, affecting passive items held by Isaac, pedestal items in the room, stats, monsters, rocks and pickups."
   },
-  "d10": {
-    "id": "285",
-    "name": "D10",
+  "how to jump": {
+    "id": "282",
+    "name": "How to Jump",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_285_d10.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_282_howtojump.png",
+    "description": "Makes Isaac jump in the direction he's currently moving.\nThe distance of the jump depends on how fast Isaac was moving.\nIsaac can jump over obstacles such as rocks and pits.\nIsaac is invulnerable while mid-jump, and cannot interact with pickups and machines."
   },
   "d4": {
     "id": "284",
     "name": "D4",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_284_d4.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_284_d4.png",
+    "description": "Rerolls Isaac's passive items.\nEach item is rerolled into an item from the same item pool it was acquired from."
   },
-  "book of secrets": {
-    "id": "287",
-    "name": "Book of Secrets",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_287_bookofsecrets.png"
+  "d10": {
+    "id": "285",
+    "name": "D10",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_285_d10.png",
+    "description": "Devolves all monsters in the room into weaker variants of themselves.\nEach type of monster has a specific devolve path it takes.\nIf a monster is at its weakest level, it will mostly transform into a background critter or simply die.\nSome enemies can be transformed into obstacles or pickups."
   },
   "blank card": {
     "id": "286",
     "name": "Blank Card",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_286_blankcard.png"
-  },
-  "box of spiders": {
-    "id": "288",
-    "name": "Box of Spiders",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_288_boxofspiders.png"
-  },
-  "the jar": {
-    "id": "290",
-    "name": "The Jar",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_290_thejar.png"
-  },
-  "flush": {
-    "id": "291",
-    "name": "Flush!",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_291_flush.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_286_blankcard.png",
+    "description": "Copies the effect of the card currently held by Isaac, without expending the consumable.\r\nThe recharge time of the item depends on the last copied card. Check each of the card pages for more details.\r\nIf used with ? Card , it will teleport Isaac to the I AM ERROR room, consuming both the card and item in the process."
   },
   "red candle": {
     "id": "289",
     "name": "Red Candle",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_289_redcandle.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_289_redcandle.png",
+    "description": "On use, raises a candle above Isaac's head that can be shot by pressing a fire button. Shooting the candle will spawn a red flame in the chosen direction that can travel over pits, but not obstacles.\r\nThe flame deals 23 damage per tick at full size, then 17.25, then 2x11.5, and can hit enemies up to 4 times, for a maximum of 63.25 damage.\r\nThe flame can also destroy enemy projectiles, which decreases its size each time, ultimately destroying the flame.\r\nThe flame will disappear automatically after 10 seconds.\r\nThe flame also destroys enemy shots and shopkeepers.\r\nThe flame cannot hurt Isaac."
   },
-  "head of krampus": {
-    "id": "293",
-    "name": "Head of Krampus",
+  "book of secrets": {
+    "id": "287",
+    "name": "Book of Secrets",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_287_bookofsecrets.png",
+    "description": "Activates one of the following map effects: Treasure Map , The Compass or Blue Map , for the duration of the current floor.\nHighlights any tinted rocks and rocks with a crawl space in the room.\nCannot give effects that are already activated via any means.\nIf all of the effects are already active, it will provide X-Ray Vision for the current floor, opening all secret room entrances.\nIf used on a floor with Curse of the Lost active, it will immediately grant the X-Ray Vision effect."
+  },
+  "the jar": {
+    "id": "290",
+    "name": "The Jar",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_290_thejar.png",
+    "description": "While held Allows Isaac to store up to 4 extra red hearts in The Jar if his red heart containers are full.\r\nThe number of hearts currently stored in The Jar is indicated by a number next to it.\r\nOn use Drops all previously stored red hearts on the ground.\r\nWhen dropped \r\nDrops all previously stored red hearts on the ground."
+  },
+  "box of spiders": {
+    "id": "288",
+    "name": "Box of Spiders",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_293_headofkrampus.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_288_boxofspiders.png",
+    "description": "Spawns 4-8 friendly Blue Spiders.\r\nHas a 1% chance of being dropped upon defeating Rag Man."
+  },
+  "flush": {
+    "id": "291",
+    "name": "Flush!",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_291_flush.png",
+    "description": "Turns all non-boss monsters in the room into poop, and fills the whole room with water.\r\nPoops can drop pickups.\r\nInstantly kills poop-themed enemies and bosses: Dingle, Dangle, Brownie, Clog, and Turdlings.\r\nExtinguishes all normal and red fire places in the room.\r\nTurns lava-filled pits into solid rock, allowing them to be walked over.\r\nHas a 1% chance of being dropped upon defeating Clog."
   },
   "satanic bible": {
     "id": "292",
     "name": "Satanic Bible",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_292_satanicbible.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_292_satanicbible.png",
+    "description": "+1 Black Heart.\nForces item pedestals that appear after defeating the floor's boss to be replaced by a deal with the devil, meaning items will be pulled from the Devil Room item pool, and must be paid for with heart containers. This effect lasts for the entire floor Satanic Bible was used on.\nTaking a devil deal generated this way affects the chance of getting an angel deal for the rest of the run.\nDoes not change hardcoded boss drops into devil items, such as Cube of Meat from a Harbinger, however the item will still cost hearts.\nException from the above rule are the items dropped after the Mom fight.\nDoes not affect the items dropped in The Void."
   },
   "butter bean": {
     "id": "294",
     "name": "Butter Bean",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_294_butterbean.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_294_butterbean.png",
+    "description": "Isaac farts and knocks back nearby enemies and projectiles.\r\nEnemies pushed into walls, obstacles or other enemies take 8 + 2 × CurrentFloor damage.\r\nReflected projectiles deal 7 damage to enemies.\r\nWhen a run is started, the game has a 5% chance to replace this item with Wait What? in every item pool. This means both items cannot be available at the same time in a run."
+  },
+  "head of krampus": {
+    "id": "293",
+    "name": "Head of Krampus",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_293_headofkrampus.png",
+    "description": "Fires a Brimstone laser in the 4 cardinal directions, similarly to Krampus' attack.\nEach beam deals 10 damage over 20 ticks, for a total of 200 damage per use.\nStanding close to enemies can cause them to get by more than one beam at once, dealing significantly more damage.\nCan drop by defeating Krampus."
   },
   "magic fingers": {
     "id": "295",
     "name": "Magic Fingers",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_295_magicfingers.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_295_magicfingers.png",
+    "description": "Consumes 1¢ and damages all enemies for DamageStat × 2 + 10 ."
   },
   "converter": {
     "id": "296",
     "name": "Converter",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_296_converter.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_296_converter.png",
+    "description": "/ -1 Soul/Black Heart.\r\n+1 full Red Heart container."
   },
   "unicorn stump": {
     "id": "298",
     "name": "Unicorn Stump",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_298_unicornstump.png"
-  },
-  "taurus": {
-    "id": "299",
-    "name": "Taurus",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_299_taurus.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_298_unicornstump.png",
+    "description": "+0.28 speed and invulnerability for 6 seconds.\r\nRemoves the ability to shoot while the effect is active.\r\nAlso speeds up the game's music."
   },
   "pandora s box": {
     "id": "297",
     "name": "Pandora's Box",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_297_bluebox.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_297_bluebox.png",
+    "description": null
   },
   "aries": {
     "id": "300",
     "name": "Aries",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_300_aries.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_300_aries.png",
+    "description": "+0.25 speed.\nRunning into enemies at a speed higher than 0.85 will deal 25 damage to them and prevent Isaac from taking contact damage."
+  },
+  "taurus": {
+    "id": "299",
+    "name": "Taurus",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_299_taurus.png",
+    "description": "-0.3 speed.\nWhen in a room with enemies, Isaac's speed gradually increases at a rate of +0.065 per tick.\nOnce the speed reaches 2.0, it activates My Little Unicorn for 5 seconds, granting invulnerability, and reseting the speed bonus afterward.\nThe effect can be activated only once per room.\nIf Isaac already has 2.0 speed, the effect will activate immediately upon entering a new room."
   },
   "cancer": {
     "id": "301",
     "name": "Cancer",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_301_cancer.png"
-  },
-  "virgo": {
-    "id": "303",
-    "name": "Virgo",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_303_virgo.png"
-  },
-  "scorpio": {
-    "id": "305",
-    "name": "Scorpio",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_305_scorpio.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_301_cancer.png",
+    "description": "+3 Soul Hearts.\nTaking damage activates The Wafer effect for the duration of the room, reducing all damage taken to half a heart."
   },
   "leo": {
     "id": "302",
     "name": "Leo",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_302_leo.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_302_leo.png",
+    "description": "+20% size. Does not affect Isaac's hitbox.\r\nAllows Isaac to destroy obstacles by walking into them."
+  },
+  "virgo": {
+    "id": "303",
+    "name": "Virgo",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_303_virgo.png",
+    "description": "Grants a chance to trigger Book of Shadows when taking damage, creating a shield that negates damage for 10 seconds.\r\nConverts all pills into positive ones without identifying them.\r\nThe chance to activate the shield starts at 10% with 0 luck, going up to 100% with 10 luck."
   },
   "libra": {
     "id": "304",
     "name": "Libra",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_304_libra.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_304_libra.png",
+    "description": "+6 coins.\n+6 bombs.\n+6 keys.\nContinually balances Isaac's primary stats: damage, range, tears and speed.\nStats are rebalanced in a way that attempts to bring together the highest and lowest stats.\nRebalacing happens all the time, meaning picking up new items, activating cards/pills, etc, will have an effect on all 4 previously mentioned stats."
+  },
+  "scorpio": {
+    "id": "305",
+    "name": "Scorpio",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_305_scorpio.png",
+    "description": "Makes Isaac's tears inflict poison to enemies that deals Isaac's amount of damage to them 2 times."
   },
   "sagittarius": {
     "id": "306",
     "name": "Sagittarius",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_306_sagittarius.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_306_sagittarius.png",
+    "description": "+0.2 speed.\nGrants piercing tears that can pass through enemies."
   },
   "capricorn": {
     "id": "307",
     "name": "Capricorn",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_307_capricorn.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_307_capricorn.png",
+    "description": null
   },
   "aquarius": {
     "id": "308",
     "name": "Aquarius",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_308_aquarius.png"
-  },
-  "eve s mascara": {
-    "id": "310",
-    "name": "Eve's Mascara",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_310_evesmascara.png"
-  },
-  "judas shadow": {
-    "id": "311",
-    "name": "Judas' Shadow",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_311_judasshadow.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_308_aquarius.png",
+    "description": "Makes Isaac leave a trail of blue creep on the ground behind him that damages enemies walking over it.\r\nThe creep deals 66% of Isaac's damage 10 times per second.\r\nThe creep inherits Isaac's tear effects and changes color based on them.\r\nChance-based tear effects will also have a chance to be applied whenever enemies walk over the creep.\r\nHas a 1% chance of being dropped upon defeating Lil Blub."
   },
   "pisces": {
     "id": "309",
     "name": "Pisces",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_309_pisces.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_309_pisces.png",
+    "description": "+0.5 fire rate.\n+0.12 tear size.\nIncreases tear knockback."
+  },
+  "eve s mascara": {
+    "id": "310",
+    "name": "Eve's Mascara",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_310_evesmascara.png",
+    "description": "×2 damage multiplier.\r\n×0.66 fire rate multiplier.\r\n-0.5 shot speed.\r\nEffectively acts as a 33% increase in DPS."
+  },
+  "judas shadow": {
+    "id": "311",
+    "name": "Judas' Shadow",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_311_judasshadow.png",
+    "description": "+1 extra life.\nUpon death, respawns Isaac as Black Judas with 2 Black Hearts in the most recent non-hostile room.\nIf playing as Tainted Judas , respawns as that character instead."
   },
   "maggy s bow": {
     "id": "312",
     "name": "Maggy's Bow",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_312_maggysbow.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_312_maggysbow.png",
+    "description": "+1 full Red Heart container.\nHeals 1 additional Red Heart.\nMakes all Red Hearts heal for double their value."
   },
   "holy mantle": {
     "id": "313",
     "name": "Holy Mantle",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_313_holymantle.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_313_holymantle.png",
+    "description": "Once per room, grants a shield that negates the first instance of damage.\nThe shield is represented with a blue cross icon next to the health bar.\nBreaking the shield grants 1 second of invincibility frames."
   },
   "thunder thighs": {
     "id": "314",
     "name": "Thunder Thighs",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_314_thunderthighs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_314_thunderthighs.png",
+    "description": "+1 full Red Heart container.\r\n-0.4 speed.\r\nAllows Isaac to destroy obstacles by walking into them.\r\nHas a 1% chance of being dropped upon defeating Mega Fatty."
   },
   "strange attractor": {
     "id": "315",
     "name": "Strange Attractor",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_315_strangeattractor.png"
-  },
-  "cursed eye": {
-    "id": "316",
-    "name": "Cursed Eye",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_316_cursedeye.png"
-  },
-  "mysterious liquid": {
-    "id": "317",
-    "name": "Mysterious Liquid",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_317_mysteriousliquid.png"
-  },
-  "gemini": {
-    "id": "318",
-    "name": "Gemini",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_318_gemini.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_315_strangeattractor.png",
+    "description": "Isaac's tears gain a magnetic effect that attracts monsters, pickups and trinkets towards them.\nThe magnetic effect becomes stronger as tears travel in the air."
   },
   "cain s other eye": {
     "id": "319",
     "name": "Cain's Other Eye",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_319_cainseye.png"
-  },
-  "question s only friend": {
-    "id": "320",
-    "name": "???'s Only Friend",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_320_bluebabysonlyfriend.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_319_cainseye.png",
+    "description": "Spawns a familiar that follows Isaac and copies all of his tear modifiers/stats, but with a 25% reduction in damage, unless playing as Lilith or Tainted Lilith .\nThe familiar fires randomly in the cardinal directions."
   },
   "samson s chains": {
     "id": "321",
     "name": "Samson's Chains",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_321_samsonschains.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_321_samsonschains.png",
+    "description": "Attaches a ball and chain to Isaac's ankle that blocks enemy projectiles, deals damage to enemies and destroys obstacles.\nThe ball deals 5 damage per tick (10.71 per second)."
+  },
+  "cursed eye": {
+    "id": "316",
+    "name": "Cursed Eye",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_316_cursedeye.png",
+    "description": "Grants a charge-attack which fires a tight burst of up to 5 shots.\nThe charge can be released before fully charged but will shoot fewer tears.\nTaking damage while charging (not fully charged) will teleport Isaac into another room.\nThe teleportation effect can be removed with Black Candle ."
+  },
+  "gemini": {
+    "id": "318",
+    "name": "Gemini",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_318_gemini.png",
+    "description": "Spawns a familiar that is conjoined to Isaac and chases nearby enemies.\r\nThe familiar deals 3 damage per tick (6.43 per second).\r\nHas a 1% chance of being dropped upon defeating Gemini."
   },
   "mongo baby": {
     "id": "322",
     "name": "Mongo Baby",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_322_mongobaby.png"
-  },
-  "isaac s tears": {
-    "id": "323",
-    "name": "Isaac's Tears",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_323_isaacstears.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_322_mongobaby.png",
+    "description": null
   },
   "undefined": {
     "id": "324",
     "name": "Undefined",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_324_undefined.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_324_undefined.png",
+    "description": "Teleports Isaac to the Treasure Room, Secret Room, Super Secret Room or the I AM ERROR room.\nThe chance to teleport to each room is equal.\nThere is a very small chance to teleport into a Black Market.\nHas no effect when used in the Home level."
   },
-  "scissors": {
-    "id": "325",
-    "name": "Scissors",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_325_scissors.png"
+  "question s only friend": {
+    "id": "320",
+    "name": "???'s Only Friend",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_320_bluebabysonlyfriend.png",
+    "description": "Spawns a familiar that can be controlled with the shooting buttons and deals contact damage to enemies.\r\nThe familiar deals 3.5 damage per tick (15 per second)."
   },
   "breath of life": {
     "id": "326",
     "name": "Breath of Life",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_326_breathoflife.png"
-  },
-  "the polaroid": {
-    "id": "327",
-    "name": "The Polaroid",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_327_thepolaroid.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_326_breathoflife.png",
+    "description": "Holding down the active item button will gradually deplete this item's charge bar. As it gets close to 0, Isaac turns blue over time. Once it hits 0, Isaac will become invincible to all outside damage sources. After 1 second, Isaac will begin to take damage if the active item button is still held down.\nWhile invincible, Isaac deals 3.5 contact damage to enemies and beams of light will strike down on enemies touching him, dealing 15 damage.\nTouching an enemy or blocking a projectile at the exact moment the invincibility takes place will shoot out beams of light in the 4 cardinal directions that deal 12 damage per tick, or a total of 180 damage.\nThe item will recharge on its own but cannot be used again until fully charged."
   },
   "the negative": {
     "id": "328",
     "name": "The Negative",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_328_thenegative.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_328_thenegative.png",
+    "description": "+1 damage.\nActivates The Necronomicon effect if Isaac has half a red heart or no red hearts at all after taking damage, dealing 40 damage to all enemies in the room.\nGrants entrance to the Dark Room level after beating Satan in Sheol.\nOpens the door in the starting room of Depths II that leads to the Ascent path, getting consumed in the process.\nDrops after killing Mom, alongisde The Polaroid ."
+  },
+  "scissors": {
+    "id": "325",
+    "name": "Scissors",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_325_scissors.png",
+    "description": "Detaches Isaac's head from his body, turning the head into a stationary familiar that fires tears for the rest of the room.\nThe head's shooting can be controlled by Isaac.\nThe body will constantly spew a controllable fountain of blood shots, dealing from 66%-101% of Isaac's tear damage."
+  },
+  "isaac s tears": {
+    "id": "323",
+    "name": "Isaac's Tears",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_323_isaacstears.png",
+    "description": "Fires 8 tears around Isaac that retain Isaac's damage, range, shot speed and most tear effects.\nTears fired from this item gain a +5 flat damage bonus.\nThe item can only be charged by shooting tears: 1 tear shot will increase the item's charge by one.\nCannot copy tear-replacing items such as Brimstone ."
+  },
+  "mysterious liquid": {
+    "id": "317",
+    "name": "Mysterious Liquid",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_317_mysteriousliquid.png",
+    "description": "Isaac's tears create a small, short-lasting pool of green creep upon hitting an enemy or falling to the ground.\nThe creep deals 1 damage per tick to enemies, and can deal a total of 25 damage before disappearing."
+  },
+  "the polaroid": {
+    "id": "327",
+    "name": "The Polaroid",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_327_thepolaroid.png",
+    "description": "Activates the Book of Shadows effect if Isaac has half a red heart or no red hearts at all after taking damage, creating a shield that negates damage for 5 seconds.\nGrants entrance to the Chest level after beating Isaac in the Cathedral.\nOpens the door in the starting room of Depths II that leads to the Ascent path, getting consumed in the process.\nDrops after killing Mom, alongisde The Negative ."
   },
   "soy milk": {
     "id": "330",
     "name": "Soy Milk",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_330_soymilk.png"
-  },
-  "the ludovico technique": {
-    "id": "329",
-    "name": "The Ludovico Technique",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_329_theludovicotechnique.png"
-  },
-  "godhead": {
-    "id": "331",
-    "name": "Godhead",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_331_godhead.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_330_soymilk.png",
+    "description": "×5.5 fire rate multiplier.\r\n×0.2 damage multiplier.\r\n-0.3 tear size.\r\nDrastically reduces knockback by Isaac's tears.\r\nAutomatically charges and fires charged attack items such as Brimstone ."
   },
   "lazarus rags": {
     "id": "332",
     "name": "Lazarus' Rags",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_332_lazarusrags.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_332_lazarusrags.png",
+    "description": "+1 extra life.\nUpon death, respawns Isaac as Lazarus II in the current room with one less heart container (but no less than 1), the Anemic item and a permanent +0.5 damage.\nTraveling to the next floor after the effect has been activated will revert the character into the regular Lazarus form, with his inherent extra life effect.\nIf playing as Tainted Lazarus , revives as that character instead."
+  },
+  "godhead": {
+    "id": "331",
+    "name": "Godhead",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_331_godhead.png",
+    "description": "+0.5 damage.\r\n-0.3 tears.\r\n-0.3 shot speed.\r\nGrants homing tears.\r\nTears gain a damaging aura that deals 2 damage per tick (60 per second).\r\nThe size of the aura scales with tear size."
   },
   "the mind": {
     "id": "333",
     "name": "The Mind",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_333_mind.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_333_mind.png",
+    "description": "Grants the effects of Blue Map , Treasure Map and The Compass , revealing the entire floor layout, including Secret Rooms and Super Secret Rooms.\nIts effects appear as an icon next to the map."
+  },
+  "the ludovico technique": {
+    "id": "329",
+    "name": "The Ludovico Technique",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_329_theludovicotechnique.png",
+    "description": "+0.2 shot speed.\r\nReplaces Isaac's tears with a single controllable tear that hovers over obstacles and deals constant damage to enemies when held over them.\nThe movement speed of the tear is determined by the shot speed stat.\nThe hits per second are determined by the tears stat, maxing out at 30 ticks per second."
   },
   "the body": {
     "id": "334",
     "name": "The Body",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_334_body.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_334_body.png",
+    "description": "+3 full Red Heart containers."
   },
   "dead onion": {
     "id": "336",
     "name": "Dead Onion",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_336_deadonion.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_336_deadonion.png",
+    "description": "+0.22 tear size.\r\n-1.5 range.\r\n-0.4 shot speed.\r\nGrants piercing and spectral tears."
   },
   "the soul": {
     "id": "335",
     "name": "The Soul",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_335_soul.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_335_soul.png",
+    "description": "+2 Soul Hearts.\nGrants a pulsing blue aura that repels enemies and projectiles. The power of the repel force is random."
   },
   "broken watch": {
     "id": "337",
     "name": "Broken Watch",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_337_brokenwatch.png"
-  },
-  "safety pin": {
-    "id": "339",
-    "name": "Safety Pin",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_339_safetypin.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_337_brokenwatch.png",
+    "description": "In every 4th newly discovered room, enemies and their attacks are slowed down, but has a ~13% chance to speed them up by 40% instead.\nThe effect is lost upon leaving the room, and not gained back by re-entering it."
   },
   "the boomerang": {
     "id": "338",
     "name": "The Boomerang",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_338_boomerang.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_338_boomerang.png",
+    "description": "On use, Isaac holds the Boomerang in his hand. Pressing a fire button will throw the Boomerang in the chosen direction, and will return it shortly afterward.\r\nThe Boomerang can collect pickups along the way and return them to Isaac.\r\nEnemies hit by it will take 2x Isaac's damage and get petrified for ~2 seconds.\r\nThe Boomerang will pierce through enemies and obstacles (except key blocks), and can destroy Shopkeepers."
   },
-  "torn photo": {
-    "id": "341",
-    "name": "Torn Photo",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_341_tornphoto.png"
-  },
-  "latch key": {
-    "id": "343",
-    "name": "Latch Key",
+  "safety pin": {
+    "id": "339",
+    "name": "Safety Pin",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_343_latchkey.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_339_safetypin.png",
+    "description": "+1 Black Heart.\n+2.5 range.\n+0.16 shot speed."
   },
   "caffeine pill": {
     "id": "340",
     "name": "Caffeine Pill",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_340_caffeinepill.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_340_caffeinepill.png",
+    "description": "On pickup Gives a random pill.\nWhile held +0.3 speed.\n-10% size.\n-4% hitbox size."
+  },
+  "torn photo": {
+    "id": "341",
+    "name": "Torn Photo",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_341_tornphoto.png",
+    "description": "+0.7 tears.\r\n+0.16 shot speed."
   },
   "blue cap": {
     "id": "342",
     "name": "Blue Cap",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_342_bluecap.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_342_bluecap.png",
+    "description": "+1 full Red Heart container.\n+0.7 tears.\n-0.16 shot speed."
   },
-  "match book": {
-    "id": "344",
-    "name": "Match Book",
+  "latch key": {
+    "id": "343",
+    "name": "Latch Key",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_344_matchbook.png"
-  },
-  "diplopia": {
-    "id": "347",
-    "name": "Diplopia",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_347_diplopia.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_343_latchkey.png",
+    "description": "+1 Soul Heart.\n+1 luck.\nSpawns 2 keys, with them having a very small chance to be of different variant."
   },
   "synthoil": {
     "id": "345",
     "name": "Synthoil",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_345_synthoil.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_345_synthoil.png",
+    "description": "+1 damage.\r\n+2.5 range."
+  },
+  "match book": {
+    "id": "344",
+    "name": "Match Book",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_344_matchbook.png",
+    "description": "+1 Black Heart.\nSpawns 3 bombs around Isaac.\nSpawns the Match Stick if it hasn't yet been encountered."
+  },
+  "diplopia": {
+    "id": "347",
+    "name": "Diplopia",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_347_diplopia.png",
+    "description": "Duplicates all pickups and item pedestals in the current room.\r\nCannot duplicate trinkets, the Jera rune or Diplopia itself.\r\nCan be used to take Shop and Devil Room items for free."
   },
   "a snack": {
     "id": "346",
     "name": "A Snack",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_346_asnack.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_346_asnack.png",
+    "description": "+1 full Red Heart container.\nHeals 1 additional Red Heart."
   },
   "placebo": {
     "id": "348",
     "name": "Placebo",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_348_placebo.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_348_placebo.png",
+    "description": "Copies the effect of Isaac's currently held pill without consuming it.\nThe recharge time depends on the last used pill. Check the specific pill page for more details."
   },
   "wooden nickel": {
     "id": "349",
     "name": "Wooden Nickel",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_349_woodennickel.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_349_woodennickel.png",
+    "description": "Has a 59% chance to drop a random coin, or more precisely:\n• 52% → Penny \n• 6% → Nickel \n• 1% → Dime \n• 41% → nothing"
   },
   "toxic shock": {
     "id": "350",
     "name": "Toxic Shock",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_350_toxicshock.png"
-  },
-  "glass cannon": {
-    "id": "352",
-    "name": "Glass Cannon",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_352_glasscannon.png"
-  },
-  "bomber boy": {
-    "id": "353",
-    "name": "Bomber Boy",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_353_bomberboy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_350_toxicshock.png",
+    "description": "Poisons all enemies upon entering a room, dealing 2x Isaac's tear damage 2 times, and creating a green fog for the first couple of seconds of the room.\r\nKilling enemies leaves a small, short-lasting pool of green creep that deals 1 damage per tick (30 per second)."
   },
   "mega bean": {
     "id": "351",
     "name": "Mega Bean",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_351_megabean.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_351_megabean.png",
+    "description": "Creates a Mama Mega! explosion in the current room which destroys all obstacles, and blows open all doors.\r\nThe explosion deals 100 flat damage to all enemies in the room.\r\nPetrifies all enemies in the room for a couple of seconds.\r\nDeals 5 damage and poisons all enemies near Isaac.\r\nThe poison deals Isaac's amount of damage 6 times."
+  },
+  "glass cannon": {
+    "id": "352",
+    "name": "Glass Cannon",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_352_glasscannon.png",
+    "description": "On use Fires a single high-damage piercing and spectral tear, and knocks back Isaac a bit.\nThe damage dealt by the tear is equal to (10 * Isaac's damage) + 10 .\nWhile held Upon taking damage, the item transforms into the Broken Glass Cannon , and damages Isaac for an additional 2 full hearts.\nWhen this happens, Isaac gains +1.5 range and leaves a trail of red creep for the rest of the current room.\nThe damage dealt by Glass Cannon cannot kill Isaac, but will leave him on half a red heart.\nThe Cannon won't break from self-sacrifice mechanics such as the Blood Donation Machine ."
+  },
+  "bomber boy": {
+    "id": "353",
+    "name": "Bomber Boy",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_353_bomberboy.png",
+    "description": "+5 bombs.\nCauses Isaac's bombs to explode in a large cross-shaped blast by adding 2 additional explosions in each cardinal direction.\nEach single explosion deals 0.75x its normal damage.\nEach successive explosion that hits the same enemy has its damage halved."
   },
   "crack jacks": {
     "id": "354",
     "name": "Crack Jacks",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_354_crackjacks.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_354_crackjacks.png",
+    "description": "+1 full Red Heart container.\r\nHeals 1 additional Red Heart.\r\nSpawns a random trinket."
   },
   "mom s pearls": {
     "id": "355",
     "name": "Mom's Pearls",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_355_momspearls.png"
-  },
-  "the wiz": {
-    "id": "358",
-    "name": "The Wiz",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_358_thewiz.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_355_momspearls.png",
+    "description": "+1 Soul Heart.\n+2.5 range.\n+1 luck."
   },
   "car battery": {
     "id": "356",
     "name": "Car Battery",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_356_carbattery.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_356_carbattery.png",
+    "description": "Whenever an active item is used, it is activated 2 times at once.\r\nSome active items cannot be used twice. These include one-time-use and throwable active items."
   },
   "box of friends": {
     "id": "357",
     "name": "Box of Friends",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_357_pandorasbox.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_357_pandorasbox.png",
+    "description": "Adds a copy of each of Isaac's familiars for the duration of the current room.\r\nIf Isaac has no familiars, it will instead spawn a Demon Baby for the duration of the room.\r\nIf Isaac already has more than one copy of a familiar, only one additional copy of that familiar will be added.\r\nCannot copy Blue Flies/Spiders.\r\nCannot copy familiars with the uniquefamiliar tag."
   },
-  "incubus": {
-    "id": "360",
-    "name": "Incubus",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_360_incubus.png"
-  },
-  "fate s reward": {
-    "id": "361",
-    "name": "Fate's Reward",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_361_fatesreward.png"
+  "the wiz": {
+    "id": "358",
+    "name": "The Wiz",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_358_thewiz.png",
+    "description": "Makes Isaac's tears fire diagonally from both eyes at the same time.\nGives spectral tears.\r\nHas a 1% chance of being dropped upon defeating Reap Creep."
   },
   "8 inch nails": {
     "id": "359",
     "name": "8 Inch Nails",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_359_8inchnails.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_359_8inchnails.png",
+    "description": "+1.5 damage.\r\nReplaces Isaac's tears with nails that have increased knockback."
+  },
+  "incubus": {
+    "id": "360",
+    "name": "Incubus",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_360_incubus.png",
+    "description": "Spawns a familiar that follows Isaac and copies his tears and stats.\r\nThe damage dealt by the familiar is reduced by 25% unless playing as Lilith or Tainted Lilith ."
+  },
+  "fate s reward": {
+    "id": "361",
+    "name": "Fate's Reward",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_361_fatesreward.png",
+    "description": "Spawns a familiar that follows Isaac and copies his damage and tear effects.\r\nThe familiar shoots 0.68 times per second."
   },
   "lil chest": {
     "id": "362",
     "name": "Lil Chest",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_362_lilchest.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_362_lilchest.png",
+    "description": "Spawns a chest familiar that follows Isaac and has a chance to spawn a random pickup or trinket after clearing a room.\nThe chances are 25% for a pickup, and 10% for a trinket."
   },
   "sworn protector": {
     "id": "363",
     "name": "Sworn Protector",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_363_swornprotector.png"
-  },
-  "friend zone": {
-    "id": "364",
-    "name": "Friend Zone",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_364_friendzone.png"
-  },
-  "lost fly": {
-    "id": "365",
-    "name": "Lost Fly",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_365_lostfly.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_363_swornprotector.png",
+    "description": "Spawns an orbital familiar that blocks enemy shots and deals 7 damage per tick (52.5 per second).\r\nThe familiar attracts enemy shot to itself. If a shot is inside the familiar's range, it can no longer deal damage to Isaac unless it slips out of the range.\r\nThe familiar has a chance to drop an Eternal Heart upon blocking 10 shots in one room. Can only happen once per room, unless the room is re-entered."
   },
   "scatter bombs": {
     "id": "366",
     "name": "Scatter Bombs",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_366_scatterbombs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_366_scatterbombs.png",
+    "description": "+5 bombs.\nMakes Isaac's bombs split into 4-5 tiny bombs after exploding.\nTiny bombs explode immediately upon landing. They deal half the damage of the original bombs and have a decreased radius.\nThe bombs inherit most bomb synergies."
+  },
+  "lost fly": {
+    "id": "365",
+    "name": "Lost Fly",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_365_lostfly.png",
+    "description": "Spawns a fly familiar that moves in a straight line upon entering the room, and attaches itself to the first wall or obstacle it comes in contact with. The fly will orbit around said obstacle.\nThe familiar deals 7 damage per tick (30 per second).\nEnemies that are nearby the fly will target the fly instead of Isaac.\nIf the obstacle that the fly was attached to was destroyed, it will continue moving in the original direction until it finds a new obstacle."
+  },
+  "friend zone": {
+    "id": "364",
+    "name": "Friend Zone",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_364_friendzone.png",
+    "description": "Spawns a fly familiar that slowly orbits Isaac and deals 3 damage per tick (45 per second)."
   },
   "sticky bombs": {
     "id": "367",
     "name": "Sticky Bombs",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_367_stickybombs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_367_stickybombs.png",
+    "description": "+5 bombs.\r\nMakes Isaac's bombs stick to enemies and spawn Blue Spiders when they kill the enemy they have stuck to.\r\nBombs leave slowing white creep upon exploding."
   },
   "epiphora": {
     "id": "368",
     "name": "Epiphora",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_368_epiphora.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_368_epiphora.png",
+    "description": "Fire rate continuously increases as Isaac shoots in one direction, but accuracy decreases.\r\nWhen the stat boost is at maximum, it effectively doubles Isaac's fire rate.\r\nRate of fire returns to normal immediately after Isaac stops shooting, changes shooting direction, or enters an unexplored boss room."
   },
   "continuum": {
     "id": "369",
     "name": "Continuum",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_369_continuum.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_369_continuum.png",
+    "description": "+3 range.\nGrants spectral tears.\nWhen tears travel off-screen, they loop back around through the opposite wall.\r\nHas a 1% chance of being dropped upon defeating Mega Maw."
   },
   "mr dolly": {
     "id": "370",
     "name": "Mr. Dolly",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_370_mrdolly.png"
-  },
-  "charged baby": {
-    "id": "372",
-    "name": "Charged Baby",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_372_chargedbaby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_370_mrdolly.png",
+    "description": "+0.7 tears.\r\n+2.5 range.\r\nSpawns 3 of the following hearts when picked up, each having an equal chance to be selected:\r\n• Heart \r\n• Soul Heart \r\n• Black Heart"
   },
   "curse of the tower": {
     "id": "371",
     "name": "Curse of the Tower",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_371_curseofthetower.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_371_curseofthetower.png",
+    "description": "Spawns 6 Troll Bombs around the center of the room upon taking damage.\r\nThe bombs inherit Isaac's bomb synergies.\r\nThe effect will not trigger when taking damage from bombs, and self-sacrifice mechanisms, such as Devil Beggars and Blood Donation Machines ."
+  },
+  "charged baby": {
+    "id": "372",
+    "name": "Charged Baby",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_372_chargedbaby.png",
+    "description": "Spawns a familiar that follows Isaac.\r\nWhile in an uncleared room, every 30 seconds, it has a 50% chance (100% on its second attempt) to do one of the following:\r\n• Spawn a random battery pickup (max 2 times per room).\r\n• Add a charge to Isaac's active item (max 2 times per room).\r\n• Petrify all enemies in the room for 1.3 seconds."
   },
   "dead eye": {
     "id": "373",
     "name": "Dead Eye",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_373_deadeye.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_373_deadeye.png",
+    "description": "Each successive tear hit increases Isaac's damage multiplier by 25%, going up to 100% at 4 successive hits.\nIf a tear misses an enemy, there is a chance for the multiplier to reset. The chance is:\r\n• 20% for the first miss.\r\n• 33% for the second miss.\r\n• 50% for the third miss and beyond.\r\nIsaac's tears glow red and increase in size as the multiplier increases."
   },
   "holy light": {
     "id": "374",
     "name": "Holy Light",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_374_holylight.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_374_holylight.png",
+    "description": "Adds a chance to fire glowing blue tears that spawn a damaging beam of light after colliding with an enemy.\nEach beam deals 3x Isaac's tear damage and damages enemies in a small radius around it.\nThe chance to fire a holy tear scales with luck, using the formula: 1 / (11 - LuckStat) , starting at 10% with 0 luck, going up to 50% at 9 luck."
   },
   "host hat": {
     "id": "375",
     "name": "Host Hat",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_375_hosthat.png"
-  },
-  "restock": {
-    "id": "376",
-    "name": "Restock",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_376_restock.png"
-  },
-  "no 2": {
-    "id": "378",
-    "name": "No. 2",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_378_numbertwo.png"
-  },
-  "pupula duplex": {
-    "id": "379",
-    "name": "Pupula Duplex",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_379_pupuladuplex.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_375_hosthat.png",
+    "description": "Grants immunity to explosions and projectiles falling from above.\nHas a 20% chance to block any incoming projectiles. When a projectile is blocked, fires 3 tears that copy Isaac's damage, range and tear effects.\r\nHas a 1% chance of being dropped upon defeating The Gate."
   },
   "bursting sack": {
     "id": "377",
     "name": "Bursting Sack",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_377_burstingsack.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_377_burstingsack.png",
+    "description": "Prevents certain spider enemies from targeting or dealing contact damage to Isaac, or spawning other enemies."
+  },
+  "restock": {
+    "id": "376",
+    "name": "Restock",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_376_restock.png",
+    "description": "Allows infinite purchases from Shops, by spawning a new item/pickup after purchasing one.\nUnless playing Greed Mode, each new item/pickup will increase in size after each purchase from the same Shop slot. The price increase varies based on the type of item/pickup:\n• Items follow the formula: 15 + n × (n + 1) where n is the number of restocks triggered.\n• Everything else follows the formula> (OriginalPrice + n × (n + 1)) / 2 .\nThe maximum price of an item cannot exceed 99 cents.\nA small restock icon will appear under the map while the item is held."
+  },
+  "no 2": {
+    "id": "378",
+    "name": "No. 2",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_378_numbertwo.png",
+    "description": "Continuously firing tears for 2.35 seconds causes Isaac to fart (purely visual effect) and drop a Butt Bombs bomb.\r\nOnly one bomb can be dropped per firing cycle, requiring Isaac to let go of the firing buttons in order to start a new cycle. Taking damage will interrupt the cycle.\r\nHas a 1% chance of being dropped upon defeating Turdlings."
+  },
+  "pupula duplex": {
+    "id": "379",
+    "name": "Pupula Duplex",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_379_pupuladuplex.png",
+    "description": "+0.6 tear size.\nGrants spectral tears."
   },
   "pay to play": {
     "id": "380",
     "name": "Pay To Play",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_380_paytoplay.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_380_paytoplay.png",
+    "description": "+5 coins.\nMost rooms and objects that require a key to open will now require a penny instead.\nAffects Shops, Treasure Rooms, Libraries, Locked Chests and Key Blocks."
   },
   "eden s blessing": {
     "id": "381",
     "name": "Eden's Blessing",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_381_edensblessing.png"
-  },
-  "friendly ball": {
-    "id": "382",
-    "name": "Friendly Ball",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_382_friendlyball.png"
-  },
-  "lil gurdy": {
-    "id": "384",
-    "name": "Lil Gurdy",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_384_lilgurdy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_381_edensblessing.png",
+    "description": "+0.7 tears.\r\nGrants a random item at the start of the next run.\r\nCannot grant items with the noeden tag.\r\nThe effect will occur even if the run was unsuccessful, or restarted. Rerolling the item will still grant the effect on the next run.\r\nDoes not work if obtained on a seeded run, victory lap, RERUN, during a challenge, or if obtained as a temporary effect, e.g. via Lemegeton or Metronome .\r\nUp to 2 items can be obtained in subsequent runs by picking up multiple copies of the item."
   },
   "tear detonator": {
     "id": "383",
     "name": "Tear Detonator",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_383_teardetonator.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_383_teardetonator.png",
+    "description": "Splits all mid-air tears shot from Isaac into 6 more tears in all directions which retain their tear effects, damage and shot speed.\nAlso affects tears shot from Isaac's familiars."
+  },
+  "lil gurdy": {
+    "id": "384",
+    "name": "Lil Gurdy",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_384_lilgurdy.png",
+    "description": "Spawns a familiar that follows Isaac and can be launched in the direction Isaac is firing after a short charge-up period, represented with a charge bar next to the familiar.\r\nIt can be launched before the charge bar is at maximum, but will do so with a lower velocity.\r\nThe familiar deals a fixed amount of damage based on the level of charge and velocity, ranging from ~1 to ~28 damage.\r\nIt can bounce off of walls and enemies multiple times.\r\nHas a 1% chance of being dropped upon defeating Gurdy, Gurdy Jr., Mama Gurdy, or Gurglings."
+  },
+  "friendly ball": {
+    "id": "382",
+    "name": "Friendly Ball",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_382_friendlyball.png",
+    "description": "Grants a throwable ball that will instantly capture any non-boss enemy it hits.\nThe next time the ball is thrown, it will release the previously captured enemy as a permanently charmed enemy that will follow Isaac between rooms and floors, until it dies.\nWalking over the ball after it's been used to capture a monster will instantly recharge it and allow immediate release of the monster."
   },
   "bumbo": {
     "id": "385",
     "name": "Bumbo",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_385_bumbo.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_385_bumbo.png",
+    "description": "Spawns a familiar that follows Isaac and picks up nearby coins. The familiar changes level and behavior based on the number of collected coins.\r\n• Level 1 (0-5 coins): only collects coins to level up.\r\n• Level 2 (6-11 coins): has a chance to drop a random pickup, trinket, chest or pedestal item after clearing a room.\r\n• Level 3 (12-23 coins): fires tears in the same direction as Isaac that deal 3.5 damage and have a chance to drop a coin if they hit an enemy. The familiar shoots 1.36 times per second.\r\n• Level 4 (24+ coins): no longer fires tears and instead chases enemies, dealing 2.5 damage per tick (10.71 per second). Will occasionally drop bombs while chasing enemies or coins. Has a chance to drop a pickup or item after each coin collected."
   },
   "d12": {
     "id": "386",
     "name": "D12",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_386_d12.png"
-  },
-  "rune bag": {
-    "id": "389",
-    "name": "Rune Bag",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_389_runebag.png"
-  },
-  "seraphim": {
-    "id": "390",
-    "name": "Seraphim",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_390_seraphim.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_386_d12.png",
+    "description": "Rerolls all obstacles in the room, such as rocks, metal blocks, poops, spikes, fire places, TNT, cobwebs and pillars.\nCan reroll into other obstacles, as well as reward plates, red buttons, crawl spaces, trapdoors, golden poop, rainbow poop and tinted rocks."
   },
   "censer": {
     "id": "387",
     "name": "Censer",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_387_censer.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_387_censer.png",
+    "description": "Spawns a familiar that follows Isaac and projects a circular aura that slows down enemies and enemy shots within its radius.\r\nProjectiles that once touched the aura will be permanently slowed down.\r\nDoes not affect bosses but slows down their shots."
   },
   "key bum": {
     "id": "388",
     "name": "Key Bum",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_388_keybum.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_388_keybum.png",
+    "description": "Spawns a familiar that follows Isaac and collects keys. It has a 20% chance of dropping a random chest upon collecting a key.\r\nPicking up a Charged Key will make Key Bum spawn a Lil' Battery .\r\nKey Bum cannot pick up Golden Keys ."
+  },
+  "seraphim": {
+    "id": "390",
+    "name": "Seraphim",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_390_seraphim.png",
+    "description": "Spawns a familiar that follows Isaac and fires homing tears that deal 10 damage and are shot at 75% shot speed.\r\nThe familiar shoots 1.36 times per second."
+  },
+  "rune bag": {
+    "id": "389",
+    "name": "Rune Bag",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_389_runebag.png",
+    "description": "Spawns a familiar that follows Isaac and drops a random rune or soul stone after clearing 7 or 8 rooms (alternating)."
   },
   "betrayal": {
     "id": "391",
     "name": "Betrayal",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_391_betrayal.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_391_betrayal.png",
+    "description": "Allows enemies to hurt each other with projectiles.\nWhen an enemy gets damaged by another enemy, they will attack that enemy instead of Isaac. At this point, the 2 enemies are able to deal contact damage to each other as well."
   },
   "zodiac": {
     "id": "392",
     "name": "Zodiac",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_392_zodiac.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_392_zodiac.png",
+    "description": "Grants the effects of a random Zodiac item each floor."
   },
   "serpent s kiss": {
     "id": "393",
     "name": "Serpent's Kiss",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_393_serpentskiss.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_393_serpentskiss.png",
+    "description": "Grants a 15% chance to fire poison tears that deal a total of 2x Isaac's damage.\r\nInflicts poison on enemies that make contact with Isaac. The poison will tick 6 times, each tick dealing Isaac's amount of damage.\r\nEnemies that were inflicted with poison via contact damage have a 20% chance to drop a Black Heart ."
   },
   "ventricle razor": {
     "id": "396",
     "name": "Ventricle Razor",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_396_ventriclerazor.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_396_ventriclerazor.png",
+    "description": "When used for the first time, creates a blue portal where Isaac is standing. When used for the second time, it creates an orange portal.\nWalking into a portal will teleport Isaac to the other one. Portals persist across the entire floor, but will not persist between floors.\nActivating the item after 2 portals have been created will replace the older of the 2 portals.\nPortals won't persist in rooms that are not part of the floor's layout, such as Devil Rooms, Angel Room, I AM ERROR rooms, Crawl Spaces, Boss Rush, Black Markets, the Mega Satan room, the Hush fight arena, etc."
   },
   "marked": {
     "id": "394",
     "name": "Marked",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_394_marked.png"
-  },
-  "tractor beam": {
-    "id": "397",
-    "name": "Tractor Beam",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_397_tractorbeam.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_394_marked.png",
+    "description": "+0.7 tears.\n+3 range.\nWhen Isaac starts shooting, a controllable crosshair will appear on the floor that Isaac will automatically and continuously shoot at.\nThe crosshair can be shot at from any direction, rather than the traditional 4-way cardinal direction shooting.\nPressing the drop button will make the crosshair disappear and stop Isaac from shooting until a firing key is pressed again.\nFamiliars will also shoot towards the crosshair. Throwable familiars will launch themselves towards it automatically."
   },
   "tech x": {
     "id": "395",
     "name": "Tech X",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_395_techx.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_395_techx.png",
+    "description": "Replaces Isaac's tears with ring-shaped lasers that require a short charge-up before firing.\r\nShots can be fired before fully charged, which will shoot out smaller rings that deal less damage, scaling from 25% to 100% of Isaac's damage stat.\r\nIsaac's tear stat also slightly affects the damage output.\r\nRings deal damage 15 times per second. Only the outer line deals damage.\r\nRings have infinite range and will travel through obstacles and enemies."
+  },
+  "tractor beam": {
+    "id": "397",
+    "name": "Tractor Beam",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_397_tractorbeam.png",
+    "description": "+1 fire rate.\n+2.5 range.\n+0.16 shot speed.\nCreates a beam directly in front of Isaac in the direction that his head is facing. Isaac's tears will always travel in the path of the beam.\nIf Isaac changes direction while shooting, tears that are midair will instantly snap to the beam.\nPrevents Isaac from firing tears at an angle by using momentum."
   },
   "god s flesh": {
     "id": "398",
     "name": "God's Flesh",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_398_godsflesh.png"
-  },
-  "spear of destiny": {
-    "id": "400",
-    "name": "Spear Of Destiny",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_400_spearofdestiny.png"
-  },
-  "explosivo": {
-    "id": "401",
-    "name": "Explosivo",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_401_explosivo.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_398_godsflesh.png",
+    "description": "Grants Isaac a 20% chance to shoot tears that cause enemies to shrink in size and run away from Isaac for 5 seconds.\r\nShrunk enemies can be crushed and instantly killed by stepping over them.\r\nEnemies will flash white briefly before returning to normal size.\r\nOn-death effects of shrunken enemies, such as explosions, shooting projectiles, or summoning enemies, are prevented. This does not apply to champion enemies that have these effects.\r\nDoes not affect bosses or mini-bosses."
   },
   "maw of the void": {
     "id": "399",
     "name": "Maw Of The Void",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_399_mawofthevoid.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_399_mawofthevoid.png",
+    "description": "Adds a charge meter that fills up while shooting. Releasing the fire buttons when fully charged (2.35 seconds) creates a black Brimstone ring around Isaac that expands and contracts, dealing damage 15 times per second.\nThe ring deals Isaac's damage per tick, for a total of 30 times, lasting for 2 seconds.\nThe ring inherits Isaac's tear effects."
   },
-  "spider mod": {
-    "id": "403",
-    "name": "Spider Mod",
+  "explosivo": {
+    "id": "401",
+    "name": "Explosivo",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_401_explosivo.png",
+    "description": "Isaac's tears have a chance to stick to enemies and explode after a few seconds, dealing 60 + DamageStat in a small radius.\nThe explosions can hurt Isaac.\nIf a sticky tear gets detached from an enemy (if the enemy dies or teleports), the tear will slowly fall to the ground, attaching itself to a new enemy it comes in contact with."
+  },
+  "spear of destiny": {
+    "id": "400",
+    "name": "Spear Of Destiny",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_403_spidermod.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_400_spearofdestiny.png",
+    "description": "Gives Isaac a spear that he holds in the direction of his most recent shot.\nThe spear deals contact damage equal to 2x Isaac's damage per tick, and does so 4.29 times per second.\nThe spear occasionally inflicts fear to enemies it damages."
   },
   "chaos": {
     "id": "402",
     "name": "Chaos",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_402_chaos.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_402_chaos.png",
+    "description": "On pickup Drops 1-6 random pickups around Isaac.\r\nWhile held Causes items to be chosen from random item pools.\r\nFixed item drops that ignore the current room's item pool are not affected. Such examples include Cube of Meat after defeating a Harbinger, The Small Rock after breaking a Tinted Rock, etc.\r\nEach pool has a different weight (chance to be selected) based on the number of items inside it, with pools having more items being much more likely to be chosen than smaller pools.\r\nCannot mix up pools between Greed Mode and the normal game."
+  },
+  "spider mod": {
+    "id": "403",
+    "name": "Spider Mod",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_403_spidermod.png",
+    "description": "Spawns a spider familiar that wanders around the room and allows Isaac to see tear damage and health bars of enemies.\r\nThe familiar will inflict a random status effect to any enemy it comes in contact with.\r\nHas a chance to drop a Lil' Battery or spawn a Blue Spider upon clearing a room."
   },
   "farting baby": {
     "id": "404",
     "name": "Farting Baby",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_404_fartbaby.png"
-  },
-  "gb bug": {
-    "id": "405",
-    "name": "GB Bug",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_405_gbbug.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_404_fartbaby.png",
+    "description": "Spawns a familiar that follows Isaac and blocks enemy projectiles. Has a 10% chance to fart upon blocking a projectile.\nThere are 3 possible fart effects:\r\n• Charms nearby enemies.\r\n• Poisons nearby enemies, dealing 5 initial damage, and 3.5 per tick of poison.\r\n• Knocks back nearby enemies and projectiles, dealing 6 initial damage, while the deflected tears deal 7 damage."
   },
   "d8": {
     "id": "406",
     "name": "D8",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_406_d8.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_406_d8.png",
+    "description": "Rerolls Isaac's damage, tears, range and speed.\nEach stat is given a multiplier ranging from 0.5x to 2x, which applies after all other adjustments.\nAllows the tears to exceed the default tears cap of 5."
+  },
+  "gb bug": {
+    "id": "405",
+    "name": "GB Bug",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_405_gbbug.png",
+    "description": "Spawns a familiar that follows Isaac and can be launched forward by double-tapping a fire button.\nThe familiar will reroll the first monster, trinket or pickup it hits when launched, after which it will disappear for the rest of the room.\nIf it hits an enemy that cannot be rerolled (e.g. a boss), it will deal 8 damage instead.\nCannot reroll items and opened chests.\nAny pickup has a 10% chance to be rerolled into a chest. Rerolling a chest has a 28% chance to stay as some kind of a chest."
   },
   "purity": {
     "id": "407",
     "name": "Purity",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_407_purity.png"
-  },
-  "evil eye": {
-    "id": "410",
-    "name": "Evil Eye",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_410_evileye.png"
-  },
-  "empty vessel": {
-    "id": "409",
-    "name": "Empty Vessel",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_409_emptyvessel.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_407_purity.png",
+    "description": "Grants Isaac an aura that boosts his stats based on color:\r\n• Red : +4 damage.\r\n• Blue : +2 fire rate.\r\n• Yellow : +0.5 speed.\r\n• Orange : +3 range.\r\nTaking damage causes the aura to disappear until another room is entered, randomizing its color."
   },
   "athame": {
     "id": "408",
     "name": "Athame",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_408_athame.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_408_athame.png",
+    "description": "Killing an enemy has a luck-based chance to spawn a black Brimstone ring that deals Isaac's tear damage to everything it touches, 15 times per second.\nEnemies killed by the ring have a chance of spawning another ring, starting at 25% with 0 luck, and going up to 100% with 30 luck.\nThe ring lasts for 2 seconds and inherits Isaac's tear effects."
   },
-  "lusty blood": {
-    "id": "411",
-    "name": "Lusty Blood",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_411_lustyblood.png"
+  "empty vessel": {
+    "id": "409",
+    "name": "Empty Vessel",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_409_emptyvessel.png",
+    "description": "+2 Black Hearts.\nGrants flight when Isaac has no red hearts.\nWhen Isaac has no red hearts, every 40 seconds (when the seconds on the timer hit 00, 20, or 40), while in an active room, activates a shield that negates all damage for 10 seconds."
   },
-  "immaculate conception": {
-    "id": "413",
-    "name": "Immaculate Conception",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_413_immaculateconception.png"
+  "evil eye": {
+    "id": "410",
+    "name": "Evil Eye",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_410_evileye.png",
+    "description": "Grants a chance to fire a slow-moving eye with infinite range that copies Isaac tears and shoots in the direction that Isaac is firing at.\nThe chance starts at 3.33% with 0 luck, going up to 10% with 20 luck."
   },
   "cambion conception": {
     "id": "412",
     "name": "Cambion Conception",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_412_cambionconception.png"
-  },
-  "crown of light": {
-    "id": "415",
-    "name": "Crown Of Light",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_415_crownoflight.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_412_cambionconception.png",
+    "description": null
   },
   "more options": {
     "id": "414",
     "name": "More Options",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_414_moreoptions.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_414_moreoptions.png",
+    "description": "Makes 2 item pedestals spawn in every Treasure Room. Only one can be taken; the other will disappear."
+  },
+  "lusty blood": {
+    "id": "411",
+    "name": "Lusty Blood",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_411_lustyblood.png",
+    "description": "Isaac gains a damage boost for each enemy killed.\nEach kill adds +0.5 damage up to a maximum of +5 damage after 10 kills.\nThe boost lasts only for the current room."
+  },
+  "immaculate conception": {
+    "id": "413",
+    "name": "Immaculate Conception",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_413_immaculateconception.png",
+    "description": null
+  },
+  "crown of light": {
+    "id": "415",
+    "name": "Crown Of Light",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_415_crownoflight.png",
+    "description": "On pickup +2 Soul Hearts.\r\nWhen Isaac has no damaged Red Heart containers or Bone Hearts \r\n×2 damage.\r\n-0.3 shot speed.\r\nReplaces Isaac's tears with blue diamonds.\r\nThe crown on Isaac's head will glow blue while the effect is active, and grey when inactive.\r\nTaking damage will disable the effect for the rest of the room."
   },
   "deep pockets": {
     "id": "416",
     "name": "Deep Pockets",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_416_deeppockets.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_416_deeppockets.png",
+    "description": "Increases the amount of coins Isaac can carry to 999.\r\nIf a room would otherwise yield no reward, 1-3 random coins of the same type will spawn.\r\nSpawning coins has no effect in Greed Mode."
   },
   "succubus": {
     "id": "417",
     "name": "Succubus",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_417_succubus.png"
-  },
-  "teleport 2 0": {
-    "id": "419",
-    "name": "Teleport 2.0",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_419_teleport20.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_417_succubus.png",
+    "description": "Spawns a familiar that bounces around the room and has a dark aura around it that boosts Isaac's damage and deals damage to enemies within its radius.\r\nThe aura deals 2.5 damage per tick (10.71 per second).\r\nBoosts Isaac's damage multiplier to ×1.5 while he's standing inside the aura."
   },
   "fruit cake": {
     "id": "418",
     "name": "Fruit Cake",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_418_fruitcake.png"
-  },
-  "kidney bean": {
-    "id": "421",
-    "name": "Kidney Bean",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_421_kidneybean.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_418_fruitcake.png",
+    "description": null
   },
   "black powder": {
     "id": "420",
     "name": "Black Powder",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_420_blackpowder.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_420_blackpowder.png",
+    "description": "Leaves a trail of black powder on the ground as Isaac is walking. Using this powder to form a circle will create a pentagram symbol which deals 10 damage per tick (30 per second) to enemies standing inside it.\r\nThe pentagram lasts for 4.5 seconds.\r\nFlying enemies are also affected.\r\nIncreases the damage and blast radius of Isaac's bombs. Damage is increased to 185.\r\nCauses fire places to explode and deal 20 damage to enemies when extinguished. This explosion cannot hurt Isaac."
+  },
+  "teleport 2 0": {
+    "id": "419",
+    "name": "Teleport 2.0",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_419_teleport20.png",
+    "description": "Teleports Isaac to an unexplored room.\r\nPrioritizes normal rooms over special rooms. Common special rooms have priority over rarer ones.\r\nWhen used inside an uncleared room, it will simply reset the room.\r\nThe order of rooms that his item will teleport Isaac to is as follows:\r\n• Grave Room (only in the Dark Room).\r\n• Mirror/Minecart Room on Downpour/Mines II.\r\n• Normal rooms.\r\n• Red rooms.\r\n• Boss Room.\r\n• Super Secret Room.\r\n• Shop.\r\n• Treasure Room.\r\n• Planetarium.\r\n• Sacrifice Room.\r\n• Dice Room.\r\n• Library.\r\n• Curse Room.\r\n• Mini-Boss Room.\r\n• Challenge Room.\r\n• Bedroom.\r\n• Arcade.\r\n• Vault.\r\n• Secret Room.\r\n• Devil/Angel Room.\r\n• Ultra Secret Room (Mirrored World only).\r\n• I AM ERROR room (not in Chest, Dark Room or The Void, instead will teleport to the Devil/Angel Room.)."
+  },
+  "kidney bean": {
+    "id": "421",
+    "name": "Kidney Bean",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_421_kidneybean.png",
+    "description": "Isaac farts, charming nearby enemies."
   },
   "glowing hourglass": {
     "id": "422",
     "name": "Glowing Hourglass",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_422_glowinghourglass.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_422_glowinghourglass.png",
+    "description": "Undoes everything that happened in the current room and returns Isaac to the previous room.\r\nWill restore any health, bombs, coins, keys, cards (except Joker ), runes, pills, items and trinkets.\r\nWill restore devil/angel deal chance if red heart damage has been taken.\r\nWill remove completion marks obtained in the current room.\r\nWill reset even counters, such as the Donation Machine progress.\r\nCan only be used 3 times per floor, after which it will turn into The Hourglass for the rest of the floor.\r\nCan be used to go back to the previous floor if used in the starting room of a new floor. This will immediately turn it into The Hourglass for the entire floor.\r\nDoes not affect the chance for a Devil/Angel Room to spawn, or a Void portal appearing, as these chances are seeded per run.\r\nIf used in the starting room of a run, teleports Isaac directly to the Home floor."
   },
   "circle of protection": {
     "id": "423",
     "name": "Circle of Protection",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_423_circleofprotection.png"
-  },
-  "sack head": {
-    "id": "424",
-    "name": "Sack Head",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_424_sackhead.png"
-  },
-  "obsessed fan": {
-    "id": "426",
-    "name": "Obsessed Fan",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_426_obsessedfan.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_423_circleofprotection.png",
+    "description": "Creates a large white halo around Isaac that damages enemies inside it and has a chance to reflect enemy shots.\r\nThe halo deals Isaac's amount of damage 2.73 times per second to enemies inside it.\r\nThe chance to reflect a shot is 30%. Reflected tears gain a homing effect and deal Isaac's amount of damage."
   },
   "night light": {
     "id": "425",
     "name": "Night Light",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_425_nightlight.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_425_nightlight.png",
+    "description": "Creates a shining cone of light in front of Isaac that slows down enemies and their projectiles.\r\nRemoves Curse of Darkness! for the current floor. Will not remove it on later floors, but will significantly lessen its visual effect.\r\nThe light faces the direction Isaac is moving.\r\nCannot slow down bosses, but affects their shots.\r\nEnemies that exit the cone of light will lose the slow effect, however projectiles that touch it are permanently affected."
   },
-  "pjs": {
-    "id": "428",
-    "name": "PJs",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_428_pjs.png"
+  "obsessed fan": {
+    "id": "426",
+    "name": "Obsessed Fan",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_426_obsessedfan.png",
+    "description": "Spawns a fly familiar that follows Isaac's movement with a 0.66 second delay, dealing 2 damage per tick (30 per second)."
+  },
+  "sack head": {
+    "id": "424",
+    "name": "Sack Head",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_424_sackhead.png",
+    "description": "On pickup Spawns a random Grab Bag .\nWhile held 10% chance to replace any coin spawned with a Grab Bag.\n20% chance to replace any bomb (including troll bombs), key, card, rune or battery with a Grab Bag.\nDoes not apply to pickups spawned by Isaac, e.g. via IV Bag , and contents of other sacks.\nWorks retroactively, meaning pickups existing on the floor prior to picking the item up can be converted as well."
   },
   "mine crafter": {
     "id": "427",
     "name": "Mine Crafter",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_427_minecrafter.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_427_minecrafter.png",
+    "description": "Spawns a movable TNT barrel that can be exploded by using the item again.\r\nExploding the TNT barrel does not require for the item to be fully charged."
+  },
+  "pjs": {
+    "id": "428",
+    "name": "PJs",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_428_pjs.png",
+    "description": "+4 Soul Hearts.\nHeals 12 Red Heart containers."
   },
   "head of the keeper": {
     "id": "429",
     "name": "Head of the Keeper",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_429_headofthekeeper.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_429_headofthekeeper.png",
+    "description": "Turns Isaac's tears into coins that have a 5% chance to drop a Penny when hitting an enemy.\nCan spawn by blowing up shopkeepers."
   },
   "papa fly": {
     "id": "430",
     "name": "Papa Fly",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_430_papafly.png"
-  },
-  "glitter bombs": {
-    "id": "432",
-    "name": "Glitter Bombs",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_432_glitterbombs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_430_papafly.png",
+    "description": "Spawns a fly familiar that mimics Isaac's movement with a 0.66 second delay and fires tears at nearby enemies.\r\nTears deal Isaac's amount of damage and are fired once per second."
   },
   "multidimensional baby": {
     "id": "431",
     "name": "Multidimensional Baby",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_431_multidimensionalbaby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_431_multidimensionalbaby.png",
+    "description": "Spawns a familiar that follows Isaac's movement with a 0.66 second delay.\nWhen a friendly tear passes through the familiar, it splits into 2 parallel tears that gain +33% shot speed and +50% tear height which effectively increases range."
+  },
+  "glitter bombs": {
+    "id": "432",
+    "name": "Glitter Bombs",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_432_glitterbombs.png",
+    "description": "+5 bombs.\r\nIsaac's bombs gain a 63% chance to spawn a random pickup or trinket upon exploding. Each successful spawn decreases the chance by 1% for the rest of the floor.\r\nBombs also gain a 15% chance to charm random enemies in the room for 5 seconds upon exploding."
   },
   "my shadow": {
     "id": "433",
     "name": "My Shadow",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_433_myshadow.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_433_myshadow.png",
+    "description": "Spawns a shadow familiar that follows Isaac's movement on a very brief delay, and spawns friendly Chargers whenever an enemy comes into contact with it.\r\nThe Chargers have 20 HP and deal 8.66 damage per tick (18.56 per second). They also deal an additional tick of damage that scales with enemies' max health points, but cannot exceed 3.5.\r\nChargers last only for the current room.\r\nNo more than 16 Chargers can be acquired at once."
   },
   "jar of flies": {
     "id": "434",
     "name": "Jar of Flies",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_434_jarofflies.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_434_jarofflies.png",
+    "description": "While held Killing an enemy adds a fly to the jar that can hold up to 20 flies at once.\r\nOn use Releases Blue Flies equal to the number of flies in the jar.\r\nKills made by Blue Flies, locusts and shooting familiars do not add flies to the jar."
   },
   "lil loki": {
     "id": "435",
     "name": "Lil Loki",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_435_lilloki.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_435_lilloki.png",
+    "description": "Spawns a familiar that follows Isaac and shoots tears in the 4 cardinal directions.\r\nThe familiar shoots 1.36 times per second and deals 3.5 damage.\r\nHas a 1% chance of being dropped upon defeating Lokii."
   },
   "milk": {
     "id": "436",
     "name": "Milk!",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_436_milk.png"
-  },
-  "d7": {
-    "id": "437",
-    "name": "D7",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_437_d7.png"
-  },
-  "mom s box": {
-    "id": "439",
-    "name": "Mom's Box",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_439_momsbox.png"
-  },
-  "kidney stone": {
-    "id": "440",
-    "name": "Kidney Stone",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_440_kidneystone.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_436_milk.png",
+    "description": "Spawns a familiar that follows closely behind Isaac and blocks projectiles.\r\nAfter blocking 10 projectiles per floor, the glass breaks, spilling milk on the floor and granting Isaac +1 fire rate for the rest of the floor.\r\nThe familiar reappears on the next floor.\r\nThe puddle of milk is purely cosmetic."
   },
   "binky": {
     "id": "438",
     "name": "Binky",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_438_binky.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_438_binky.png",
+    "description": "+1 Soul Heart.\n+0.75 tears.\n-20% size.\n-14.7% hitbox size.\nIncreases the pitch of Isaac's voice."
+  },
+  "d7": {
+    "id": "437",
+    "name": "D7",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_437_d7.png",
+    "description": "Restarts the current room and respawns all enemies.\r\nPickups may be granted for clearing the room again.\r\nHas no effect in Greed Mode or rooms that had no enemies.\r\nHas no effect in Boss Rooms, Devil Deals, and Angel Rooms.\r\nRespawned champion enemies are unable to drop pickups."
+  },
+  "kidney stone": {
+    "id": "440",
+    "name": "Kidney Stone",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_440_kidneystone.png",
+    "description": "Firing tears will occasionally cause Isaac's head to turn read and charge an attack. Releasing the attack will fire a kidney stone that deals 5x Isaac's damage and pierces enemies, followed by a rapid, inaccurate spray of tears.\r\nWhen the effect is activated, Isaac gains a temporary x6 fire rate multiplier that decreases rapidly.\r\nThe effect occurs immediately when the item is acquired, and every ~25 seconds.\r\nIsaac cannot fire tears normally until the kidney stone effect ends."
+  },
+  "mom s box": {
+    "id": "439",
+    "name": "Mom's Box",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_439_momsbox.png",
+    "description": "On use Spawns a random trinket.\r\nWhile held +1 luck.\r\nBoosts the effects of trinkets. Most often it doubles their original effects, but some trinkets may have special interactions. Check the respective trinket pages for full details about each interaction.\r\nThe boosted effects stack with golden trinkets."
   },
   "mega blast": {
     "id": "441",
     "name": "Mega Blast",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_441_megasatansbreath.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_441_megasatansbreath.png",
+    "description": "Fires a giant Brimstone laser for 15 seconds that persists between rooms and floors.\r\nThe beam deals 5x Isaac's damage 15 times per second.\r\nThe beam pushes Isaac backward while active.\r\nThe beam can be rotated with the shooting buttons.\r\nWhile the beam is active, Isaac cannot open chests, pick up batteries, items, pills, trinkets or cards/runes, finish the run, or sleep in a bed."
   },
   "apple": {
     "id": "443",
     "name": "Apple!",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_443_apple.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_443_apple.png",
+    "description": "+0.3 tears.\r\nAdds a chance to fire razor blades that deal 4x Isaac's damage.\r\nThe chance scales with luck, using the formula: 1 / (15 - LuckStat) , starting at 6.66% with 0 luck, going up to 100% at 14 luck."
   },
   "dark prince s crown": {
     "id": "442",
     "name": "Dark Prince's Crown",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_442_darkprincescrown.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_442_darkprincescrown.png",
+    "description": "Increases Isaac's stats when at exactly 1 red heart.\nThe effect is lost for the rest of the room any time Isaac gains or loses red hearts.\nThe crown glows red while active, and black when inactive.\nThe following stat changes are applied when active:\n• +2 fire rate.\n• +1.5 range.\n• +0.2 shot speed.\nHas no effect on characters that cannot obtain red hearts or coin hearts."
   },
   "lead pencil": {
     "id": "444",
     "name": "Lead Pencil",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_444_leadpencil.png"
-  },
-  "dog tooth": {
-    "id": "445",
-    "name": "Dog Tooth",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_445_dogtooth.png"
-  },
-  "linger bean": {
-    "id": "447",
-    "name": "Linger Bean",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_447_lingerbean.png"
-  },
-  "shard of glass": {
-    "id": "448",
-    "name": "Shard of Glass",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_448_shardofglass.png"
-  },
-  "metal plate": {
-    "id": "449",
-    "name": "Metal Plate",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_449_metalplate.png"
-  },
-  "eye of greed": {
-    "id": "450",
-    "name": "Eye of Greed",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_450_eyeofgreed.png"
-  },
-  "tarot cloth": {
-    "id": "451",
-    "name": "Tarot Cloth",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_451_tarotcloth.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_444_leadpencil.png",
+    "description": "After every 15 tears fired, Isaac will fire a low range burst of 12 tears at once from his right eye.\nTears have a 50% chance to be colored red, but this is purely cosmetic."
   },
   "dead tooth": {
     "id": "446",
     "name": "Dead Tooth",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_446_deadtooth.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_446_deadtooth.png",
+    "description": "Holding down a fire button creates a green aura around Isaac that poisons nearby enemies, dealing Isaac's amount of damage 2 times.\r\nShooting tears is not required for the aura to appear, as long as a fire button is held.\r\nCan stack up to 6 ticks at a time."
+  },
+  "dog tooth": {
+    "id": "445",
+    "name": "Dog Tooth",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_445_dogtooth.png",
+    "description": "+0.3 damage.\n+0.1 speed.\nUpon entering a room that's connected to an undiscovered Secret Room or Super Secret room, a dog howl sound will play.\nUpon entering a room that contains an undiscovered Crawl Space, a barking dog sound will play."
+  },
+  "linger bean": {
+    "id": "447",
+    "name": "Linger Bean",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_447_lingerbean.png",
+    "description": "Holding down a fire button for 4 seconds will create a small brown cloud that damages enemies that walk into it.\r\nShooting tears is not required for the cloud to appear, as long as a fire button is held.\r\nThe cloud grows larger over the span of 10 seconds before disappearing. Its damage reduces as it grows larger.\r\nDamage dealt by the cloud starts at ~1.5x Isaac's damage, and is dealt 4.29 times per second. It scales down to ~0.7x Isaac's damage.\r\nClouds can be moved slightly by shooting at them."
+  },
+  "shard of glass": {
+    "id": "448",
+    "name": "Shard of Glass",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_448_shardofglass.png",
+    "description": "Grants a 25% chance to drop a full Red Heart upon taking damage.\r\nTaking damage causes Isaac to bleed and constantly spew out red tears around him. The direction of the bleeding can be influenced by holding a fire button, which will slightly increase its range. It can also be pointed diagonally.\r\nAfter bleeding for 20 seconds, Isaac will take half a heart of damage, but only red hearts and rotten hearts are affected. This damage also has a 25% chance to drop a red heart.\r\nThe damage over time effect will continue every 20 seconds until the bleeding is stopped by receiving any form of red heart or rotten heart healing. Eternal hearts also work.\r\nBleeding will also stop if Isaac has no more red or rotten hearts, or if the next bit of bleed damage will kill him.\r\nThe bleeding effect of the item won't activate if Isaac has no red or rotten hearts."
+  },
+  "metal plate": {
+    "id": "449",
+    "name": "Metal Plate",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_449_metalplate.png",
+    "description": "+1 Soul Heart.\r\nEnemy projectiles have a 25% chance to be reflected off of Isaac, negating damage, but pushing Isaac back a bit.\r\nReflected tears gain homing and concussive properties, and inherit Isaac's damage and tear effects."
+  },
+  "eye of greed": {
+    "id": "450",
+    "name": "Eye of Greed",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_450_eyeofgreed.png",
+    "description": "After every 20 tears shot, an additional coin tear is fired that turns enemies to gold and petrifies them for a few seconds, similarly to Midas' Touch for the cost of 1¢.\r\nHitting an enemy with the golden coin will drop a penny, effectively returning the cost unless the shot is missed.\r\nEnemies killed while golden will drop 1-3 coins.\r\nThe tear does 1.5 × DamageStat + 10 damage.\r\nIf Isaac has no money, the golden tear will still be fired, however it won't deal increased damage. The other effects of it will still apply."
+  },
+  "tarot cloth": {
+    "id": "451",
+    "name": "Tarot Cloth",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_451_tarotcloth.png",
+    "description": "On pickup Drops a random card.\r\nWhile held Boosts the effects of certain tarot cards.\r\nMakes cards glow purple while held, even if they gain no boost.\r\nFor full details about the boosted effects of each card, please check the respective card pages."
   },
   "varicose veins": {
     "id": "452",
     "name": "Varicose Veins",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_452_varicoseveins.png"
-  },
-  "polydactyly": {
-    "id": "454",
-    "name": "Polydactyly",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_454_polydactyly.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_452_varicoseveins.png",
+    "description": "Upon getting hit, Isaac will fire 10 tears in a circle around him that have a +25 damage increase.\nGrants a chance to activate the Anemic effect for 2 seconds upon getting hit, leaving damaging red creep on the ground."
   },
   "compound fracture": {
     "id": "453",
     "name": "Compound Fracture",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_453_compoundfracture.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_453_compoundfracture.png",
+    "description": "+1.5 range.\r\nTurns tears into bones that shatter into 1-3 shard upon hitting an obstacle or an enemy, and deal 50% of Isaac's damage.\r\nTears can split only once.\r\nHas a 1% chance of being dropped upon defeating The Pile."
+  },
+  "polydactyly": {
+    "id": "454",
+    "name": "Polydactyly",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_454_polydactyly.png",
+    "description": "On pickup Spawns a random card, rune or pill.\nWhile held Allows Isaac to carry 2 consumables at the same time (cards, pills, runes, usable objects, etc)."
   },
   "dad s lost coin": {
     "id": "455",
     "name": "Dad's Lost Coin",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_455_dadslostcoin.png"
-  },
-  "midnight snack": {
-    "id": "456",
-    "name": "Midnight Snack",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_456_moldybread.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_455_dadslostcoin.png",
+    "description": "On pickup Spawns a Lucky Penny .\nWhile held +2.5 range."
   },
   "cone head": {
     "id": "457",
     "name": "Cone Head",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_457_conehead.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_457_conehead.png",
+    "description": "+1 Soul Heart.\r\nGrants a 20% chance to negate any type of damage dealt to Isaac. This also includes damage from self-sacrifice mechanics, such as Curse Rooms, Blood Donation Machines , Devil Beggars , etc.\r\nDamage negation is indicated by Isaac briefly flashing blue."
+  },
+  "midnight snack": {
+    "id": "456",
+    "name": "Midnight Snack",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_456_moldybread.png",
+    "description": "+1 full Red Heart container.\r\nHeals 1 additional Red Heart."
   },
   "belly button": {
     "id": "458",
     "name": "Belly Button",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_458_bellybutton.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_458_bellybutton.png",
+    "description": "On pickup Spawns a random trinket.\nWhile held Allows Isaac to carry 2 trinkets at once."
   },
   "sinus infection": {
     "id": "459",
     "name": "Sinus Infection",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_459_sinusinfection.png"
-  },
-  "glaucoma": {
-    "id": "460",
-    "name": "Glaucoma",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_460_glaucoma.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_459_sinusinfection.png",
+    "description": "Grants a 20% chance to fire a booger tear that sticks to enemies and deals damage over time.\r\nDamage is equal to Isaac's damage stat and is dealt once per second.\r\nBoogers last for 10 seconds before disappearing.\r\nBoogers don't inherit Isaac's tear effects, despite them changing appearance.\r\nBoogers will pierce through bombs and fire places.\r\nMultiple boogers can stick to the same enemy, resulting in stackable damage.\r\nIf an enemy dies, jumps or teleports while having a booger attached to them, the booger will slowly fall to the ground and can stick to another enemy before disappearing.\r\nThe chance to fire booger tears is not affected by luck."
   },
   "parasitoid": {
     "id": "461",
     "name": "Parasitoid",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_461_parasitoid.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_461_parasitoid.png",
+    "description": "Adds a chance to fire egg sack tears that spawn slowing white creep. If they hit an enemy, 1-2 Blue Flies or Blue Spiders are spawned.\r\nThe chance starts at 14.29% with 0 luck, and goes up to 50% with 5 luck.\r\nEgg sack tears have x2 tear height which effectively increases range."
   },
-  "eye of belial": {
-    "id": "462",
-    "name": "Eye of Belial",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_462_eyeofbelial.png"
+  "glaucoma": {
+    "id": "460",
+    "name": "Glaucoma",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_460_glaucoma.png",
+    "description": "Adds a 5% chance to shoot concussive tears that cause enemies to walk around randomly.\r\nThe effect is permanent for normal enemies, and a very longer than usual duration for bosses when compared to other status effects.\r\nMakes the screen darker.\r\nThe chance to shoot concussive tears is not affected by luck."
   },
   "sulfuric acid": {
     "id": "463",
     "name": "Sulfuric Acid",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_463_sulfuricacid.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_463_sulfuricacid.png",
+    "description": "+0.3 damage.\nAdds a 25% chance to shoot acidic tears that destroy obstacles and open doors upon contact."
+  },
+  "eye of belial": {
+    "id": "462",
+    "name": "Eye of Belial",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_462_eyeofbelial.png",
+    "description": "+1.5 range.\nGrants piercing tears that after piercing one enemy, gain double damage, ×1.3 size multiplier and homing properties."
   },
   "glyph of balance": {
     "id": "464",
     "name": "Glyph of Balance",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_464_glyphofbalance.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_464_glyphofbalance.png",
+    "description": "+2 Soul Hearts.\r\nModifies drops from room clears and champion enemies depending on Isaac's held amount of pickups. It prioritizes drops as follows:\r\n• Soul Hearts: when Isaac has no red heart containers and less than 2 soul hearts.\r\n• Full Red Hearts: when Isaac is at half a red heart.\r\n• Keys: when Isaac has no keys.\r\n• Bombs: when Isaac has no bombs.\r\n• Pennies: when Isaac has less than 15 pennies.\r\n• Keys: when Isaac has less than 5 keys.\r\n• Bombs: when Isaac has less than 5 bombs.\r\n• Trinkets: when Isaac has no trinkets, and there are no trinkets on the ground in the room.\r\n• Soul Hearts: when Isaac has less than 6 total heart containers of any kind.\r\n• If none of the above criteria are met, pickups are dropped normally.\r\nCannot reroll chests.\r\nGlyph of Balance drops can appear if the room would normally yield no reward. An exception to this rule are hearts drops in Hard Mode which have a separate chance of being replaced with an empty drop.\r\nWhen playing as a character that cannot have red heart containers, red heart and soul heart drops are skipped from the above list.\r\nHaving a higher luck stat means that the effects of the Glyph will occur much less frequently, as room drops will often be replaced with chests that are immune to the Glyph."
   },
   "analog stick": {
     "id": "465",
     "name": "Analog Stick",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_465_analogstick.png"
-  },
-  "depression": {
-    "id": "469",
-    "name": "Depression",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_469_depression.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_465_analogstick.png",
+    "description": "+0.35 tears.\r\nAllows tears to be fired diagonally by holding down 2 shooting buttons at the same time.\r\nWhen using a controller or mouse input, tears can be shot in any direction."
   },
   "contagion": {
     "id": "466",
     "name": "Contagion",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_466_contagion.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_466_contagion.png",
+    "description": "The first enemy killed in each room will release a gas explosion that poisons nearby enemies.\r\nEnemies poisoned by this explosion will also release gas upon death, spreading the effect.\r\nPoisoned enemies don't have to die while poisoned in order for the gas explosion to take place.\r\nThe initial gas explosion deals 5 damage, and the poison deals Isaac's tear damage per tick for 6 total ticks."
   },
   "finger": {
     "id": "467",
     "name": "Finger!",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_467_finger.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_467_finger.png",
+    "description": "Spawns a finger familiar that can be aimed with the shooting buttons in all directions.\nThe finger fires invisible spectral lasers that deal 10% of Isaac's damage 10 times per second.\nThe thickness of the invisible laser scales with Isaac's damage, allowing it to deal damage to a wider area.\nWhilst not being aimed with the firing buttons, the finger will point to Isaac's movement direction."
   },
   "shade": {
     "id": "468",
     "name": "Shade",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_468_shade.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_468_shade.png",
+    "description": "Spawns a familiar that mimics Isaac's movement with a 0.66 second delay and deals 5 damage per tick (75 per second).\r\nAfter the familiar deals over 666 damage, it gets absorbed by Isaac and turns into friendly dark Chargers, similar to those spawned by My Shadow .\r\nThis enables Isaac to do contact damage at the same rate Shade used to."
   },
-  "lil monstro": {
-    "id": "471",
-    "name": "Lil Monstro",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_471_lilmonstro.png"
+  "depression": {
+    "id": "469",
+    "name": "Depression",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_469_depression.png",
+    "description": "Spawns a cloud familiar that follows Isaac and leaves a trail of damaging blue creep on the ground.\r\nThe creep deals 2 damage per tick (20 per second).\r\nUpon touching an enemy, the cloud has a small chance to shoot a damaging Holy Light beam onto the enemy that deals 20 + DamageStat damage per tick and can strike up to 8 times.\r\nHas a 1% chance of being dropped upon defeating Rainmaker."
   },
   "hushy": {
     "id": "470",
     "name": "Hushy",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_470_hushy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_470_hushy.png",
+    "description": "Spawns a little Hush familiar that bounces diagonally around the room, dealing 2 damage per tick (30 per second).\r\nThe familiar stops moving when Isaac is shooting tears, at which point it will block enemy projectiles.\r\nWhile stationary, the familiar shoots 8 blue projectiles in a circle 0.97 times per second, each dealing 6 damage."
   },
-  "broken glass cannon": {
-    "id": "474",
-    "name": "Broken Glass Cannon",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_474_brokenglasscannon.png"
-  },
-  "king baby": {
-    "id": "472",
-    "name": "King Baby",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_472_kingbaby.png"
-  },
-  "plan c": {
-    "id": "475",
-    "name": "Plan C",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_475_planc.png"
-  },
-  "d1": {
-    "id": "476",
-    "name": "D1",
+  "lil monstro": {
+    "id": "471",
+    "name": "Lil Monstro",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_476_d1.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_471_lilmonstro.png",
+    "description": "Spawns a miniature Monstro familiar that follows Isaac. It charges up and fires a cluster of tears similar to Monstro's attack.\nThe familiar fires 12-14 tears that do 3.5 damage each.\nCharge time is equal to 1 second."
   },
   "big chubby": {
     "id": "473",
     "name": "Big Chubby",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_473_bigchubby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_473_bigchubby.png",
+    "description": "Spawns a familiar that follows Isaac and charges across the room when Isaac fires.\r\nThe familiar deals 2.7 damage per tick (40.5 per second) when launched, and blocks enemy projectiles.\r\nWhen launched, the familiar will travel forward until it hits an obstacle or a wall.\r\nHas a 1% chance of being dropped upon defeating The Matriarch."
+  },
+  "king baby": {
+    "id": "472",
+    "name": "King Baby",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_472_kingbaby.png",
+    "description": "Grants a familiar that follows Isaac and is always first in the chain of familiars.\r\nWhile Isaac is firing tears, the familiar stops moving and glows, causing other familiars to remain stationary as well.\r\nThis action will cause shooting familiars to fire at nearby enemies automatically, and throwable familiars to launch themselves at enemies.\r\nWhen Isaac stops shooting, King Baby rapidly moves back to Isaac."
+  },
+  "broken glass cannon": {
+    "id": "474",
+    "name": "Broken Glass Cannon",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_474_brokenglasscannon.png",
+    "description": "This item is acquired when Isaac takes damage while holding Glass Cannon .\nIt begins with no charges, and turns into the Glass Cannon when fully charged.\nFor more details about the charged item, please check the Glass Cannon page."
+  },
+  "d1": {
+    "id": "476",
+    "name": "D1",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_476_d1.png",
+    "description": "Duplicates a random pickup in the current room into another pickup of the same type, but the variant can be different, e.g. using it on a Heart can spawn a Soul Heart .\nCannot duplicate Jera .\nOpened chests will be duplicated into an unopened copy.\nCan be used to duplicate shop pickups into free pickups."
+  },
+  "plan c": {
+    "id": "475",
+    "name": "Plan C",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_475_planc.png",
+    "description": "Deals 9,999,999 damage to every enemy in the room, but kills Isaac 3 seconds later.\r\nCan be used to kill final bosses that have a quick death animation and finish the run in time before dying.\r\nIf used against Delirium or Mother, the death timer is 10 seconds.\r\nEven if Isaac does not manage to reach the ending object in time, some bosses are still technically considered dead before their death animation is finished, thus granting the completion mark if not yet acquired.\r\nList of bosses that cannot be killed in time: Ultra Greedier (only as Tainted Forgotten, The Lost, Tainted Lost, The Forgotten in Soul form and Tainted Jacob in Lost form), The Beast (if used before Isaac starts fighting her directly).\r\nInvlunerable enemies cannot be killed. This includes temporary invulnerability, such as a closed off Host.\r\nNo form of invincibility can prevent Isaac from dying after having used Plan C."
   },
   "void": {
     "id": "477",
     "name": "Void",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_477_void.png"
-  },
-  "smelter": {
-    "id": "479",
-    "name": "Smelter",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_479_smelter.png"
-  },
-  "pause": {
-    "id": "478",
-    "name": "Pause",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_478_pause.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_477_void.png",
+    "description": null
   },
   "compost": {
     "id": "480",
     "name": "Compost",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_480_compost.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_480_compost.png",
+    "description": "Convert all pickups in the current room to Blue Flies or Blue Spiders.\nDoubles Isaac's current amount of Blue Flies and Blue Spiders.\nIf Isaac does not have any Blue Flies or Blue Spiders, spawns one of them.\nDoes not work on Troll Bombs ."
   },
-  "dataminer": {
-    "id": "481",
-    "name": "Dataminer",
+  "smelter": {
+    "id": "479",
+    "name": "Smelter",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_479_smelter.png",
+    "description": "On use Absorbs Isaac's currently held trinkets and permanently applies their effects to him.\r\nAbsorbed trinkets are displayed on the HUD item tracker as regular items.\r\nWhile held Grants a 2% chance to convert the room clear reward into a trinket."
+  },
+  "pause": {
+    "id": "478",
+    "name": "Pause",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_481_dataminer.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_478_pause.png",
+    "description": "Pauses all enemies and their projectiles in the room until a fire button is pressed or if 30 seconds have passed.\r\nTouching paused enemies will still hurt Isaac."
   },
   "clicker": {
     "id": "482",
     "name": "Clicker",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_482_clicker.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_482_clicker.png",
+    "description": "Transforms Isaac into a random unlocked character and applies all of the new character's stat changes, and grants his intrinsic passive items (these will be removed upon using Clicker again).\r\nHas a 50% chance to remove the last passive item collected or trinket gulped.\r\nCannot transform into a character that hasn't been unlocked yet.\r\nNon-tainted characters can only transform into other non-tainted characters, and tainted ones can transform only into tainted ones.\r\nThe Clicker can choose the same character, making it seem as no effect took place at all."
+  },
+  "dataminer": {
+    "id": "481",
+    "name": "Dataminer",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_481_dataminer.png",
+    "description": "Rotates every enemy and pickup 90 degrees and moves its sprite up and left without affecting hitboxes.\r\nAdds random tear effects for the current room and distorts the music.\r\nConverts all items in the room into glitched items.\r\nIncreases 1 of Isaac's stats and decreases another. Possible stat changes include:\r\n• ±1 damage.\r\n• ±0.5 fire rate.\r\n• ±0.2 speed.\r\n• ±0.2 shot speed.\r\n• ±1 luck.\r\n• ±2.5 range.\r\nIf the tear stat reaches a negative number, Isaac's tear stat will instead go to the maximum possible value due to an integer overflow."
   },
   "mama mega": {
     "id": "483",
     "name": "Mama Mega!",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_483_mamamega.png"
-  },
-  "crooked penny": {
-    "id": "485",
-    "name": "Crooked Penny",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_485_crookedpenny.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_483_mamamega.png",
+    "description": "Destroys all obstacles, machines, beggars, etc and deals 200 damage to every enemy. This effect is applied upon entering each room for the entire floor.\r\nIt will also open up any doors in the rooms, including Secret Room and Super Secret Room entrances.\r\nWill blow up the Donation Machine as well, rendering it unusable for the rest of the run.\r\nOpens the door to Boss Rush and Hush even after the time limit has expired.\r\nIf Isaac has a Golden Bomb , it will change Mama Mega's sprite on the HUD to a golden one , and using Mama Mega will consume the Golden Bomb, allowing Mama Mega to be used again."
   },
   "wait what question": {
     "id": "484",
     "name": "Wait What?",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_484_waitwhat.png"
-  },
-  "potato peeler": {
-    "id": "487",
-    "name": "Potato Peeler",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_487_potatopeeler.png"
-  },
-  "metronome": {
-    "id": "488",
-    "name": "Metronome",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_488_metronome.png"
-  },
-  "d infinity": {
-    "id": "489",
-    "name": "D infinity",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/assets/img/items/dinfinity.gif"
-  },
-  "acid baby": {
-    "id": "491",
-    "name": "Acid Baby",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_491_acidbaby.png"
-  },
-  "eden s soul": {
-    "id": "490",
-    "name": "Eden's Soul",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_490_edenssoul.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_484_waitwhat.png",
+    "description": "Isaac farts, knocking back enemies and their shots, and sending out rock waves that deal 10 damage per tick to enemies and break obstacles.\r\nRock waves can break open door entrances, including Secret Rooms. They can also break open Bomb Chests.\r\nWhen a run is started, the game has a 5% chance to replace Butter Bean with this item in every item pool. This means both items cannot be available at the same time in a run."
   },
   "dull razor": {
     "id": "486",
     "name": "Dull Razor",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_486_dullrazor.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_486_dullrazor.png",
+    "description": "Hurts Isaac without taking away any health, granting invincibility frames and activating any items that trigger upon taking damage.\r\nCan be used to enter Curse Rooms and open Spiked Chests for free via its invincibility frames.\r\nCannot be used to exploit Blood Donation Machines , Devil Beggars , etc.\r\nIgnores the shield granted by Holy Mantle and similar items."
   },
-  "yo listen": {
-    "id": "492",
-    "name": "YO LISTEN!",
+  "crooked penny": {
+    "id": "485",
+    "name": "Crooked Penny",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_492_yolisten.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_485_crookedpenny.png",
+    "description": "Has a 50% chance to double all items and pickups in the current room.\r\nIf the effect fails, removes all items and pickups and spawns a single Penny instead.\r\nCan be used to take Shop and Devil Room items for free, if duplicated."
   },
-  "adrenaline": {
-    "id": "493",
-    "name": "Adrenaline",
+  "potato peeler": {
+    "id": "487",
+    "name": "Potato Peeler",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_487_potatopeeler.png",
+    "description": "+0.2 flat damage.\r\n-1 Red Heart container.\r\nGrants a Cube of Meat , or Ball of Bandages if one is held.\r\nGrants the effects of Anemic for the current room.\r\nCounts as self-damage for the purposes of damage-triggered items."
+  },
+  "metronome": {
+    "id": "488",
+    "name": "Metronome",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_493_adderline.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_488_metronome.png",
+    "description": "Grants the effects of a random item for the current room.\r\nCan grant the effects of any active or passive item, except Glowing Hourglass , Plan C , Breath of Life , Clicker and R Key .\r\nUsing the item multiple times in the same room will replace the effect granted previously.\r\nCan trigger the effects of items that haven't been unlocked yet.\r\nHas a reduced chance of selecting Genesis (25%) or Death Certificate (15%)."
+  },
+  "d infinity": {
+    "id": "489",
+    "name": "D infinity",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/dinfinity.gif",
+    "description": "Acts as any die item except for Spindown Dice . Different dice can be cycled through by using the drop key.\r\nCharge time varies and is equal to the one of the last used die.\r\nThe icon displayed on the HUD will change based on the selected die."
+  },
+  "acid baby": {
+    "id": "491",
+    "name": "Acid Baby",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_491_acidbaby.png",
+    "description": "Spawns a familiar that follows Isaac and drops a random pill after every 7 cleared rooms. The first pill is dropped after 6 rooms.\nUpon using a pill, the familiar poisons all enemies in the room for 6 ticks. Each tick deals damage equal to Isaac's. Enemies also take 10 additional damage."
+  },
+  "eden s soul": {
+    "id": "490",
+    "name": "Eden's Soul",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_490_edenssoul.png",
+    "description": "Starts with 0 charges when acquired.\r\nWhen used, spawns 2 random items from the current room's item pool and vanishes from Isaac's inventory."
   },
   "jacob s ladder": {
     "id": "494",
     "name": "Jacob's Ladder",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_494_jacobsladder.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_494_jacobsladder.png",
+    "description": "Isaac's tears fire a short-ranged spark of electricity in a random direction upon hitting an enemy or an obstacle. When an arc strikes an enemy, it will strike another nearby enemy, chaining up to 4 enemies.\r\nEach spark deals half of Isaac's damage, and has spectral and piercing properties.\r\nEnemies can take damage multiple times from sparks of a single chain. If an enemy takes damage from a tear, it does not take any damage from the chain caused by that tear.\r\nThe arcing distance is increased on wet floors, such as Downpour, Dross, Flooded Caves, some rooms in Scarred Womb. This also applies after using Flush! ."
+  },
+  "adrenaline": {
+    "id": "493",
+    "name": "Adrenaline",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_493_adderline.png",
+    "description": "Grants damage based on the number of Isaac's fully empty heart containers (half empty containers don't count).\nDamage is calculated using the formula: ((2 × MissingHearts) ^ 1.6) × 0.1 ."
+  },
+  "yo listen": {
+    "id": "492",
+    "name": "YO LISTEN!",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_492_yolisten.png",
+    "description": "+1 luck.\r\nSpawns a familiar that sporadically moves around the room.\r\nUpon entering a room with a Secret Room/Super Secret Room entrance, tinted rock or a rock with a Crawl Space underneath, the familiar will fly towards it.\r\nIf multiple of the abovementioned are present in the room, the familiar will fly from one to another.\r\nCan sometimes fly over pits, poops or empty tiles, indicating that an unreachable Crawl Space has been generated there."
   },
   "ghost pepper": {
     "id": "495",
     "name": "Ghost Pepper",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_495_ghostpepper.png"
-  },
-  "euthanasia": {
-    "id": "496",
-    "name": "Euthanasia",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_496_euthanasia.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_495_ghostpepper.png",
+    "description": "Grants a luck-based chance to shoot out a blue fire whilst shooting tears, damaging enemies and destroying shots it comes into contact with.\r\nThe fire lasts for a limited time and can pass through obstacles.\r\nCauses Isaac's farts to produce fires.\r\nThe fire deals 3-6x Isaac's damage depending on the size of the flame.\r\nThe chance of shooting a flame is equal to 1 / (12 - LuckStat) . It starts at 8.33% with 0 luck, going up to 50% with 10 luck.\r\nFlames can be used to destroy Shopkeepers."
   },
   "camo undies": {
     "id": "497",
     "name": "Camo Undies",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_497_camoundies.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_497_camoundies.png",
+    "description": "Upon entering a new room, Isaac becomes camouflaged which causes all non-boss enemies to be confused and walk around randomly. The effect lasts until Isaac shoots.\r\nWhile camouflaged, Isaac gains +0.5 speed.\r\nDropping the camouflage deals 15 damage to enemies in a short radius, and briefly grants Isaac +7.5 fire rate and +10.5 damage.\r\nUsing an active item or placing a bomb does not cancel the effect."
   },
-  "eucharist": {
-    "id": "499",
-    "name": "Eucharist",
+  "euthanasia": {
+    "id": "496",
+    "name": "Euthanasia",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_499_eucharist.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_496_euthanasia.png",
+    "description": "Adds a luck-based chance to fire needles that instantly kill non-boss enemies and causes them to burst into 10 tears in all directions.\nNeedles deal 3x Isaac's damage to bosses and mini-bosses.\nTears from the burst shot can still become needles, but do not retain their insta-kill capabilities. They still do 3x Isaac's damage.\nThe chance to fire a needle starts at 3.33% with 0 luck, going up to 25% with 15 luck.\nNeedles can kill otherwise invulnerable enemies, such as Peep's eyes, Death's Heads and Stoneys & Stone Grimaces."
   },
   "duality": {
     "id": "498",
     "name": "Duality",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_498_duality.png"
-  },
-  "greed s gullet": {
-    "id": "501",
-    "name": "Greed's Gullet",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_501_greedsgullet.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_498_duality.png",
+    "description": "Causes both a Devil and Angel Room to spawn whenever one would spawn normally after defeating a boss.\nOnly one of the rooms can be entered, causing the other one to disappear.\nBoth rooms will spawn, even if a Devil Deal has been taken before.\nSometimes only one room will spawn if the boss room does not have enough space for both."
   },
   "sack of sacks": {
     "id": "500",
     "name": "Sack of Sacks",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_500_sackofsacks.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_500_sackofsacks.png",
+    "description": "Spawns a familiar that follows Isaac and drops a Grab Bag every 7 or 8 rooms (alternatingly)."
   },
-  "large zit": {
-    "id": "502",
-    "name": "Large Zit",
+  "eucharist": {
+    "id": "499",
+    "name": "Eucharist",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_499_eucharist.png",
+    "description": "100% chance for an Angel Room to spawn after beating a boss, regardless of damage taken.\nPrevents Devil Deals from appearing.\nThe Angel Room will stay open after leaving.\nEven if the boss has been defeated on the current floor, the item will still spawn an Angel Room, unless a Devil Deal has previously been visited on the floor.\nDoes not work on floors that don't normally spawn a devil/angel room."
+  },
+  "greed s gullet": {
+    "id": "501",
+    "name": "Greed's Gullet",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_502_largezit.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_501_greedsgullet.png",
+    "description": "+1 empty Red Heart container for every 25 coins Isaac has.\r\nHeart containers are removed if the number of coins reduces below the required amount.\r\nWill grant a total of 4 extra heart containers at 99 coins.\r\nIf used by a character that cannot obtain Red Heart Containers, it will instead grant Soul Hearts.\r\nCan kill Isaac if the extra containers are wasted, and the money required for them is spent.\r\nCan exceed the maximum Coin Heart limit of Keeper and Tainted Keeper .\r\nWhen combined with Deep Pockets and exceeding 100 coins, an extra heart container is given for every 100 coins instead of 25."
   },
   "little horn": {
     "id": "503",
     "name": "Little Horn",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_503_littlehorn.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_503_littlehorn.png",
+    "description": "Grants Isaac the ability to deal 3.5 contact damage to enemies, 2 times per second.\r\nGrants a luck-based chance to fire tears that summon Big Horn's hand. The hand will grab and crush any non-boss enemy, killing them instantly.\r\nThe hand will attack bosses 3 times, dealing 12 damage per hit.\r\nThe hand is able to push enemy projectiles and increase their speed, which may prove more difficult to dodge.\r\nThe chance of firing the special tear start at 5% with 0 luck, going up to 20% at 15 luck.\r\nThe special tears can kill otherwise invulnerable enemies, such as Peep's eyes, Death's Heads, Stoneys & Stone Grimaces.\r\nHas a 1% chance of being dropped upon defeating Little Horn or Big Horn."
+  },
+  "large zit": {
+    "id": "502",
+    "name": "Large Zit",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_502_largezit.png",
+    "description": "Grants Isaac a chance to fire a creep shot alongside his tears that deals double damage, slows enemies and leaves a short trail of slowing white creep on the ground.\r\nFires a creep shot in a random direction upon taking damage.\r\nThe chance to fire a creep shot is not affected by luck.\r\nCreep shots inherit Isaac's shot speed, but not his tear effects."
   },
   "poke go": {
     "id": "505",
     "name": "Poke Go",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_505_pokego.png"
-  },
-  "backstabber": {
-    "id": "506",
-    "name": "Backstabber",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_506_backstabber.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_505_pokego.png",
+    "description": "Grants a 20% chance to spawn a friendly enemy upon entering a new room with enemies.\r\nMultiple friendly enemies can spawn at the same time.\r\nCan spawn the following enemies:\r\n• Attack Fly.\r\n• Fat Bat.\r\n• Frowning Gaper.\r\n• One Tooth.\r\n• Pooter.\r\n• Vis.\r\nCan also spawn different friendly variants of the abovementioned enemies."
   },
   "brown nugget": {
     "id": "504",
     "name": "Brown Nugget",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_504_brownnugget.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_504_brownnugget.png",
+    "description": "Spawns a stationary fly familiar that automatically shoots at nearby enemies, dealing 3.5 damage per shot.\r\nThe flies are invulnerable and ignored by enemies.\r\nThe familiar shoots once per second.\r\nHas a 1% chance of being dropped upon defeating Turdlet."
+  },
+  "backstabber": {
+    "id": "506",
+    "name": "Backstabber",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_506_backstabber.png",
+    "description": "Tears deal double damage and inflict a bleeding effect when they hit enemies on the back.\r\nAffected enemies bleed for 5 seconds, taking damage at a rate that scales with their movement speed. The faster an enemy is moving, the faster it will take damage. These enemies will also leave behind red creep that damages other enemies for 2 ticks per second at a rapid rate.\r\nAn enemy's \"back\" is considered the opposite of the direction they last moved in.\r\nEnemies that are standing still don't receive the extra damage.\r\nThe amount of damage dealt per tick is equal to 2.8 + 0.3 × CurrentFloor .\r\nThe effects of Backstabber can also be inflicted by shooting familiars."
   },
   "sharp straw": {
     "id": "507",
     "name": "Sharp Straw",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_507_sharpstraw.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_507_sharpstraw.png",
+    "description": "Damages all enemies in the room for DamageStat + 0.1 × EnemyMaxHealth .\r\nEach damaged enemy has a 15% chance to drop a Half Red Heart ."
   },
   "mom s razor": {
     "id": "508",
     "name": "Mom's Razor",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_508_momsrazor.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_508_momsrazor.png",
+    "description": "Spawns an orbiting razor familiar that blocks shots and deals contact damage to enemies equal to 20% of Isaac's damage 7.5 times per second (150% per second).\r\nThe razor also makes enemies bleed for 5 seconds, taking damage at a rate that scales with their movement speed. The faster an enemy is moving, the faster it will take damage. These enemies will also leave behind red creep that damages other enemies for 2 ticks per second at a rapid rate.\r\nEnemies that are standing still don't receive the extra damage.\r\nThe amount of damage dealt per tick is equal to 2.8 + 0.3 × CurrentFloor ."
   },
   "bloodshot eye": {
     "id": "509",
     "name": "Bloodshot Eye",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_509_bloodshoteye.png"
-  },
-  "delirious": {
-    "id": "510",
-    "name": "Delirious",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_510_delirious.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_509_bloodshoteye.png",
+    "description": "Spawns an orbital familiar that shoots in the direction it's facing and deals contact damage.\r\nThe familiar deals 2 contact damage per tick (15 per second).\r\nTears shot from the eye deal 3.5 damage and are fired 1.88 times per second when enemies are within its line of sight."
   },
   "angry fly": {
     "id": "511",
     "name": "Angry Fly",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_511_angryfly.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_511_angryfly.png",
+    "description": "Spawns a fly familiar that orbits around a random enemy in the room, dealing 2 damage per tick (30 per second) to enemies coming into contact with it.\r\nThe familiar occasionally makes a lunge towards the enemy it is orbiting, allowing brief contact even with smaller enemies.\r\nWhen the enemy it was orbiting dies, it starts orbiting a different enemy.\r\nWhen there are no enemies in the room, it will instead orbit Isaac."
+  },
+  "delirious": {
+    "id": "510",
+    "name": "Delirious",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_510_delirious.png",
+    "description": "Spawns Delirum in the form of a friendly boss with 75 HP. The boss remains active until it dies, or another one is spawned via the item.\r\nRandomizes the room appearance, similar to the effect caused by Delirium.\r\nThe boss takes 1 damage per hit, and 5 damage per explosion.\r\nSpikes, fires, and Red Poops cannot damage the boss.\r\nThe boss' health will deteriorate at a rate of 1 HP every 2 seconds, and their color will turn more gray as they reach 1 HP."
   },
   "black hole": {
     "id": "512",
     "name": "Black Hole",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_512_blackhole.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_512_blackhole.png",
+    "description": "Throws a black hole that sucks in pickups, enemies and projectiles, and lasts for 6 seconds.\r\nThe hole deals 0.4 damage per tick (6 per second) to enemies it's sucking in.\r\nThe hole will slightly suck in Isaac but cannot deal damage to him.\r\nCan destroy nearby obstacles in a radius that expands over time.\r\nCannot destroy room doors.\r\nCannot suck in stationary or invincible enemies.\r\nSome bosses cannot be sucked in, although they will still take damage from the hole."
   },
   "bozo": {
     "id": "513",
     "name": "Bozo",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_513_bozo.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_513_bozo.png",
+    "description": "+1 Soul Heart.\r\n+0.1 flat damage.\r\nRandomly causes enemies to briefly become charmed or feared.\r\nTaking damage has a 5% chance to spawn a Rainbow Poop.\r\nPicking up the item multiple times will not grant further damage ups."
   },
   "broken modem": {
     "id": "514",
     "name": "Broken Modem",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_514_brokenmodem.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_514_brokenmodem.png",
+    "description": "Causes enemies, enemy projectiles, tears and pickups to briefly freeze in place at random intervals. The frequency of the effect scales with Isaac's luck.\r\nFrozen enemy shots will disappear.\r\nHas a 25% chance to double room clear rewards. Cannot double chests, pills or cards. However, it can duplicate chests spawned by Options? .\r\nCan be used to create a glitched TMTRAINER item under very specific circumstances. This can happen by using Magneto to immediately open a chest that was duplicated by Options? and contained an item."
   },
   "mystery gift": {
     "id": "515",
     "name": "Mystery Gift",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_515_mysterygift.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_515_mysterygift.png",
+    "description": "Spawns a random item from the current room's item pool, but has a chance to spawn A Lump of Coal or The Poop instead.\nThe item spawned depends on Isaac's luck.\n• At -10 luck, it has an equal chance to spawn one of the 2 abovementioned items.\n• At 0 luck, it has a 83.3% chance to spawn a random item, and 8.3% + 8.3% chance to spawn one of the 2 items.\n• At 10 luck, it has a 90.9% chance to spawn a random item, and 4.5% + 4.5% chance to spawn one of the 2 items."
   },
   "sprinkler": {
     "id": "516",
     "name": "Sprinkler",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_516_sprinkler.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_516_sprinkler.png",
+    "description": "Spawns a stationary sprinkler familiar that rotates and fires tears in 8 directions. The tears copy Isaac's stats and tear effects.\nIts rate of fire and rotation depend on Isaac's tears stat.\nThe familiar does not deal contact damage, but is counted as an obstacle and will block some enemies' movement."
   },
   "fast bombs": {
     "id": "517",
     "name": "Fast Bombs",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_517_fastbombs.png"
-  },
-  "lil delirium": {
-    "id": "519",
-    "name": "Lil Delirium",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_519_lildelirium.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_517_fastbombs.png",
+    "description": "+7 Bombs.\r\nAllows Isaac to place bombs rapidly with no delay whatsoever.\r\nRemoves the knockback between Isaac's bombs."
   },
   "buddy in a box": {
     "id": "518",
     "name": "Buddy in a Box",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_518_buddybox.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_518_buddybox.png",
+    "description": "Spawns a familiar that follows Isaac and has a random appearance, tear effects, fire rate, and damage.\r\nThe familiar is randomized each floor using the appearance of co-op babies.\r\nDamage dealt by the familiar scales from ~2-6, while tear delay scales from ~12-30.\r\nTear effects granted are the same used by Fruit Cake ."
+  },
+  "lil delirium": {
+    "id": "519",
+    "name": "Lil Delirium",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_519_lildelirium.png",
+    "description": null
   },
   "jumper cables": {
     "id": "520",
     "name": "Jumper Cables",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_520_jumpercable.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_520_jumpercable.png",
+    "description": "Grants +1 active item charge for every 15 enemies killed."
   },
   "coupon": {
     "id": "521",
     "name": "Coupon",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_521_cerealcutout.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_521_cerealcutout.png",
+    "description": "While held Guarantees a random item or pickup in the Shop to sell at half price.\nOn use Allows a random item in the current room that costs money or hearts to be taken for free.\nUsing the Coupon in Greed Mode or when holding Restock does not restock the taken item or consumable.\nCan be obtained from Shopkeepers."
   },
   "moving box": {
     "id": "523",
     "name": "Moving Box",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_523_movingbox.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_523_movingbox.png",
+    "description": "If the box is empty \r\nPicks up items and pickups in the room and stores them.\r\nIt can store up to 10 things at once, picked randomly.\r\nCannot be used to steal items from Shops or Devil Rooms.\r\nUsing it in a Challenge Room or Boss Rush will take the items, but start the challenge.\r\nIf used in a room with choice pedestals, only one of them will be packed up, while the others will disappear.\r\nA Moving Box that is holding stuff cannot be packed within another box.\r\nIf the box is not empty \r\nPlaces all previously stored things in the current room."
   },
   "telekinesis": {
     "id": "522",
     "name": "Telekinesis",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_522_telekinesis.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_522_telekinesis.png",
+    "description": "Upon use, for the next 3 seconds, any enemy shots that come near Isaac are held in place. They're fired back as tears when the item charge is depleted, dealing 3.5 damage to enemies.\r\nAlso pushes away enemies while active."
   },
   "technology zero": {
     "id": "524",
     "name": "Technology Zero",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_524_technologyzero.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_524_technologyzero.png",
+    "description": "Connects Isaac's tears with electricity beams that deal damage to enemies equal to 30% of Isaac's damage, 15 times per second.\r\nA single tear can only generate one connection, but other tears can still make connections with it.\r\nEach of Isaac's tears can connect with allied tears, including those of shooting familiars."
   },
   "leprosy": {
     "id": "525",
     "name": "Leprosy",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_525_leprosy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_525_leprosy.png",
+    "description": "Upon taking damage, Isaac gains a body part orbital that blocks enemy shots and deals 7 damage per tick (30 per second).\r\nA maximum of 3 body parts can be active at once.\r\nEach body part can deal up to 30 ticks of damage and/or block 3 shots before getting destroyed.\r\nHas a 1% chance of being dropped upon defeating Fistula."
   },
   "7 seals": {
     "id": "526",
     "name": "7 Seals",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_526_7seals.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_526_7seals.png",
+    "description": "Spawns a random Harbinger familiar that deals contact damage to enemies and periodically spawns locusts if Isaac currently does not have any.\nThe familiar changes appearance and behavior every 10 seconds based on the 5 Harbingers:\n• Famine: wanders around the room leaving slowing black creep on the ground. He deals 0.5 damage per tick (2.14 per second), and spawns yellow locusts every 3 seconds that deal 2x Isaac's damage and slow enemies down.\n• Pestilence: wanders around the room leaving green creep on the ground that deals 1 damage per tick (30 per second). He deals 0.5 damage per tick (2.14 per second), and spawns green locusts every 3 seconds that deal 2x Isaac's damage and poison enemies, dealing Isaac's damage over time.\n• War: chases enemies and has increased speed. He deals 1.5 damage per tick (6.43 per second), and spawns red locusts every 5 seconds that detonate upon impact with enemies, dealing 2x Isaac's damage on impact, and 60 for the explosion. The explosion can hurt Isaac, and synergizes with his bomb modifiers.\n• Death: chases enemies dealing 1.5 damage per tick (6.43 per second), and spawns black locusts every 3 seconds that deal 4x Isaac's damage.\n• Conquest: wanders around the room dealing 0.5 damage per tick (2.14 per second), and spawns 2 white locusts every 2 second that deal 2x Isaac's damage."
   },
   "mr me": {
     "id": "527",
     "name": "Mr. ME!",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_527_mr_me.png"
-  },
-  "angelic prism": {
-    "id": "528",
-    "name": "Angelic Prism",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_528_angelic prism.png"
-  },
-  "lachryphagy": {
-    "id": "532",
-    "name": "Lachryphagy",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_532_lachryphagy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_527_mr_me.png",
+    "description": "Summons a ghost that follows Isaac and a controllable blue crosshair on the ground. The crosshair disappears after a few seconds, and the ghost will act based on what the crosshair's was targeting:\n• Item / Pickup / Trinket / Chest / Red Chest / Spiked Chest / Mega Chest: brings it to Isaac.\n• Shop or Devil Deal Item/Pickup: has a 50/50 chance to either grab the item for free or fail, making the ghost disappear and do nothing.\n• Locked Chest / Eternal Chest / Bomb Chest: opens it for free.\n• Button/Reward Plate: presses the button.\n• Enemy: attacks it until it dies or can no longer be targeted due to a form change or similar cause. Deals 3 damage per tick (9 per second).\n• Door: opens the door, even if locked. Can open the door to Mega Satan, Hush (only exit) and Boss Rush (only exit).\n• Secret Room entrance: blows up and opens the entrance.\n• Destructible obstacle / Shopkeeper / Machine / Beggar: explodes and destroys it.\n• Nothing: interacts with the object closest to Isaac."
   },
   "pop": {
     "id": "529",
     "name": "Pop!",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_529_pop.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_529_pop.png",
+    "description": "Isaac's tears become eyeballs that bounce off of each other and are no longer limited by range, but instead dissipate when they stop moving or hit an enemy or obstacle.\nEyeball tears fall to the ground after bouncing off of each other 8 times."
   },
-  "haemolacria": {
-    "id": "531",
-    "name": "Haemolacria",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_531_haemolacria.png"
-  },
-  "lil spewer": {
-    "id": "537",
-    "name": "Lil Spewer",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_537_lilspewer.png"
-  },
-  "sacrificial altar": {
-    "id": "536",
-    "name": "Sacrificial Altar",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_536_sacrificialaltar.png"
-  },
-  "schoolbag": {
-    "id": "534",
-    "name": "Schoolbag",
+  "angelic prism": {
+    "id": "528",
+    "name": "Angelic Prism",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_534_schoolbag.png"
-  },
-  "trisagion": {
-    "id": "533",
-    "name": "Trisagion",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_533_trisagion.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_528_angelic prism.png",
+    "description": "Spawns an orbital familiar with a large radius that splits any tear it passes through it into 4 multi-colored tears.\nAlso works for familiars' tears."
   },
   "death s list": {
     "id": "530",
     "name": "Death's List",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_530_deathslist.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_530_deathslist.png",
+    "description": null
   },
-  "mystery egg": {
-    "id": "539",
-    "name": "Mystery Egg",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_539_mysteryegg.png"
+  "haemolacria": {
+    "id": "531",
+    "name": "Haemolacria",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_531_haemolacria.png",
+    "description": "+1 damage.\n×1.5 damage multiplier.\r\nx1.71 tear size multiplier.\r\nx2 tear delay + 10.\r\nx0.8 range multiplier.\r\nMakes Isaac's tears fire in an arc, and burst into 6-11 smaller tears in all directions upon hitting something or falling to the ground.\r\nThe burst tears' damage varies from 50-83.33% of the main tear, averaging at ~67% damage.\r\nShot speed affects the arc oppositely. Higher shot speed lowers the arc, while lower shot speed heightens it."
   },
-  "marbles": {
-    "id": "538",
-    "name": "Marbles",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_538_marbles.png"
-  },
-  "flat stone": {
-    "id": "540",
-    "name": "Flat Stone",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_540_flatstone.png"
+  "lachryphagy": {
+    "id": "532",
+    "name": "Lachryphagy",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_532_lachryphagy.png",
+    "description": "Grants Isaac hungry tears that decelerate as they travel. Upon stopping or hitting something, they burst into 5-8 tears (based on tear size) in all directions that deal half of the main tear's damage.\nTears can be fired into each other in order to feed them, increasing their size and damage.\nOne tear can be fed up to 5 times before bursting.\nCombined tears' damage gets added up together, with the first consumed tear giving additional damage.\nFamiliars' tears can also feed Isaac's tears.\nTear bursting is also affected by tear size. With big enough tear size, tears will burst immediately after firing."
   },
   "blanket": {
     "id": "535",
     "name": "Blanket",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_535_blanket.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_535_blanket.png",
+    "description": "+1 Soul Heart.\r\nHeals 1 red heart container.\r\nGrants a one-time-use Holy Mantle shield upon entering a Boss Room, that blocks one hit.\r\nThe shield is only active within the Boss Room and cannot be carried over to a different room.\r\nRe-entering the Boss Room will renew the shield.\r\nIn Greed Mode, the shield will only activate in The Shop floor final boss fights."
+  },
+  "trisagion": {
+    "id": "533",
+    "name": "Trisagion",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_533_trisagion.png",
+    "description": "Replaces Isaac's tears with piercing white beams of light that deal 33% of Isaac's damage, but can hit the same enemy multiple times.\r\nBeams decrease in size until disappearing.\r\nLower shot speed is more beneficial as it can cause enemies to get hit more times.\r\nBeams can hit enemies through obstacles, but only when passing through only 1 obstacle."
+  },
+  "schoolbag": {
+    "id": "534",
+    "name": "Schoolbag",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_534_schoolbag.png",
+    "description": "Allows Isaac to carry 2 active items at once.\r\nItems can be swapped through by using the drop button.\r\nItems in the secondary slot will recharge at the same rate as the primary item."
+  },
+  "sacrificial altar": {
+    "id": "536",
+    "name": "Sacrificial Altar",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_536_sacrificialaltar.png",
+    "description": null
+  },
+  "lil spewer": {
+    "id": "537",
+    "name": "Lil Spewer",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_537_lilspewer.png",
+    "description": "Spawns a random pill.\r\nSpawns a familiar that follows Isaac. It charges up for 1 second and fires different types of creep based on his appearance that changes when Isaac uses a pill.\r\nPossible creep types:\r\n• Green: deals 0.35 damage per tick (10.5 per second) - total 35.\r\n• Red: deals 12 damage per tick (120 per second) - total 24.\r\n• Yellow: 2 damage per tick at its lowest range, up to 15.2 damage at its furthest range (~6.47 damage per second, based on range). Damage ticks for a total of 9 times.\r\n• Black /White: slows enemies down.\r\nThe familiar always starts with green creep.\r\nHas a 1% chance of being dropped upon defeating Blastocyst."
+  },
+  "marbles": {
+    "id": "538",
+    "name": "Marbles",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_538_marbles.png",
+    "description": "On pickup Spawns 3 random trinkets.\nWhile held Grants a 10% chance to swallow Isaac's currently held trinket(s) upon taking damage, gaining its effects permanently."
+  },
+  "flat stone": {
+    "id": "540",
+    "name": "Flat Stone",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_540_flatstone.png",
+    "description": "Causes Isaac's tears to bounce off the floor multiple times, dealing splash damage to nearby enemies for 25% of Isaac's damage."
+  },
+  "mystery egg": {
+    "id": "539",
+    "name": "Mystery Egg",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_539_mysteryegg.png",
+    "description": "Spawns an egg familiar that follows Isaac. It cracks and turns into a random friendly enemy when Isaac is hurt.\r\nRegenerates upon entering a different room.\r\nClearing more rooms without the egg cracking will results in more useful friendly enemies spawned. The most useful enemies are spawned after clearing more than 13 rooms without taking damage."
   },
   "marrow": {
     "id": "541",
     "name": "Marrow",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_541_marrow.png"
-  },
-  "hallowed ground": {
-    "id": "543",
-    "name": "Hallowed Ground",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_543_hallowedground.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_541_marrow.png",
+    "description": "+1 Bone Heart .\r\nSpawns 3 Red Hearts."
   },
   "slipped rib": {
     "id": "542",
     "name": "Slipped Rib",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_542_slippedrib.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_542_slippedrib.png",
+    "description": "Spawns an orbital familiar that reflects enemy projectiles, making them deal 6 or 7 damage based on whether they would've hurt Isaac for a half or full heart.\r\nThe familiar will insta-kill some fly enemies."
+  },
+  "hallowed ground": {
+    "id": "543",
+    "name": "Hallowed Ground",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_543_hallowedground.png",
+    "description": "Spawns a white poop familiar that follows Isaac and turns into a white poop when Isaac is hurt.\r\nWhite poop has an aura that grants ×1.2 damage multiplier, ×2.5 fire rate multiplier, homing tears, and has a 50% chance to negate damage.\r\nCan be used to negate damage from Devil Beggars , Blood Donation Machines , and similar self-sacrifice mechanics.\r\nWhite poop cannot be destroyed from enemy projectiles and charging attacks.\r\nThe familiar respawns after leaving the room."
   },
   "pointy rib": {
     "id": "544",
     "name": "Pointy Rib",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_544_pointyrib.png"
-  },
-  "dad s ring": {
-    "id": "546",
-    "name": "Dad's Ring",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_546_dadsring.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_544_pointyrib.png",
+    "description": "Spawns a familiar that can be aimed with the firing buttons in all directions, and deals contact damage.\r\nDamage dealt is equal to Isaac's tear damage and is dealt 4.29 times per second.\r\nThe damage increases when Isaac is moving in the direction the familiar is pointing at, and it scales with the speed Isaac is currently moving at, going up to 2x its base damage."
   },
   "book of the dead": {
     "id": "545",
     "name": "Book of the Dead",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_545_bookofthedead.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_545_bookofthedead.png",
+    "description": "Spawns one of the following for each enemy killed in the current room:\r\n• Orbital bone familiar (very common).\r\n• Friendly Bony (uncommon).\r\n• Friendly Bone Fly (uncommon).\r\n• Friendly Black Bony (rare).\r\n• Friendly Revenant (rare - more common in Mausoleum, Gehenna, Sheol, and Dark Room).\r\nSpawning a different enemy other than a Bony is only possible after dying at least once to said enemy on the save file.\r\nHas a 1% chance of being dropped upon defeating The Forsaken."
+  },
+  "dad s ring": {
+    "id": "546",
+    "name": "Dad's Ring",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_546_dadsring.png",
+    "description": "Creates a ring of light around Isaac that petrifies enemies it touches.\r\nBosses get a standard petrification effect that lasts for a few seconds, while non-boss enemies stay permanently petrified while inside the ring."
   },
   "divorce papers": {
     "id": "547",
     "name": "Divorce Papers",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_547_divorcepapers.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_547_divorcepapers.png",
+    "description": "+1 Bone Heart .\r\n+0.7 tears.\r\nSpawns Mysterious Paper if unlocked and not previously encountered during the run."
   },
   "jaw bone": {
     "id": "548",
     "name": "Jaw Bone",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_548_jawbone.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_548_jawbone.png",
+    "description": "Spawns a familiar that follows Isaac and glides across the room in the direction of the first tear fired and returns to Isaac upon hitting a wall.\r\nThe familiar deals 7 contact damage to enemies and will pierce through them if it kills them, or bounce back if it doesn't.\r\nCan block enemy projectiles, even when stationary.\r\nCan retrieve pickups."
   },
   "brittle bones": {
     "id": "549",
     "name": "Brittle Bones",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_549_brittlebones.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_549_brittlebones.png",
+    "description": "On pickup +6 Bone Hearts .\r\nRemoves all Red Heart containers and empties all Bone Hearts.\r\nWhile held Losing any Bone heart causes Isaac to fire a ring of 8 bones that deal 22 + DamageStat damage and split into more bones that deal damage half of this amount.\r\nLosing a Bone Heart also grants a permanent +0.4 fire rate.\r\nNo effects are applied when losing Bone Hearts via a Devil Deal or other means that don't involve directly taking damage.\r\nHas a 1% chance of being dropped upon defeating The Frail."
   },
   "broken shovel": {
-    "id": "551",
+    "id": "550",
     "name": "Broken Shovel",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_551_shovelpiece2.png"
-  },
-  "mom s shovel": {
-    "id": "552",
-    "name": "Mom's Shovel",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_552_momsshovel.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_550_shovelpiece1.png",
+    "description": null
   },
   "mucormycosis": {
     "id": "553",
     "name": "Mucormycosis",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_553_mucormycosis.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_553_mucormycosis.png",
+    "description": "Grants a 25% chance to shoot a spore tear that sticks to enemies and explodes after 2.5 seconds.\r\nThe explosion deals 5 damage and poisons nearby enemies, firing 4 more spores in a cross pattern.\r\nThe poison deals Isaac's amount of damage for a total of 6 times.\r\nSpores produced from Isaac's tears have homing properties.\r\nSpores cannot hurt Isaac."
   },
-  "golden razor": {
-    "id": "555",
-    "name": "Golden Razor",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_555_goldenrazor.png"
+  "mom s shovel": {
+    "id": "552",
+    "name": "Mom's Shovel",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_552_momsshovel.png",
+    "description": "Spawns a trapdoor that leads to the next floor.\r\nIf used on a tile with a special graphic (e.g. grass, piece of garbage, etc), it will instead spawn a Crawl Space once per floor.\r\nIf used in Womb II, the trapdoor will always lead to Sheol.\r\nCan only spawn a Crawl Space trapdoor if used in any floor after Womb. Regular trapdoors won't be spawned in these floors.\r\nUsing it on a dirt patch that appears in Grave Rooms in the Dark Room will unlock The Forgotten . If already unlocked, will spawn a random chest instead."
   },
   "2spooky": {
     "id": "554",
     "name": "2Spooky",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_554_2spooky.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_554_2spooky.png",
+    "description": "+0.5 fire rate.\r\n+0.2 shot speed.\r\nConstantly applies fear to enemies near Isaac, causing them to run away."
   },
-  "eye sore": {
-    "id": "558",
-    "name": "Eye Sore",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_558_eyesore.png"
+  "golden razor": {
+    "id": "555",
+    "name": "Golden Razor",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_555_goldenrazor.png",
+    "description": "On pickup +5¢.\r\nOn use Consumes 5¢ and grants +1.2 damage for the current room.\r\nDoes nothing if Isaac has less than 5¢."
   },
   "sulfur": {
     "id": "556",
     "name": "Sulfur",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_556_sulfur.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_556_sulfur.png",
+    "description": "Grants Brimstone for the current room.\r\nIf Sulfur has already been used in the current room, or Isaac has Brimstone, it instead grants +1 damage, ×1.2 damage multiplier, and widens the laser for the current room."
   },
   "fortune cookie": {
     "id": "557",
     "name": "Fortune Cookie",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_557_fortunecookie.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_557_fortunecookie.png",
+    "description": "Gives one of the following:\n• Random fortune (69.5% chance).\n• Soul Heart (15% chance).\n• Card or Rune (12% chance).\n• Random trinket (3.5% chance)."
+  },
+  "eye sore": {
+    "id": "558",
+    "name": "Eye Sore",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_558_eyesore.png",
+    "description": "Grants Isaac a random chance to fire 1-3 additional tears in random directions when shooting."
   },
   "120 volt": {
     "id": "559",
     "name": "120 Volt",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_559_120volt.png"
-  },
-  "it hurts": {
-    "id": "560",
-    "name": "It Hurts",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_560_ithurts.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_559_120volt.png",
+    "description": "Repeatedly zaps enemies near Isaac with electricity beams that deal 75% of Isaac's damage.\r\nEnemies can be zapped up to 5 times per second.\r\nEach zap can hit up to 4 enemies.\r\nArcing distance is increased on wet floors, such as Downpour, Flooded Caves, Dross, some rooms in Scarred Womb, as well as when using Flush! \r\nIt's possible to zap an enemy standing directly on the other side of an obstacle."
   },
   "almond milk": {
     "id": "561",
     "name": "Almond Milk",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_561_almondmilk.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_561_almondmilk.png",
+    "description": "×4 fire rate multiplier.\r\n×0.3 damage multiplier.\r\n-0.16 tear size.\r\nCauses each tear fired to gain a random worm trinket effect, as well as some item effects such as Rubber Cement , My Reflection and Tiny Planet ."
   },
-  "rock bottom": {
-    "id": "562",
-    "name": "Rock Bottom",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_562_rockbottom.png"
-  },
-  "nancy bombs": {
-    "id": "563",
-    "name": "Nancy Bombs",
+  "it hurts": {
+    "id": "560",
+    "name": "It Hurts",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_563_enigmabombs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_560_ithurts.png",
+    "description": "Causes Isaac to release a ring of 10 tears upon taking damage, and gain a fire rate increase for the current room.\r\nEach tear in the ring deals 10 damage and does not inherit Isaac's tear effects.\r\nThe first hit taken in a room grants +1.2 fire rate, while each subsequent hit grants +0.4 fire rate.\r\nThe tears also leave damaging red creep when they land that deals 2 damage per tick (20 per second), and lasts for 5 seconds.\r\nThe fire rate boost can be stacked indefinitely."
   },
   "a bar of soap": {
     "id": "564",
     "name": "A Bar of Soap",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_564_barofsoap.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_564_barofsoap.png",
+    "description": "+0.5 tears.\n+0.2 shot speed."
+  },
+  "rock bottom": {
+    "id": "562",
+    "name": "Rock Bottom",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_562_rockbottom.png",
+    "description": "Locks Isaac's stats to their highest values reached after picking up the item, preventing stats from ever going down.\r\nThe real values of Isaac's stats are still being calculated in the background, but only the highest values are applied.\r\nFor example, using The Book of Belial would normally grant +2 damage for the current room. Rock Bottom allows this bonus to be carried over for the rest of the run. However, since the original damage is calculated in the background, Isaac will have to earn more than +2 damage from other items in order to see an increase in overall damage.\r\nIt is recommended to stack as many temporary buffs at once as possible in order to reach high stat values.\r\nTaking items that lower your stats may seem to not have an effect, but due to background calculation, doing this will make it more difficult to reach higher stats on the long run."
+  },
+  "nancy bombs": {
+    "id": "563",
+    "name": "Nancy Bombs",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_563_enigmabombs.png",
+    "description": "+5 Bombs.\r\nIsaac's bombs gain 1-4 random bomb synergies (mostly 1).\r\nCan also apply the effects of Bob's Bladder , Strange Attractor and Golden Bombs (only visual effect)."
   },
   "blood puppy": {
     "id": "565",
     "name": "Blood Puppy",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_565_bloodpuppy.png"
-  },
-  "dream catcher": {
-    "id": "566",
-    "name": "Dream Catcher",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_566_dreamcatcher.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_565_bloodpuppy.png",
+    "description": "Spawns a familiar that chases nearby enemies, dealing 2 damage per tick (8.57 per second)\r\nThe familiar will evolve 2 times after killing some enemies.\r\nEach boss killed by Blood Puppy counts as killing 4 non-boss enemies.\r\nAfter killing 15 enemies \r\nBlood Puppy deals 7.5 damage per tick (16.07 per second) to enemies.\r\nIt will charge at enemies that are aligned with it in the cardinal directions, dealing 90 damage per second while charging.\r\nDrops a Half Red Heart for every 10 enemies it kills.\r\nBecomes hostile and will charge at Isaac if aligned with him, dealing half a heart of damage.\r\nCan be damaged by Isaac to return it back to normal after it takes enough damage. It has 20 health points + 90 armor.\r\nAfter killing 25 more enemies (40 total) \r\nIncreases in size and deals 15 damage per tick (150 per second).\r\nDestroys obstacles it runs into while charging.\r\nDeals a full heart of damage to Isaac.\r\nDrops a full Red Heart after every 10 kills.\r\nHas 50 health points + 90 armor."
   },
   "paschal candle": {
     "id": "567",
     "name": "Paschal Candle",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_567_paschalcandle.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_567_paschalcandle.png",
+    "description": "Spawns a familiar that follows Isaac and grants +0.4 fire rate for each room cleared in a row without taking damage.\nThe bonus can stack up to 5 times, giving a total of +2 fire rate. This is represented by the flame burning at its brightest.\nThe bonus resets immediately upon taking damage, unless damage is taken from self-sacrifice mechanics, such as Curse Rooms, Blood Donation Machines , etc."
   },
-  "divine intervention": {
-    "id": "568",
-    "name": "Divine Intervention",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_568_divineintervention.png"
+  "dream catcher": {
+    "id": "566",
+    "name": "Dream Catcher",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_566_dreamcatcher.png",
+    "description": "+1 Half Soul Heart each floor.\r\nChanges the nightmare cutscene that plays during floor transitions. It will now show the item that will be found in the upcoming Treasure Room, as well as the floor's boss.\r\nIt will also reveal items during Curse of the Blind! , as well as the second hidden item on alternate floors.\r\nBoth items and bosses are shown during Curse of the Labyrinth! .\r\nCannot show glitched items generated by TMTRAINER .\r\nWill show a poop in the Treasure Room if there are no item pedestals inside it.\r\nIn The Void, it will list all possible bosses found on the floor.\r\nPrevents the nightmare cutscene from being skipped."
   },
   "blood oath": {
     "id": "569",
     "name": "Blood Oath",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_569_bloodoath.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_569_bloodoath.png",
+    "description": "Spawns a familiar that follows Isaac and stabs him at the beginning of the each floor if he has more than half a red heart.\r\nThe familiar will drain as much red hearts as possible without killing Isaac, ultimately leaving him at half a red heart, or no red hearts at all if he has other types of hearts that will keep him alive.\r\nWhen stabbed, Isaac gains increased stats for the rest of the floor: +0.15 × HeartsLost ^ 2 worth of damage, and +0.1 × HeartsLost worth of speed.\r\nEven though a single stab animation, every bit of damage taken is treated separately per half a heart lost, which can lead to synergies with some items."
+  },
+  "divine intervention": {
+    "id": "568",
+    "name": "Divine Intervention",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_568_divineintervention.png",
+    "description": "Double-tapping a fire button creates a shield that slowly moves in the chosen direction and disappears after 1 second.\r\nThe shield has a variety of effects as listed below.\r\nIt will push back enemies, causing them to take damage upon hitting a wall or enemy, as well as deal damage to hit enemies. Both damage amounts are equal to 10 + 2 × CurrentFloor .\r\nIt will reflect back enemy tears, dealing damage to enemies depending on the source of the tear. Damage is 6 for tears that would deal half a heart of damage to Isaac, and 7 if they would deal a full heart.\r\nReflected projectiles do not inherit Isaac's tear effects.\r\nIt can also reflect enemy lasers, dealing 7 damage per tick (105 per second). It is also capable of reflecting The Beast's laser."
   },
   "orphan socks": {
     "id": "571",
     "name": "Orphan Socks",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_571_socks.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_571_socks.png",
+    "description": "+2 Soul Hearts.\n+0.3 speed.\nGrants immunity to spikes on the ground and creep.\nDoes not prevent damage from Curse Rooms, Spiked Chests, or Spiked Rocks, but prevents damage from Spiked Rock bridges.\nDoes not prevent the use of a Sacrifice Room - these spikes will still deal damage."
   },
   "playdough cookie": {
     "id": "570",
     "name": "Playdough Cookie",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_570_playdohcookie.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_570_playdohcookie.png",
+    "description": "Causes every tear fired by Isaac to have a different color and corresponding effect:\r\n• Light Brown: none.\r\n• Green: poison.\r\n• Yellow: fear.\r\n• Blue: chance for Proptosis , but start at x1 damage instead of x3.\r\n• Light Blue: slowing effect, and freeze on kill.\r\n• Pink: charm.\r\n• Red: double damage, petrifying effect, or Fire Mind .\r\n• Purple: homing.\r\n• Dark Orange: mark effect (forces enemies to attack the marked enemy)."
   },
   "eye of the occult": {
     "id": "572",
     "name": "Eye of the Occult",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_572_occulteye.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_572_occulteye.png",
+    "description": "+1 damage.\r\n+2 range.\r\n-0.16 shot speed.\r\nIsaac's tears no longer move on their own and can be controlled mid-air with the shooting buttons.\r\nHas a 1% chance of being dropped upon defeating The Adversary."
   },
   "immaculate heart": {
     "id": "573",
     "name": "Immaculate Heart",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_573_immaculateheart.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_573_immaculateheart.png",
+    "description": "+1 full Red Heart container.\r\n×1.2 damage multiplier.\r\nFully heals Isaac.\r\nCauses Isaac to frequently fire additional spectral tears that orbit around him until they hit the ground. These tears inherit most tear effects."
   },
   "monstrance": {
     "id": "574",
     "name": "Monstrance",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_574_monstrance.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_574_monstrance.png",
+    "description": "Creates a large pulsing aura around Isaac that damages enemies inside of it.\r\nThe aura's damage scales as enemies get closer towards the inside of the aura, ranging from 0.4 on the edge, up to 3.9 + 0.3 × CurentFloor .\r\nThe aura deals damage 7.5 times per second."
   },
   "the intruder": {
     "id": "575",
     "name": "The Intruder",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_575_theintruder.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_575_theintruder.png",
+    "description": "Causes Isaac to fire 4 slowing tears in addition to his regular ones 0.68 times per second that deal 1.5 damage each.\r\nUpon taking damage, there's a luck-based chance for Isaac's head to pop off and spawn Blue Spiders, releasing the intruder familiar.\r\nThe familiar will leap at enemies, dealing up to 4.5 contact damage depending on how fast it's moving, 4.29 times per second, and will fire 4 slowing tears instead of Isaac, 1.88 times per second.\r\nThe chance for the familiar to pop off goes up to 100% with 4 luck.\r\nThe familiar only lasts for the current room, and reattaches to Isaac upon entering a new room."
   },
   "damocles": {
     "id": "577",
     "name": "Damocles",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_577_damocles.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_577_damocles.png",
+    "description": "Summons a sword above Isaac's head. As long as the sword is active, all item pedestals become doubled, spawning an additional free item next to them. Both items can be taken.\r\nIt will also double items spawned via other means, e.g. via Machines, Beggars, via other items, cards, etc.\r\nWill not double items spawned from chests, except for Mega Chests .\r\nWill not double items that require payment, such as ones in Shops and Devil Deals.\r\nThe additional item is pulled from the current room's item pool, even if the original item was from another pool.\r\nAfter Isaac gets hit once the item has been activated, the sword can fall at any time and instantly kill Isaac. Self-sacrifice mechanics won't activate this effect.\r\nThe sword has a 1/10000 chance every 4 frames to fall. This chance does not increase as more hits get taken.\r\nThe sword falling can be survived if Isaac has invincibility at the time, or if he has an extra life. No more extra items will spawn once the sword has fallen."
   },
   "dirty mind": {
     "id": "576",
     "name": "Dirty Mind",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_576_dirtymind.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_576_dirtymind.png",
+    "description": null
   },
   "free lemonade": {
     "id": "578",
     "name": "Free Lemonade",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_578_freelemonade.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_578_freelemonade.png",
+    "description": "Spawns a lemonade pool on the ground that deals 8 damage per tick (24 per second) and lasts for ~19 seconds.\r\nHas a 1% chance of being dropped upon defeating Peep."
   },
   "spirit sword": {
     "id": "579",
     "name": "Spirit Sword",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_579_spiritsword.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_579_spiritsword.png",
+    "description": "Replaces Isaac's tears with a sword that can be swung in front of him. The sword deals 3 × DamageStat + 3.5 damage and knocks back enemies it hits and Isaac.\r\nThe sword has no fire rate limitation and can be swung as fast as the fire button can be pressed.\r\nThe sword can be used to collect pickups.\r\nIf Isaac's total health is equal to or greater than his number of red heart containers, the sword will fire a projectile when swung. This projectile deals DamageStat + 2 damage and has a cooldown of 2x Isaac's normal tear rate.\r\nHolding an attack button charges a spin attack which damages all enemies around Isaac, deflects enemy projectiles, and launches a projectile regardless of Isaac's health.\r\nThe circular swing deals 8 × DamageStat + 10 damage, while the projectile created from it deals 4 × DamageStat + 4 .\r\nThe charge time is based on Isaac's tear stat, at ~4x Isaac's normal tear rate.\r\nWhile charging, the sword will damage the first enemy that comes in contact with it, canceling the spin attack."
   },
   "red key": {
     "id": "580",
     "name": "Red Key",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_580_secretkey.png"
-  },
-  "psy fly": {
-    "id": "581",
-    "name": "Psy Fly",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_581_psyfly.png"
-  },
-  "rocket in a jar": {
-    "id": "583",
-    "name": "Rocket in a Jar",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_583_rocketinajar.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_580_secretkey.png",
+    "description": "While held Indicates walls that can create a Red Room with a red outline.\r\nOn use Creates a Red Room when used next to one of the red outlines on walls.\r\nRed Rooms are most commonly same as normal rooms, but with a 10% chance to be any type of special room instead. It can create these types of rooms:\r\n• Angel Room\r\n• Arcade\r\n• Bedroom\r\n• Curse Room\r\n• Devil Room\r\n• Dice Room\r\n• Library\r\n• Mini-Boss Room\r\n• Planetarium\r\n• Sacrifice Room\r\n• Secret Room\r\n• Shop\r\n• Super Secret Room\r\n• Treasure Room\r\n• Vault\r\nRooms created by Red Key will always be 1x1 rooms with doors available on all sides.\r\nIf a door leads Isaac outside of the 13x13 playable area of the floor, it will take Isaac to the I AM ERROR room.\r\nSince Secret Rooms cannot be overwritten by Red Key, the lack of an red outline can be used as an indicator that a Secret Room is possibly located behind the wall.\r\nIf a created Red Room is adjacent to the Ultra Secret Room, its entrance will immediately open along with a jingle sound.\r\nHas no effect in Greed Mode and cannot normally be obtained there.\r\nCan be used to open the hidden closet door in the Home level that unlocks the Tainted version for each character. If the character has already been unlocked, this room will contain Inner Child , or a Shopkeeper if not unlocked."
   },
   "wavy cap": {
     "id": "582",
     "name": "Wavy Cap",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_582_wavycap.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_582_wavycap.png",
+    "description": "+0.75 fire rate.\r\n-0.03 speed.\r\nDistorts the screen and background music.\r\nThe effects can be stacked multiple times, making the colors turn very bright and intense after multiple uses.\r\nEach use increases the item's charge time which starts at 0.5 seconds and goes up to 15 seconds after the 9th use. After the 10th use, it will no longer recharge automatically over time.\r\nLeaving the room doubles the speed penalty and multiplies the fire rate bonus by x0.4 for the uses in that room.\r\nClearing a room removes one use's worth of penalties and bonuses."
   },
-  "the stairway": {
-    "id": "586",
-    "name": "The Stairway",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_586_jacobsladder.png"
+  "rocket in a jar": {
+    "id": "583",
+    "name": "Rocket in a Jar",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_583_rocketinajar.png",
+    "description": "+5 Bombs.\r\nWhen placing a bomb while holding any fire button, an explosive rocket will be shot in the direction corresponding to the fire button held.\r\nRockets deal the same amount of damage as regular bombs and inherit bomb synergies.\r\nRockets are not affected by Isaac's shot speed."
+  },
+  "psy fly": {
+    "id": "581",
+    "name": "Psy Fly",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_581_psyfly.png",
+    "description": "Spawns an orbital fly familiar that rapidly chases and blocks enemy shots.\r\nAfter blocking a certain amount of shots, it enters a shot cooldown period where it only orbits around Isaac, but can still block shots.\r\nThe familiar deals 1 damage per tick (15 per second)."
   },
   "book of virtues": {
     "id": "584",
     "name": "Book of Virtues",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_584_bookofvirtues.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_584_bookofvirtues.png",
+    "description": "While held +25% chance for an Angel Room to appear after defeating a boss.\r\nGuarantees the first deal encountered in a run to be an Angel Room.\r\nAllows an Angel Room to spawn even if a Devil Deal was taken.\r\nWhen used by itself \r\nSpawns an orbital wisp that fires spectral tears alongside Isaac, block shots and deals contact damage to enemies. It will get destroyed after taking enough damage.\r\nA normal wisp is summoned in the middle ring, has 2 health points and tears that deal 3 damage. It deals contact damage equal to 2x Isaac's tear damage.\r\nAs the wisp takes damage, it shrinks in size.\r\nWhile Isaac is invulnerable, wisps are also invulnerable.\r\nMultiple wisps can be summoned at once, and are placed in 3 different rings around Isaac: inner ring (max 6 wisps), middle ring (max 8 wisps), and outer ring (max 12 wisps), for a total of 26 wisps.\r\nIf a new wisp is summoned while having the maximum number of wisps, the most damaged wisp or most old will get replaced.\r\nWhen used with another item \r\nPicking up another active item while holding Book of Virtues will stack the new item on top of the book, essentially turning the book into a passive item.\r\nUsing the active item will spawn unique wisps that are different for each item. For more details about each active item's unique wisps, check out an active item page.\r\nUnique wisps come with their own appearances, modified attributes and special effects."
   },
   "alabaster box": {
     "id": "585",
     "name": "Alabaster Box",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_585_alabasterbox.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_585_alabasterbox.png",
+    "description": "General information \r\nThe item starts with no charges and cannot be charged by clearing rooms or picking up batteries. It can only be charged by picking up Soul Hearts. Each Half Soul Heart increases the charge by 1 and gets directly added to the box rather than going to Isaac's health bar.\r\nBoth Black Hearts and Soul Hearts can be used to recharge the box.\r\nTaking a Devil Deal that requires Soul Hearts will take charges from the box before using Isaac's health. This also applies to The Lost .\r\nOn use Consumes the item and spawns 3 Soul Hearts and 2 items from the Angel Room item pool.\r\nIf a Devil Deal was previously taken, the reward is reduced to 2 Soul Hearts and 1 Angel Room item.\r\nThere's a small chance for each Soul Heart to be replaced with an Eternal Heart instead."
+  },
+  "the stairway": {
+    "id": "586",
+    "name": "The Stairway",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_586_jacobsladder.png",
+    "description": "Generates a ladder that leads to a special Angel Room Shop at the start of each floor.\r\nThese shops will always contain the following:\r\n• An item from the Angel Room item pool.\r\n• Eternal Heart.\r\n• Soul Heart.\r\n• Key.\r\n• Holy Card.\r\n• Angel statue that can be fought for a Key Piece.\r\n• Beggar or Rotten Beggar next to the entrance.\r\n• Confessional, if unlocked.\r\nItems and pickups can be on sale just like in normal shops.\r\nThe ladder will disappear once Isaac leaves the starting room.\r\nThe ladder will also appear in Greed Mode."
   },
   "sol": {
     "id": "588",
     "name": "Sol",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_588_sol.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_588_sol.png",
+    "description": "Shows the location of the Boss Room on the minimap.\r\nAfter defeating the floor's boss \r\n+3 damage.\r\n+1 luck.\r\nActivates the effects of XIX - The Sun .\r\nFully recharges Isaac's active item.\r\nRemoves any curses.\r\nThese effects apply for the rest of the floor."
   },
   "luna": {
     "id": "589",
     "name": "Luna",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_589_luna.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_589_luna.png",
+    "description": "Adds an extra Secret Room and Super Secret Room on each floor. Does not apply to the floor the item was picked up on.\r\nReveals one random Secret Room on the map on pickup, and at the start of each floor.\r\nSecret Rooms will contain a shining beam of light that causes the following when entered:\r\n• +1 Half Soul Heart.\r\n• +1 fire rate for the first beam entered; +0.5 for all subsequent ones. Stat changes only apply for the current floor.\r\n• Creates a strong shine around Isaac that is increased for every beam of light entered. It can be used to light up dark areas or fight the Curse of Darkness! .\r\nBeams of light don't appear in Ultra Secret Rooms.\r\nNo additional Secret Rooms are added in Greed Mode, Blue Womb, the Ascent, and Home."
   },
   "mercurius": {
     "id": "590",
     "name": "Mercurius",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_590_mercurius.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_590_mercurius.png",
+    "description": "+0.4 speed.\r\nOpens all normal doors after entering a room, along with the door Isaac came from. This allows Isaac to leave at any time without completing the room.\r\nDoes not open doors that require pickups to unlock, such as Treasure Rooms, Shops, etc.\r\nCannot open the Boss Rush door."
   },
   "venus": {
     "id": "591",
     "name": "Venus",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_591_venus.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_591_venus.png",
+    "description": "+1 full Red Heart container.\r\nHeals 1 additional Red Heart.\r\nContinuously charms enemies near Isaac. The effect wears off quickly after enemies move away from Isaac."
   },
   "terra": {
     "id": "592",
     "name": "Terra",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_592_terra.png"
-  },
-  "jupiter": {
-    "id": "594",
-    "name": "Jupiter",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_594_jupiter.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_592_terra.png",
+    "description": "+1 damage.\r\nReplaces Isaac's tears with rocks that deal extra knockback and have a chance to destroy doors and obstacles.\r\nRock tears deal varying damage between x0.5 and x2 Isaac's damage.\r\nTears can destroy the armor of Tuff Twins and The Shell, and bypasses Blasters' damage reduction."
   },
   "mars": {
     "id": "593",
     "name": "Mars",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_593_mars.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_593_mars.png",
+    "description": "Isaac can dash by double-tapping a direction key.\r\nWhile dashing, Isaac is immune to all sources of damage, with the exception of self-sacrifice mechanics such as Devil Beggars and Blood Donation Machines . However, it can be used to enter Curse Rooms and open Spiked Chests for free.\r\nHe also gains 1 second of invulnerability after the dash.\r\nThe dash deals 4 × DamageStat + 8 damage.\r\nThe direction of the dash can be influenced by holding another movement button.\r\nHitting an obstacle while dashing knocks back Isaac and surrounding enemies. This might cause them to take damage if they collide with another enemy or an obstacle.\r\nThe knockback effect also creates a ring of fire in a small radius that deals 10 damage to enemies, and sets them on fire for 2~3 seconds.\r\nThe dash has a 3-second cooldown."
   },
-  "saturnus": {
-    "id": "595",
-    "name": "Saturnus",
+  "jupiter": {
+    "id": "594",
+    "name": "Jupiter",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_595_saturnus.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_594_jupiter.png",
+    "description": "+2 full Red Heart containers.\r\n-0.3 speed.\r\nStanding still causes Isaac to build up speed at a rate of +0.25 per second, up to a +0.5 total bonus.\r\nIsaac Charges up while standing still. Moving releases a fart cloud that damages and poisons enemies that pass through it. This drains the speed buff at a rate of -0.25 per second. The clouds are active for the duration of the speed buff.\r\nThe fart cloud deals 50% of Isaac's damage per tick (150% per second), and lasts ~2.5 seconds.\r\nGrants immunity to poison clouds."
   },
   "uranus": {
     "id": "596",
     "name": "Uranus",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_596_uranus.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_596_uranus.png",
+    "description": "Turns Isaac's tears into icicles that freeze non-boss enemies upon death, turning them into ice statues.\r\nPrevents on-death effects from occurring, such as enemies firing tears on death, exploding, splitting into other enemies, etc.\r\nFrozen enemies can be kicked which makes them slide and leave damaging creep across the room. They shatter and release 10 icicle tears in a circle upon hitting an enemy or a wall.\r\nThe on-shatter icicles will slow enemies for 4 seconds or turn them into more ice statues if they deal lethal damage. They deal damage equal to 6 + CurrentFloor , and don't inherit Isaac's tear effects.\r\nThe creep rapidly deals 2 damage per tick (20 per second).\r\nIce statues can be shattered if shot by 10 tears or enemy projectiles, or a single explosion.\r\nSliding statues deal 35 flat damage to enemies."
+  },
+  "saturnus": {
+    "id": "595",
+    "name": "Saturnus",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_595_saturnus.png",
+    "description": "Creates a circle around Isaac that contains 7 orbiting spectral tears which copy Isaac's tear effects.\nThe tears deal 1.5 × DamageStat + 5 damage.\nThe tears fall to the ground after 13 seconds and are renewed upon entering a new room.\nEnemy tears have a chance to be caught in the orbit, making them able to damage enemies. These tears disappear a shrot time after leaving the room."
   },
   "neptunus": {
     "id": "597",
     "name": "Neptunus",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_597_neptunus.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_597_neptunus.png",
+    "description": "While not firing tears, Isaac charges a special attack that fires multiple tears in rapid succession.\r\nThe charge time and maximum tears per charge scales with Isaac's tears stat.\r\nHas no effect on Isaac's tear rate when not charging."
   },
   "voodoo head": {
     "id": "599",
     "name": "Voodoo Head",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_599_voodoohead.png"
-  },
-  "pluto": {
-    "id": "598",
-    "name": "Pluto",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_598_pluto.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_599_voodoohead.png",
+    "description": "Spawns an additional Curse Room on each floor, whenever possible. Does not apply to the floor the item was picked up on.\r\nImproves the layouts of Curse Rooms, often making them more beneficial.\r\nMakes a penny spawn in every Curse Room.\r\nHas no effect in Greed Mode."
   },
   "eye drops": {
     "id": "600",
     "name": "Eye Drops",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_600_eyedrops.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_600_eyedrops.png",
+    "description": "+40% fire rate to tears fired from the left eye.\nCauses Isaac's tears to be fired at a staggered rate.\nThe first shot after not firing for a while will always be a double shot."
   },
-  "member card": {
-    "id": "602",
-    "name": "Member Card",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_602_membercard.png"
+  "pluto": {
+    "id": "598",
+    "name": "Pluto",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_598_pluto.png",
+    "description": "+0.7 tears.\n-50% size.\n-73% hitbox size.\nAllows Isaac to squeeze between objects and makes some enemy shots pass over him, all as a result to his size decrease."
   },
   "act of contrition": {
     "id": "601",
     "name": "Act of Contrition",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_601_actofcontrition.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_601_actofcontrition.png",
+    "description": "+1 Eternal Heart .\r\n+0.7 tears.\r\n+40% chance for a deal if Isaac has taken Red Heart damage. Additional +15% is added if the damage was taken against the boss.\r\nAllows Angel Rooms to spawn even if a Devil Deal is/was taken."
+  },
+  "member card": {
+    "id": "602",
+    "name": "Member Card",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_602_membercard.png",
+    "description": "Each shop will contain a trapdoor that leads to a special underground shop that sells 2-5 of the following:\r\n• Trinket (15¢).\r\n• Item (15-30¢). Items are chosen from the following item pools: Secret Room , Shop , Devil Room , Angel Room and Boss . Devil/Angel items can cost up to 50¢ while Secret Room items can go up to 99¢.\r\n• Card/Rune/Soul Stone (6-8¢).\r\n• Black Heart/Bone Heart (8¢).\r\n• Eternal Heart (15¢).\r\n• Rotten Heart (5¢).\r\nThe trapdoor will spawn even if Greed or Super Greed was fought in the shop."
   },
   "battery pack": {
     "id": "603",
     "name": "Battery Pack",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_603_batterypack.png"
-  },
-  "ocular rift": {
-    "id": "606",
-    "name": "Ocular Rift",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_606_oculusrift.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_603_batterypack.png",
+    "description": "Spawns 2-4 random batteries.\r\nFully charges Isaac's active item."
   },
   "mom s bracelet": {
     "id": "604",
     "name": "Mom's Bracelet",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_604_momsbracelet.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_604_momsbracelet.png",
+    "description": "Picks up the obstacle in front of Isaac, allowing him to carry it around the room, or even different rooms.\r\nPressing a fire button will launch the obstacle in the chosen direction. It will deal 40 damage to the enemy it hits, and break on impact. If it had any content inside it (e.g. a Tinted Rock), it will drop the contents normally.\r\nAlternatively, the active item button can be pressed again to drop the object where Isaac is standing, without wasting the item's charge.\r\nCan be used on Hosts to steal their skulls.\r\nCan be used to pick up bombs, including Troll Bombs.\r\nCan be used on friendly Dip familiars.\r\nWhile carrying an obstacle, Isaac cannot travel to the next floor.\r\nThrowing a Giant Poop at enemies will deal 320 damage."
   },
   "the scooper": {
     "id": "605",
     "name": "The Scooper",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_605_thescooper.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_605_thescooper.png",
+    "description": "Summons The Peeper for the current room which also leaves a trail of red creep.\nThe Peeper deals 12 damage per tick (45 per second), while the creep deals 2 damage per tick (20 per second).\nThe Peeper can block enemy shots.\nWhen active, Isaac gains +35% damage to tears shot from his right eye."
   },
-  "boiled baby": {
-    "id": "607",
-    "name": "Boiled Baby",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_607_boiledbaby.png"
-  },
-  "eternal d6": {
-    "id": "609",
-    "name": "Eternal D6",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_609_floriansd6.png"
-  },
-  "bird cage": {
-    "id": "610",
-    "name": "Bird Cage",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_610_birdcage.png"
+  "ocular rift": {
+    "id": "606",
+    "name": "Ocular Rift",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_606_oculusrift.png",
+    "description": "Grants Isaac a 5% chance to fire a special tear that creates a rift where it lands, which damages nearby enemies and pulls in enemies, pickups and tears/enemy projectiles for 2 seconds.\r\nRifts deal 50% of Isaac's damage per tick (3x Isaac's damage per second).\r\nEnemy projectiles pulled in by rifts will damage other enemies.\r\nThe size of the rift scales with Isaac's damage.\r\nThe chance to fire a rift is only slightly affected by luck."
   },
   "freezer baby": {
     "id": "608",
     "name": "Freezer Baby",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_608_freezerbaby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_608_freezerbaby.png",
+    "description": "Spawns a familiar that follows Isaac and shoots icicles which have a chance to petrify enemies and freeze them on kill.\r\nIcicles deal 3.5 damage and are fired 1.36 times per second.\r\nFrozen enemies obey the same rules as ice statues created by Uranus ."
+  },
+  "boiled baby": {
+    "id": "607",
+    "name": "Boiled Baby",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_607_boiledbaby.png",
+    "description": "Spawns a familiar that follows Isaac and fires bursts of tears in all directions at random intervals while in a room with enemies.\nThe familiar shoots faster the closer it is to an enemy.\nEach tear fired by the familiar does either 3.5 or 5.25 damage."
+  },
+  "eternal d6": {
+    "id": "609",
+    "name": "Eternal D6",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_609_floriansd6.png",
+    "description": "Rerolls every item pedestal in the current room into another item from the current room's item pool, but has a 25% chance to delete the pedestal instead.\nOnce unlocked, the item can be acquired by killing Florian last when fighting Ultra Pride.\nThe chance to reroll items is not affected by luck."
+  },
+  "bird cage": {
+    "id": "610",
+    "name": "Bird Cage",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_610_birdcage.png",
+    "description": "Spawns a familiar on top of Isaac's head that jumps onto the nearest enemy's head once Isaac takes damage, creating a rock wave in a random direction. After this, it will chase enemies around the room, dealing 3 damage per tick (6.43 per second).\r\nThe familiar deals 45 damage to the enemy it lands, and 10 damage per rock wave that hits enemies.\r\nRock waves can destroy obstacles.\r\nIf damage is taken in a room without enemies, the familiar will directly go to the flying phase.\r\nHas a 1% chance of being dropped upon defeating The Cage."
   },
   "lost soul": {
     "id": "612",
     "name": "Lost Soul",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_612_lostsoul.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_612_lostsoul.png",
+    "description": "Spawns a familiar that follows closely behind Isaac and dies in one hit, respawning at the start of the next floor.\r\nIf the familiar survives and is taken down to a new floor, it will rewards Isaac with one of the following:\r\n• 3 Soul Hearts .\r\n• 2 Eternal Hearts .\r\n• 1 item from the Treasure Room or Angel Room item pool.\r\nHas a 1% chance of being dropped upon defeating Blighted Ovum."
   },
   "larynx": {
     "id": "611",
     "name": "Larynx",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_611_larynx.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_611_larynx.png",
+    "description": "Isaac shouts, damaging and pushing away nearby enemies, and destroying obstacles and doors.\r\nCan be used when the item is not fully charged, which affects the damage and range of the shout.\r\nDamage of the shout is equal to 20 + 28 × ChargesUsed . Extra ticks of damage are dealt to enemies that are close enough: 2.5 + 3.5 × ChargesUsed .\r\nThe item gains 1 charge when Isaac takes damage."
   },
   "blood bombs": {
     "id": "614",
     "name": "Blood Bombs",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_614_bloodbombs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_614_bloodbombs.png",
+    "description": "On pickup +1 full Red Heart container.\r\nHeals 5 Red Heart containers.\r\nWhile held Allows Isaac to place down bombs even when he doesn't have any, in exchange for half a heart of self-damage (prioritizes red hearts).\r\nCauses Isaac's bombs to leave a pool of red creep on the ground upon exploding, that deals 2 damage per tick (20 per second) and lasts for 15 seconds."
   },
   "lil dumpy": {
     "id": "615",
     "name": "Lil Dumpy",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_615_lildumpy.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_615_lildumpy.png",
+    "description": "Spawns a familiar that follows behind Isaac. When Isaac is about to take damage, the familiar farts and pushes away nearby enemies and projectiles. Enemies that collide with obstacles/walls, or other enemies, will take damage.\r\nThe fart will protect Isaac from the damage he's about to take, serving as a shield.\r\nAfter farting, the familiar goes on cooldown until Isaac walks up to him, or enters a new room.\r\nThe familiar cannot prevent damage from environmental hazards."
   },
   "bird s eye": {
     "id": "616",
     "name": "Bird's Eye",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_616_birdseye.png"
-  },
-  "rotten tomato": {
-    "id": "618",
-    "name": "Rotten Tomato",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_618_rottentomato.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_616_birdseye.png",
+    "description": "Grants Isaac a chance to shoot fires alongside his tears that block enemy shots and deal damage to enemies, similarly to Red Candle .\r\nFires can block up to 4 shots and/or deal 4 ticks of damage before being destroyed. They last for 10 seconds otherwise.\r\nFires deal 4x Isaac's damage at full durability, 3x after taking damage once, and 2x otherwise, for a maximum possible damage of 11x Isaac's damage per fire.\r\nThe chance to shoot a fire scales with Isaac's luck, and equals to 1 / (12 - LuckStat) . At base luck, the chance is 8.33%, going up to 50% with 10 luck.\r\nFlames' size scales with Isaac's tear size.\r\nCauses Isaac's farts to also spawn a fire.\r\nFlames will turn certain enemies into stronger, fire-like variants.\r\nFlames can be used to destroy Shopkeepers.\r\nHas a 1% chance of being dropped upon defeating Singe."
   },
   "lodestone": {
     "id": "617",
     "name": "Lodestone",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_617_lodestone.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_617_lodestone.png",
+    "description": "Grants Isaac a luck-based chance to fire tears that magnetize enemies, giving them properties similar to those of Strange Attractor .\r\nEnemies, pickups, tears and enemy projectiles that are near magnetized enemies are pulled towards them.\r\nPulled enemy projectiles deal damage to enemies.\r\nThe chance to fire magnetizing tears scales with luck, using the formula 1 / (6 - LuckStat) ). It starts at 16.67% with 0 luck, going up to 100% with 5 luck."
   },
-  "birthright": {
-    "id": "619",
-    "name": "Birthright",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_619_birthright.png"
+  "rotten tomato": {
+    "id": "618",
+    "name": "Rotten Tomato",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_618_rottentomato.png",
+    "description": "Grants Isaac a luck-based chance to fire red tears that Mark enemies. Marked enemies move slower and are attacked by other enemies until killed, or the effect wears off.\r\nThe chance to fire Mark tears scales with luck, using the formula 1 / (6 - LuckStat) . It starts at 16.67% with 0 luck, going up to 100% with 5 luck.\r\nWhile a Marked enemy is present in the room, other enemies ignore Isaac and attack that enemy instead."
   },
   "red stew": {
     "id": "621",
     "name": "Red Stew",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_621_redstew.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_621_redstew.png",
+    "description": "+21.6 temporary damage up.\r\nFully heals Isaac.\r\nThe damage boost scales down to 0 over the course of 3 minutes.\r\nIsaac can extend the duration of the effect by killing enemies.\r\nThe effect disappears once the damage bonus goes down to 0."
   },
-  "sharp key": {
-    "id": "623",
-    "name": "Sharp Key",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_623_sharpkey.png"
-  },
-  "booster pack": {
-    "id": "624",
-    "name": "Booster Pack",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_624_boosterpack.png"
+  "birthright": {
+    "id": "619",
+    "name": "Birthright",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_619_birthright.png",
+    "description": "Grants a passive ability that is unique for each character. This ability usually enhances the character's special traits or helps mitigate some of their downsides.\nTo check the effect given to each character, check the respective character's page."
   },
   "genesis": {
     "id": "622",
     "name": "Genesis",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_622_genesis.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_622_genesis.png",
+    "description": "Resets all of Isaac's stats and transformations, removes the floor's curses, and removes all of Isaac's items, except his starting ones and those with the quest tag, and teleports him to a special Bedroom.\r\nThe Bedroom contains a Bed, 2 random Chests, 2 Grab Bags, a random trinket, and a beam of light that can be used to exit the room and go down to the next floor.\r\nFor every item removed by Genesis, a set of 3 choice-pedestals will spawn in the room containing items from the same item pool as the removed item. Only one of these items can be taken. Each set appears one after the other.\r\nIf used on a final floor of the game, the beam of light will be replaced with a Crawl Space that leads back to the starting room of the floor.\r\nTrinkets that were absorbed will simply be removed from Isaac's inventory with no extra item pedestals granted for them.\r\nPicking up an active item from the choice of items will not drop it on the ground, but instead replace it with the new item.\r\nGenesis affects all players in the run."
+  },
+  "sharp key": {
+    "id": "623",
+    "name": "Sharp Key",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_623_sharpkey.png",
+    "description": "On pickup +5 Keys.\nOn use Isaac holds a key above his head that can be launched by pressing a fire button, consuming a key from his inventory.\nThe key acts as a piercing projectile and deals damage to enemies equal to 5 × DamageStat + 30 .\nThe key will open any locked doors (including Secret Rooms) and chests it hits, as well as open up Key Blocks, but will break upon impact with one, or by hitting an obstacle.\nEnemies killed by the key have a chance to spawn the contents of a chest.\nKeys inherit Isaac's tear effects."
+  },
+  "booster pack": {
+    "id": "624",
+    "name": "Booster Pack",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_624_boosterpack.png",
+    "description": "Spawns 5 random cards that have a high chance to be playing cards."
   },
   "knife piece 1": {
     "id": "626",
     "name": "Knife Piece 1",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_626_knifepiece1.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_626_knifepiece1.png",
+    "description": "Can be acquired from the Treasure Room in the Mirrored World in Downpour/Dross II.\r\nSpawns a knife handle familiar that follows Isaac.\r\nMakes a special room generate in the Mines/Ashpit II that contains Knife Piece 2 , the second piece of the knife.\r\nWhen combined with the other piece, it forms a knife familiar that launches itself in the direction Isaac is shooting, dealing 25 damage to and piercing enemies it hits.\r\nCan be launched at the red door at the end of Mausoleum/Gehenna to open the door leading to the Mother path, destroying the knife in the process."
   },
   "mega mush": {
     "id": "625",
     "name": "Mega Mush",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_625_megamush.png"
-  },
-  "death certificate": {
-    "id": "628",
-    "name": "Death Certificate",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_628_deathcertificate.png"
-  },
-  "bot fly": {
-    "id": "629",
-    "name": "Bot Fly",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_629_botfly.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_625_megamush.png",
+    "description": null
   },
   "knife piece 2": {
     "id": "627",
     "name": "Knife Piece 2",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_627_knifepiece2.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_627_knifepiece2.png",
+    "description": "Can be acquired from the Mother chase scene in Mines/Ashpit II.\r\nSpawns a knife blade familiar that follows Isaac.\r\nWhen combined with the other piece, it forms a knife familiar that launches itself in the direction Isaac is shooting, dealing 25 damage to and piercing enemies it hits.\r\nCan be launched at the red door at the end of Mausoleum/Gehenna to open the door leading to the Mother path, destroying the knife in the process."
   },
-  "evil charm": {
-    "id": "632",
-    "name": "Evil Charm",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_632_evilcharm.png"
+  "death certificate": {
+    "id": "628",
+    "name": "Death Certificate",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_628_deathcertificate.png",
+    "description": "Teleports Isaac to an abandoned and expanded version of the Home floor which contains a copy of every unlocked item in the game spread across different rooms.\r\nAfter taking an item, Isaac returns to the room he used Death Certificate in.\r\nThe area often contains pickups and chests. Picking them up or acquiring items from the chests will not cause Isaac to leave the area.\r\nCurse of the Blind! has no effect in the area.\r\nItems in the area show up in the order from the lowest ID to the highest.\r\nModded items will also show up, expanding the area further.\r\nItems that have the hidden tag and Dad's Note will not show up. Death Certificate itself cannot show up either.\r\nReturning to the Death Certificate room on the same floor via another copy of the item or other means will result in an empty room."
   },
-  "purgatory": {
-    "id": "634",
-    "name": "Purgatory",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_634_purgatory.png"
+  "bot fly": {
+    "id": "629",
+    "name": "Bot Fly",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_629_botfly.png",
+    "description": "Spawns a familiar that orbits Isaac, deals contact damage and fires shielded tears that destroy enemy projectiles.\r\nThe shielded tears home in on projectiles, but not enemies. They deal 3 damage if they hit an enemy.\r\nThe familiar deals 1 contact damage per tick (3.75 per second).\r\nThe familiar will instantly kill specific fly enemies upon contact."
   },
   "meat cleaver": {
     "id": "631",
     "name": "Meat Cleaver",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_631_meatcleaver.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_631_meatcleaver.png",
+    "description": "Splits each enemy into two smaller versions that have ~40% health each.\r\nNormal enemies can be split up to 2 times, while champions and bosses up to 3 times. Attempting to split over the maximum allowed amount deals 25 damage to enemies instead.\r\nSome enemies, such as Mr. Maw that has a cable holding the two parts, will be detached instead.\r\nCannot split invincible enemies, including Hosts while lowered.\r\nFinal bosses cannot be split.\r\nDelirium has no limit on how many times it can split.\r\nSome bosses have special behavior when split:\r\n• Gemini will separate both of its pieces.\r\n• Loki turns into Lokii.\r\n• Chub / C.H.A.D. / Carrion Queen will instantly die.\r\n• Gabriel / Uriel will make each copy spawn a Key Piece.\r\n• Horny Boys will turn into Loki and Hornfel."
   },
   "dogma": {
     "id": "633",
     "name": "Dogma",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/assets/img/items/dogma.gif"
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/dogma.gif",
+    "description": "+2 damage.\nPrevents speed from going under 1.1.\nIf Isaac has less than 6 hearts, gives enough hearts to get to 6 full hearts, first by restoring empty red heart containers, and then by granting soul hearts.\nGrants a one-time-use Holy Mantle shield that wears off upon leaving the room.\nGrants flight.\nGrants The Wafer effect if playing on Normal Mode.\nAutomatically given to Isaac upon entering The Beast fight."
   },
-  "r key": {
-    "id": "636",
-    "name": "R Key",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_636_rkey.png"
+  "evil charm": {
+    "id": "632",
+    "name": "Evil Charm",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_632_evilcharm.png",
+    "description": "+2 luck.\r\nMakes Isaac immune to status effects, such as burning, confusion, fear, gas clouds, and Dogma's Godhead projectiles.\r\nGrants immunity to contact damage to fire places, poison from destroying mushrooms, and any enemy flame attacks.\r\nAllows Isaac to walk over cobwebs on the ground without them affecting his speed.\r\nAllows Isaac to stand in damaging creep for 1 second before receiving any damage."
+  },
+  "purgatory": {
+    "id": "634",
+    "name": "Purgatory",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_634_purgatory.png",
+    "description": "Makes a red crack spawn on a random position in the room while inside a room with enemies. Walking over the crack summons a ghost that homes in on the nearest enemy and explodes.\r\nA new crack will appear once a ghost is summoned.\r\nThe ghost explosion deals 2x Isaac's damage per tick, up to 4 times, and damages nearby enemies. It also destroys enemy projectiles.\r\nThe explosion cannot hurt Isaac or damage the environment."
   },
   "stitches": {
     "id": "635",
     "name": "Stitches",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_635_stitches.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_635_stitches.png",
+    "description": "On pickup Spawns a familiar that can be controlled with the firing buttons, that deals 1.5 damage per tick (3 per second).\nOn use Causes Isaac to swap places with the familiar, making him briefly invincible whilst teleporting.\nTeleporting onto an enemy deals 3 × DamageStat + 40 damage to the enemy.\nTeleporting onto a fire place will put it out, including fire places that require an explosion in order to destroy them.\nThe brief immunity can be used to enter Curse Rooms and open Spiked Chests for free."
+  },
+  "r key": {
+    "id": "636",
+    "name": "R Key",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_636_rkey.png",
+    "description": "Restarts the run by returning Isaac to the beginning of Chapter 1, but without removing any items, pickups or consumables he has.\r\nAngel Rooms become available again if a Devil Deal was previously taken.\r\nThe Donation Machine becomes unjammed if it was previously used or blown up.\r\nItem and pill pools are not reset.\r\nThe in-game timer is not reset, meaning Boss Rush and Blue Womb requirements will not be reset either."
   },
   "knockout drops": {
     "id": "637",
     "name": "Knockout Drops",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_637_knockoutdrops.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_637_knockoutdrops.png",
+    "description": "Grants a luck-based chance to shoot red fist-shaped tears that deal huge knockback to enemies and confuse them for 2 seconds.\r\nEnemies take 8 + 2 × CurrentFloor damage if they are knocked into a wall or an obstacle, or when hit by another knocked back enemy.\r\nThe chance to fire first tears scales with luck, starting at 10% with 0 luck, going up to 100% with 9 luck."
   },
   "yuck heart": {
     "id": "639",
     "name": "Yuck Heart",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_639_yuckheart.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_639_yuckheart.png",
+    "description": "+1 Rotten Heart .\r\nHas a 1% chance of being dropped upon defeating Rotgut."
   },
   "eraser": {
     "id": "638",
     "name": "Eraser",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_638_eraser.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_638_eraser.png",
+    "description": "Makes Isaac hold the Eraser above his head that can be thrown with a shooting button in the desired direction.\r\nUpon hitting an enemy, the type of enemy will be permanently erased and will no longer appear for the rest of the run. This is indicated by a pink puff appearing when such an enemy attempts to spawn.\r\nIf a boss is hit, it will instead deal 15 damage to him. If this damage is enough to kill it, the boss will be erased for the rest of the run.\r\nCannot be recharged normally. Only recharges automatically upon entering a new floor."
   },
   "urn of souls": {
     "id": "640",
     "name": "Urn of Souls",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_640_urnofsouls.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_640_urnofsouls.png",
+    "description": "Makes Isaac pull out (or put away) the Urn that, while out, can be fired by holding the shooting buttons in any direction.\r\nThe Urn shoots a constant stream of blue flames that deal 22.5-31.5 damage per second, depending on how far the flames have travelled, plus an additional 4.5 × CurrentFloor damage.\r\nIsaac is pushed backwards while shooting the Urn.\r\nThe flames can destroy enemy projectiles and other fires, but will bounce off of rocks.\r\nThe Urn can only be recharged by picking up enemy souls that spawn when killing enemies. Up to 20 souls can be stored at once.\r\nBosses' souls grant a larger boost.\r\nEach soul charge can shoot up to 15 flames over the course of half a second."
   },
   "magic skin": {
     "id": "642",
     "name": "Magic Skin",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_642_magicskin.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_642_magicskin.png",
+    "description": null
   },
   "akeldama": {
     "id": "641",
     "name": "Akeldama",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_641_akeldama.png"
-  },
-  "consolation prize": {
-    "id": "644",
-    "name": "Consolation Prize",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_644_consolationprize.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_641_akeldama.png",
+    "description": "Creates a trail of tears while in a room with enemies that Isaac drags behind him.\r\nEach tear in the trail deals 3.5 damage.\r\nThe shorter the trail is, the faster it grows. The trail consists of 20 tears at its maximum length.\r\nClearing the room will stop the trail for regenerating.\r\nAnother trail of tears may appear if the trail is cut in the middle.\r\nHas a 1% chance of being dropped upon defeating The Shell."
   },
   "revelation": {
     "id": "643",
     "name": "Revelation",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_643_revelation.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_643_revelation.png",
+    "description": "Grants flight.\r\nWhilst shooting, Isaac charges a special attack indicated by a charge bar that takes 2.35 seconds to fully charge. Releasing the fire button will shoot out a holy beam of light that deals Isaac's damage per tick up to 15 times.\r\nThe laser inherits some tear effects, such as homing."
   },
   "tinytoma": {
     "id": "645",
     "name": "Tinytoma",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_645_tinytoma.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_645_tinytoma.png",
+    "description": "Spawns a large familiar that slowly orbits around Isaac, and repels enemies that touch it, dealing 3.5 damage per tick (3.5 per second).\r\nAfter blocking 3 shots and/or dealing 3 ticks of contact damage, the familiar splits into 2 smaller ones that orbit opposite of each other. They can only take 2 hits before being destroyed, and burst into 3 Blue Spiders in the process.\r\nAfter both orbitals are destroyed, the familiar regenerates in its full size after 5 seconds.\r\nHas a 1% chance of being dropped upon defeating Teratoma."
+  },
+  "consolation prize": {
+    "id": "644",
+    "name": "Consolation Prize",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_644_consolationprize.png",
+    "description": null
   },
   "brimstone bombs": {
     "id": "646",
     "name": "Brimstone Bombs",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_646_brimstonebombs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_646_brimstonebombs.png",
+    "description": "+5 Bombs.\r\nMakes Isaac's bombs fire 4 Brimstone lasers in the cardinal directions upon exploding.\r\nEach laser deals 8 damage per tick (120 per second) and can hit enemies up to 19 times.\r\nHas a 1% chance of being dropped upon defeating The Fallen."
   },
   "4 5 volt": {
     "id": "647",
     "name": "4.5 Volt",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_647_assaultbattery.png"
-  },
-  "plum flute": {
-    "id": "650",
-    "name": "Plum Flute",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_650_plumflute.png"
-  },
-  "star of bethlehem": {
-    "id": "651",
-    "name": "Star of Bethlehem",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_651_starofbethlehem.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_647_assaultbattery.png",
+    "description": "Prevents Isaac's active items from charging normally when clearing rooms.\r\nInstead, active items are now charged when enemies take damage from any source.\r\nCharges are gained at a rate of 40 + 20 × CurrentStage . For example, in Basement I it takes 60 damage to gain 1 charge, while in Home it takes 300 damage.\r\nIf an enemy receives more damage than their maximum amount of health, the excess amount will not be counted towards the recharge formula."
   },
   "fruity plum": {
     "id": "649",
     "name": "Fruity Plum",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_649_fruityplum.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_649_fruityplum.png",
+    "description": "Spawns a familiar that mimics Baby Plum's attack of shooting tears and propelling itself diagonally around the room.\r\nThe familiar deals 2 damage per tick (8.57 per second). It fires 15 tears per second while moving which deal 3 damage each.\r\nThe familiar will prioritize moving towards nearby enemies.\r\nIf there are no enemies in the room, the familiar will loosely orbit Isaac."
   },
-  "false phd": {
-    "id": "654",
-    "name": "False PHD",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_654_falsephd.png"
+  "plum flute": {
+    "id": "650",
+    "name": "Plum Flute",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_650_plumflute.png",
+    "description": "Summons a friendly version of Baby Plum that fights for Isaac in the current room for 10 seconds.\nThe familiar will always twirl, jump, then spit blood and bounce around the room before flying away.\nThe familiar deals 12 contact damage per tick (36 per second), 5 when jumping in place, 3.5 per shot, 3-4 per shot while bouncing diagonally, and 2 damage per tick with creep (20 per second).\nCan be obtained by using its unlock method."
   },
-  "vade retro": {
-    "id": "653",
-    "name": "Vade Retro",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_653_vaderetro.png"
+  "star of bethlehem": {
+    "id": "651",
+    "name": "Star of Bethlehem",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_651_starofbethlehem.png",
+    "description": null
   },
   "cube baby": {
     "id": "652",
     "name": "Cube Baby",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_652_cubebaby.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_652_cubebaby.png",
+    "description": "Spawns a frozen ice cube familiar that cannot move on its own, and requires Isaac to kick it, causing it to slide around the room and deal contact damage to enemies.\r\nThe cube can be kicked by walking into it, melee attacked, or be shot at. It can also be picked up by using Mom's Bracelet .\r\nThe familiar deals up to 11 contact damage based on how fast it's traveling, 4.29 times per second.\r\nThe familiar will slow enemies it touches while moving.\r\nEnemies killed by the familiar are frozen, and obey the same rules as ice statues created by Uranus .\r\nThe familiar blocks enemy projectiles."
+  },
+  "vade retro": {
+    "id": "653",
+    "name": "Vade Retro",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_653_vaderetro.png",
+    "description": "While held Enemies leave behind small, red ghosts upon death.\nOn use Causes all red ghosts to explode, dealing damage to nearby enemies and destroying projectiles.\nThe explosion cannot hurt Isaac or damage the environment.\nThe explosion deals damage equal to 3 + 0.04 × EnemyMaxHealth + (CurrentFloor - 1) × 0.5 . Each explosion can hit the same enemy up to 4 times.\nThe blast radius scales with how powerful the explosion is.\nInstantly kills any enemy that has the \"ghost\" tag and is at 50% or less HP, including bosses. This can even be used to kill Delirium if it transforms into such an enemy. Enemies that are currently not visible on screen are not detonated.\nDetonates Isaac's ghost after his death, dealing 200 damage to nearby enemies.\nGhosts can be slightly pushed around by shooting at them."
+  },
+  "false phd": {
+    "id": "654",
+    "name": "False PHD",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_654_falsephd.png",
+    "description": "On pickup +1 Black Heart.\r\nWhile held Identifies all pills.\r\nConverts all pills into their bad counterparts, but gives them positive secondary effects. Neutral pills don't gain a secondary effect.\r\nStat down pills will also grant +0.6 damage, or +1.2 if it was a horse pill.\r\nOther bad pills will drop a Black Heart .\r\nThe item's effects work retroactively, giving stat boosts for each stat down pill taken before picking up the item.\r\nWhen combined with PHD or other items that convert pills, the effects neutralize themselves allowing both types of pills to exist again."
   },
   "spin to win": {
     "id": "655",
     "name": "Spin to Win",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_655_spintowin.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_655_spintowin.png",
+    "description": "While held Spawns a spinning wheel familiar that orbits Isaac, blocks enemy shots and deals 3.5 damage per tick (26.25 per second).\nOn use Holding the active item button makes the wheel spin rapidly around Isaac, giving him +0.5 speed, and increasing the contact damage of all of Isaac's familiars, even if they normally don't do any.\nOrbital familiars also spin much faster and knock back both enemies and Isaac while dealing damage.\nThe contact damage is boosted to 1.5 × ContactDamage + 6 . If a familiar does not do contact damage normally, it still received the +6.\nThis means that Spin to Win deals 11.25 damage per tick (84.38 per second) while spinning.\nAlso affects Blue Flies and Blue Spiders, and they don't die while the item is in use.\nThe recharge time is gradually drained over 3 seconds while the item is being used. It can be used even when the charge bar is not full.\nIsaac's effective speed can exceed the 2.0 limit, even if the HUD doesn't show it."
   },
   "vasculitis": {
     "id": "657",
     "name": "Vasculitis",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_657_vasculitis.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_657_vasculitis.png",
+    "description": "Makes enemies release 1-16 friendly tears in random directions upon death. Tears appear as large red blood clots which may make them hard to distinguish from enemy projectiles. They also inherit Isaac's tear effects thus may appear in a different color.\r\nThe amount of tears released is based on the enemy's max health points.\r\nBurst tears deal a set amount of damage: 3.2 + 0.3 × CurrentStage .\r\nIf an enemy is killed while affected by a status effect, the burst tears will inherit that status effect."
   },
   "giant cell": {
     "id": "658",
     "name": "Giant Cell",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_658_giantcell.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_658_giantcell.png",
+    "description": "Taking damage summons a miniature Isaac familiar known as Minisaac, that chases enemies and fires tears on its own.\r\nMinisaacs' tear damage is based on the formula: 1.20 + 0.15 × CurrentFloor .\r\nThe familiar shoots 3 times per second.\r\nMinisaacs persist between rooms and floors.\r\nEach Minisaac starts with 15 health points that are constantly drained with a rate of 0.4 per second, until it reaches 0.8 HP.\r\nWhenever Isaac takes damage, all Minisaacs are healed back to their full health.\r\nMinisaacs take damage from enemy projectiles and contact damage. They can also be damaged by Isaac's bombs.\r\nMinisaacs are immune to spikes and lasers.\r\nNo more than 16 Minisaacs can exist at a time.\r\nWhen playing as The Forgotten , a special Minisaac variant will spawn that inherits the bone club attack. This familiar deals 8.1 + 0.9 × CurrentFloor damage, and swings its bone club 1.5 times per second.\r\nMinisaacs receive wings if Isaac has any form of flight.\r\nHas a 1% chance of being dropped upon defeating Polycephalus."
   },
   "tropicamide": {
     "id": "659",
     "name": "Tropicamide",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_659_tropicamide.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_659_tropicamide.png",
+    "description": "+2.5 range.\n+0.22 tear size."
   },
   "card reading": {
     "id": "660",
     "name": "Card Reading",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_660_cardreading.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_660_cardreading.png",
+    "description": "Creates 2 portals at the beginning of each floor. They can spawn at random with different colors, each taking Isaac to a different room:\r\n• Red: Boss Room.\r\n• Yellow: Treasure Room.\r\n• Blue: Secret Room.\r\n• Green: Shop.\r\nThe portals disappear once the starting room is left.\r\nFrom Chapter 4 onward, only 1 portal will spawn."
   },
   "quints": {
     "id": "661",
     "name": "Quints",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_661_quints.png"
-  },
-  "binge eater": {
-    "id": "664",
-    "name": "Binge Eater",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_664_bingeeater.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_661_quints.png",
+    "description": null
   },
   "tooth and nail": {
     "id": "663",
     "name": "Tooth and Nail",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_663_toothandnail.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_663_toothandnail.png",
+    "description": "Causes Isaac to turn to stone and sprout spikes every 6 seconds. Isaac is immune to damage while in this state, and deals 40 damage per tick (80 per second). The effect lasts for 1 second.\r\nIsaac will flash white 4 times before turning into stone on the 4th flash. These flashes are accompanied with a ticking sound.\r\nCan be used to enter Curse Rooms and open Spiked Chests for free, but cannot be used to play Blood Donation Machines and Devil Beggars for free.\r\nHas a 1% chance of being dropped upon defeating Tuff Twins."
   },
-  "strawman": {
-    "id": "667",
-    "name": "Strawman",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_667_strawman.png"
+  "binge eater": {
+    "id": "664",
+    "name": "Binge Eater",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_664_bingeeater.png",
+    "description": null
   },
   "guppy s eye": {
     "id": "665",
     "name": "Guppy's Eye",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_665_guppyseye.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_665_guppyseye.png",
+    "description": "Shows the contents of Chests, Fire Places, Grab Bags and Shopkeepers before they're opened/destroyed.\nUp to 4 contents can be displayed at a time, with higher-quality pickups like Bombs, Keys and Soul Hearts having priority on the display."
+  },
+  "strawman": {
+    "id": "667",
+    "name": "Strawman",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_667_strawman.png",
+    "description": "+1 Bomb.\nSpawns Keeper as an extra controllable character alongside Isaac. The familiar will receive the same inputs as Isaac, but can be separated by holding down the \"drop\" button.\nThe Keeper will have his base stats, except speed which is shared between both characters. He won't receive any of his starting items.\nThe Keeper is able to pick up items on his own, thus having a separate inventory. He is not able, however, to pick up active items, trinkets, or consumables.\nThe Keeper's health is displayed over his head, and he can heal normally by picking up coins. Curse of the Unknown will hide his health bar.\nDevil Room items will cost money instead of health while The Keeper is alive.\nPlacing a bomb will also make The Keeper place a bomb free of charge.\nThe Keeper is not able to walk through doors on his own, but he can enter the beams of light and the ending chest.\nUnlocks for The Keeper cannot be earned by using this item.\nWhen The Keeper dies, he spawns 5 Blue Spiders and the item is removed from Isaac's inventory. None of the items collected by The Keeper are dropped."
   },
   "dad s note": {
     "id": "668",
     "name": "Dad's Note",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_668_dadsnote.png"
-  },
-  "options question": {
-    "id": "670",
-    "name": "Options?",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_670_options.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_668_dadsnote.png",
+    "description": "Initiates the Ascent sequence, teleporting Isaac to the backward floors, ultimately leading to the Home floor and The Beast fight.\nThe item cannot be rerolled or destroyed.\nCan be acquired by entering the Strange Door that appears in the beginning of Depths II by using The Polaroid or The Negative on it. This will take Isaac to the Mausoleum/Gehenna, where the Boss Room will contain the item.\nHas no effect if obtained outside the special Boss Room, except for the music slowly fading out."
   },
   "sausage": {
     "id": "669",
     "name": "Sausage",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_669_sausage.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_669_sausage.png",
+    "description": null
   },
-  "a pound of flesh": {
-    "id": "672",
-    "name": "A Pound of Flesh",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_672_poundofflesh.png"
+  "options question": {
+    "id": "670",
+    "name": "Options?",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_670_options.png",
+    "description": "Makes 2 room clear rewards spawn instead of 1, but only one of them can be taken, while the other one disappears.\r\nIf one of the rewards is a Troll Bomb, picking up the other reward will not make the Troll Bomb disappear."
   },
   "candy heart": {
     "id": "671",
     "name": "Candy Heart",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_671_candyheart.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_671_candyheart.png",
+    "description": null
   },
-  "redemption": {
-    "id": "673",
-    "name": "Redemption",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_673_redemption.png"
-  },
-  "spirit shackles": {
-    "id": "674",
-    "name": "Spirit Shackles",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_674_spiritshackles.png"
+  "a pound of flesh": {
+    "id": "672",
+    "name": "A Pound of Flesh",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_672_poundofflesh.png",
+    "description": "Items that require health to purchase now require money instead, and vice-versa.\nConsumables in Shops no longer have a cost, but are instead surrounded by spikes that deal a full heart of damage. The pickups inside the spikes cannot be pushed by an explosion.\nBuying Shop items for health does not prevent Angel Rooms from appearing.\nImmunity from spikes does not prevent damage from the special spikes inside Shops. Invincibility frames or invulnerability from certain items will disallow Isaac from taking the pickups."
   },
   "cracked orb": {
     "id": "675",
     "name": "Cracked Orb",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_675_crackedorb.png"
-  },
-  "c section": {
-    "id": "678",
-    "name": "C Section",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_678_csection.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_675_crackedorb.png",
+    "description": "Taking damage activates the following effects:\r\n• Unlocks all locked doors in the room. It can even unlock the Mega Satan door and the Strange Door in Depths II.\r\n• Opens the Secret Room and Super Secret Room if adjacent to the current room.\r\n• Reveals a random unmapped room on the floor. It can also reveal the Ultra Secret Room.\r\n• Destroys all Tinted Rocks and rocks with a Crawl Space.\r\nCannot open Challenge Rooms from the outside, and regular rooms in the Chest or Dark Room.\r\nCannot open the door leading to Boss Rush or Blue Womb."
   },
   "empty heart": {
     "id": "676",
     "name": "Empty Heart",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_676_emptyheart.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_676_emptyheart.png",
+    "description": "Adds an empty heart container at the beginning of each floor if Isaac has one red heart or less.\r\nDoes nothing with characters that cannot have red hearts.\r\nHas a 1% chance of being dropped upon defeating The Visage."
   },
-  "lil abaddon": {
-    "id": "679",
-    "name": "Lil Abaddon",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_679_lilabaddon.png"
+  "spirit shackles": {
+    "id": "674",
+    "name": "Spirit Shackles",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_674_spiritshackles.png",
+    "description": "Upon death, Isaac turns into a ghost linked to Isaac's dead body, and can continue fighting with 1/2 of a heart for 10 seconds, after which he comes back to life.\nIsaac gains flight while in ghost form.\nThe effect cannot occur again until a half or full Soul Heart or Black Heart is picked up. Doing so will charge the item without adding to Isaac's health.\nThe Shackles appear blue when ready to be used, and grey when they aren't."
   },
-  "montezuma s revenge": {
-    "id": "680",
-    "name": "Montezuma's Revenge",
+  "redemption": {
+    "id": "673",
+    "name": "Redemption",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_680_montezumasrevenge.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_673_redemption.png",
+    "description": "Makes a white inverted cross appear over Isaac's head upon entering a Devil Room. If Isaac goes to the next floor with the cross active, he will gain +1 Soul Heart and +1 damage.\nTaking anything generated by the Devil Room will result in the icon going away. This includes both items, chests and pickups.\nIt is safe to pick up stuff that have been spawned after room generation, e.g. enemy drops or room clear rewards.\nIf a Red Chest generates an item, the item can be taken without the cross disappearing.\nThe item can be acquired from a Confessional or a Sacrifice Room after a devil deal has been taken."
   },
   "astral projection": {
     "id": "677",
     "name": "Astral Projection",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_677_astralprojection.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_677_astralprojection.png",
+    "description": "Taking damage for the first time in an uncleared room will stop time for 2 seconds, and turn Isaac into a ghost, leaving his body behind.\r\nWhile in ghost form, Isaac gains flight, spectral tears, increased speed, and can shoot at a very fast rate, despite this not being shown on the HUD, as it's a result of time being slowed down.\r\nIsaac will re-enter the body when the room is cleared, or if he takes damage, which will negate the damage.\r\nHas a 1% chance of being dropped upon defeating Clutch."
+  },
+  "c section": {
+    "id": "678",
+    "name": "C Section",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_678_csection.png",
+    "description": "Replaces Isaac's tears with a short-delay charge attack that fires homing, piercing, spectral fetus-like tears. The charge attack fires on its own after fully charged.\r\nFetus tears do 75% of Isaac's damage, 3.75 times per second, until they run out of range.\r\nCharge time depends on Isaac's fire rate: 30 / (RoundUp(TearDelay × 3) + 1) . This cannot exceed 15.\r\nThe size of the fetuses scales with Isaac's damage.\r\nFetuses inherit Isaac's tear effects, and some special weapon effects, such as Mom's Knife or The Forgotten 's bone club."
+  },
+  "lil abaddon": {
+    "id": "679",
+    "name": "Lil Abaddon",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_679_lilabaddon.png",
+    "description": "Spawns a familiar that follows Isaac and creates a black ring after charging for 1 second.\nThe ring deals 3.5 damage per tick (52.5 per second), and lasts for 1 second."
+  },
+  "montezuma s revenge": {
+    "id": "680",
+    "name": "Montezuma's Revenge",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_680_montezumasrevenge.png",
+    "description": "Continuously shooting for 2.35 seconds allows Isaac to fire a short-range brown Brimstone laser and corn shots behind him.\r\nThe laser deals Isaac's damage per tick, 15 times per second, and lasts for ~1.28 seconds.\r\nCorn shots deal 6 damage, and a random amount of them are created with each blast.\r\nHas a 1% chance of being dropped upon defeating Dangle."
   },
   "lil portal": {
     "id": "681",
     "name": "Lil Portal",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_681_lilportal.png"
-  },
-  "hungry soul": {
-    "id": "684",
-    "name": "Hungry Soul",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_684_hungrysoul.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_681_lilportal.png",
+    "description": "Spawns a familiar that follows Isaac and can be launched by double-tapping a shooting key.\r\nThe familiar will consume pickups and trinkets in its path, converting them into Blue Flies while increasing its size.\r\nUpon consuming 1 + 1 × CurrentFloor pickups, it will spawn a purple portal that leads to a special room. The contents of this room remain unchanged for the duration of the run, and it may be accessed from any floor by creating the portal again.\r\nThe portal remains in the same place it was initially created, even after Isaac leaves the room. Its location will be marked on the map.\r\nAfter creating a portal, the familiar disappears until the next floor, where another portal can be created that leads back to the same room.\r\nDamage dealt by the familiar is equal to 2 + 2 × ConsumablesDestroyed + 2 per tick, ticking up to 10 times per second. This damage cannot exceed 6.\r\nThe familiar does not deal damage or consume pickups while following behind Isaac. It must be launched in order to do so.\r\nAny trapdoors created in the portal room will lead to the I AM ERROR room."
   },
   "worm friend": {
     "id": "682",
     "name": "Worm Friend",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_682_wormfriend.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_682_wormfriend.png",
+    "description": "Spawns a familiar that burrows out of the ground and grabs enemies every 5 seconds, holding them in place for 5 seconds.\r\nGrabbed enemies take 4 damage per tick (8 per second).\r\nAlso applies slowness on grabbed enemies, which affects their shots as well.\r\nHas a 1% chance of being dropped upon defeating The Stain."
   },
   "bone spurs": {
     "id": "683",
     "name": "Bone Spurs",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_683_bonespurs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_683_bonespurs.png",
+    "description": "Enemies spawn 1-2 floating bones upon death, which block enemy shots and damage/repel enemies that touch them.\r\nBones can block up to 2 shots and/or deal 2 ticks of damage before breaking.\r\nBones deal damage equal to Isaac's damage in the moment they were created.\r\nHas a 1% chance of being dropped upon defeating Carrion Queen."
+  },
+  "hungry soul": {
+    "id": "684",
+    "name": "Hungry Soul",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_684_hungrysoul.png",
+    "description": "Grants enemies a 33% chance to spawn a friendly red ghost upon death, which chases down enemies and deals contact damage to them.\nGhosts deal damage equal to 50% of Isaac's damage (2x Isaac's damage per second).\nThe ghost explodes after 7 seconds, dealing 7 damage to nearby enemies up to 3-4 times. This explosion cannot damage Isaac or the environment.\nEnemies killed by ghosts won't spawn additional ghosts, except for those killed by the ghost's explosion."
   },
   "jar of wisps": {
     "id": "685",
     "name": "Jar of Wisps",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/assets/img/items/jar_of_wisps.gif"
-  },
-  "soul locket": {
-    "id": "686",
-    "name": "Soul Locket",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_686_soullocket.png"
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/jar_of_wisps.gif",
+    "description": "Spawns wisps that orbit Isaac, fire tears, block enemy shots, and deal contact damage to enemies, much like the ones spawned by Book of Virtues .\r\nThe Jar will initially spawn 2 wisps, but the amount is increased by +1 each time the jar is used, up to a total of 12 wisps. The amount of wisps the jar will spawn is indicated by both a counter and the jar visually filling up with wisps.\r\nEvery wisp spawned has a 15% chance of being of a special variant."
   },
   "friend finder": {
     "id": "687",
     "name": "Friend Finder",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_687_friendfinder.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_687_friendfinder.png",
+    "description": "Spawns a random friendly monster that mimics Isaac's movement and attacks.\r\nCan spawn the following monsters:\r\n• Black Bony.\r\n• Blaster.\r\n• Bony.\r\n• Chubber.\r\n• Clot.\r\n• Clotty.\r\n• Coal Boy.\r\n• Danny.\r\n• Dople.\r\n• Double Vis.\r\n• Drowned Hive.\r\n• Evil Twin.\r\n• Grilled Clotty.\r\n• Gurgle.\r\n• Hive.\r\n• Holy Bony.\r\n• Holy Mulligan.\r\n• I.Blob.\r\n• Maw.\r\n• Nest.\r\n• Vis.\r\nCertain enemies will have a crosshair that indicates where they're shooting.\r\nBlasters will only fire by pressing the active item button."
   },
-  "glitched crown": {
-    "id": "689",
-    "name": "Glitched Crown",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_689_glitchedcrown.png"
+  "soul locket": {
+    "id": "686",
+    "name": "Soul Locket",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_686_soullocket.png",
+    "description": "On pickup Spawns a Soul Heart .\r\nWhile held Gives Isaac one of the following stat boosts per half heart gained by picking up Soul Heart or Black Hearts off the ground:\r\n• +0.04 speed.\r\n• +0.1 tears.\r\n• +0.2 flat damage.\r\n• +0.5 range.\r\n• +0.04 shot speed.\r\n• +0.20 luck."
   },
   "inner child": {
     "id": "688",
     "name": "Inner Child",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_688_innerchild.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_688_innerchild.png",
+    "description": "+1 Extra Life.\nUpon death, Isaac respawns in the current room with half a red heart (or half soul heart if he doesn't have any red heart containers), and receives:\n+0.2 speed.\n-50% size.\n-73% hitbox size.\nRespawning as the inner child emits a blood explosion that deals 35 damage to nearby enemies.\nAfter unlocking, the item is guaranteed to spawn in the hidden closet in the Home floor once the tainted version of the current character has been unlocked."
+  },
+  "glitched crown": {
+    "id": "689",
+    "name": "Glitched Crown",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_689_glitchedcrown.png",
+    "description": "Causes newly generated item pedestals to indefinitely cycle between 5 random items from the current room's item pool, at a very quick rate of once every 0.2 seconds.\r\nDoes not affect quest items.\r\nAlso affects items during Curse of the Blind! , but none of the items can be seen.\r\nPausing the game will cause the items to cycle much faster. This does not apply to the pause caused by the Debug Console."
   },
   "belly jelly": {
     "id": "690",
     "name": "Belly Jelly",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_690_bellyjelly.png"
-  },
-  "sanguine bond": {
-    "id": "692",
-    "name": "Sanguine Bond",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_692_sanguinebond.png"
-  },
-  "the swarm": {
-    "id": "693",
-    "name": "The Swarm",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_693_theswarm.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_690_bellyjelly.png",
+    "description": "Enemies and projectiles that touch Isaac have a 50% chance to bounce off of him and propel in the opposite direction. When this happens, damage to Isaac is negated.\r\nBounced off enemies will take damage upon hitting a wall or an obstacle, or another enemy. The damage is equal to 8 + 2 × CurrentFloor .\r\nOnly enemies that normally deal contact damage can be bounced off.\r\nBounced off projectiles deal 6 damage if they would deal half a heart of damage, or 7 if they would deal a full heart.\r\nLasers cannot be bounced off.\r\nThe bouncing mechanic also works for Fire Places and spikes enemies such as Poky, Slide and Grudge, granting a chance to avoid unintentional damage."
   },
   "sacred orb": {
     "id": "691",
     "name": "Sacred Orb",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_691_sacredorb.png"
-  },
-  "bloody gust": {
-    "id": "695",
-    "name": "Bloody Gust",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_695_bloodygust.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_691_sacredorb.png",
+    "description": "Decreases the chances of low-quality items appearing by affecting newly created pedestals in the following way:\n• Rerolls items with quality 0-1.\n• Has a 33% chance to reroll items with quality 2.\nItems with the quest tag cannot be rerolled."
   },
   "heartbreak": {
     "id": "694",
     "name": "Heartbreak",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_694_heartbreak.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_694_heartbreak.png",
+    "description": "+3 Broken Hearts.\r\n+0.25 damage for every Broken Heart Isaac has.\r\nCauses every fatal hit to add 2 more Broken Hearts instead of killing Isaac, and deal 40 damage to all enemies in the room.\r\nThis effect won't prevent death from Devil Deals."
+  },
+  "bloody gust": {
+    "id": "695",
+    "name": "Bloody Gust",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_695_bloodygust.png",
+    "description": "When Isaac takes damage, he gains stat boosts for the rest of the floor, up to a maximum of 6 times per floor:\n• +0.04 × HitsTaken + 0.07 speed\n• +0.1 × HitsTaken + 0.25 fire rate"
+  },
+  "the swarm": {
+    "id": "693",
+    "name": "The Swarm",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_693_theswarm.png",
+    "description": "On pickup Spawns 8 orbital flies.\r\nWhile held Each time one of the flies blocks a projectile, it will turn into a Blue Fly.\r\nAn additional orbital fly is spawned upon clearing a room, up to a maximum of 16 at a time."
+  },
+  "sanguine bond": {
+    "id": "692",
+    "name": "Sanguine Bond",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_692_sanguinebond.png",
+    "description": "Spawns a special set of spikes in every Devil Room that deal a full heart of damage per use. Taking damage from the spikes has a chance to yield a reward:\r\n• 35% - nothing.\r\n• 33% - +0.5 damage.\r\n• 15% - 6 pennies .\r\n• 10% - 2 Black Hearts .\r\n• 5% - random item from the Devil Room pool.\r\n• 2% - Leviathan transformation.\r\nThe spikes will deal damage to enemies that walk or fly over them.\r\nCauses all other spikes in the Devil Room to retract."
   },
   "salvation": {
     "id": "696",
     "name": "Salvation",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_696_salvation.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_696_salvation.png",
+    "description": "Creates an angelic halo around Isaac that, when an enemy comes in contact with, a beam of light starts forming above them. If they stay in the halo for about a second, a beam of light will strike down on them, dealing damage to them and creating 4 more beams in the cardinal directions.\nThe initial beam does 3.5 damage per tick, up to 15 times, and the others deal 1.75 per second, up to 15 times.\nThe halo will grow in size each time Isaac takes damage, up to a maximum of 10 times. The size resets after leaving the floor."
   },
   "vanishing twin": {
     "id": "697",
     "name": "Vanishing Twin",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_697_vanishingtwin.png"
-  },
-  "twisted pair": {
-    "id": "698",
-    "name": "Twisted Pair",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_698_twistedpair.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_697_vanishingtwin.png",
+    "description": "Spawns a fetus familiar that follows Isaac.\r\nAfter entering a Boss Room, the familiar will move to the center of the room, and transform into a clone of the boss. Isaac must defeat both bosses in order to proceed.\r\nWhen this happens, both the original boss and its copy will be set to 75% of their maximum health, and will gain slightly reduced movement and attack speed.\r\nUpon dying, the clone will drop an item from the Boss item pool, even before the fight is over. The original boss will also grant another item.\r\nThe cloning can happen only once per floor.\r\nThe familiar cannot clone mini-bosses and final bosses such as Mom, Mom's Heart, Isaac, Satan, etc.\r\nThe familiar can clone the boss even after it's been defeated.\r\nOn floors with multiple boss rooms, the familiar will act only on the first boss encountered.\r\nIf it clones Great Gideon, 2 extra waves of enemies are added to the battle.\r\nThe item is removed from item pools and cannot be found normally starting from Chapter 4.\r\nThe item has no effect in Greed Mode."
   },
   "azazel s rage": {
     "id": "699",
     "name": "Azazel's Rage",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_699_azazelsrage.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_699_azazelsrage.png",
+    "description": "Upon clearing a room, Isaac builds up rage that is indicated by the patch of skin spreading around his face, as well as 4 sections of the horn lighting up red one at a time.\nAfter clearing 4 rooms, Isaac's head will flash red. Upon entering room with enemies, a large Brimstone laser is fired for ~3.33 seconds, that deals Isaac's damage per tick, 15 times per second."
   },
-  "isaac s tomb": {
-    "id": "701",
-    "name": "Isaac's Tomb",
-    "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_701_isaacstomb.png"
-  },
-  "vengeful spirit": {
-    "id": "702",
-    "name": "Vengeful Spirit",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_702_bloodsoul.png"
+  "twisted pair": {
+    "id": "698",
+    "name": "Twisted Pair",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_698_twistedpair.png",
+    "description": "Spawns 2 familiars that float by the left and right side of Isaac, and fire tears alongside him that copy his stats and tear effects.\r\nEach familiar deals 37.5% of Isaac's damage. When playing as Lilith or Tainted Lilith , they instead deal 50% damage each."
   },
   "echo chamber": {
     "id": "700",
     "name": "Echo Chamber",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_700_echochamber.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_700_echochamber.png",
+    "description": "When Isaac uses a consumable (card, pill, rune, soul stone, etc), he also uses a copy of the 3 previous consumables used after picking up Echo Chamber.\nConsumables used with mimic items, such as Blank Card , Placebo or Clear Rune , won't get added to the queue."
+  },
+  "vengeful spirit": {
+    "id": "702",
+    "name": "Vengeful Spirit",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_702_bloodsoul.png",
+    "description": "Upon taking damage, spawns an invulnerable red wisp that fires spectral tears and deals contact damage, but does not block projectiles.\nWisps are destroyed when leaving the floor. Up to 6 wisps can be created per floor.\nWisps' tears are shot once per second, and deal damage equal to 2.9 + 0.1 × CurrentFloor .\nContact damage is equal to 50% of Isaac's damage per tick, and is dealt 15 times per second."
+  },
+  "isaac s tomb": {
+    "id": "701",
+    "name": "Isaac's Tomb",
+    "quality": 2,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_701_isaacstomb.png",
+    "description": "Makes an Old Chest appear at the start of each floor.\r\nThe chest won't spawn on the Home floor."
   },
   "esau jr": {
     "id": "703",
     "name": "Esau Jr.",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_703_esaujr.png"
-  },
-  "berserk": {
-    "id": "704",
-    "name": "Berserk!",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_704_berserk.png"
-  },
-  "dark arts": {
-    "id": "705",
-    "name": "Dark Arts",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_705_darkarts.png"
-  },
-  "supper": {
-    "id": "707",
-    "name": "Supper",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_707_supper.png"
-  },
-  "abyss": {
-    "id": "706",
-    "name": "Abyss",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_706_abyss.png"
-  },
-  "suplex": {
-    "id": "709",
-    "name": "Suplex!",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_709_suplex.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_703_esaujr.png",
+    "description": null
   },
   "stapler": {
     "id": "708",
     "name": "Stapler",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_708_stapler.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_708_stapler.png",
+    "description": "+1 damage.\r\nPrevents Isaac from firing tears from his left eye."
   },
-  "bag of crafting": {
-    "id": "710",
-    "name": "Bag of Crafting",
+  "supper": {
+    "id": "707",
+    "name": "Supper",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_707_supper.png",
+    "description": "+1 full Red Heart container.\r\nHeals 1 additional Red Heart."
+  },
+  "berserk": {
+    "id": "704",
+    "name": "Berserk!",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_704_berserk.png",
+    "description": null
+  },
+  "dark arts": {
+    "id": "705",
+    "name": "Dark Arts",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_705_darkarts.png",
+    "description": "+1 speed.\r\nAllows Isaac to walk through enemies/bullets for 1 second, or until he shoots. Walking through them will freeze them until the effect ends, then deal damage to them equal to 2 × DamageStat + 3.5 . If multiple enemies/projectiles get caught in the attack, each consecutive attack deals an additional 3.5 damage.\r\nAt the end of the effect, an area of blast is created, dealing more damage the more enemies or projectiles were pierced during the effect.\r\nWhen used as Black Judas or Tainted Judas , they will gain a temporary +1 damage bonus for every enemy/projectile walked through, that wears off at a rate of -0.25 every half a second.\r\nDuring the effect, Isaac is unable to collect pickups or use machines/beggars.\r\nThe effect can be used to walk freely through Curse Rooms and walk over spikes, or open Spiked Chests.\r\nInvulnerable enemies will still grant bonuses even if they cannot be damaged."
+  },
+  "abyss": {
+    "id": "706",
+    "name": "Abyss",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_710_bagofcrafting.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_706_abyss.png",
+    "description": "Consumes all item pedestals in the room and gives a unique red locust familiar for each item consumed.\r\nThe locusts are permanent once created, and up to 64 can exists at a time. Consuming more items after this number will replace older locusts. This limit is shared with Blue Flies and Blue Spiders.\r\nThe locusts loosely follow Isaac similarly to Blue Flies, and charge in the direction he's firing until they hit an enemy, wall, or obstacle.\r\nLocusts deal various damage 4.29 times per second, based on the consumed item's quality, and have a different size multiplier:\r\n• Quality 0: 0.5x Isaac's damage, 0.8x size.\r\n• Quality 1: 0.75x Isaac's damage, 0.9x size.\r\n• Quality 2: 1x Isaac's damage, 1x size.\r\n• Quality 3: 1.5x Isaac's damage, 1.1x size.\r\n• Quality 4: 2x Isaac's damage, 1.2x size.\r\nSome items, when consumed, will produce a unique locust with different behavior. Check the respective item pages to see if Abyss would create such a locust.\r\nIf at the limit of 64 locusts and multiple item pedestals are present in the room, Abyss will only consume half of the items.\r\nItems can be consumed while the pick-up animation is playing, i.e. Isaac is holding the item above his head.\r\nAbsorbing items counts as Isaac taking them, thus will activate Boss Rush, Challenge Rooms, and similar mechanics.\r\nIf Abyss is used in a room with linked choice item pedestals, only one of them will be absorbed, while the others will vanish as if Isaac took them."
   },
-  "flip": {
-    "id": "711",
-    "name": "Flip",
-    "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/assets/img/items/flip.gif"
-  },
-  "lemegeton": {
-    "id": "712",
-    "name": "Lemegeton",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_712_lemegeton.png"
+  "suplex": {
+    "id": "709",
+    "name": "Suplex!",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_709_suplex.png",
+    "description": "Causes Isaac to dash a short distance. If he runs into an enemy while dashing, he will pick them up and a crosshair spawns under him that can be controlled with the shooting buttons.\nAfter 1 second, Isaac leaps up and slams down on the crosshair with the enemy, dealing damage to them and any enemies he lands on. This also creates a circular wave of rocks that damages nearby enemies and destroys projectiles.\nIsaac is invulnerable while dashing and holding an enemy, except to damage from Blood Donation Machines and Devil Beggars .\nThe damage of the slam is equal to 50 ± S , where S is the number of size ups/downs Isaac has.\nEach spike in the rock wave deals 10 damage, and the range of the wave scales with Isaac's size.\nIsaac can also Suplex bombs, bosses, shopkeepers, TNT, stone enemies, fire places, furniture in the Home level, etc."
   },
   "recall": {
     "id": "714",
     "name": "Recall",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_714_recall.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_714_recall.png",
+    "description": "Only has an effect when playing as Tainted Forgotten , and can only be obtained via his Birthright .\nRetreives The Forgotten's body automatically, even from a distance.\nTainted Soul is invincible while the body is returning to him, except to forms of self-damage such as Devil Beggars .\nTainted Forgotten will deal ~4-6x Isaac's damage to enemies that collide with it while it's returning to the Soul.\nThe item cannot be used while the Soul is holding the body or the body is traveling after it has been thrown."
+  },
+  "lemegeton": {
+    "id": "712",
+    "name": "Lemegeton",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_712_lemegeton.png",
+    "description": "Grants an orbital wisp that takes the form of a random passive item.\nThe summoned item will act as if Isaac owns it, but is active only while the wisp is alive.\nThe item has a 25% chance to be chosen from the current room's item pool, otherwise a random pool is selected.\nOnly items with the summonable tag can be generated.\nThe wisps can block up to 4 shots and/or get hit by 2 explosions before destroyed.\nWisps deals contact damage equal to 2x Isaac's damage per tick, 2 times per second. They also receive contact damage.\nA total of 24 wisps can be created. Using the item when this limit is reached will replace the oldest wisp.\nItem wisps do not exhaust item pools, meaning Isaac can still normally find these items in a run, and multiple of the same item wisp can be obtained.\nWisps do not contribute towards transformations, or the Collection Page.\nItems that would normally grant pickups or health, will not do so when summoned as wisps."
   },
   "sumptorium": {
     "id": "713",
     "name": "Sumptorium",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_713_sumptorium.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_713_sumptorium.png",
+    "description": null
+  },
+  "flip": {
+    "id": "711",
+    "name": "Flip",
+    "quality": 4,
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/flip.gif",
+    "description": "While held When Isaac enters a room containing an item, the item pedestal will appear with a secondary ghostly item behind it.\r\nOnly the real item can be interacted with. The ghostly one will vanish if Isaac leaves the room and there is no real item on the pedestal.\r\nItem pedestals that are spawned after room generation, e.g. Boss Room items, items from chests, etc., won't have a ghostly item.\r\nBuying an item from a Shop or Devil Deal will also buy the ghostly version of it for free.\r\nOn use Cycles between the real and ghostly items on pedestals, allowing Isaac to collect the ghostly variant.\r\nDoes not affect pedestals that don't have a ghostly item on them.\r\nIf playing as Tainted Lazarus , it will switch between the dead and alive form of the character, and the item will have only 4 charges rather than 6."
+  },
+  "bag of crafting": {
+    "id": "710",
+    "name": "Bag of Crafting",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_710_bagofcrafting.png",
+    "description": null
   },
   "hold": {
     "id": "715",
     "name": "Hold",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_715_hold.png"
-  },
-  "keeper s sack": {
-    "id": "716",
-    "name": "Keeper's Sack",
-    "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_716_keeperssack.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_715_hold.png",
+    "description": "Only has an effect when playing as Tainted ??? .\nRemoves Tainted ???'s leftmost poop, storing it inside of the jar and cycling to the next poop.\nUsing Hold while a poop is inside it will remove the poop and use it as expected."
   },
   "keeper s kin": {
     "id": "717",
     "name": "Keeper's Kin",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_717_keeperskin.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_717_keeperskin.png",
+    "description": "While in a room with enemies, rocks and obstacles will occasionally spawn Blue Spiders.\nCauses 0-2 Blue Spiders to spawn when destroying a rock."
+  },
+  "keeper s sack": {
+    "id": "716",
+    "name": "Keeper's Sack",
+    "quality": 3,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_716_keeperssack.png",
+    "description": "On pickup Spawns 3 random coins and 1 Key .\r\nWhile held Grants stat upgrades for each item/pickup purchased with money. It can give the following upgrades:\r\n• +0.5 damage.\r\n• +0.25 range.\r\n• +0.03 speed.\r\nEvery 3¢ spent in a shop will give boosts to a specific stat, going in the order of damage -> range -> speed.\r\nBuying 15¢ items gives the same amount of stats as buying 5 3¢ items."
   },
   "keeper s box": {
     "id": "719",
     "name": "Keeper's Box",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_719_keepersbox.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_719_keepersbox.png",
+    "description": "Spawns a random Shop pickup or item that must be bought for its normal shop price. The item will be chosen from the Shop item pool.\r\nHas an equal ~11.1% chance to spawn a card, pill, bomb, key, battery, item, soul heart, red heart, or a grab bag.\r\nIf used inside of a Devil Room, pickups will be surrounded by spikes that damage Isaac for a full heart, and items will cost hearts."
   },
   "everything jar": {
     "id": "720",
     "name": "Everything Jar",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/assets/img/items/everything_jar.gif"
+    "imageUrl": "https://isaacguru.com/core/assets/img/items/everything_jar.gif",
+    "description": null
   },
   "tmtrainer": {
     "id": "721",
     "name": "TMTRAINER",
     "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_721_tmtrainer.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_721_tmtrainer.png",
+    "description": "On pickup Petrifies all enemies in the room and sets them on fire.\r\nFades out the music, making it silent until another music track starts playing.\r\nWhile held Causes all future items to become glitched, causing them to become random combinations of 2-3 effects based on other items, as well as effects that are not normally controlled by Isaac, such as enemy spawns.\r\nItem sprites are also combined from other item sprites, often appearing in different colors.\r\nThis does not apply to quest items.\r\nGlitched items can be either active or passive. There is a 75% chance for them to be passive.\r\nRandom effects can be assigned on random events, such as upon taking damage, enemy death, room clear, etc.\r\nGlitched items will have random prices in shops."
   },
   "anima sola": {
     "id": "722",
     "name": "Anima Sola",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_722_animasola.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_722_animasola.png",
+    "description": "Chains down the nearest enemy, completely preventing them from acting for 5 seconds.\nUsing the item again, even if not fully charged, will release the enemy immediately.\nThe effect also works on enemies that are invulnerable.\nWhen playing as Tainted Jacob \nThe chain will always be set on Dark Esau, if he is present. Releasing Dark Esau will immediately cause him to charge at Tainted Jacob.\nDark Esau deals no contact damage to Jacob while chained down.\nIf used in a room without any enemies before Dark Esau has spawned, it will immediately summon him without wasting a charge."
   },
   "spindown dice": {
     "id": "723",
     "name": "Spindown Dice",
     "quality": 4,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_723_spindowndice.png"
-  },
-  "ibs": {
-    "id": "725",
-    "name": "IBS",
-    "quality": 0,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_725_ibs.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_723_spindowndice.png",
+    "description": "Rerolls all items in the current room by subtracting their internal ID number by 1 until a valid item is rolled.\r\nLocked items and items with the hidden tag are skipped.\r\nTo check which item is next in the reroll queue, see the item left from the desired item in the item list.\r\nItems that are generated via this type of reroll are not removed from item pools and can be found again during the run, unless picked up."
   },
   "hypercoagulation": {
     "id": "724",
     "name": "Hypercoagulation",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_724_hypercoagulation.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_724_hypercoagulation.png",
+    "description": "Taking damage or donating health makes a red heart launch out of Isaac that disappears after 1.5 seconds.\nThe heart depends on the amount of health spent: half heart spent will produce half a heart, while a full heart will produce a full heart.\nDamage sources that scale up from half a heart to a full heart, starting from Chapter 4, will still only produce half a heart.\nNo hearts are spawned when spending heart containers in Devil Deals."
   },
-  "ghost bombs": {
-    "id": "727",
-    "name": "Ghost Bombs",
-    "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_727_ghostbombs.png"
+  "ibs": {
+    "id": "725",
+    "name": "IBS",
+    "quality": 0,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_725_ibs.png",
+    "description": "After dealing enough damage to enemies, Isaac begins to flash red. Once this happens, releasing the fire button activates one of Tainted ??? 's unique poop abilities.\nIBS cannot activate if Isaac is currently holding a poop."
   },
   "hemoptysis": {
     "id": "726",
     "name": "Hemoptysis",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_726_hemoptysis.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_726_hemoptysis.png",
+    "description": "Double-tapping a fire button causes Isaac to sneeze blood that deals damage to enemies in front of him and knocks back pickups, enemies and projectiles.\nThe amount of damage the sneeze does is equal to 1.5x Isaac's damage.\nEnemies knocked back take 8 + 2 × CurrentFloor damage if they hit a wall or an obstacle, and deal the same damage to other enemies they hit.\nThe sneeze has a cooldown period of 1 second.\nThe sneeze applies a Brimstone curse to enemies for 5 seconds which makes them take more damage from Brimstone-like laser beams and explode on death from such an attack, damaging and spreading the curse to nearby enemies.\nThe amount of damage cursed enemies receive from lasers is equal to 2 × DamageStat + 3 . This damage also applies to lasers shot by enemies.\nThe range of the sneeze attack is affected by Isaac's shot speed."
+  },
+  "ghost bombs": {
+    "id": "727",
+    "name": "Ghost Bombs",
+    "quality": 1,
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_727_ghostbombs.png",
+    "description": "+5 Bombs.\r\nCauses Isaac's bombs to create ghosts when they explode, that rapidly chase and deal contact damage to enemies equal to 50% of Isaac's damage per tick, 3.75 times per second.\r\nGhosts explode after 10 seconds, dealing 7 damage to nearby enemies up to 3 times, and destroying enemy projectiles. Isaac and the environment are immune to the explosion."
   },
   "gello": {
     "id": "728",
     "name": "Gello",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_728_gello.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_728_gello.png",
+    "description": "Spawns a familiar that's attached to Isaac, and can be controlled in the direction Isaac is shooting. While Isaac is shooting, the familiar will shoot at the closest enemy.\nThe familiar inherits Isaac's damage, tears, range, shoot speed, tear effects, and tear modifiers.\nLaunching the familiar deals 3x Isaac's damage to enemies it hits.\nGello's tears deal 75% of Isaac's damage, or 100% if playing as Lilith or Tainted Lilith ."
   },
   "decap attack": {
     "id": "729",
     "name": "Decap Attack",
     "quality": 1,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_729_decapattack.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_729_decapattack.png",
+    "description": "Throws Isaac's head, allowing him to shoot from the spot it lands. The head will block enemy shots and deal contact damage. The body cannot shoot tears while the head is detached.\r\nThe head does 24 damage on impact and 4 damage per tick (12 per second) while on the ground.\r\nThe head can return to Isaac by touching it, or by using the item again which won't waste charges. Both throwing and retaking the head deals 24 damage to enemies passing through.\r\nHas a 1% chance of being dropped upon defeating Chimera."
   },
   "glass eye": {
     "id": "730",
     "name": "Glass Eye",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_730_glasseye.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_730_glasseye.png",
+    "description": "+0.75 damage.\n+1 luck."
   },
   "stye": {
     "id": "731",
     "name": "Stye",
     "quality": 2,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_731_stye.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_731_stye.png",
+    "description": "Tears fired from Isaac's right eye gain the following:\n+28.6% damage.\n+6.5 range.\n-0.3 shot speed."
   },
   "mom s ring": {
     "id": "732",
     "name": "Mom's Ring",
     "quality": 3,
-    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_732_momsring.png"
+    "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_732_momsring.png",
+    "description": "On pickup Drops a random rune or soul stone.\r\nWhile held +1 damage."
   }
 };

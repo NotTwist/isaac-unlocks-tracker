@@ -46,6 +46,27 @@ function parseImage(html) {
   return match ? match[1] : null;
 }
 
+function parseDescription(html) {
+  const headerIndex = html.indexOf('wiki-header">Description</h1>');
+  if (headerIndex === -1) return null;
+  const block = html.slice(headerIndex, headerIndex + 2000);
+  const paragraphMatch = block.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+  if (!paragraphMatch) return null;
+  const cleaned = paragraphMatch[1]
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/p>\s*<p[^>]*>/gi, "\n\n")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, "\"")
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n\s+/g, "\n")
+    .trim();
+  return cleaned || null;
+}
+
 function parseTitle(html) {
   const match = html.match(/<title>([^<]+)<\/title>/i);
   if (!match) return null;
@@ -95,8 +116,9 @@ async function run() {
         const html = await fetchHtml(url);
         const quality = parseQuality(html);
         const imageUrl = parseImage(html);
+        const description = parseDescription(html);
         const title = parseTitle(html);
-        results[String(numeric)] = { quality, imageUrl, name: title };
+        results[String(numeric)] = { quality, imageUrl, description, name: title };
         if (title) {
           const normalized = normalizeName(title);
           if (!resultsByName[normalized]) {
@@ -105,11 +127,17 @@ async function run() {
               name: title,
               quality,
               imageUrl,
+              description,
             };
           }
         }
       } catch (error) {
-        results[String(numeric)] = { quality: null, imageUrl: null, name: null };
+        results[String(numeric)] = {
+          quality: null,
+          imageUrl: null,
+          description: null,
+          name: null,
+        };
       }
       completed += 1;
       if (completed % 50 === 0) {
@@ -123,6 +151,11 @@ async function run() {
   fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
   const outputByName = path.join(__dirname, "item-meta-by-name.json");
   fs.writeFileSync(outputByName, JSON.stringify(resultsByName, null, 2));
+  const outputByNameJs = path.join(__dirname, "item-meta-by-name.js");
+  fs.writeFileSync(
+    outputByNameJs,
+    `const ITEM_META_BY_NAME = ${JSON.stringify(resultsByName, null, 2)};\n`
+  );
   console.log(`Saved ${Object.keys(results).length} entries to ${outputPath}`);
   console.log(
     `Saved ${Object.keys(resultsByName).length} entries to ${outputByName}`
