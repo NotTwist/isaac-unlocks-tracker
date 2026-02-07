@@ -47,9 +47,9 @@ Tainted Magdalene Completion Marks,,,,
 492,Belly Jelly,Defeat The Beast as Tainted Magdalene,,FALSE`,
   Cain: `Cain Completion Marks,,,,
 171,Glass Baby,Defeat Mom's Heart on Hard mode as Cain,,FALSE
-021,Bag of Pennies,Defeat Isaac as Cain,,FALSE
+021,Sack of Pennies,Defeat Isaac as Cain,,FALSE
 075,Cain's Eye,Defeat ??? as Cain,,FALSE
-046,A Bag of Bombs,Defeat Satan as Cain,,FALSE
+046,bomb bag,Defeat Satan as Cain,,FALSE
 051,Abel,Defeat The Lamb as Cain,,FALSE
 207,Green Baby,Defeat Mega Satan as Cain,,FALSE
 110,Cain's Other Eye,Complete the Boss Rush as Cain,,FALSE
@@ -118,7 +118,7 @@ Tainted ??? Completion Marks,,,,
 169,Crow Baby,Defeat Mom's Heart on Hard mode as Eve,,FALSE
 076,Eve's Bird Foot,Defeat Isaac as Eve,,FALSE
 053,Sacraficial Dagger,Defeat ??? as Eve,,FALSE
-044,The Razor,Defeat Satan as Eve,,FALSE
+044,Razor Blade,Defeat Satan as Eve,,FALSE
 111,Black Lipstick,Defeat The Lamb as Eve,,FALSE
 210,Lil' Baby,Defeat Mega Satan as Eve,,FALSE
 112,Eve's Mascara,Complete the Boss Rush as Eve,,FALSE

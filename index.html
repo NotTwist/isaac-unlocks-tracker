@@ -13,8 +13,8 @@
         <p>Track completion marks and get your next best unlock.</p>
       </div>
       <div class="header-actions">
-        <button id="exportBtn" class="secondary">Export Progress</button>
-        <label class="import-label">
+        <button id="exportBtn" class="secondary action-button">Export Progress</button>
+        <label class="import-label action-button">
           Import Progress
           <input id="importInput" type="file" accept="application/json" />
         </label>
@@ -47,6 +47,7 @@
             <div class="paper">
               <h3>Completion Marks</h3>
               <div id="marksGridRegular" class="marks-grid"></div>
+              <div id="specialUnlockRegular" class="special-unlock"></div>
             </div>
           </div>
 
@@ -63,6 +64,7 @@
             <div class="paper">
               <h3>Completion Marks</h3>
               <div id="marksGridTainted" class="marks-grid"></div>
+              <div id="specialUnlockTainted" class="special-unlock"></div>
             </div>
           </div>
         </div>
@@ -79,16 +81,13 @@
           <button id="toggleRecommendationsLess" class="secondary recommendations-less">
             Show less
           </button>
-          <p class="muted">
-            Tip: unlock data is embedded in <code>data.js</code> (from your CSVs).
-          </p>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <span>Data stored locally in your browser.</span>
-      <button id="resetBtn" class="danger">Reset Progress</button>
+      <button id="resetBtn" class="danger action-button">Reset Progress</button>
     </footer>
 
     <script src="data.js"></script>

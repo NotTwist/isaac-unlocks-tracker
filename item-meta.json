@@ -200,7 +200,7 @@
   "34": {
     "quality": 2,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_034_thebookofbelial.png",
-    "description": null,
+    "description": "While held +12.5% chance for a devil/angel deal.\r\nOn use +2 damage for the current room.\r\nMultiple uses will only add +1 damage.\r\nPassive variant \r\nIf Judas or Black Judas obtain Birthright , they receive a special variation of The Book of Belial that can be held alongside another active item, similar to Book of Virtues . This variant synergizes differently with certain active items. For more details, check the synergies section on active item pages.\r\nThe special variant won't always grant +2 damage on use, but will instead use a formula for calculating the damage: NumberOfCharges × 0.66 .\r\nThe above formula will result in +2 damage for active items with 3 charges, just like The Book of Belial itself.\r\nTimed-charge items and items with no charges will not grant a damage bonus, unless they have a specific synergy.",
     "name": "The Book of Belial"
   },
   "35": {
@@ -740,7 +740,7 @@
   "124": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_124_deadseascrolls.png",
-    "description": null,
+    "description": "Activates a random active item effect from the following:\r\n• Anarchist Cookbook \r\n• Best Friend \r\n• Bob's Rotten Head \r\n• The Book of Belial \r\n• Book of Revelations \r\n• Book of Shadows \r\n• The Book of Sin \r\n• Crack the Sky \r\n• Crystal Ball \r\n• Deck of Cards \r\n• Doctor's Remote \r\n• The Gamekid \r\n• The Hourglass \r\n• Lemon Mishap \r\n• Mom's Bottle of Pills \r\n• Mom's Bra \r\n• Mom's Pad \r\n• Monster Manual \r\n• Monstro's Tooth \r\n• Mr. Boom \r\n• My Little Unicorn \r\n• The Nail \r\n• The Necronomicon \r\n• The Pinking Shears \r\n• Prayer Card \r\n• Shoop da Whoop! \r\n• Spider Butt \r\n• Tammy's Head \r\n• Telepathy For Dummies \r\n• Teleport! \r\n• We Need To Go Deeper! \r\n• Yum Heart",
     "name": "Dead Sea Scrolls"
   },
   "125": {
@@ -1142,7 +1142,7 @@
   "191": {
     "quality": 2,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_191_3dollarbill.png",
-    "description": null,
+    "description": "Grants 2 random tear effects that change every 2-3 seconds.\nCan grant the following tear effects:\r\n• 8 Inch Nails \r\n• 20/20 \r\n• Apple! \r\n• Ball of Tar \r\n• Continuum \r\n• Cricket's Body \r\n• Dark Matter \r\n• Dead Eye \r\n• Death's Touch \r\n• Euthanasia \r\n• Explosivo \r\n• Eye of Belial \r\n• Fire Mind \r\n• Holy Light \r\n• Iron Bar \r\n• Little Horn \r\n• Lost Contact \r\n• Mom's Contacts \r\n• Mom's Eyeshadow \r\n• Mom's Perfume \r\n• Mutant Spider \r\n• My Reflection \r\n• Mysterious Liquid \r\n• Number One \r\n• Ouija Board \r\n• Parasitoid \r\n• Proptosis \r\n• Pupula Duplex \r\n• Rubber Cement \r\n• Sagittarius \r\n• Scorpio \r\n• Sinus Infection \r\n• Speed Ball \r\n• Spoon Bender \r\n• The Inner Eye \r\n• The Parasite \r\n• The Sad Onion \r\n• The Wiz \r\n• Tough Love \r\nAdditionally, it may also grant the following item effects:\r\n• Lucky Foot \r\n• Magneto",
     "name": "3 Dollar Bill"
   },
   "192": {
@@ -1778,7 +1778,7 @@
   "297": {
     "quality": 2,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_297_bluebox.png",
-    "description": null,
+    "description": "Spawns specific pickups or items depending on the floor it was used on:\r\nFloor \r\nReward \r\nBasement I \r\n2 Soul Hearts \r\nBasement II \r\n2 Bombs and 2 Keys \r\nCaves I \r\n1 Boss item \r\nCaves II \r\n1 Boss item and 2 Soul Hearts \r\nDepths I \r\n4 Soul Hearts \r\nDepths II \r\n20 Pennies \r\nWomb I \r\n2 Boss items \r\nWomb II \r\nThe Bible \r\n??? (Blue Womb) \r\nnothing \r\nSheol \r\n1 Devil Room item and 1 Black Heart \r\nCathedral \r\n1 Angel Room item and 1 Eternal Heart \r\nDark Room \r\nnothing; unlocks Moving Box \r\nChest \r\n1 Penny \r\nThe Void \r\nnothing \r\nHome \r\nRed Key \r\nThe Shop / Ultra Greed \r\n1 Penny \r\nAlternate variants of the floor spawn the same pickups as the main floor they're based on (e.g. Dross = Basement).\r\nFor Greed Mode, it will always generate its second floor drops for each chapter that is before the Shop.\r\nWith Curse of the Labyrinth! , the floor is treated as the first floor of a chapter.\r\nIf used while Strange Key is held, the above pickup table is ignored, and it will instead spawn 6 higher quality items from a set of item pools, consuming both items in the process.",
     "name": "Pandora's Box"
   },
   "298": {
@@ -1838,7 +1838,7 @@
   "307": {
     "quality": 3,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_307_capricorn.png",
-    "description": null,
+    "description": "+1 full Red Heart container.\r\n+0.5 damage.\r\n+0.1 speed.\r\n+0.75 range.\r\n+0.5 fire rate.\r\n+1 bomb.\r\n+1 penny.\r\n+1 key.",
     "name": "Capricorn"
   },
   "308": {
@@ -1928,7 +1928,7 @@
   "322": {
     "quality": 2,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_322_mongobaby.png",
-    "description": null,
+    "description": "Spawns a familiar that follows Isaac and copies the tears of his other currently held familiars.\nIf Isaac has no other familiars, Mongo Baby will fire normal tears that deal 3.5 damage.\nThe familiar shoots 2.73 times per second.\nOnly the following familiars can be copied:\n• Brother Bobby \n• Demon Baby \n• Freezer Baby \n• Ghost Baby \n• Harlequin Baby \n• Little Gish \n• Little Steven \n• Rainbow Baby \n• Robo-Baby \n• Rotten Baby \n• Sister Maggy",
     "name": "Mongo Baby"
   },
   "323": {
@@ -2468,13 +2468,13 @@
   "412": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_412_cambionconception.png",
-    "description": null,
+    "description": "Grants Isaac a permanent demonic familiar upon taking damage a certain amount of times. Possible familiars include:\r\n• Dark Bum \r\n• Demon Baby \r\n• Incubus \r\n• Leech \r\n• Lil Brimstone \r\n• Succubus \r\n• Lil Abaddon \r\n• Twisted Pair \r\nCan spawn a maximum of 4 familiars. The first 2 each spawn after taking damage 15 times, while the second 2 after taking damage 30 more times. Will max out at 90 hits taken.",
     "name": "Cambion Conception"
   },
   "413": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_413_immaculateconception.png",
-    "description": null,
+    "description": "Grants a permanent angelic familiar and spawns a Soul Heart for every 15 hearts picked up.\r\nAlso works with picking up coins as Keeper or Tainted Keeper .\r\nPossible familiars include:\r\n• Holy Water \r\n• Guardian Angel \r\n• Sworn Protector \r\n• The Relic \r\n• Seraphim \r\nOnly one of each familiar can spawn. After all of them have spawned, a Soul Heart will continue to drop after every 15 hearts collected.\r\nAny heart pickups count except for Gold Hearts and Blended Hearts .",
     "name": "Immaculate Conception"
   },
   "414": {
@@ -2504,7 +2504,7 @@
   "418": {
     "quality": 2,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_418_fruitcake.png",
-    "description": null,
+    "description": "Grants a random item effect to each tear fired by Isaac.\r\nCan also grant the effects of Book of Virtues wisps, such as dropping pickups on kill, teleporting enemies to random locations, transforming enemies into poop or into random wisps.\r\nPossible item effects:\r\n• Anti-Gravity \r\n• Ball of Bandages (level 4)\r\n• Ball of Tar \r\n• Brain Worm \r\n• Bumbo (level 3)\r\n• The Common Cold \r\n• Compound Fracture \r\n• Continuum \r\n• Cricket's Body \r\n• Cupid's Arrow \r\n• Euthanasia \r\n• Explosivo \r\n• Eye of Belial \r\n• Eye of Greed (does not make Isaac lose coins)\r\n• Eye of the Occult \r\n• Fire Mind \r\n• Flat Stone \r\n• Flat Worm \r\n• Glaucoma \r\n• God's Flesh \r\n• Godhead \r\n• Haemolacria \r\n• Head of the Keeper \r\n• Holy Light \r\n• Hook Worm \r\n• Immaculate Heart \r\n• Ipecac (no damage boost, poison effect or arcing)\r\n• Iron Bar \r\n• Jacob's Ladder \r\n• Knockout Drops \r\n• Lachryphagy \r\n• Large Zit \r\n• Little Horn \r\n• Lodestone \r\n• Lost Contact \r\n• A Lump of Coal \r\n• Mom's Contacts \r\n• Mom's Eyeshadow \r\n• Mom's Perfume \r\n• Mucormycosis \r\n• The Mulligan \r\n• My Reflection (no shot speed modifier)\r\n• Mysterious Liquid \r\n• Ocular Rift \r\n• Ouija Board \r\n• Ouroboros Worm \r\n• The Parasite \r\n• Parasitoid \r\n• Pisces \r\n• Polyphemus (no damage applied, only piercing shots on overkill)\r\n• Pop! \r\n• Proptosis (no damage multiplier, effectively only decreases damage dealt)\r\n• Pulse Worm \r\n• Ring Worm \r\n• Rotten Tomato \r\n• Rubber Cement \r\n• Serpent's Kiss \r\n• Sinus Infection \r\n• Spider Bite \r\n• Spoon Bender \r\n• Strange Attractor \r\n• Sulfuric Acid \r\n• Technology Zero \r\n• Terra \r\n• Tiny Planet (no range up)\r\n• Trisagion \r\n• Uranus \r\n• Wiggle Worm",
     "name": "Fruit Cake"
   },
   "419": {
@@ -2858,7 +2858,7 @@
   "477": {
     "quality": 3,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_477_void.png",
-    "description": null,
+    "description": "Absorbs and removes all items in the room. Cannot absorb items that require payment.\r\nIf an active item is absorbed \r\nVoid will grant the activated ability of that item, allowing it to be activated when Void is used again, simultaneously with all other absorbed active items.\r\nItems are activated in the same order they were absorbed in.\r\nPassive effects of asorbed active items are not gained.\r\nIf a passive item is absorbed \r\nIsaac gains 2 random stat boosts from the following list:\r\n• +1 damage.\r\n• +0.5 fire rate.\r\n• +0.2 speed.\r\n• +0.2 shot speed.\r\n• +1 luck.\r\n• +2.5 range.\r\nCannot increase stats above their maximum allowed values. If such a stat is chosen, it will effectively do nothing to it.\r\nItems can be absorbed while the pickup animation is playing, i.e. when Isaac holds the item above his head. This can be used to absorb items from shops or devil deals after purchasing them, or during Curse of the Blind.\r\nAbsorbing items counts as Isaac taking them, thus will activate Boss Rush, Challenge Rooms and similar mechanics.\r\nIf Void is used in a room with linked choice item pedestals, only one of them will be absorbed, while the others will vanish as if Isaac took them.\r\nUsing multiple copies of an active item will activate those items' effects equally as many times.\r\nOne time use items can still be used only once.",
     "name": "Void"
   },
   "478": {
@@ -3110,7 +3110,7 @@
   "519": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_519_lildelirium.png",
-    "description": null,
+    "description": "Spawns a familiar that transforms into another random familiar every 10 seconds. The familiar will take on a Delirium-like appearance, but otherwise has the same stats and behavior as the non-Delirium counterpart.\r\nCan transform into the following familiars:\r\n• Acid Baby \r\n• BBF \r\n• Big Chubby \r\n• Bob's Brain \r\n• Cube of Meat (level 4)\r\n• Dry Baby \r\n• Farting Baby \r\n• Fruity Plum \r\n• Headless Baby \r\n• Hushy \r\n• Incubus \r\n• Isaac's Head \r\n• Lil Brimstone \r\n• Lil Gurdy \r\n• Lil Haunt \r\n• Lil Loki \r\n• Lil Monstro \r\n• Little Chubby \r\n• Little Gish \r\n• Robo-Baby 2.0 \r\n• Seraphim \r\nCan transform into the same familiar multiple times in a row, thus keeping the same form for more than 10 seconds.\r\nThe familiar can damage Isaac when taking the form of BBF or Bob's Brain .",
     "name": "Lil Delirium"
   },
   "520": {
@@ -3176,7 +3176,7 @@
   "530": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_530_deathslist.png",
-    "description": null,
+    "description": "Upon entering a room, a skull appears over an enemy that spawned first. Killing the enemy will cause the skull to move to a different enemy.\nKilling all enemies in the marked order will grant Isaac with a random reward.\nIf a non-marked enemy is killed, the skull will disappear and no bonus will be granted for that room.\nMarked enemies are chosen starting from the top-left corner of the room. New enemies spawned afterward are added at the end of the list\nRooms with no enemies (e.g. only a button) will also give rewards.\nPossible rewards:\n• +0.2 speed.\n• +0.5 range.\n• +0.5 fire rate.\n• +0.2 shot speed.\n• +1 damage.\n• +1 luck.\n• Soul Heart.\n• Pill.\n• Key.\n• Bomb.\n• Nickel.",
     "name": "Death's List"
   },
   "531": {
@@ -3212,7 +3212,7 @@
   "536": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_536_sacrificialaltar.png",
-    "description": null,
+    "description": "Sacrifices up to 2 of Isaac's familiars chosen at random, and spawns an item from a preset devil-deal-like list for each of them.\r\nConverts specific familiars:\r\n• Blue Flies, Blue Spiders, Clots, Locusts, Friendly Dips and Minisaacs into Pennies \r\n• Book of Virtues wisps into Half Hearts \r\n• Lemegeton wisps into Half Soul Hearts \r\nCauses a brief Curse of Darkness! .\r\nCannot sacrifice Incubus when playing as Lilith .\r\nCan sacrifice familiars granted from trinkets, destroying the trinket in the process.\r\nIf an angelic familiar is sacrificed ( Guardian Angel / Seraphim / Sworn Protector ), 2 Black Hearts will drop as well.\r\nIf Isaac already has all items that can be spawned, it will instead spawn 1-2 copies of Pentagram .",
     "name": "Sacrificial Altar"
   },
   "537": {
@@ -3296,7 +3296,7 @@
   "550": {
     "quality": 4,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_550_shovelpiece1.png",
-    "description": null,
+    "description": "Can be acquired by defeating the first floor boss under a minute (indicated by Mom yelling \"Isaac!\").\nBombing the starting room of the floor after defeating the boss will drop the item. If Isaac has no bomb, the Sacrifice Room can be used which will guarantee a bomb drop on the first sacrifice.\nThe Lamb must be defeated at least once in order for the item to appear.\nForms Mom's Shovel when combined with the other piece of the shovel.\nWhile held Causes 1-2 Mom's feet to attempt to stomp Isaac every few seconds. Each stomp deals a full heart of damage to Isaac if successful, and 100 damage to enemies.\nStomps will not blow up Slot Machines or Beggars, but will destroy obstacles, Bomb Chests, and will open doors.\nThe stomps cease while fighting Mom.\nRemoves the 20 minute time limit on the Boss Rush door, but forces Isaac to complete Boss Rush before advancing to the next floor.\nForces The Negative to appear after defeating Mom, ultimately leading Isaac to Sheol.\nIf the item is dropped, leaving the room will cause it to disappear.\nOn use Pauses stomps for the current room.\nIf used in Boss Rush or a Challenge Room, stomps will be paused for only a single wave.",
     "name": "Broken Shovel"
   },
   "551": {
@@ -3452,7 +3452,7 @@
   "576": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_576_dirtymind.png",
-    "description": null,
+    "description": "Converts all enemy Dips and Drips into Dip familiars.\r\nGrants a chance to replace rocks with poop when generated.\r\nCauses poops to spawn 1-4 Dip familiars when destroyed, which will loosely follow Isaac, block enemy projectiles, and deal contact damage to enemies equal to 2x Isaac's damage.\r\nDips can deal up to 2 ticks of contact damage and/or block 2 shots before dying.\r\nDifferent poop variants grant different types of Dip familiars.\r\nDip variants based on destroyed poop \r\n• Corny Poop: Dips spawn a Blue Fly on death.\r\n• Red Poop: Dips deal double damage and charge at enemies, but automatically die after 15 seconds.\r\n• Golden Poop: Dips have a chance to inflict Midas' Touch on enemies they hit. They can take up to 5 hits before dying.\r\n• Rainbow Poop: Dips charm enemies they hit and have a chance to drop half red hearts on death.\r\n• Black Poop: Dips leave a trail of slowing creep on the ground.\r\n• White Poop: Dips have the Hallowed Ground aura around them, and can take up to 3 hits.\r\n• Stone Poop: Dips deal an additional 3.5 damage per hit, and can take up to 6 hits.\r\n• Stinky Poop: Dips release toxic gas as they move, and a larger cloud of gas upon death. The gas does 50% of Isaac's damage per tick (~1.2x Isaac's damage per second) and poisons enemies. Clouds left behind while alive last 1.5 seconds, while the on-death cloud lasts 8 seconds.\r\n• Fire Poop: Dips set enemies ablaze when hit, and leave behind a fire when they die. The burn deals 3.5 damage up to 6 times. The fire deals 8 damage at full durability, 6 after taking 1 hit, and 4 otherwise, for a total of 22 damage.\r\nHas a 1% chance of being dropped upon defeating Brownie.",
     "name": "Dirty Mind"
   },
   "577": {
@@ -3746,7 +3746,7 @@
   "625": {
     "quality": 4,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_625_megamush.png",
-    "description": null,
+    "description": "×4 damage multiplier.\r\n+2 range.\r\n-1.9 tears.\r\nTurns Isaac into a invincible giant for 30 seconds, persisting between rooms and floors.\r\nIsaac is able to destroy obstacles and doors by walking into them, as well as metal blocks. Cannot destroy doors that require a pickup in order to open.\r\nIsaac deals massive amounts of rapid contact damage to enemies equal to 1 damage per tick (2400 per second).\r\nDifferent types of weapons (e.g. Brimstone or Mom's Knife ) are overwritten while the effect is active. Isaac is only able to shoot regular tears.\r\nPrevents Isaac from using donation mechanics such as Blood Donation Machines or Devil Beggars , since they will get destroyed on contact.",
     "name": "Mega Mush"
   },
   "626": {
@@ -3848,7 +3848,7 @@
   "642": {
     "quality": 2,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_642_magicskin.png",
-    "description": null,
+    "description": "On use -1 Heart Container, Bone Heart or 2 Soul Hearts (chosen by priority as shown).\r\n+1 Broken Heart which can never be filled, permanently reducing Isaac's maximum possible health.\r\nSpawns an item from the current room's item pool.\r\nDisappears after being used 12 times (or 18 times if playing as Magdalene with Birthright ).\r\nThe Lost and Tainted Lost can only use the item once before it disappears.\r\nWhile held After using Magic Skin, if Isaac drops the item, any item that spawns in the future will have a chance to be replaced by Magic Skin.\r\nThe chance for this to happen is 33% after the first use, 50% after 2 uses, and 100% after 3 uses. This chance is drastically reduced if Magic Skin is on a pedestal somewhere on the current floor.\r\nHas a 1% chance of being dropped upon defeating The Scourge.",
     "name": "Magic Skin"
   },
   "643": {
@@ -3860,7 +3860,7 @@
   "644": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_644_consolationprize.png",
-    "description": null,
+    "description": "Gives Isaac one of the following stat boosts based on which of his stats is the lowest:\n• +1 flat damage.\n• +0.5 fire rate.\n• +0.2 speed.\n• +2.5 range.\nAlso drops either 3 coins, 1 bomb, or 1 key, depending on what Isaac has the least of. For the purposes of this calculation, each key or bomb is equivalent to 3 coins.\nIf Isaac has the same amount of 2 lowest stats, one of them is selected randomly.\nHaving temporary stat boosts, such as those given by cards, will affect the payout given by the item.\nA Soul Heart may be dropped as Bethany , or 2 Hearts as Tainted Bethany .\nPoop Nuggets may be dropped as Tainted ??? . The game will check for his regular bomb count when doing this which which is always 0.",
     "name": "Consolation Prize"
   },
   "645": {
@@ -3902,7 +3902,7 @@
   "651": {
     "quality": 3,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_651_starofbethlehem.png",
-    "description": null,
+    "description": "Spawns a glowing star that slowly travels towards the Boss Room using the shortest possible route.\r\nThe star is surrounded with a glowing aura that gives Isaac the following when standing inside it:\r\n• ×1.2 damage multiplier.\r\n• ×2.5 fire rate multiplier.\r\n• Homing tears.\r\n• 50% chance to block damage.\r\nOnce the star reaches the Boss Room, it will center itself in the room for the rest of the floor.\r\nThe speed of the star changes based on whether Isaac is in front or behind it in correlation to the Boss Room. It will speed up if it's lacking behind, or slow down if Isaac is behind.\r\nThe star may travel through Secret Rooms and Curse Rooms on its path to the Boss Room. It may also travel through Red Rooms if they create an optimal path to the Boss Room.\r\nWith Curse of the Labyrinth! active, the star will travel to the second Boss Room.\r\nIn the Void, the star will travel to Delirium's Boss Room.\r\nIn Greed Mode, the star will always center itself in the starting room, except on the final floor, where it will move to the Ultra Greed fight.\r\nThe star won't appear in The Beast fight.\r\nIf the Mega Satan door is opened, the star will travel to that fight instead.",
     "name": "Star of Bethlehem"
   },
   "652": {
@@ -3962,7 +3962,7 @@
   "661": {
     "quality": 2,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_661_quints.png",
-    "description": null,
+    "description": "Spawns a stationary familiar in the place of killed enemies, up to 5 per room. Familiars appear colorless.\nThe following familiars can be spawned:\n• Abel \n• Boiled Baby \n• Brother Bobby \n• Demon Baby \n• Freezer Baby \n• Ghost Baby \n• Guardian Angel \n• Harlequin Baby \n• Lil Brimstone \n• Little Steven \n• Multidimensional Baby \n• Robo-Baby \n• Rotten Baby \n• Seraphim \n• Sister Maggy \nThe same type of familiar can spawn multiple times per room.",
     "name": "Quints"
   },
   "662": {
@@ -3980,7 +3980,7 @@
   "664": {
     "quality": 4,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_664_bingeeater.png",
-    "description": null,
+    "description": "On pickup +1 full Red Heart container.\r\nFully heals Isaac.\r\nWhile held Causes item pedestals to have an additional food item which cycles alongside the original item.\r\nPicking up the food item grants Isaac with the following: \n• +3.6 damage which fades over 30 seconds. This boost cannot be stacked and will be reset to 3.6 by picking up additional food items.\r\n• 0.03 speed.\r\n• A permanent boost to 2 stats depending on the food item consumed.\r\n• +1 additional red heart heal.\r\nStat boosts are different based on the item consumed:\r\n• Breakfast : +0.2 shot speed, +2.5 range.\r\n• Dessert : +1 flat damage, +0.2 shot speed.\r\n• Dinner : +0.5 tears, +0.2 shot speed.\r\n• Lunch : +0.5 tears, +2.5 range.\r\n• Midnight Snack : +1 flat damage, +1 luck.\r\n• Rotten Meat : +1 flat damage, +2.5 range.\r\n• A Snack : +0.2 shot speed, +1 luck.\r\n• Supper : +0.5 tears, +1 luck.\r\nStat boosts also work retroactively, meaning that picking up Binge Eater will grant all relevant stat boosts from food items previously collected, excluding the additional healing provided by them.\r\nCertain item pedestals that are required to progress the game won't gain the additional food item.",
     "name": "Binge Eater"
   },
   "665": {
@@ -4010,7 +4010,7 @@
   "669": {
     "quality": 3,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_669_sausage.png",
-    "description": null,
+    "description": "+1 full Red Heart container.\r\n+0.2 speed.\r\n+0.5 damage.\r\n+0.5 tears.\r\n+2.5 range.\r\n+0.2 shot speed.\r\n+1 luck.\r\n+6.9% for a Devil/Angel Room.\r\n+6.9% Planetarium chance.\r\nFully heals Isaac.",
     "name": "Sausage"
   },
   "670": {
@@ -4022,7 +4022,7 @@
   "671": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_671_candyheart.png",
-    "description": null,
+    "description": "On pickup Spawns a Heart .\nWhile held Gives Isaac one of the following stat boost per half heart healed by picking up Red Hearts or Rotten Hearts :\n• +0.02 speed.\n• +0.05 tears.\n• +0.10 flat damage.\n• +0.25 range.\n• +0.02 shot speed.\n• +0.10 luck.\nItems that heal Isaac won't grant any boosts. Only hearts picked up off the ground count.\nDoes not work when adding to Tainted Bethany 's blood charges.",
     "name": "Candy Heart"
   },
   "672": {
@@ -4214,13 +4214,13 @@
   "703": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_703_esaujr.png",
-    "description": null,
+    "description": "Swaps between the current character and Esau Jr., a separate character that has 3 Black Hearts, +2 flat damage, and flight.\nCoins, bombs, and keys are shared between the 2 characters, but a separate inventory exists for everything else (health, items, consumables, trinkets).\nWhen used for the first time, Esau Jr. receives random items equal to the number of items the original characters has. Each item is chosen from the same item pool as the original item. Only passive items are given substitutes. Items with the quest tag and set drops (such as The Small Rock ) are not counted and won't get a substitute item.\nIf either character dies, they will both die.\nEsau Jr. will receive any passive starting item the original character had, however, if said items are rerollable, they will count towards the number of items he should get, resulting in both the staring item and 1 extra to be obtained.\nUsing 5 different copies of Esau Jr. one after the other, starting from the 5th copy, Esau Jr.'s jar will break and create a familiar that behaves like Abel , and deals 7.5 damage per shot but at a faster fire rate.",
     "name": "Esau Jr."
   },
   "704": {
     "quality": 1,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_704_berserk.png",
-    "description": null,
+    "description": "+0.4 speed.\r\n+3 flat damage.\r\n+2 fire rate.\r\n×0.5 fire rate multiplier.\r\nReplaces Isaac's tears with a jaw bone similar to The Forgotten 's club. It also uses the same synergies as the club.\r\nThis effect lasts for 5 seconds.\r\nThe jaw bone deals 3x Isaac's damage when swung, and 1.5x Isaac's damage when thrown.\r\nSwinging the jaw bone will reflect enemy shots, and is able to pick up pickups from a distance.\r\nKilling an enemy while in Berserk mode will increase the duration of the effect by 1 second, and grant very brief invincibility that prevents damage from exploding enemies. Duration cannot be increased by more than 5 seconds.\r\nEach enemy killed will also grant +0.4 speed until the effect ends.\r\nIsaac is unable to die while in Berserk mode. His health can go down to 0, but he will not die until the effect ends. During this time, he can heal himself and cheat death.\r\nThe item starts at 50% charge when picked up. It is charged by dealing damage to enemies instead of clearing rooms or picking up batteries. To fully charge it, Isaac must deal damage equal to 120 + 40 × CurrentFloor .",
     "name": "Berserk!"
   },
   "705": {
@@ -4256,7 +4256,7 @@
   "710": {
     "quality": 3,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_710_bagofcrafting.png",
-    "description": null,
+    "description": "Upon use, pressing an attack button will cause a swipe attack that deals 3 damage to enemies and knocks them back. The size of the swipe scales with Isaac's size, and is affected by his range.\r\nThe swipe can be used to open chests and block projectiles.\r\nSwiping a pickup off the floor will add it to the bag. Up to 8 pickups can be stored in the bag. These pickups cannot be dropped.\r\nDouble pickups will add 2 copies of the pickup into the bag.\r\nPickups can also be collected from the Shop, if Isaac has enough money to buy them first.\r\nOnce 8 pickups have been collected, the bag can be used once more to create an item based on the types of pickups (components) collected.\r\nA random recipe is chosen for each item when the run starts. This is seeded per run.\r\nIf the bag would grant an item that hasn't been unlocked yet, a random item will be crafted instead.\r\nSome recipes are fixed and exist in every run. Check the GuruWiki page for a full list of fixed recipes.\r\nThe crafted item is chosen from one of the following pools:\r\n• 40% → Boss \r\n• 40% → Shop \r\n• 20% → Treasure Room \r\nPickups added into the bag have different qualities. Some pickups grant a chance to craft an item from a different pool. Check the GuruWiki page for more details.\r\nBased on the overall quality of all components in the bag, the crafted item can be chosen from a special pool ( Angel Room , Devil Room , or Secret Room ), or other pools based on previously explained criteria.\r\nThe overall quality of components in the bag also affects the crafted item's possible quality.\nSpecial pool \r\nOther pool \r\nItem quality \r\n40+ \r\n35+ \r\n4 \r\n32-39 \r\n27-34 \r\n3-4 \r\n28-31 \r\n23-26 \r\n2-4 \r\n24-27 \r\n19-22 \r\n2-3 \r\n20-23 \r\n15-18 \r\n1-2 \r\n14-19 \r\n9-14 \r\n0-2 \r\n0-13 \r\n0-8 \r\n0-1 \r\nWhen playing as Tainted Cain \nThe item that would be crafted is displayed in the bottom-right corner of the screen.\r\nGetting more than 8 pickups in the bag will shift its contents left and up, deleting the top-left slot and adding to the bottom-right.\r\nTapping the drop key will cycle the bag's contents left and up in a loop. Holding the use button will craft the displayed item.\r\nCrafting an active item while already holding one will turn the old one into pickups, just like collecting it would.\r\nCurse of the Blind! will hide the crafting preview.",
     "name": "Bag of Crafting"
   },
   "711": {
@@ -4274,7 +4274,7 @@
   "713": {
     "quality": 3,
     "imageUrl": "https://isaacguru.com/core/data/isaac/collectibles/collectibles_713_sumptorium.png",
-    "description": null,
+    "description": "When used by any character other than Tainted Eve \nRemoves half a heart of health and creates a blood clot familiar.\nBlood clots mimic Isaac's movement, shooting, and inherit tear, effect, including weapon effects.\nHolding down the drop button allows Isaac to move independently from the clots.\nThe familiar start with 15 HP that slowly decays down to 1 HP over time, or 5 HP for clots created by non-red hearts.\nClots are immune to hazards such as spikes, fire places, and lasers.\nEnemies deal 1 point of contact and projectile damage when they hit them.\nIsaac's bombs and Troll Bombs deal 2 points of damage.\nEach type of heart generates a unique type of blood clot, however red hearts are prioritized when using the item:\n• Red Heart: 35% damage.\n• Soul Heart: 35% damage; 22.5 HP.\n• Black Heart: 43% damage; Dark Matter tears.\n• Eternal Heart: 52% damage; Sacred Heart tears.\n• Golden Heart: 35% damage; Midas' Touch tears (scales with luck).\n• Bone Heart: 35% damage; Compound Fracture tears.\n• Rotten Heart: 35% damage; 7.5 HP.\nWhen playing as Tainted Eve \nHolding down the fire button will create blood clot familiars every 2 seconds and drain half a heart.\nActivating the item will recall all previously created blood clots and heal Tainted Eve for the same type of hearts used to generate the clots.\nBlood clots deal 3x Tainted Eve's damage to enemies they pass through when returned to her.\nIf more blood clots get returned that the amount of health she can have, excess blood clots will drop next to her.\nThe item has a recharge time of 1 second instead of 10.\nA maximum of 29 clots can be absorbed at once.",
     "name": "Sumptorium"
   },
   "714": {
@@ -4316,7 +4316,7 @@
   "720": {
     "quality": 2,
     "imageUrl": "https://isaacguru.com/core/assets/img/items/everything_jar.gif",
-    "description": null,
+    "description": "Spawns a different pickup based on the number of charges the item had when used:\r\n• 1: poop.\r\n• 2: Penny .\r\n• 3: Bomb .\r\n• 4: Key .\r\n• 5: Heart .\r\n• 6: pill.\r\n• 7: card, rune, or soul stone.\r\n• 8: Soul Heart .\r\n• 9: Gold Heart .\r\n• 10: Golden Key .\r\n• 11: Golden Bomb .\r\nIf the item was fully charged, it instead does one of the following:\r\n• Spawns a random amount of various pickups.\r\n• Spawns a neutral fly.\r\n• Spawns a bunch of friendly Dips, Blue Flies, and Blue Spiders.\r\n• Closes the room's doors and spawns random enemies in front of each door, including Secret Room entrances.\r\n• Spawns an item pedestal that cycles between 9 different items, 30 times per second, Items are selected from the current room's item pool.\r\n• Spawns many different colored beams of light that deal damage to enemies and scale with Isaac's damage.\r\n• Fills the room with poop.\r\n• Spawns 6 Troll Bombs .\r\n• Invokes the effects of Dataminer .\r\n• Spawns a bunch of Shopkeepers.\r\n• Spawns a Giga Bomb pickup that has a chance to be lit and explode.\r\n• Does nothing.",
     "name": "Everything Jar"
   },
   "721": {

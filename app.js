@@ -63,6 +63,14 @@ const MARKS = [
     iconUrl:
       "assets/Completion_Greed.png",
     iconUrlHard:
+      "assets/Completion_Greed.png",
+  },
+  {
+    id: "greedier",
+    label: "Ultra Greedier",
+    iconUrl:
+      "assets/Completion_Greed_Hard.png",
+    iconUrlHard:
       "assets/Completion_Greed_Hard.png",
   },
   {
@@ -101,11 +109,12 @@ const MARKS = [
 const MARK_POSITIONS = {
   moms_heart: { x: 25, y: 9 },
   isaac: { x: 40, y: 20 },
-  blue_baby: { x: 57, y: 22 },
-  greed: { x: 75, y: 15 },
+  blue_baby: { x: 54, y: 27 },
+  greed: { x: 65, y: 13 },
+  greedier: { x: 70, y: 30 },
   satan: { x: 28, y: 30 },
-  lamb: { x: 45, y: 38 },
-  mega_satan: { x: 61, y: 44 },
+  lamb: { x: 42, y: 42 },
+  mega_satan: { x: 59, y: 46 },
   boss_rush: { x: 15, y: 42 },
   hush: { x: 14, y: 62 },
   mother: { x: 30, y: 58 },
@@ -209,6 +218,21 @@ const MARK_PATTERNS = [
   { id: "beast", patterns: ["The Beast"] },
 ];
 
+const ITEM_NAME_ALIASES = {
+  "celctic cross": "celtic cross",
+  "sacraficial dagger": "sacrificial dagger",
+  "temporary tatoo": "temporary tattoo",
+  "the high priesstess": "the high priestess",
+  "euthanesia": "euthanasia",
+  "soul of lillith": "soul of lilith",
+  "abbadon": "abaddon",
+  "samson s chain": "samson s chains",
+  "cricket leg": "cricket s leg",
+  "the d20": "d20",
+  "the d100": "d100",
+  "fart baby": "farting baby",
+};
+
 const ITEMS = buildItemsFromCsv(
   typeof UNLOCKS_CSV === "object" && UNLOCKS_CSV ? UNLOCKS_CSV : {}
 );
@@ -232,6 +256,8 @@ const characterProgressRegular = document.getElementById("characterProgressRegul
 const characterProgressTainted = document.getElementById("characterProgressTainted");
 const marksGridRegular = document.getElementById("marksGridRegular");
 const marksGridTainted = document.getElementById("marksGridTainted");
+const specialUnlockRegular = document.getElementById("specialUnlockRegular");
+const specialUnlockTainted = document.getElementById("specialUnlockTainted");
 const recommendations = document.getElementById("recommendations");
 const characterSearch = document.getElementById("characterSearch");
 
@@ -250,10 +276,28 @@ markTooltip.id = "markTooltip";
 markTooltip.className = "mark-tooltip";
 markTooltip.style.display = "none";
 document.body.appendChild(markTooltip);
+let tooltipHideTimer = null;
+let activeTooltipKey = null;
+let tooltipLocked = false;
+
+function cancelTooltipHide() {
+  if (tooltipHideTimer) {
+    window.clearTimeout(tooltipHideTimer);
+    tooltipHideTimer = null;
+  }
+}
+
+function scheduleHideMarkTooltip() {
+  cancelTooltipHide();
+  hideMarkTooltip();
+}
 
 renderCharacters();
 renderSelectedCharacter();
 renderRecommendations();
+
+markTooltip.addEventListener("mouseenter", cancelTooltipHide);
+markTooltip.addEventListener("mouseleave", scheduleHideMarkTooltip);
 
 characterSearch.addEventListener("input", (event) => {
   renderCharacters(event.target.value.trim().toLowerCase());
@@ -353,6 +397,19 @@ function renderCharacters(filter = "") {
     entry.appendChild(name);
     return entry;
   };
+  const renderProgress = (char, column) => {
+    const progress = document.createElement("div");
+    progress.className = "character-progress";
+    progress.style.gridColumn = String(column);
+    progress.style.gridRow = "2";
+    const stats = getCompletionStats(char.id);
+    progress.title = `${stats.completed} / ${stats.total} marks`;
+    const fill = document.createElement("div");
+    fill.className = "character-progress-fill";
+    fill.style.width = `${stats.percent}%`;
+    progress.appendChild(fill);
+    return progress;
+  };
   BASE_CHARACTERS.forEach((base) => {
     const regular = characterById.get(base.id);
     const tainted = characterById.get(`t_${base.id}`);
@@ -384,6 +441,24 @@ function renderCharacters(filter = "") {
     } else {
       const placeholder = document.createElement("div");
       placeholder.className = "character-entry placeholder";
+      row.appendChild(placeholder);
+    }
+    if (showRegular) {
+      row.appendChild(renderProgress(regular, 1));
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "character-progress placeholder";
+      placeholder.style.gridColumn = "1";
+      placeholder.style.gridRow = "2";
+      row.appendChild(placeholder);
+    }
+    if (showTainted) {
+      row.appendChild(renderProgress(tainted, 2));
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "character-progress placeholder";
+      placeholder.style.gridColumn = "2";
+      placeholder.style.gridRow = "2";
       row.appendChild(placeholder);
     }
     regularList.appendChild(row);
@@ -419,7 +494,7 @@ function buildItemsFromCsv(csvMap) {
       items.push({
         id: `item_${itemId}`,
         itemId,
-        name: itemName,
+        name: meta && meta.name ? meta.name : itemName,
         quality: meta ? meta.quality : null,
         imageUrl: meta ? meta.imageUrl : null,
         description: meta ? meta.description : null,
@@ -465,13 +540,14 @@ function parseCsvLine(line) {
 }
 
 function normalizeItemName(name) {
-  return name
+  const normalized = name
     .toLowerCase()
     .replace(/&/g, " and ")
     .replace(/\?+/g, " question ")
     .replace(/[^a-z0-9]+/g, " ")
     .trim()
     .replace(/\s+/g, " ");
+  return ITEM_NAME_ALIASES[normalized] || normalized;
 }
 
 function normalizeCharacterName(name) {
@@ -498,6 +574,7 @@ function getCharacterImageUrl(name) {
 
 function parseUnlockCondition(condition) {
   const normalized = condition.toLowerCase();
+  const strippedCharacter = normalized.replace(/\s+as\s+[^,]+$/i, "");
   if (
     normalized.includes("earn all hard mode completion marks") ||
     normalized.includes("12 completion marks on hard mode")
@@ -508,7 +585,7 @@ function parseUnlockCondition(condition) {
   const matched = [];
   MARK_PATTERNS.forEach((entry) => {
     entry.patterns.forEach((pattern) => {
-      if (condition.includes(pattern)) {
+      if (strippedCharacter.includes(pattern.toLowerCase())) {
         matched.push(entry.id);
       }
     });
@@ -532,6 +609,7 @@ function renderSelectedCharacter() {
     sprite: characterSpriteRegular,
     progress: characterProgressRegular,
     marksGrid: marksGridRegular,
+    specialUnlock: specialUnlockRegular,
   });
   renderCharacterPane(tainted, {
     panel: characterPanelTainted,
@@ -539,6 +617,7 @@ function renderSelectedCharacter() {
     sprite: characterSpriteTainted,
     progress: characterProgressTainted,
     marksGrid: marksGridTainted,
+    specialUnlock: specialUnlockTainted,
   });
 }
 
@@ -581,9 +660,11 @@ function renderCharacterPane(character, pane) {
   };
   marksGrid.addEventListener("pointermove", (event) => {
     if (event.target !== marksGrid) return;
-    showMarkTooltip("delirium", character.id, marksGrid);
+    const tooltipKey = `${character.id}:delirium`;
+    if (activeTooltipKey === tooltipKey) return;
+    showMarkTooltip("delirium", character.id, marksGrid, false);
   });
-  marksGrid.addEventListener("mouseleave", hideMarkTooltip);
+  marksGrid.addEventListener("mouseleave", scheduleHideMarkTooltip);
   const deliriumState = normalizeMarkState(marksState.delirium, "delirium");
   marksGrid.classList.toggle("hard-paper", deliriumState === "hard");
 
@@ -611,18 +692,18 @@ function renderCharacterPane(character, pane) {
     markCard.addEventListener("click", () => {
       const nextState = getNextMarkState(markState, mark.id);
       marksState[mark.id] = nextState;
-      if (mark.id === "greed") {
-        delete marksState.greedier;
-      }
       state.marksByCharacter[character.id] = marksState;
       saveState(state);
       renderSelectedCharacter();
       renderRecommendations();
     });
     markCard.addEventListener("mouseenter", () => {
-      showMarkTooltip(mark.id, character.id, markCard);
+      if (tooltipLocked && activeTooltipKey !== `${character.id}:${mark.id}`) {
+        return;
+      }
+      showMarkTooltip(mark.id, character.id, markCard, true);
     });
-    markCard.addEventListener("mouseleave", hideMarkTooltip);
+    markCard.addEventListener("mouseleave", scheduleHideMarkTooltip);
 
     const icon = document.createElement("img");
     icon.className = "mark-icon-img";
@@ -632,6 +713,60 @@ function renderCharacterPane(character, pane) {
     markCard.appendChild(icon);
     marksGrid.appendChild(markCard);
   });
+
+  const specialContainer = pane.specialUnlock;
+  if (specialContainer) {
+    specialContainer.innerHTML = "";
+    specialContainer.style.display = "none";
+    const allMarksItems = ITEMS.filter(
+      (item) =>
+        item.allMarks &&
+        item.unlock &&
+        item.unlock.characterId === character.id &&
+        isCollectibleItem(item)
+    );
+    if (allMarksItems.length) {
+      specialContainer.style.display = "flex";
+      allMarksItems.forEach((item) => {
+        const isUnlocked = isItemUnlocked(item);
+        const card = document.createElement("div");
+        card.className = "special-unlock-card";
+        if (!isUnlocked) {
+          card.classList.add("locked");
+        }
+        if (item.imageUrl) {
+          const icon = document.createElement("img");
+          icon.className = "special-unlock-icon";
+          icon.src = item.imageUrl;
+          icon.alt = item.name;
+          icon.referrerPolicy = "no-referrer";
+          card.appendChild(icon);
+        }
+        const text = document.createElement("div");
+        text.className = "special-unlock-text";
+        const title = document.createElement("div");
+        title.className = "special-unlock-title";
+        title.textContent = item.name;
+        const subtitle = document.createElement("div");
+        subtitle.className = "special-unlock-subtitle";
+        subtitle.textContent = "All completion marks reward";
+        text.appendChild(title);
+        text.appendChild(subtitle);
+        card.appendChild(text);
+        card.addEventListener("mouseenter", () => {
+          if (
+            tooltipLocked &&
+            activeTooltipKey !== `${character.id}:allmarks:${item.id}`
+          ) {
+            return;
+          }
+          showSpecialUnlockTooltip(item, character.id, card);
+        });
+        card.addEventListener("mouseleave", scheduleHideMarkTooltip);
+        specialContainer.appendChild(card);
+      });
+    }
+  }
 
   pane.progress.textContent = `${completedCount} / ${getTotalMarks()} marks`;
 }
@@ -715,6 +850,18 @@ function renderRecommendations() {
     description.className = "item-description";
     description.textContent = item.description ?? "No description available.";
     description.title = description.textContent;
+    const descriptionToggle = document.createElement("button");
+    descriptionToggle.type = "button";
+    descriptionToggle.className = "desc-toggle";
+    descriptionToggle.textContent = "More";
+    if (!item.description || item.description.length < 180) {
+      descriptionToggle.style.display = "none";
+    }
+    descriptionToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const expanded = description.classList.toggle("expanded");
+      descriptionToggle.textContent = expanded ? "Less" : "More";
+    });
 
     body.appendChild(title);
     const metaRow = document.createElement("div");
@@ -723,6 +870,7 @@ function renderRecommendations() {
     metaRow.appendChild(badges);
     body.appendChild(metaRow);
     body.appendChild(description);
+    body.appendChild(descriptionToggle);
     card.appendChild(body);
     recommendations.appendChild(card);
   });
@@ -748,6 +896,18 @@ function getMarksForCharacter(characterId) {
   return state.marksByCharacter[characterId] || {};
 }
 
+function getCompletionStats(characterId) {
+  const marks = getMarksForCharacter(characterId);
+  let completed = 0;
+  MARKS.forEach((mark) => {
+    const state = getEffectiveMarkState(marks, mark.id);
+    completed += countMarkCompletion(mark.id, state);
+  });
+  const total = getTotalMarks();
+  const percent = total ? Math.min(100, Math.round((completed / total) * 100)) : 0;
+  return { completed, total, percent };
+}
+
 function getBaseCharacterId(characterId) {
   return characterId.startsWith("t_") ? characterId.slice(2) : characterId;
 }
@@ -756,12 +916,20 @@ function getMarksGridForCharacter(characterId) {
   return characterId.startsWith("t_") ? marksGridTainted : marksGridRegular;
 }
 
-function showMarkTooltip(markId, characterId, anchor) {
-  const matches = ITEMS.filter((item) => {
+function showMarkTooltip(markId, characterId, anchor, lockTooltip = true) {
+  cancelTooltipHide();
+  const tooltipKey = `${characterId}:${markId}`;
+  if (activeTooltipKey === tooltipKey && markTooltip.style.display === "block") {
+    return;
+  }
+  activeTooltipKey = tooltipKey;
+  tooltipLocked = lockTooltip;
+  let matches = ITEMS.filter((item) => {
     if (!item.unlock || item.unlock.characterId !== characterId) return false;
-    if (item.allMarks) return true;
     return item.unlock.markIds.includes(markId);
-  });
+  })
+    .filter((item) => !item.allMarks)
+    .filter((item) => item.imageUrl || item.sourceId);
   if (!matches.length) {
     hideMarkTooltip();
     return;
@@ -772,7 +940,6 @@ function showMarkTooltip(markId, characterId, anchor) {
     return bq - aq;
   });
   const item = sorted[0];
-  const extraCount = sorted.length - 1;
 
   markTooltip.innerHTML = "";
   const card = document.createElement("div");
@@ -810,16 +977,33 @@ function showMarkTooltip(markId, characterId, anchor) {
   description.className = "item-description";
   description.textContent = item.description ?? "No description available.";
   description.title = description.textContent;
+  description.classList.add("expanded");
+  const descToggle = document.createElement("button");
+  descToggle.type = "button";
+  descToggle.className = "desc-toggle";
+  descToggle.textContent = "More";
+  descToggle.style.display = "none";
 
   body.appendChild(title);
   body.appendChild(metaRow);
   body.appendChild(description);
+  body.appendChild(descToggle);
 
-  if (extraCount > 0) {
-    const more = document.createElement("div");
-    more.className = "meta";
-    more.textContent = `+${extraCount} more unlock${extraCount > 1 ? "s" : ""}`;
-    body.appendChild(more);
+  if (sorted.length > 1) {
+    const list = document.createElement("div");
+    list.className = "tooltip-unlock-list";
+    sorted.slice(1).forEach((entry) => {
+      const row = document.createElement("div");
+      row.className = "tooltip-unlock-item";
+      const entryQuality =
+        typeof entry.quality === "number" ? entry.quality : "unknown";
+      row.innerHTML = `
+        <span class="badge quality-q${entryQuality}">Q${entry.quality ?? "?"}</span>
+        <span>${entry.name}</span>
+      `;
+      list.appendChild(row);
+    });
+    body.appendChild(list);
   }
 
   card.appendChild(body);
@@ -848,13 +1032,105 @@ function showMarkTooltip(markId, characterId, anchor) {
   markTooltip.style.top = `${top}px`;
 }
 
+function showSpecialUnlockTooltip(item, characterId, anchor) {
+  if (!item) return;
+  cancelTooltipHide();
+  const tooltipKey = `${characterId}:allmarks:${item.id}`;
+  if (activeTooltipKey === tooltipKey && markTooltip.style.display === "block") {
+    return;
+  }
+  activeTooltipKey = tooltipKey;
+  tooltipLocked = true;
+  markTooltip.innerHTML = "";
+  const card = document.createElement("div");
+  card.className = "card mark-tooltip-card";
+
+  if (item.imageUrl) {
+    const icon = document.createElement("img");
+    icon.className = "item-icon";
+    icon.src = item.imageUrl;
+    icon.alt = item.name;
+    icon.referrerPolicy = "no-referrer";
+    card.appendChild(icon);
+  }
+
+  const body = document.createElement("div");
+  body.className = "card-body";
+  const title = document.createElement("h4");
+  title.textContent = item.name;
+  const metaRow = document.createElement("div");
+  metaRow.className = "meta-row";
+  const meta = document.createElement("div");
+  meta.className = "meta";
+  meta.textContent = `${getCharacterName(characterId)} • All completion marks`;
+  const badges = document.createElement("div");
+  badges.className = "badge-row";
+  const qualityValue =
+    typeof item.quality === "number" ? item.quality : "unknown";
+  badges.innerHTML = `<span class="badge quality-q${qualityValue}">Q${
+    item.quality ?? "?"
+  }</span>`;
+  metaRow.appendChild(meta);
+  metaRow.appendChild(badges);
+
+  const description = document.createElement("div");
+  description.className = "item-description";
+  description.textContent = item.description ?? "No description available.";
+  description.title = description.textContent;
+  description.classList.add("expanded");
+  const descToggle = document.createElement("button");
+  descToggle.type = "button";
+  descToggle.className = "desc-toggle";
+  descToggle.textContent = "More";
+  descToggle.style.display = "none";
+
+  body.appendChild(title);
+  body.appendChild(metaRow);
+  body.appendChild(description);
+  body.appendChild(descToggle);
+  card.appendChild(body);
+  markTooltip.appendChild(card);
+  markTooltip.style.display = "block";
+
+  const rect = anchor.getBoundingClientRect();
+  const tooltipRect = markTooltip.getBoundingClientRect();
+  const padding = 12;
+  let left = rect.right + padding;
+  let top = rect.top + window.scrollY - tooltipRect.height / 2 + rect.height / 2;
+
+  const maxLeft = window.scrollX + window.innerWidth - tooltipRect.width - padding;
+  if (left > maxLeft) {
+    left = rect.left + window.scrollX - tooltipRect.width - padding;
+  }
+  if (left < padding) {
+    left = padding;
+  }
+  const minTop = window.scrollY + padding;
+  const maxTop = window.scrollY + window.innerHeight - tooltipRect.height - padding;
+  if (top < minTop) top = minTop;
+  if (top > maxTop) top = maxTop;
+
+  markTooltip.style.left = `${left}px`;
+  markTooltip.style.top = `${top}px`;
+}
+
 function hideMarkTooltip() {
+  cancelTooltipHide();
+  activeTooltipKey = null;
+  tooltipLocked = false;
   markTooltip.style.display = "none";
 }
 
 function getCharacterName(characterId) {
   const char = CHARACTERS.find((entry) => entry.id === characterId);
   return char ? char.name : "Unknown";
+}
+
+function isCollectibleItem(item) {
+  if (!item) return false;
+  if (item.imageUrl && item.imageUrl.includes("/collectibles/")) return true;
+  if (item.imageUrl && item.imageUrl.includes("collectibles_")) return true;
+  return false;
 }
 
 function getMarkName(markId) {
@@ -884,8 +1160,7 @@ function focusUnlock(item) {
   if (!targetGrid) return;
   window.requestAnimationFrame(() => {
     marksToHighlight.forEach((markId) => {
-      const markKey = markId === "greedier" ? "greed" : markId;
-      const markEl = targetGrid.querySelector(`[data-mark-id="${markKey}"]`);
+      const markEl = targetGrid.querySelector(`[data-mark-id="${markId}"]`);
       if (!markEl) {
         if (markId === "delirium") {
           targetGrid.classList.add("pulse");
@@ -912,66 +1187,40 @@ function isItemUnlocked(item) {
   );
 }
 
-function isGreedMark(markId) {
-  return markId === "greed" || markId === "greedier";
-}
-
 function normalizeMarkState(value, markId) {
   if (value === true) return "hard";
   if (value === false || value == null) {
     return "dim";
   }
   if (value === "hard" || value === "normal" || value === "dim") {
-    if (!isGreedMark(markId) && value === "normal") {
-      return "dim";
-    }
-    return value;
+    return value === "normal" ? "dim" : value;
   }
-  return isGreedMark(markId) ? "dim" : "dim";
+  return "dim";
 }
 
 function getNextMarkState(current, markId) {
-  if (isGreedMark(markId)) {
-    if (current === "dim") return "normal";
-    if (current === "normal") return "hard";
-    return "dim";
-  }
   if (current === "hard") return "dim";
   return "hard";
 }
 
 function isMarkCompleted(markId, state) {
-  if (isGreedMark(markId)) {
-    return state === "normal" || state === "hard";
-  }
   return state === "hard";
 }
 
 function isMarkHardCompleted(markId, state) {
-  if (isGreedMark(markId)) {
-    return state === "hard";
-  }
   return state === "hard";
 }
 
 function getEffectiveMarkState(marksState, markId) {
-  if (markId === "greed" || markId === "greedier") {
-    return normalizeMarkState(marksState.greed, "greed");
-  }
   return normalizeMarkState(marksState[markId], markId);
 }
 
 function countMarkCompletion(markId, state) {
-  if (markId === "greed") {
-    if (state === "hard") return 2;
-    if (state === "normal") return 1;
-    return 0;
-  }
   return state === "hard" ? 1 : 0;
 }
 
 function getTotalMarks() {
-  return MARKS.length + 1;
+  return MARKS.length;
 }
 
 function loadState() {

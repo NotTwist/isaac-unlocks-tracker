@@ -47,9 +47,21 @@ function parseImage(html) {
 }
 
 function parseDescription(html) {
-  const headerIndex = html.indexOf('wiki-header">Description</h1>');
-  if (headerIndex === -1) return null;
-  const block = html.slice(headerIndex, headerIndex + 2000);
+  const headerRegex =
+    /<h1[^>]*class="[^"]*wiki-header[^"]*"[^>]*>\s*Description\s*<\/h1>/i;
+  let match = headerRegex.exec(html);
+  if (!match) {
+    const idRegex = /<h1[^>]*id="description"[^>]*>\s*Description\s*<\/h1>/i;
+    match = idRegex.exec(html);
+  }
+  if (!match) return null;
+  const start = match.index + match[0].length;
+  const rest = html.slice(start);
+  const nextHeaderIndex = rest.search(
+    /<h1[^>]*class="[^"]*wiki-header[^"]*"[^>]*>/i
+  );
+  const block =
+    nextHeaderIndex === -1 ? rest : rest.slice(0, nextHeaderIndex);
   const paragraphMatch = block.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
   if (!paragraphMatch) return null;
   const cleaned = paragraphMatch[1]
@@ -84,28 +96,6 @@ function normalizeName(name) {
 }
 
 async function run() {
-  if (process.argv.includes("--debug")) {
-    const testId = process.argv[process.argv.indexOf("--debug") + 1] || "1";
-    const html = await fetchHtml(`https://isaacguru.com/wiki/isaac/c${testId}`);
-    const snippet = html.slice(
-      html.indexOf("item-quality-container"),
-      html.indexOf("item-quality-container") + 600
-    );
-    console.log(snippet);
-    const blockMatch = snippet.match(/--x:\s*(-?\d+)px/g) || [];
-    console.log("Raw --x matches:", blockMatch);
-    const globalBlock = html.match(/item-quality-container[\s\S]*?<\/span>/i);
-    console.log("Global block found:", Boolean(globalBlock));
-    if (globalBlock) {
-      const matches = [...globalBlock[0].matchAll(/--x:\s*(-?\d+)px/g)].map(
-        (m) => Number(m[1])
-      );
-      console.log("Global --x values:", matches);
-    }
-    console.log("Quality:", parseQuality(html));
-    console.log("Image:", parseImage(html));
-    return;
-  }
   const concurrency = 6;
   const queue = Array.from({ length: MAX_ID }, (_, idx) => idx + 1);
   const workers = new Array(concurrency).fill(0).map(async () => {
