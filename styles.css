@@ -829,3 +829,73 @@ button.danger {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .layout {
+    padding: 16px 16px 28px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .action-button {
+    min-width: 140px;
+    flex: 1 1 160px;
+  }
+
+  .title-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title-block h1 {
+    font-size: 22px;
+  }
+
+  .character-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sprite {
+    width: 64px;
+    height: 64px;
+  }
+
+  .character-image.large {
+    width: 58px;
+    height: 58px;
+  }
+
+  .marks-grid {
+    --paper-scale: 2.4;
+  }
+
+  .recommendations {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+  }
+
+  .item-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
