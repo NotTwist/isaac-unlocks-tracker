@@ -357,6 +357,7 @@ resetBtn.addEventListener("click", () => {
   if (!confirmed) return;
   state.marksByCharacter = {};
   saveState(state);
+  updateSidebarProgress();
   renderSelectedCharacter();
   renderRecommendations();
 });
@@ -406,6 +407,7 @@ function renderCharacters(filter = "") {
     progress.title = `${stats.completed} / ${stats.total} marks`;
     const fill = document.createElement("div");
     fill.className = "character-progress-fill";
+    fill.dataset.characterId = char.id;
     fill.style.width = `${stats.percent}%`;
     progress.appendChild(fill);
     return progress;
@@ -592,6 +594,12 @@ function parseUnlockCondition(condition) {
   });
 
   const unique = Array.from(new Set(matched));
+  if (unique.includes("greedier") && unique.includes("greed")) {
+    const index = unique.indexOf("greed");
+    if (index !== -1) {
+      unique.splice(index, 1);
+    }
+  }
   return {
     markIds: unique,
     allMarks: false,
@@ -655,6 +663,7 @@ function renderCharacterPane(character, pane) {
     marksState.delirium = getNextMarkState(current, "delirium");
     state.marksByCharacter[character.id] = marksState;
     saveState(state);
+    updateSidebarProgress();
     renderSelectedCharacter();
     renderRecommendations();
   };
@@ -694,6 +703,7 @@ function renderCharacterPane(character, pane) {
       marksState[mark.id] = nextState;
       state.marksByCharacter[character.id] = marksState;
       saveState(state);
+      updateSidebarProgress();
       renderSelectedCharacter();
       renderRecommendations();
     });
@@ -823,7 +833,17 @@ function renderRecommendations() {
       icon.src = item.imageUrl;
       icon.alt = item.name;
       icon.referrerPolicy = "no-referrer";
-      card.appendChild(icon);
+      if (item.sourceId) {
+        const iconLink = document.createElement("a");
+        iconLink.href = `https://isaacguru.com/wiki/isaac/c${item.sourceId}`;
+        iconLink.target = "_blank";
+        iconLink.rel = "noreferrer";
+        iconLink.className = "item-icon-link";
+        iconLink.appendChild(icon);
+        card.appendChild(iconLink);
+      } else {
+        card.appendChild(icon);
+      }
     }
 
     const body = document.createElement("div");
@@ -894,6 +914,20 @@ function renderRecommendations() {
 
 function getMarksForCharacter(characterId) {
   return state.marksByCharacter[characterId] || {};
+}
+
+function updateSidebarProgress() {
+  const fills = document.querySelectorAll(".character-progress-fill");
+  fills.forEach((fill) => {
+    const characterId = fill.dataset.characterId;
+    if (!characterId) return;
+    const stats = getCompletionStats(characterId);
+    fill.style.width = `${stats.percent}%`;
+    const wrapper = fill.parentElement;
+    if (wrapper) {
+      wrapper.title = `${stats.completed} / ${stats.total} marks`;
+    }
+  });
 }
 
 function getCompletionStats(characterId) {
@@ -1163,13 +1197,13 @@ function focusUnlock(item) {
       const markEl = targetGrid.querySelector(`[data-mark-id="${markId}"]`);
       if (!markEl) {
         if (markId === "delirium") {
-          targetGrid.classList.add("pulse");
-          window.setTimeout(() => targetGrid.classList.remove("pulse"), 1000);
+          targetGrid.classList.add("pulse-strong");
+          window.setTimeout(() => targetGrid.classList.remove("pulse-strong"), 1400);
         }
         return;
       }
-      markEl.classList.add("pulse");
-      window.setTimeout(() => markEl.classList.remove("pulse"), 1000);
+      markEl.classList.add("pulse-strong");
+      window.setTimeout(() => markEl.classList.remove("pulse-strong"), 1400);
     });
   });
 }
