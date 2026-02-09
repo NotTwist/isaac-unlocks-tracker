@@ -23,11 +23,25 @@
         </div>
       </div>
       <div class="header-actions">
-        <button id="exportBtn" class="secondary action-button">Export Progress</button>
-        <label class="import-label action-button">
-          Import Progress
-          <input id="importInput" type="file" accept="application/json" />
-        </label>
+        <div class="import-stack">
+          <button id="exportBtn" class="secondary action-button">Export JSON</button>
+        </div>
+        <div class="import-stack">
+          <label class="import-label action-button" title="Import JSON exported by this web app">
+            Import JSON
+            <input id="importInput" type="file" accept="application/json" />
+          </label>
+        </div>
+        <div class="import-stack">
+          <label
+            id="saveImportLabel"
+            class="import-label action-button"
+            title="Import rep+persistentgamedata*.dat"
+          >
+            Import Save (.dat)
+            <input id="saveImportInput" type="file" accept=".dat" />
+          </label>
+        </div>
       </div>
     </header>
 
@@ -135,6 +149,29 @@
         <button id="resetBtn" class="danger action-button">Reset Progress</button>
       </div>
     </footer>
+
+    <div id="saveImportModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+      <div class="modal-card" role="dialog" aria-modal="true">
+        <button id="saveImportClose" class="modal-close" aria-label="Close">
+          ✕
+        </button>
+        <h3>Import save file</h3>
+        <p class="modal-note">
+          Find it here:
+          <code>
+            &lt;Your Steam Directory&gt;\userdata\&lt;Your user id&gt;\remote\250900\remote\rep+persistentgamedata&lt;Save number&gt;.dat
+          </code>
+        </p>
+        <div id="saveDropZone" class="save-drop-zone">
+          <div class="save-drop-title">Drop the file here</div>
+          <div class="save-drop-subtitle">or</div>
+          <button id="saveImportBrowse" class="secondary action-button">
+            Open File Explorer
+          </button>
+        </div>
+      </div>
+    </div>
 
     <script src="data.js"></script>
     <script src="item-meta-by-name.js"></script>

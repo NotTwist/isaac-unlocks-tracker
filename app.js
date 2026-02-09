@@ -264,6 +264,12 @@ const characterSearch = document.getElementById("characterSearch");
 const exportBtn = document.getElementById("exportBtn");
 const importInput = document.getElementById("importInput");
 const resetBtn = document.getElementById("resetBtn");
+const saveImportInput = document.getElementById("saveImportInput");
+const saveImportLabel = document.getElementById("saveImportLabel");
+const saveImportModal = document.getElementById("saveImportModal");
+const saveImportClose = document.getElementById("saveImportClose");
+const saveImportBrowse = document.getElementById("saveImportBrowse");
+const saveDropZone = document.getElementById("saveDropZone");
 
 const toggleRecommendationsBottom = document.getElementById("toggleRecommendationsBottom");
 const toggleRecommendationsLess = document.getElementById("toggleRecommendationsLess");
@@ -352,6 +358,119 @@ importInput.addEventListener("change", async (event) => {
   event.target.value = "";
 });
 
+if (saveImportInput) {
+  const openSaveImportModal = () => {
+    if (!saveImportModal) return;
+    saveImportModal.classList.remove("hidden");
+    saveImportModal.setAttribute("aria-hidden", "false");
+  };
+
+  const closeSaveImportModal = () => {
+    if (!saveImportModal) return;
+    saveImportModal.classList.add("hidden");
+    saveImportModal.setAttribute("aria-hidden", "true");
+    saveDropZone?.classList.remove("is-dragover");
+  };
+
+  const importSaveFile = async (file) => {
+    if (!file) return;
+    try {
+      const buffer = await file.arrayBuffer();
+      let marks = {};
+      try {
+        marks = extractMarksFromSave(buffer);
+      } catch (markError) {
+        const achievements = extractAchievementsFromSave(buffer);
+        const map = await getSteamAchievementMap();
+        marks = mapAchievementsToMarks(achievements, map);
+      }
+      if (!Object.keys(marks).length) {
+        throw new Error("No marks mapped from savefile achievements.");
+      }
+      state.marksByCharacter = marks;
+      saveState(state);
+      updateSidebarProgress();
+      renderSelectedCharacter();
+      renderRecommendations();
+      alert("Save file imported.");
+    } catch (error) {
+      alert(`Save import failed: ${error.message}`);
+    }
+  };
+
+  if (saveImportLabel) {
+    saveImportLabel.addEventListener("click", (event) => {
+      event.preventDefault();
+      openSaveImportModal();
+    });
+  }
+
+  if (saveImportModal) {
+    saveImportModal.addEventListener("click", (event) => {
+      if (event.target === saveImportModal || event.target.classList.contains("modal-backdrop")) {
+        closeSaveImportModal();
+      }
+    });
+  }
+
+  if (saveImportClose) {
+    saveImportClose.addEventListener("click", () => {
+      closeSaveImportModal();
+    });
+  }
+
+  if (saveImportBrowse) {
+    saveImportBrowse.addEventListener("click", () => {
+      saveImportInput.click();
+    });
+  }
+
+  if (saveDropZone) {
+    const highlight = (active) => {
+      if (active) {
+        saveDropZone.classList.add("is-dragover");
+      } else {
+        saveDropZone.classList.remove("is-dragover");
+      }
+    };
+
+    ["dragenter", "dragover"].forEach((eventName) => {
+      saveDropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        highlight(true);
+      });
+    });
+
+    ["dragleave", "drop"].forEach((eventName) => {
+      saveDropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        highlight(false);
+      });
+    });
+
+    saveDropZone.addEventListener("drop", async (event) => {
+      const file = event.dataTransfer?.files?.[0];
+      await importSaveFile(file);
+      closeSaveImportModal();
+    });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeSaveImportModal();
+    }
+  });
+
+  saveImportInput.addEventListener("change", async (event) => {
+    const file = event.target.files[0];
+    await importSaveFile(file);
+    closeSaveImportModal();
+    event.target.value = "";
+  });
+}
+
 resetBtn.addEventListener("click", () => {
   const confirmed = window.confirm("Reset all saved progress?");
   if (!confirmed) return;
@@ -361,6 +480,195 @@ resetBtn.addEventListener("click", () => {
   renderSelectedCharacter();
   renderRecommendations();
 });
+
+async function getSteamAchievementMap() {
+  const response = await fetch("steam-achievement-map.json");
+  if (!response.ok) {
+    throw new Error("Missing steam-achievement-map.json.");
+  }
+  const raw = await response.text();
+  const cleaned = raw.replace(/^\uFEFF/, "").trim();
+  const mapData = JSON.parse(cleaned);
+  return mapData.mapping || mapData;
+}
+
+function extractMarksFromSave(buffer) {
+  const data = new Uint8Array(buffer);
+  const sectionOffsets = getSectionOffsets(data);
+  if (!sectionOffsets[1]) {
+    throw new Error("Save section offsets missing.");
+  }
+  const characterIds = [
+    ...BASE_CHARACTERS.map((char) => char.id),
+    ...BASE_CHARACTERS.map((char) => `t_${char.id}`),
+  ];
+  const markIndexToId = [
+    "moms_heart",
+    "isaac",
+    "satan",
+    "boss_rush",
+    "blue_baby",
+    "lamb",
+    "mega_satan",
+    "greed",
+    "hush",
+    "delirium",
+    "mother",
+    "beast",
+  ];
+  const marks = {};
+  characterIds.forEach((characterId, index) => {
+    const rawMarks = getChecklistUnlocks(data, sectionOffsets, index);
+    rawMarks.forEach((rawValue, markIndex) => {
+      const markId = markIndexToId[markIndex];
+      if (!markId) return;
+      const soloDifficulty = getSoloDifficulty(rawValue);
+      if (!soloDifficulty) return;
+      if (!marks[characterId]) marks[characterId] = {};
+      if (markId === "greed") {
+        if (soloDifficulty === 2) {
+          marks[characterId].greedier = "hard";
+          marks[characterId].greed = "hard";
+        } else {
+          marks[characterId].greed = "hard";
+        }
+        return;
+      }
+      marks[characterId][markId] = "hard";
+    });
+  });
+  return marks;
+}
+
+function extractAchievementsFromSave(buffer) {
+  const view = new DataView(buffer);
+  const decoder = new TextDecoder("utf-8");
+  const header = decoder.decode(buffer.slice(0, 16)).replace(/\0/g, "");
+  if (
+    !header.startsWith("ISAACNGSAVE") &&
+    !header.startsWith("ISAACNG_GSR")
+  ) {
+    throw new Error("Not a recognized Isaac save file.");
+  }
+  let offset = 20; // 16-byte header + 4-byte CRC
+  for (let i = 0; i < 11; i += 1) {
+    const type = view.getInt32(offset, true);
+    const len = view.getInt32(offset + 4, true);
+    offset += 8;
+    if (type === 1) {
+      const count = view.getInt32(offset, true);
+      offset += 4;
+      const achievements = new Uint8Array(buffer, offset, count);
+      return achievements;
+    }
+    if (type === 2 || type === 3 || type === 8 || type === 9) {
+      const count = view.getInt32(offset, true);
+      offset += 4 + count * 4;
+      continue;
+    }
+    if (type === 4 || type === 5 || type === 6 || type === 7 || type === 10) {
+      const count = view.getInt32(offset, true);
+      offset += 4 + count;
+      continue;
+    }
+    if (type === 11) {
+      const count = view.getUint32(offset, true);
+      offset += 4;
+      for (let j = 0; j < count; j += 1) {
+        const entryCount = view.getInt32(offset + 4, true);
+        offset += 8 + entryCount * 2;
+      }
+      continue;
+    }
+    offset += Math.max(len, 0);
+  }
+  throw new Error("Achievements chunk not found.");
+}
+
+function mapAchievementsToMarks(achievements, map) {
+  const marks = {};
+  for (let i = 1; i < achievements.length; i += 1) {
+    if (!achievements[i]) continue;
+    const mapping = map[String(i)];
+    if (!mapping) continue;
+    const { characterId, markIds } = mapping;
+    if (!characterId || !Array.isArray(markIds)) continue;
+    const normalizedMarkIds = markIds.includes("mega_satan")
+      ? markIds.filter((markId) => markId !== "satan")
+      : markIds;
+    if (!marks[characterId]) marks[characterId] = {};
+    normalizedMarkIds.forEach((markId) => {
+      marks[characterId][markId] = "hard";
+    });
+  }
+  return marks;
+}
+
+function getSectionOffsets(data) {
+  const entryLens = [1, 4, 4, 1, 1, 1, 1, 4, 4, 1, 546];
+  const results = new Array(entryLens.length).fill(0);
+  let offset = 0x14;
+  for (let i = 0; i < entryLens.length; i += 1) {
+    const sectionIndex = readUint32LE(data, offset);
+    const sectionSize = readUint32LE(data, offset + 4);
+    const sectionCount = readUint32LE(data, offset + 8);
+    offset += 12;
+    if (!results[i]) {
+      results[i] = offset;
+    }
+    offset += entryLens[i] * sectionCount;
+  }
+  return results;
+}
+
+function getChecklistUnlocks(data, sectionOffsets, charIndex) {
+  const numberOfMarks = 12;
+  const resultData = new Array(numberOfMarks).fill(0);
+  if (charIndex === 14) {
+    let offset = sectionOffsets[1] + 0x32c;
+    for (let i = 0; i < numberOfMarks; i += 1) {
+      const currentOffset = offset + i * 4;
+      resultData[i] = readUint32LE(data, currentOffset);
+      if (i === 8) offset += 0x4;
+      if (i === 9) offset += 0x37c;
+      if (i === 10) offset += 0x84;
+    }
+  } else if (charIndex > 14) {
+    let offset = sectionOffsets[1] + 0x31c;
+    for (let i = 0; i < numberOfMarks; i += 1) {
+      const currentOffset = offset + charIndex * 4 + i * 19 * 4;
+      resultData[i] = readUint32LE(data, currentOffset);
+      if (i === 8) offset += 0x4c;
+      if (i === 9 || i === 10) offset += 0x3c;
+    }
+  } else {
+    let offset = sectionOffsets[1] + 0x6c;
+    for (let i = 0; i < numberOfMarks; i += 1) {
+      const currentOffset = offset + charIndex * 4 + i * 14 * 4;
+      resultData[i] = readUint32LE(data, currentOffset);
+      if (i === 5) offset += 0x14;
+      if (i === 8) offset += 0x3c;
+      if (i === 9) offset += 0x3b0;
+      if (i === 10) offset += 0x50;
+    }
+  }
+  return resultData;
+}
+
+function getSoloDifficulty(value) {
+  const solo = value & 0b11;
+  return solo === 3 ? 2 : solo;
+}
+
+function readUint32LE(data, offset) {
+  return (
+    data[offset] |
+    (data[offset + 1] << 8) |
+    (data[offset + 2] << 16) |
+    (data[offset + 3] << 24)
+  ) >>> 0;
+}
+
 
 function renderCharacters(filter = "") {
   regularList.innerHTML = "";
