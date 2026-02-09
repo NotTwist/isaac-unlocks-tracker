@@ -128,7 +128,6 @@ code {
   border: 1px solid transparent;
 }
 
-.character-row:hover,
 .character-row.active {
   background: rgba(66, 48, 36, 0.7);
   border-color: rgba(160, 120, 80, 0.45);
@@ -297,11 +296,6 @@ code {
   place-items: center;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.mark:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .mark.checked {
@@ -746,11 +740,6 @@ code {
   border-bottom: 1px dotted rgba(182, 169, 152, 0.6);
 }
 
-.footer-credits a:hover {
-  color: #e6e1d7;
-  border-bottom-color: rgba(230, 225, 215, 0.8);
-}
-
 .footer-right {
   display: flex;
   align-items: center;
@@ -776,10 +765,6 @@ code {
   fill: currentColor;
 }
 
-.footer-github:hover {
-  background: rgba(80, 58, 40, 0.8);
-}
-
 button,
 .import-label {
   padding: 8px 12px;
@@ -789,6 +774,27 @@ button,
   background: #3a2a20;
   color: #e6e1d7;
   font-weight: 600;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .character-row:hover {
+    background: rgba(66, 48, 36, 0.7);
+    border-color: rgba(160, 120, 80, 0.45);
+  }
+
+  .mark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .footer-credits a:hover {
+    color: #e6e1d7;
+    border-bottom-color: rgba(230, 225, 215, 0.8);
+  }
+
+  .footer-github:hover {
+    background: rgba(80, 58, 40, 0.8);
+  }
 }
 
 .action-button {
