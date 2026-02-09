@@ -33,14 +33,13 @@
           </label>
         </div>
         <div class="import-stack">
-          <label
-            id="saveImportLabel"
+          <button
+            id="saveImportTrigger"
             class="import-label action-button"
             title="Import rep+persistentgamedata*.dat"
           >
             Import Save (.dat)
-            <input id="saveImportInput" type="file" accept=".dat" />
-          </label>
+          </button>
         </div>
       </div>
     </header>
@@ -166,9 +165,14 @@
         <div id="saveDropZone" class="save-drop-zone">
           <div class="save-drop-title">Drop the file here</div>
           <div class="save-drop-subtitle">or</div>
-          <button id="saveImportBrowse" class="secondary action-button">
+          <label
+            id="saveImportBrowse"
+            for="saveImportInput"
+            class="secondary action-button"
+          >
             Open File Explorer
-          </button>
+          </label>
+          <input id="saveImportInput" type="file" accept=".dat" />
         </div>
       </div>
     </div>

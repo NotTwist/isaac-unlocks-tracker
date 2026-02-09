@@ -814,6 +814,10 @@ button,
   box-sizing: border-box;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  background: #3a2a20;
+  color: #e6e1d7;
+  border: none;
+  cursor: pointer;
 }
 
 button.secondary {
@@ -824,7 +828,19 @@ button.danger {
   background: #6b2424;
 }
 
+.action-button.secondary {
+  background: #2f241d;
+}
+
+.action-button.danger {
+  background: #6b2424;
+}
+
 .import-label input {
+  display: none;
+}
+
+.save-drop-zone input[type="file"] {
   display: none;
 }
 

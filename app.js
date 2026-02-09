@@ -264,11 +264,10 @@ const characterSearch = document.getElementById("characterSearch");
 const exportBtn = document.getElementById("exportBtn");
 const importInput = document.getElementById("importInput");
 const resetBtn = document.getElementById("resetBtn");
+const saveImportTrigger = document.getElementById("saveImportTrigger");
 const saveImportInput = document.getElementById("saveImportInput");
-const saveImportLabel = document.getElementById("saveImportLabel");
 const saveImportModal = document.getElementById("saveImportModal");
 const saveImportClose = document.getElementById("saveImportClose");
-const saveImportBrowse = document.getElementById("saveImportBrowse");
 const saveDropZone = document.getElementById("saveDropZone");
 
 const toggleRecommendationsBottom = document.getElementById("toggleRecommendationsBottom");
@@ -398,9 +397,8 @@ if (saveImportInput) {
     }
   };
 
-  if (saveImportLabel) {
-    saveImportLabel.addEventListener("click", (event) => {
-      event.preventDefault();
+  if (saveImportTrigger) {
+    saveImportTrigger.addEventListener("click", () => {
       openSaveImportModal();
     });
   }
@@ -416,12 +414,6 @@ if (saveImportInput) {
   if (saveImportClose) {
     saveImportClose.addEventListener("click", () => {
       closeSaveImportModal();
-    });
-  }
-
-  if (saveImportBrowse) {
-    saveImportBrowse.addEventListener("click", () => {
-      saveImportInput.click();
     });
   }
 
